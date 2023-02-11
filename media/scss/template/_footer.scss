@@ -1,0 +1,126 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+#footer {
+	position: relative;
+	padding: 0;
+	.top {
+		position: relative;
+		padding: 1.5rem 0 0;
+		background: res.$var-footer-bg-top;
+	}
+	.moduletable {
+		margin-bottom: 0.5rem;
+	}
+	.middle {
+		background: res.$var-footer-bg;
+		position: relative;
+		padding: res.$global-padding 0 1rem;
+		color: res.$white;
+		@include mixin.breakpoint(medium) {
+			text-align: left;
+		}
+		h3 {
+			color: res.$var-footer-bg-top;
+			font-size: 1rem;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
+		i {
+			color: res.$medium_gray;
+		}
+		a {
+			color: res.$white;
+			&:hover {
+				color: res.$medium_gray;
+			}
+		}
+		.columns.border {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			//border-left: 1px solid res.$medium_gray;
+			.moduletable {
+				&:nth-last-child(n+2) ~ div:last-child {
+					margin-top: auto;
+				}
+			}
+			@include mixin.breakpoint(medium) {
+				border-left: 1px solid res.$medium_gray;
+			}
+		}
+		.row {
+			.moduletable {
+				&:nth-last-child(n+2) ~ div:last-child {
+					align-self: flex-end;
+				}
+			}
+		}
+		ul.footer {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			line-height: 1;
+			font-size: 1rem;
+			display: block;
+			li {
+				padding: 0;
+				text-decoration: none;
+				margin-bottom: 0.9375rem;;
+				&.active > a {
+					padding: 0.3rem 0.5rem;
+					margin-left: -0.5rem;
+				}
+				a {
+					padding-top: 0;
+					padding-bottom: 0;
+					&:hover {
+						color: res.$medium-gray;
+					}
+				}
+			}
+		}
+	}
+	.bottom {
+		background: res.$light-gray;
+		padding: 1.5rem 0 0;
+		font-size: .8rem;
+		position: relative;
+		.moduletable {
+			margin: 0;
+		}
+		div.copyright {
+			color: res.$dark-gray;
+			text-align: center;
+			@include mixin.breakpoint(medium) {
+				text-align: left;
+			}
+		}
+		ul {
+			&.menu .active > a {
+				color: res.$white;
+			}
+			list-style: none;
+			text-align: center;
+			@include mixin.breakpoint(medium) {
+				text-align: right;
+			}
+			li {
+				display: block;
+				@include mixin.breakpoint(medium) {
+					display: inline;
+				}
+				a {
+					color: res.$dark-gray;
+					padding: 0.5rem;
+					@include mixin.breakpoint(medium) {
+						padding: 0 0.5rem 0;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

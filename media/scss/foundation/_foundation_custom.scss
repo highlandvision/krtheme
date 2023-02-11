@@ -1,0 +1,154 @@
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ * Selected custom files for KRTheme
+ */
+
+// --- Dependencies ---
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/vendor/normalize';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/contain';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
+
+// --- Settings ---
+// import your own `settings` here or
+@import '../resources/variables.scss';
+// import and modify the default settings through
+// @import 'settings/settings';
+
+// --- Components ---
+// Sass Utilities
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util';
+// Global styles
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/global';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/forms/forms';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/typography/typography';
+
+// Grids
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/grid/grid';
+//@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/xy-grid/xy-grid';
+// Generic components
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/button';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/button-group';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/close-button';
+//@import 'components/label';
+//@import 'components/progress-bar';
+//@import 'components/slider';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/switch';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/table';
+// Basic components
+//@import 'components/badge';
+//@import '../../../../../../node_modules/foundation-sites/scss/components/breadcrumbs';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/callout';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/card';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/dropdown';
+//@import 'pagination';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/tooltip';
+
+// Containers
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/accordion';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/media-object';
+//@import 'components/orbit';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/responsive-embed';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/tabs';
+//@import 'components/thumbnail';
+// Menu-based containers
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/menu';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/menu-icon';
+//@import 'accordion-menu';
+//@import 'components/drilldown';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/dropdown-menu';
+
+// Layout components
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/off-canvas';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/reveal';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/sticky';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/title-bar';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/top-bar';
+
+// Helpers
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/float';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/flex';
+@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/visibility';
+//@import 'prototype/prototype';
+@mixin foundation-everything(
+	$flex: false,
+	$prototype: false,
+	$xy-grid: false,
+	$global-flexbox: false
+) {
+	@if $flex {
+		$global-flexbox: true !global;
+	}
+	@if $xy-grid {
+		$xy-grid: true !global;
+	}
+	// Global styles
+	@include foundation-global-styles;
+	@include foundation-forms;
+	@include foundation-typography;
+
+	// Grids
+	@if not $flex {
+		@include foundation-grid;
+	} @else {
+		@if $xy-grid {
+			@include foundation-xy-grid-classes;
+		} @else {
+			@include foundation-flex-grid;
+		}
+	}
+	// Generic components
+	@include foundation-button;
+	@include foundation-button-group;
+	@include foundation-close-button;
+	//@include foundation-label;
+	//@include foundation-progress-bar;
+	//@include foundation-slider;
+	@include foundation-switch;
+	@include foundation-table;
+	// Basic components
+	//@include foundation-badge;
+	//@include foundation-breadcrumbs;
+	@include foundation-callout;
+	@include foundation-card;
+	@include foundation-dropdown;
+	//@include foundation-pagination;
+	@include foundation-tooltip;
+	// Containers
+	//@include foundation-accordion;
+	@include foundation-media-object;
+	//@include foundation-orbit;
+	@include foundation-responsive-embed;
+	@include foundation-tabs;
+	//@include foundation-thumbnail;
+	// Menu-based containers
+	@include foundation-menu;
+	@include foundation-menu-icon;
+	//@include foundation-accordion-menu;
+	//@include foundation-drilldown-menu;
+	@include foundation-dropdown-menu;
+	// Layout components
+	@include foundation-off-canvas;
+	@include foundation-reveal;
+	@include foundation-sticky;
+	@include foundation-title-bar;
+	@include foundation-top-bar;
+	// Helpers
+	@include foundation-float-classes;
+	@if $flex {
+		@include foundation-flex-classes;
+	}
+	@include foundation-visibility-classes;
+	@if $prototype {
+		@include foundation-prototype-classes;
+	}
+}
+@include foundation-everything;
+@import "foundation_mixins";

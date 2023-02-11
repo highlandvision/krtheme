@@ -1,0 +1,155 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+form {
+	&.formbg {
+		//background: res.$var-form_bg;
+		//padding: 1.5rem;
+	}
+	.fieldset legend {
+		font-size: 1.2rem;
+		padding: 0 0.3rem 0.3rem;
+		color: res.$var-primary;
+	}
+	.callout {
+		padding: 1rem;
+	}
+	label {
+		margin-left: .2rem;
+		&.inline {
+			padding: 0.3rem 0;
+		}
+	}
+	select {
+		-webkit-appearance: none;
+		background-size: 15px 10px;
+		width: 99%;
+	}
+	.button {
+		font-size: 1.1rem;
+	}
+	.tooltip {
+		line-height: 16px;
+	}
+	&.horizontal select,
+	&.horizontal input,
+	&.horizontal button {
+		margin-bottom: res.$global-margin;
+		@include mixin.breakpoint(medium) {
+			margin: 0;
+		}
+	}
+	input[type="checkbox"].checkover,
+	input[type="radio"].radioover {
+		position: absolute;
+		z-index: -1000;
+		left: -1000px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		width: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+	}
+	input[type="checkbox"].checkover + label.checklabel,
+	input[type="radio"].radioover + label.radiolabel {
+		padding: 0;
+		display: inline-block;
+		line-height: 1.5;
+		font-size: 1rem;
+		vertical-align: middle;
+		cursor: pointer;
+		margin-left: 0;
+		margin-right: 0;
+		color: res.$var-primary;
+	}
+	input[type="radio"].radioover.gateway + label.radiolabel {
+		font-size: 1rem;
+		@include mixin.breakpoint(large) {
+			font-size: 1.1rem;
+		}
+	}
+	input[type="checkbox"].checkover + label.checklabel:before,
+	input[type="radio"].radioover + label.radiolabel:before {
+		content: "\f111";
+		font-family: 'Font Awesome 5 Free', sans-serif;
+		font-weight: 900;
+		font-size: 1rem;
+		padding-right: 5px;
+		color: res.$var-primary;
+	}
+	input[type="checkbox"].checkover + label.checklabel:before {
+		content: "\f0c8";
+	}
+	input[type="checkbox"].checkover:checked + label.checklabel:before,
+	input[type="radio"].radioover:checked + label.radiolabel:before {
+		content: "\f058";
+		font-family: 'Font Awesome 5 Free', sans-serif;
+		font-weight: 900;
+	}
+	input[type="checkbox"].checkover:checked + label.checklabel:before {
+		content: "\f14a";
+		font-family: 'Font Awesome 5 Free', sans-serif;
+		font-weight: 900;
+	}
+	input[type="checkbox"].checkover + label.checklabel.disabled {
+		cursor: default;
+	}
+	i.fas, i.fab {
+		color: res.$var-primary
+	}
+}
+
+button i.fas, button i.fab {
+	color: res.$white;
+}
+.callout.small.form {
+	background: res.$var-callout;
+}
+.accordion-title::before {
+	top: 45%;
+	font-size: 1.5rem;
+}
+ul.kr-arrival-means.menu.icons {
+	li.amitem {
+		background: res.$medium-gray;
+	}
+	li.amitem:not(:last-child) {
+		border-right: 1px solid res.$dark-gray;
+	}
+	li.amitem a {
+		font-family: res.$body-font-family;
+		font-weight: normal;
+	}
+	li.amitem.active, li.amitem.active a {
+		background: res.$dark-gray;
+		border-bottom: res.$dark-gray;
+		color: res.$white;
+		cursor: default;
+	}
+}
+input[type="text"][readonly],
+select[readonly] {
+	cursor: pointer;
+	background-color: res.$light-gray;
+}
+::-webkit-input-placeholder {
+	font-size: 0.9rem;
+}
+::-moz-placeholder {
+	font-size: 0.9rem;
+}
+:-ms-input-placeholder {
+	font-size: 0.9rem;
+}
+::placeholder {
+	font-size: 0.9rem;
+}
+.form-control-feedback {
+	display: block;
+	position: absolute;
+	right: 1rem;
+	bottom: -1.8rem;
+	text-align: right;
+}

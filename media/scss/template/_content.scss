@@ -1,0 +1,48 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+p.readmore a, a.readmore {
+	font-size:   .9em;
+	line-height: 100%;
+	color:       res.$dark-gray;
+	font-weight: 700;
+}
+#system-message {
+	margin-bottom: 0;
+}
+.blog {
+	.row {
+		position:  relative;
+		border:    none;
+		margin:    0 auto 20px;
+		max-width: 303px;
+		@include mixin.breakpoint(medium) {
+			text-align: left;
+			max-width:  100%;
+		}
+	}
+	h4 {
+		padding-bottom: 5px;
+	}
+}
+.item {
+	position: relative;
+}
+.img-fulltext-none img {
+	margin-bottom: 10px;
+}
+.item-image {
+	margin: 0.5rem 2rem;
+}
+.visually-hidden, .sr-only,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}

@@ -1,0 +1,34 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+.kr-properties .items.basicgrid {
+	.content {
+		background: res.$white;
+		padding: 0.5rem;
+		margin-top: 0;
+		border-radius: 3px;
+		-moz-box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.3);
+		box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.3);
+		&:hover {
+			-moz-box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.8);
+			box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.8);
+			cursor: pointer;
+		}
+	}
+	h2.item {
+		line-height: 1.2;
+		font-size: 1.1rem;
+		font-weight: 400;
+		margin-bottom: 0.2rem;
+		color: res.$var-primary;
+		@include mixin.breakpoint(large) {
+			font-size: 1.3rem;
+		}
+	}
+	p {
+		color: res.$var-body-font-color;
+	}
+	.callout {
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,141 @@
+/* Geriatric calendar */
+/* Legend */
+table.legend {
+	border: none;
+	border-collapse: separate;
+	border-spacing: 1px;
+	table-layout: fixed;
+	padding: 0;
+	display: inline-table;
+	margin: 0 0 5px 10px;
+	font-size: 11px;
+	width: auto;
+	tr,
+	tr td {
+		padding: 0;
+		border: 0;
+		line-height: 1;
+	}
+	tr td div {
+		width: 16px;
+		height: 16px;
+		border-width: 16px;
+		border-style: solid;
+		margin-right: 3px;
+	}
+	tr td div.duo {
+		border-width: 8px;
+	}
+}
+/* Calendar */
+#calendardata {
+	margin: 0 auto;
+}
+/* Monthly calendar */
+table.amonth {
+	border: none;
+	border-collapse: separate;
+	border-spacing: 1px;
+	table-layout: fixed;
+	width: 150px;
+	padding: 0;
+	display: inline-table;
+	margin: 0 0 10px;
+	tr th,
+	tr td,
+	p {
+		text-align: center;
+		font-family: Verdana, Arial, sans-serif;
+		color: #444;
+		font-weight: normal;
+		font-size: 10px;
+	}
+	tr {
+		padding: 0;
+		margin: 0;
+		background: #fefefe;
+	}
+	tr.monthrow th,
+	tr.daysrow th {
+		font-weight: 400;
+		background: #8a8a8a;
+		color: #fefefe;
+		padding: 0;
+		height: 16px;
+	}
+	tr.daysrow th {
+		background: #b0b0b0;
+		color: #fefefe;
+	}
+	tr td {
+		text-align: center;
+		padding: 0;
+	}
+	tr td div {
+		width: 20px;
+		height: 20px;
+		border-width: 20px;
+		border-style: solid;
+	}
+	tr td div.duo {
+		border-width: 10px;
+	}
+	tr td div.bgblank {
+		border-top-color: #fefefe;
+		border-left-color: #fefefe;
+		border-bottom-color: #fefefe;
+		border-right-width: 0;
+		border-bottom-width: 0;
+	}
+	tr td div.bgblank p.day {
+		color: #fefefe;
+	}
+	tr td div.bgtoday {
+		border-top-color: #cacaca;
+		border-left-color: #cacaca;
+		p.day {
+			color: #cc0000;
+		}
+	}
+	tr td div.bgpast {
+		border-top-color: #cacaca;;
+		border-left-color: #cacaca;;
+		border-right-width: 0;
+		border-bottom-width: 0;
+	}
+	tr td div.bookme p.day,
+	tr td div.bgtoavail p.day {
+		color: #333;
+	}
+	tr td div.nostart {
+		p.day {
+			color: #b5b5b5;
+			font-weight: normal;
+		}
+	}
+	tr td div {
+		position: relative;
+		height: 0;
+		width: 0;
+	}
+	tr td div p {
+		position: absolute;
+		width: 20px;
+		margin: 0;
+		padding: 0;
+		line-height: 0;
+	}
+	tr td div.solo p.day {
+		top: -10px;
+		left: -20px;
+	}
+	tr td div.duo p.day {
+		left: -10px;
+	}
+}
+.dw-calendar table {
+	margin: 0;
+}
+.dw-calendar th {
+	line-height: 1;
+}

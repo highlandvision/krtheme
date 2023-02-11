@@ -1,0 +1,146 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/util' as mixin;
+.title-bar {
+	margin-top: 2rem;
+	height: 51px;
+	.logo {
+		position: absolute;
+		top: 7px;
+		right: 10px;
+		overflow: visible;
+	}
+}
+#header {
+	height: 85px;
+	width: 100%;
+	#toprow {
+		display: flex;
+		justify-content: flex-end;
+		background: res.$var-body-bg;
+		width: 100%;
+		height: 35px;
+		&.empty {
+			background: res.$var-primary;
+		}
+		a {
+			font-size: 14px;
+			margin-right: 1rem;
+		}
+	}
+	#bottomrow {
+		background: res.$var-primary;
+		height: 50px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		.top-bar-left {
+			max-width: 200px;
+			width: 200px;
+			.logo-image {
+				width: 178px;
+				min-width: 178px;
+				text-align: left;
+				margin-top: -25px;
+				a img.logo {
+					overflow: visible;
+				}
+			}
+		}
+		ul.dropdown.menu {
+			align-items: center;
+			justify-content: center;
+			> li {
+				border-right: 10px solid transparent;
+			}
+			li a {
+				height: 50px;
+				color: res.$white;
+			}
+			li.current a,
+			li.current a:hover,
+			li:hover a,
+			li.is-active a {
+				background-color: res.$var-hover;
+			}
+			ul.menu {
+				li {
+					padding-top: 0;
+					padding-bottom: 0;
+					width: 198px;
+					&:hover {
+						background: res.$var-primary;
+						border-left: 8px solid res.$var-hover;
+					}
+					a {
+						line-height: 1px;
+						height: 35px;
+						&:hover {
+							background: res.$var-primary;
+							padding-left: 9px;
+						}
+					}
+				}
+			}
+			ul.megamenu.is-dropdown-submenu {
+				width: 398px;
+				li.is-dropdown-submenu-item {
+					float: left;
+					width: 198px;
+					padding-right: 0;
+					font-size: 0.9rem;
+					background: res.$var-primary;
+				}
+			}
+		}
+		.top-bar-right {
+			max-width: 320px;
+			width: 100%;
+		}
+	}
+}
+ul.offcanvas {
+	color: res.$white;
+	li a {
+		color: res.$white;
+	}
+}
+.dropdown.menu li {
+	a {
+		color: res.$white;
+		font-size: 1.1rem;
+	}
+	&.active {
+		color: res.$white;
+	}
+	&:hover a {
+		background: res.$var-hover;
+		color: res.$light-gray;
+	}
+	&.is-dropdown-submenu {
+		background: res.$var-primary;
+	}
+	&.is-dropdown-submenu-item {
+		&:hover a {
+			background: res.$var-primary;
+		}
+	}
+}
+ul#offcanvas.nav.menu.vertical {
+	background: res.$var-primary;
+	li a {
+		color: res.$white;
+		border-bottom: 1px solid res.$white;
+	}
+	li a:hover {
+		color: res.$light-gray;
+	}
+}
+.off-canvas .close-button {
+	color: res.$white;
+	z-index: 999;
+	outline: none;
+	right: 0.6rem;
+	top: 0.6rem;
+	font-size: 1.2em;
+	line-height: 1;
+}

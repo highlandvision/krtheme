@@ -1,0 +1,49 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+#main {
+	margin: 0;
+	.main-content {
+		margin-bottom: 1rem;
+	}
+	.main-content,
+	.modules-above {
+		width: 100%;
+		padding-top: 0;
+		display: block;
+	}
+	#sidebar-left, #sidebar-right {
+		text-align: left;
+	}
+	#sidebar-right {
+		margin-top: 3.5rem;
+		.moduletable h3 {
+			padding-bottom: 1rem;
+		}
+	}
+}
+.breadcrumb {
+	background-color: rgba(0, 0, 0, .03);
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 86%;
+	list-style: none;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	li::after {
+		content: "/";
+		margin: 0 0.5rem;
+	}
+	li:first-child::after,
+	li:last-child::after {
+		content: "";
+		margin-right: 0;
+	}
+}
+#sidebar-right > div, #sidebar-left > div {
+	margin-bottom: res.$global-margin;
+}
+#sidebar-right button, #sidebar-left button {
+	margin-bottom: 0;
+}

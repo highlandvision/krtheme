@@ -1,0 +1,151 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+//* Mobi calendar */
+.mbsc-kr {
+	.dwwr,
+	.dwv,
+	.dwbc,
+	.dw-cal-header,
+	.dw-cal-btnc.dw-cal-btnc-m {
+		font-family: Verdana, Arial, sans-serif;
+		background: res.$var-primary;
+	}
+	.dwv {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		background: res.$var-primary;
+	}
+	.dw-i, .dw-cal-day-ic-c {
+		font-size: 0.8rem;
+		opacity: 1;
+	}
+	.dw-cal-day {
+		border: 1px solid res.$medium-gray;
+		.dw-cal-ev .dw-cal-day-fg {
+			padding-bottom: 0;
+		}
+		.dw-cal-day-fg {
+			padding: 8px 0;
+			text-align: center;
+			font-weight: 700;
+			opacity: 1;
+			color: res.$var_primary;
+		}
+		&.dw-cal-day-inv {
+			background: res.$light-gray;
+			.dw-cal-day-fg {
+				color: res.$dark-gray;
+				font-weight: 400;
+				opacity: 1;
+			}
+		}
+		&.dw-sel {
+			.dw-cal-day-fg {
+				color: res.$white;
+				font-weight: 700;
+			}
+		}
+		&.dw-cal-day-marked {
+			background: res.$white;
+			&.blocked {
+				background: res.$light-gray;
+				.dw-cal-day-fg {
+					color: res.$dark-gray;
+					opacity: 0.8;
+					font-weight: 400;
+				}
+			}
+			&.blocked.open {
+				background: none;
+			}
+			&.selected {
+				background: scale-color(res.$var-secondary, $lightness: 60%);
+				&.dw-cal-day-inv.dw-cal-day-marked {
+					.dw-cal-day-fg {
+						color: res.$var-primary;
+						font-weight: 400;
+					}
+				}
+				&.checkin, &.checkout {
+					background: res.$var-primary;
+					.dw-cal-day-fg {
+						color: res.$white !important;
+						font-weight: 700;
+					}
+				}
+			}
+			&.weekly {
+				background: res.$white;
+				.dw-cal-day-fg {
+					color: res.$dark-gray;
+					opacity: 0.8;
+					font-weight: 400;
+				}
+			}
+			&.arrival {
+				background: linear-gradient(to right bottom, res.$light-gray 50%, res.$white 50%);
+				.dw-cal-day-fg {
+					color: res.$var-primary;
+					font-weight: 700;
+				}
+			}
+			&.departure {
+				background: linear-gradient(to right bottom, res.$white 50%, res.$light-gray 50%);
+				.dw-cal-day-fg {
+					color: res.$var-primary;
+					font-weight: 700;
+				}
+			}
+			&.arrival.blocked, &.departure.blocked {
+				background: res.$light-gray;
+				.dw-cal-day-fg {
+					color: res.$dark-gray;
+					opacity: 0.8;
+					font-weight: 400;
+				}
+			}
+			&.muted .dw-cal-day-fg {
+				color: res.$dark-gray;
+				font-weight: 400;
+			}
+		}
+	}
+	.dw-dr-t {
+		background: res.$var-primary;
+		border-color: res.$var-primary;
+	}
+	.dw-ltr .dw-dr1 {
+		border-color: res.$var-primary;
+	}
+	.mbsc-np-hdr {
+		background: res.$var-primary;
+		color: res.$white;
+	}
+	.mbsc-np-hdr {
+		background: res.$var-primary;
+		color: res.$white;
+	}
+	.dw-cal-day-m {
+		background: none;
+		border: none;
+	}
+	.dw-cal th {
+		font-weight: normal;
+	}
+	.dw-cal-day-diff {
+		background: res.$white !important;
+	}
+	.dwbc {
+		padding: 0.3rem 0;
+	}
+	.dwbc .dwb {
+		border-left: 1px solid res.$white;
+	}
+	.dwb-a {
+		color: res.$var-primary;
+	}
+	.dwwl .dwb-a:after {
+		border-color: res.$var-primary;
+	}
+}

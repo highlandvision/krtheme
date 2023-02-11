@@ -1,0 +1,14 @@
+@use '../resources/variables' as res;
+@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+
+#kr-dashboard-reservations {
+	margin-top: 2rem;
+}
+#holder input {
+	display: inline;
+	max-width: 78px;
+	margin-right: .4rem;
+}
+address {
+	font-style: normal;
+}
