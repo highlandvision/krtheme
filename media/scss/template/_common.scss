@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
@@ -311,10 +311,4 @@ i.fab {
 			}
 		}
 	}
-	//ul.level_1, ul.level_2 {
-	//	columns: 3 !important;
-	//}
-	//li.level-0, ul.level_1, li.osmap-has-children {
-	//	clear: both;
-	//}
 }

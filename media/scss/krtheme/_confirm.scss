@@ -1,12 +1,7 @@
 @use '../resources/variables' as res;
-@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
 #kr-confirm {
-	img {
-		margin-bottom: 1rem;
-		@include mixin.breakpoint(medium) {
-			margin-bottom: 0;
-		}
-	}
 	.extras {
 		.price {
 			font-size: 93%;
@@ -133,10 +128,6 @@
 	background-color: res.$black;
 	z-index: 999;
 	opacity: 0.5;
-}
-#card-errors {
-	margin-top: 5px;
-	color: res.$var-red;
 }
 .StripeElement {
 	box-sizing: border-box;
