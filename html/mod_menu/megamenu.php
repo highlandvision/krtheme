@@ -9,7 +9,6 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
-use Joomla\Utilities\ArrayHelper;
 
 $id    = '';
 $tagId = $params->get('tag_id', '');

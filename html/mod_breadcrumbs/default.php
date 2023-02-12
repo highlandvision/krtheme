@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Site
  * @subpackage  mod_breadcrumbs
@@ -75,33 +76,44 @@ use Joomla\CMS\WebAsset\WebAssetManager;
 			'itemListElement' => []
 	];
 
-	foreach ($list as $key => $item)
-	{
-		// Only add item to JSON if it has a valid link, otherwise skip it.
-		if (!empty($item->link))
-		{
-			$data['itemListElement'][] = [
-					'@type'    => 'ListItem',
-					'position' => $key + 1,
-					'item'     => [
-							'@id'  => Route::_($item->link, true, Route::TLS_IGNORE, true),
-							'name' => $item->name,
-					],
-			];
-		}
-		elseif ($key === $last_item_key)
-		{
-			// Add the last item (current page) to JSON, but without a link.
-			// Google accepts items without a URL only as the current page.
-			$data['itemListElement'][] = [
-					'@type'    => 'ListItem',
-					'position' => $key + 1,
-					'item'     => [
-							'name' => $item->name,
-					],
-			];
-		}
-	}
+    // Use an independent counter for positions. E.g. if Heading items in pathway.
+    $itemsCounter = 0;
+
+    // If showHome is disabled use the fallback $homeCrumb for startpage at first position.
+    if (isset($homeCrumb)) {
+        $data['itemListElement'][] = [
+                '@type'    => 'ListItem',
+                'position' => ++$itemsCounter,
+                'item'     => [
+                        '@id'  => Route::_($homeCrumb->link, true, Route::TLS_IGNORE, true),
+                        'name' => $homeCrumb->name,
+                ],
+        ];
+    }
+
+    foreach ($list as $key => $item) {
+        // Only add item to JSON if it has a valid link, otherwise skip it.
+        if (!empty($item->link)) {
+            $data['itemListElement'][] = [
+                    '@type'    => 'ListItem',
+                    'position' => ++$itemsCounter,
+                    'item'     => [
+                            '@id'  => Route::_($item->link, true, Route::TLS_IGNORE, true),
+                            'name' => $item->name,
+                    ],
+            ];
+        } elseif ($key === $last_item_key) {
+            // Add the last item (current page) to JSON, but without a link.
+            // Google accepts items without a URL only as the current page.
+            $data['itemListElement'][] = [
+                    '@type'    => 'ListItem',
+                    'position' => ++$itemsCounter,
+                    'item'     => [
+                            'name' => $item->name,
+                    ],
+            ];
+        }
+    }
 
 	/** @var WebAssetManager $wa */
 	$wa = $app->getDocument()->getWebAssetManager();
