@@ -1,6 +1,5 @@
 @use '../resources/variables' as res;
-@use '../node_modules/foundation-sites/scss/util/_util' as mixin;
-
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 #kr-property-slideshow,
 #kr-property-thumbs,
 .kr-featured,
@@ -80,16 +79,26 @@ i.slick-nav {
 		}
 	}
 	p {
-		position: absolute;
-		bottom: 1rem;
-		padding: 0.5rem 3rem 0.5rem 0.5rem;
+		display: none;
+	}
+	.slick-active p {
+		display: block;
+		font-size: 14px;
+		margin-bottom: 0;
 		text-align: left;
-		opacity: 0.6;
-		background: res.$white;
-		color: res.$black;
-		font-weight: 400;
+		width: 100%;
 		@include mixin.breakpoint(medium) {
-			padding-left: 0.8rem;
+			background: res.$white;
+			bottom: 1.6rem;
+			color: res.$black;
+			font-weight: 400;
+			opacity: 0.7;
+			padding: 0.5rem;
+			position: absolute;
+			width: 470px;
+		}
+		@include mixin.breakpoint(large) {
+			width: 690px;
 		}
 	}
 }
@@ -115,17 +124,19 @@ i.slick-nav {
 	}
 }
 .kr-double-arrows {
-	text-align: right;
+	float: right;
 	position: relative;
 	margin-top: 1.5rem;
+	width: 4rem;
 	i.slick-nav {
 		font-size: 1.8rem;
-		left: 0.5rem;
-		right: 2.5rem;
 		top: -0.6rem;
 		background: none;
 		padding: 0;
 		opacity: 1;
+		&.prev {
+			left: 0;
+		}
 		&.next {
 			right: 0;
 		}
