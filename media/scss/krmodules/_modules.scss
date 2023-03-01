@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .moduletable {
 	width: 100%;
@@ -223,10 +223,9 @@
 		display: block;
 		position: relative;
 		background: res.$white;
+		border: 1px solid res.$light-gray;
 		&:hover {
-			-webkit-box-shadow: 0 4px 6px -4px rgba(50, 50, 50, 0.3);
-			-moz-box-shadow: 0 4px 6px -4px rgba(50, 50, 50, 0.3);
-			box-shadow: 0 4px 6px -4px rgba(50, 50, 50, 0.3);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 		.image-wrapper {
 			position: relative;
@@ -278,26 +277,33 @@
 		}
 	}
 }
-.kr-alternatives a.property {
-	font-size: 91%;
-	height: auto;
-	border-width: 0;
-	.content {
-		padding: 0;
-	}
-	h4 {
-		font-size: 1.3rem;
-		font-weight: 300;
-		line-height: 1;
-		color: res.$var-secondary;
-	}
-	h4.h3 {
-		margin-top: 0.9375rem;
+#kr-alternatives.moduletable {
+	h3.h4 {
 		margin-bottom: 0.5rem;
+		padding-bottom: 0 !important;
 	}
-	p {
-		font-size: 0.95rem;
-		margin-bottom: 1rem;
+	.kr-double-arrows {
+		font-size: 2rem;
+		margin-top: 1.2rem;
+		background: none;
+		padding: 0;
+		opacity: 1;
+	}
+	.kr-alternatives {
+		a.property {
+			font-size: 91%;
+			height: auto;
+		}
+		.content {
+			padding: 1rem 0.3rem;
+		}
+		.price {
+			padding: 0.75rem;
+		}
+		p {
+			font-size: 0.95rem;
+			margin-bottom: 1rem;
+		}
 	}
 }
 #kr-searchregion-drop,
