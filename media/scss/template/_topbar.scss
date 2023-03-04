@@ -1,6 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
-
+@use '../../../../../../ProjectKR/node_modules/foundation-sites/scss/util/util' as mixin;
 .title-bar {
 	margin-top: 2rem;
 	height: 51px;
