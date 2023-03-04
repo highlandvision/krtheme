@@ -1258,7 +1258,7 @@ table.amonth tr td div.bgtoavail p.day {
   color: #333;
 }
 table.amonth tr td div.nostart p.day {
-  color: #b5b5b5;
+  opacity: 0.4;
   font-weight: normal;
 }
 table.amonth tr td div {
