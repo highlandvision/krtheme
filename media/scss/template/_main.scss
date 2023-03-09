@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 #main {
 	margin: 0;
@@ -21,6 +21,12 @@
 			padding-bottom: 1rem;
 		}
 	}
+	#sidebar-right > div, #sidebar-left > div {
+		margin-bottom: res.$global-margin;
+	}
+	#sidebar-right button, #sidebar-left button {
+		margin-bottom: 0;
+	}
 }
 .breadcrumb {
 	background-color: rgba(0, 0, 0, .03);
@@ -40,10 +46,4 @@
 		content: "";
 		margin-right: 0;
 	}
-}
-#sidebar-right > div, #sidebar-left > div {
-	margin-bottom: res.$global-margin;
-}
-#sidebar-right button, #sidebar-left button {
-	margin-bottom: 0;
 }
