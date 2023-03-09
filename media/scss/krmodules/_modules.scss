@@ -1,11 +1,11 @@
 @use '../resources/variables' as res;
-@use '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .moduletable {
 	width: 100%;
 	margin-bottom: res.$global-padding;
 }
-// Search
+
 .datepicker-wrapper {
 	position: relative;
 	input[type="text"][readonly] {
@@ -35,7 +35,7 @@
 		display: none;
 	}
 }
-// Mailchimp
+
 #kr-form-mailchimp {
 	input[type="text"],
 	input[type="email"] {
@@ -64,7 +64,6 @@
 	}
 }
 
-// Typeahead
 #kr-autosearch-wrapper {
 	padding-top: 0.3rem;
 	position: relative;
@@ -131,7 +130,7 @@
 		}
 	}
 }
-//Spotlight
+
 .kr-spotlight .row .column {
 	position: relative;
 	@include mixin.breakpoint(medium) {
@@ -162,71 +161,70 @@
 			overflow: hidden;
 			font-size: 1.7rem;
 		}
-	}
-	p.center {
-		width: 76%;
-		left: 12%;
-		@include mixin.breakpoint(medium) {
+		.center {
 			width: 76%;
 			left: 12%;
-			top: 72%;
+			@include mixin.breakpoint(medium) {
+				width: 76%;
+				left: 12%;
+				top: 72%;
+			}
 		}
-	}
-	p.left {
-		width: 90%;
-		left: 5%;
-		text-align: center;
-		@include mixin.breakpoint(medium) {
-			text-align: left;
+		.left {
+			width: 90%;
+			left: 5%;
+			text-align: center;
+			@include mixin.breakpoint(medium) {
+				text-align: left;
+			}
 		}
-	}
-	p.withbg {
-		font-weight: 300;
-		opacity: 0.75;
-	}
-	p.top {
-		top: 1.5rem;
-	}
-	p.middle {
-		top: 30%;
-		@include mixin.breakpoint(medium) {
-			top: 40%;
+		.withbg {
+			font-weight: 300;
+			opacity: 0.75;
 		}
-		@include mixin.breakpoint(large) {
-			top: 45%;
+		.top {
+			top: 1.5rem;
 		}
-	}
-	p.bottom.withbg {
-		top: 75%;
-		@include mixin.breakpoint(medium) {
-			top: 65%;
+		.middle {
+			top: 30%;
+			@include mixin.breakpoint(medium) {
+				top: 40%;
+			}
+			@include mixin.breakpoint(large) {
+				top: 45%;
+			}
 		}
-		@include mixin.breakpoint(large) {
-			top: auto;
-			bottom: 10px;
-		}
-	}
-	p.bottom {
-		top: 70%;
-		@include mixin.breakpoint(medium) {
+		.bottom.withbg {
 			top: 75%;
+			@include mixin.breakpoint(medium) {
+				top: 65%;
+			}
+			@include mixin.breakpoint(large) {
+				top: auto;
+				bottom: 10px;
+			}
 		}
-		@include mixin.breakpoint(large) {
-			top: auto;
-			bottom: 10px;
+		.bottom {
+			top: 70%;
+			@include mixin.breakpoint(medium) {
+				top: 75%;
+			}
+			@include mixin.breakpoint(large) {
+				top: auto;
+				bottom: 10px;
+			}
 		}
 	}
 }
-// Featured and alternatives (arrows in slick)
+
 .kr-featured, .kr-alternatives {
 	a.property {
 		display: block;
 		position: relative;
 		background: res.$white;
+		border: 1px solid res.$light-gray;
 		&:hover {
-			-webkit-box-shadow: 0 4px 6px -4px rgba(50, 50, 50, 0.3);
-			-moz-box-shadow: 0 4px 6px -4px rgba(50, 50, 50, 0.3);
-			box-shadow: 0 4px 6px -4px rgba(50, 50, 50, 0.3);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 		.image-wrapper {
 			position: relative;
@@ -278,26 +276,34 @@
 		}
 	}
 }
-.kr-alternatives a.property {
-	font-size: 91%;
-	height: auto;
-	border-width: 0;
-	.content {
-		padding: 0;
-	}
-	h4 {
-		font-size: 1.3rem;
-		font-weight: 300;
-		line-height: 1;
-		color: res.$var-secondary;
-	}
-	h4.h3 {
-		margin-top: 0.9375rem;
+
+#kr-alternatives.moduletable {
+	h3.h4 {
 		margin-bottom: 0.5rem;
+		padding-bottom: 0 !important;
 	}
-	p {
-		font-size: 0.95rem;
-		margin-bottom: 1rem;
+	.kr-double-arrows {
+		font-size: 2rem;
+		margin-top: 1.2rem;
+		background: none;
+		padding: 0;
+		opacity: 1;
+	}
+	.kr-alternatives {
+		a.property {
+			font-size: 91%;
+			height: auto;
+		}
+		.content {
+			padding: 1rem 0.3rem;
+		}
+		.price {
+			padding: 0.75rem;
+		}
+		p {
+			font-size: 0.95rem;
+			margin-bottom: 1rem;
+		}
 	}
 }
 #kr-searchregion-drop,
@@ -341,7 +347,7 @@
 		}
 	}
 }
-// Search by feature
+
 ul#categories {
 	margin: 0;
 	padding: 0;
@@ -360,7 +366,7 @@ ul#categories {
 		}
 	}
 }
-//Destinations
+
 .kr-destinations {
 	&.tabs-content {
 		border: none;

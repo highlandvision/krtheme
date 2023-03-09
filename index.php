@@ -106,17 +106,17 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		</nav>
 
-		<?php if ($this->countModules('hero-slider')): ?>
+		<?php if ($this->countModules('hero-slider', true)): ?>
 			<div id="hero" class="home">
 				<div class="show-for-large">
 					<jdoc:include type="modules" name="hero-slider" style="html5" />
 				</div>
-				<?php if ($this->countModules('hero-spot')): ?>
+				<?php if ($this->countModules('hero-spot', true)): ?>
 					<div class="spot">
 						<jdoc:include type="modules" name="hero-spot" style="html5" />
 					</div>
 				<?php endif; ?>
-				<?php if ($this->countModules('hero-search')): ?>
+				<?php if ($this->countModules('hero-search', true)): ?>
 					<div class="search">
 						<jdoc:include type="modules" name="hero-search" style="html5" />
 					</div>
@@ -124,7 +124,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		<?php endif; ?>
 
-		<?php if ($this->countModules('breadcrumbs')) : ?>
+		<?php if ($this->countModules('breadcrumbs', true)) : ?>
 			<div class="row">
 				<div class="medium-12 columns end">
 					<jdoc:include type="modules" name="breadcrumbs" style="html5" />
@@ -140,7 +140,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 		<!--main section-->
 		<section id="main">
-			<?php if ($home && $this->countModules('above-content')): ?>
+			<?php if ($home && $this->countModules('above-content', true)): ?>
 				<div class="row">
 					<div class="small-12 columns">
 						<div class="modules-above">
@@ -153,48 +153,50 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			<!--main content-->
 			<div class="main-content">
 				<div class="row">
-					<?php if ($this->countModules('sidebar-left') && $this->countModules('sidebar-right')): ?>
-						<div id="sidebar-left" class="small-12 medium-4 large-3 columns">
+					<?php if ($this->countModules('sidebar-left', true) && $this->countModules('sidebar-right', true)): ?>
+						<?php echo " hello there both!"; ?>
+						<div id="sidebar-left" class="small-12 medium-4 columns">
 							<jdoc:include type="modules" name="sidebar-left" style="html5" />
 						</div>
-						<div class="article small-12 medium-8 large-4 columns">
+						<div class="article small-12 medium-8 columns">
 							<jdoc:include type="component" />
 
-							<?php if ($this->countModules('under-content')): ?>
+							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
 						</div
 
-						<div id="sidebar-right" class="medium-4 large-3 columns">
+						<div id="sidebar-right" class="medium-4 columns">
 							<jdoc:include type="modules" name="sidebar-right" style="html5" />
 						</div>
-					<?php elseif ($this->countModules('sidebar-left')): ?>
-						<div id="sidebar-left" class="small-12 medium-4 large-3 columns">
+					<?php elseif ($this->countModules('sidebar-left', true)): ?>
+						<?php echo "hello there left!"; ?>
+						<div id="sidebar-left" class="small-12 medium-4 columns">
 							<jdoc:include type="modules" name="sidebar-left" style="html5" />
 						</div>
-						<div class="article small-12 medium-8 large-9 columns">
+						<div class="article small-12 medium-8 columns">
 							<jdoc:include type="component" />
 
-							<?php if ($this->countModules('under-content')): ?>
+							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
 						</div>
-					<?php elseif ($this->countModules('sidebar-right')): ?>
-						<div class="article small-12 medium-8 large-9 columns">
+					<?php elseif ($this->countModules('sidebar-right', true)): ?>
+						<div class="article small-12 medium-8 columns">
 							<jdoc:include type="component" />
 
-							<?php if ($this->countModules('under-content')): ?>
+							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
 						</div>
-						<div id="sidebar-right" class="small-12 text-center medium-4 medium-text-left large-3 columns">
+						<div id="sidebar-right" class="small-12 text-center medium-4 medium-text-left columns">
 							<jdoc:include type="modules" name="sidebar-right" style="html5" />
 						</div>
 					<?php else: ?>
 						<div class="article small-12 columns">
 							<jdoc:include type="component" />
 
-							<?php if ($this->countModules('under-content')): ?>
+							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="below-content" style="html5" />
 							<?php endif; ?>
 						</div>
@@ -203,7 +205,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 			<!--//main content-->
 
-			<?php if ($this->countModules('below-left') || $this->countModules('below-right')): ?>
+			<?php if ($this->countModules('below-left', true) || $this->countModules('below-right', true)): ?>
 				<div class="row hide-for-small modules-below double">
 					<div class="medium-8 columns below left">
 						<jdoc:include type="modules" name="below-left" style="html5" />
@@ -214,7 +216,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			<?php endif; ?>
 
-			<?php if ($this->countModules('below-content')): ?>
+			<?php if ($this->countModules('below-content', true)): ?>
 				<div class="modules-below">
 					<jdoc:include type="modules" name="below-left" style="html5" />
 				</div>
@@ -227,7 +229,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<div class="top">
 			<div class="row">
 				<div class="small-12 columns">
-					<?php if ($this->countModules('above-bottom')): ?>
+					<?php if ($this->countModules('above-bottom', true)): ?>
 						<jdoc:include type="modules" name="above-bottom" style="none" />
 					<?php endif; ?>
 				</div>
@@ -237,17 +239,17 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<div class="middle" data-equalizer data-equalize-on="medium">
 			<div class="row text-center medium-text-left">
 				<div class="hide-for-small medium-4 columns border" data-equalizer-watch>
-					<?php if ($this->countModules('bottom-left')): ?>
+					<?php if ($this->countModules('bottom-left', true)): ?>
 						<jdoc:include type="modules" name="bottom-left" style="html5" />
 					<?php endif; ?>
 				</div>
 				<div class="hide-for-small medium-4 columns border" data-equalizer-watch>
-					<?php if ($this->countModules('bottom-mid')): ?>
+					<?php if ($this->countModules('bottom-mid', true)): ?>
 						<jdoc:include type="modules" name="bottom-mid" style="html5" />
 					<?php endif; ?>
 				</div>
 				<div class="small-12 text-center medium-4 medium-text-left columns border" data-equalizer-watch>
-					<?php if ($this->countModules('bottom-right')): ?>
+					<?php if ($this->countModules('bottom-right', true)): ?>
 						<jdoc:include type="modules" name="bottom-right" style="html5" />
 					<?php endif; ?>
 				</div>
@@ -257,12 +259,12 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<div class="bottom">
 			<div class="row">
 				<div class="copyright small-12 small-text-center medium-6 medium-text-left columns">
-					<?php if ($this->countModules('footer-left')): ?>
+					<?php if ($this->countModules('footer-left', true)): ?>
 						<jdoc:include type="modules" name="footer-left" style="html5" />
 					<?php endif; ?>
 				</div>
 				<div class="small-12 small-text-center medium-6 medium-text-left columns">
-					<?php if ($this->countModules('footer-right')): ?>
+					<?php if ($this->countModules('footer-right', true)): ?>
 						<jdoc:include type="modules" name="footer-right" style="html5" />
 					<?php endif; ?>
 				</div>

@@ -7,14 +7,14 @@
  */
 
 // --- Dependencies ---
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/vendor/normalize';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/contain';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/vendor/normalize';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/contain';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
 
 // --- Settings ---
 // import your own `settings` here or
@@ -24,58 +24,58 @@
 
 // --- Components ---
 // Sass Utilities
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/util/_util';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/util/_util';
 // Global styles
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/global';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/forms/forms';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/typography/typography';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/global';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/forms/forms';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/typography/typography';
 
 // Grids
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/grid/grid';
-//@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/xy-grid/xy-grid';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/grid/grid';
+//@import '../../../Z:/apps/ProjectKR/node_modules/foundation-sites/scss/xy-grid/xy-grid';
 // Generic components
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/button';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/button-group';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/close-button';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/button';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/button-group';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/close-button';
 //@import 'components/label';
 //@import 'components/progress-bar';
 //@import 'components/slider';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/switch';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/table';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/switch';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/table';
 // Basic components
 //@import 'components/badge';
 //@import '../../../../../../node_modules/foundation-sites/scss/components/breadcrumbs';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/callout';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/card';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/dropdown';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/callout';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/card';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/dropdown';
 //@import 'pagination';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/tooltip';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/tooltip';
 
 // Containers
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/accordion';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/media-object';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/accordion';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/media-object';
 //@import 'components/orbit';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/responsive-embed';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/tabs';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/responsive-embed';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/tabs';
 //@import 'components/thumbnail';
 // Menu-based containers
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/menu';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/menu-icon';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/menu';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/menu-icon';
 //@import 'accordion-menu';
 //@import 'components/drilldown';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/dropdown-menu';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/dropdown-menu';
 
 // Layout components
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/off-canvas';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/reveal';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/sticky';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/title-bar';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/top-bar';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/off-canvas';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/reveal';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/sticky';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/title-bar';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/top-bar';
 
 // Helpers
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/float';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/flex';
-@import '../../../../../ProjectKR/node_modules/foundation-sites/scss/components/visibility';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/float';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/flex';
+@import 'Z:/apps/ProjectKR/node_modules/foundation-sites/scss/components/visibility';
 //@import 'prototype/prototype';
 @mixin foundation-everything(
 	$flex: false,
