@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" client="site">
-	<name>krtheme</name>
+	<name>krbstheme</name>
 	<version>4.0.0</version>
-	<creationDate>May 2022</creationDate>
+	<creationDate>March 2023</creationDate>
 	<author>Hazel Wilson</author>
 	<authorEmail>hazel@highlandvision.com</authorEmail>
 	<copyright>(C) 2023 Highland Vision</copyright>
-	<description>TPL_KRTHEME_XML_DESCRIPTION</description>
+	<description>TPL_KRBSTHEME_XML_DESCRIPTION</description>
 	<inheritable>1</inheritable>
 	<files>
 		<filename>component.php</filename>
@@ -19,7 +19,7 @@
 		<folder>html</folder>
 		<folder>language</folder>
 	</files>
-	<media destination="templates/site/krtheme" folder="media">
+	<media destination="templates/site/krbstheme" folder="media">
 		<folder>css</folder>
 		<folder>fonts</folder>
 		<folder>images</folder>
@@ -57,8 +57,8 @@
 			<fieldset name="advanced">
 				<field name="logo"
 					type="media"
-					label="TPL_KRTHEME_LOGO_LABEL"
-					description="TPL_KRTHEME_LOGO_DSC" />
+					label="TPL_KRBSTHEME_LOGO_LABEL"
+					description="TPL_KRBSTHEME_LOGO_DSC" />
 			</fieldset>
 		</fields>
 	</config>
