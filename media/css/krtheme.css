@@ -971,12 +971,10 @@ ul.pagination li.active a {
   padding: 1rem 0.5rem;
   height: 387px;
 }
-
 .kr-properties .items .thumb h2 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .kr-properties .items .thumb a img.thumbgrid {
   width: 100%;
 }

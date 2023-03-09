@@ -5,7 +5,7 @@
 	width: 100%;
 	margin-bottom: res.$global-padding;
 }
-// Search
+
 .datepicker-wrapper {
 	position: relative;
 	input[type="text"][readonly] {
@@ -35,7 +35,7 @@
 		display: none;
 	}
 }
-// Mailchimp
+
 #kr-form-mailchimp {
 	input[type="text"],
 	input[type="email"] {
@@ -64,7 +64,6 @@
 	}
 }
 
-// Typeahead
 #kr-autosearch-wrapper {
 	padding-top: 0.3rem;
 	position: relative;
@@ -131,7 +130,7 @@
 		}
 	}
 }
-//Spotlight
+
 .kr-spotlight .row .column {
 	position: relative;
 	@include mixin.breakpoint(medium) {
@@ -162,62 +161,62 @@
 			overflow: hidden;
 			font-size: 1.7rem;
 		}
-	}
-	p.center {
-		width: 76%;
-		left: 12%;
-		@include mixin.breakpoint(medium) {
+		.center {
 			width: 76%;
 			left: 12%;
-			top: 72%;
+			@include mixin.breakpoint(medium) {
+				width: 76%;
+				left: 12%;
+				top: 72%;
+			}
 		}
-	}
-	p.left {
-		width: 90%;
-		left: 5%;
-		text-align: center;
-		@include mixin.breakpoint(medium) {
-			text-align: left;
+		.left {
+			width: 90%;
+			left: 5%;
+			text-align: center;
+			@include mixin.breakpoint(medium) {
+				text-align: left;
+			}
 		}
-	}
-	p.withbg {
-		font-weight: 300;
-		opacity: 0.75;
-	}
-	p.top {
-		top: 1.5rem;
-	}
-	p.middle {
-		top: 30%;
-		@include mixin.breakpoint(medium) {
-			top: 40%;
+		.withbg {
+			font-weight: 300;
+			opacity: 0.75;
 		}
-		@include mixin.breakpoint(large) {
-			top: 45%;
+		.top {
+			top: 1.5rem;
 		}
-	}
-	p.bottom.withbg {
-		top: 75%;
-		@include mixin.breakpoint(medium) {
-			top: 65%;
+		.middle {
+			top: 30%;
+			@include mixin.breakpoint(medium) {
+				top: 40%;
+			}
+			@include mixin.breakpoint(large) {
+				top: 45%;
+			}
 		}
-		@include mixin.breakpoint(large) {
-			top: auto;
-			bottom: 10px;
-		}
-	}
-	p.bottom {
-		top: 70%;
-		@include mixin.breakpoint(medium) {
+		.bottom.withbg {
 			top: 75%;
+			@include mixin.breakpoint(medium) {
+				top: 65%;
+			}
+			@include mixin.breakpoint(large) {
+				top: auto;
+				bottom: 10px;
+			}
 		}
-		@include mixin.breakpoint(large) {
-			top: auto;
-			bottom: 10px;
+		.bottom {
+			top: 70%;
+			@include mixin.breakpoint(medium) {
+				top: 75%;
+			}
+			@include mixin.breakpoint(large) {
+				top: auto;
+				bottom: 10px;
+			}
 		}
 	}
 }
-// Featured and alternatives (arrows in slick)
+
 .kr-featured, .kr-alternatives {
 	a.property {
 		display: block;
@@ -277,6 +276,7 @@
 		}
 	}
 }
+
 #kr-alternatives.moduletable {
 	h3.h4 {
 		margin-bottom: 0.5rem;
@@ -347,7 +347,7 @@
 		}
 	}
 }
-// Search by feature
+
 ul#categories {
 	margin: 0;
 	padding: 0;
@@ -366,7 +366,7 @@ ul#categories {
 		}
 	}
 }
-//Destinations
+
 .kr-destinations {
 	&.tabs-content {
 		border: none;
