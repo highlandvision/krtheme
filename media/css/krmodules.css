@@ -6923,6 +6923,10 @@
   margin-bottom: 2rem;
 }
 
+.slickarrow {
+  color: #003c71;
+}
+
 i.slick-nav {
   cursor: pointer;
   opacity: 0.6;

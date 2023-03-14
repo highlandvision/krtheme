@@ -21,7 +21,6 @@
 	</files>
 	<media destination="templates/site/krbstheme" folder="media">
 		<folder>css</folder>
-		<folder>fonts</folder>
 		<folder>images</folder>
 		<folder>scss</folder>
 	</media>

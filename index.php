@@ -76,7 +76,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			</div>
 
-			<div id="header" class="show-for-large">
+			<div id="header" class="collapse show-for-large">
 				<div id="toprow" class="empty">
 				</div>
 				<div class="row expanded">
