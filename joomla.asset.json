@@ -42,7 +42,7 @@
         "template.krbstheme.foundation#style",
         "template.krbstheme.template#style",
         "template.krbstheme.krmodules#style",
-        "template.krbstheme.krbstheme#style"
+        "template.krbstheme.kr#style"
       ]
     }
   ]
