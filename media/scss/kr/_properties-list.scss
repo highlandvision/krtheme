@@ -29,14 +29,15 @@
 				display: flex;
 				flex: 1;
 				.button {
-					font-size: 1rem;
-					padding: 8px 0.5rem 7px;
+					font-size: 0.95rem;
+					padding: 0.5rem;
 					margin-top: auto;
 					margin-bottom: 0;
 					&.discounts-none {
 						display: block;
 						flex: 0 0 38px;
-						padding: 8px 0.5rem 8px;
+						font-size: 1rem;
+						padding: 0.5rem;
 						width: 38px;
 						:hover {
 							cursor: default !important;
@@ -56,26 +57,18 @@
 						color: res.$white;
 						display: block;
 						flex: 1 0 auto;
-						font-size: 15px;
-						padding-top: 8px;
-						padding-bottom: 9px;
+						font-size: 1rem;
+						padding-top: 0.5rem;
+						padding-bottom: 0.5rem;
 						text-align: left;
 						width: 100px;
-						@include mixin.breakpoint(medium) {
-							padding-top: 9px;
-							font-size: 14px;
-						}
-						@include mixin.breakpoint(large) {
-							padding-top: 8px;
-							font-size: 15px;
-						}
 					}
 					&.viewproperty {
 						border-left: 1px solid res.$white;
 						display: block;
 						flex: 0 0 9rem;
 						font-size: 1rem;
-						padding: 8px 0.3rem 8px 0;
+						padding: 0.5rem 0.3rem 0.5rem 0;
 						text-align: center;
 						i.fas {
 							color: res.$white;
@@ -93,7 +86,7 @@
 						width: auto;
 						min-width: 300px;
 						max-width: 350px;
-						font-size: 0.9rem;
+						font-size: 1rem;
 						padding: 0.5rem 1rem;
 						text-align: left;
 						line-height: 1.2;

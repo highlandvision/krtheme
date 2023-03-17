@@ -9,7 +9,7 @@
       "name": "template.krtheme.kr",
       "description": "CSS for KR theme.",
       "type": "style",
-      "uri": "krtheme.min.css"
+      "uri": "kr.min.css"
     },
     {
       "name": "template.krtheme.krmodules",
