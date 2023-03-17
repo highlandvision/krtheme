@@ -6923,6 +6923,10 @@
   margin-bottom: 2rem;
 }
 
+.slickarrow {
+  color: #003c71;
+}
+
 i.slick-nav {
   cursor: pointer;
   opacity: 0.6;
@@ -7235,71 +7239,69 @@ i.slick-nav:hover {
     font-size: 1.7rem;
   }
 }
-.kr-spotlight .row .column p .center {
+.kr-spotlight .row .column p.center {
   width: 76%;
   left: 12%;
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p .center {
-    width: 76%;
-    left: 12%;
+  .kr-spotlight .row .column p.center {
     top: 72%;
   }
 }
-.kr-spotlight .row .column p .left {
+.kr-spotlight .row .column p.left {
   width: 90%;
   left: 5%;
   text-align: center;
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p .left {
+  .kr-spotlight .row .column p.left {
     text-align: left;
   }
 }
-.kr-spotlight .row .column p .withbg {
+.kr-spotlight .row .column p.withbg {
   font-weight: 300;
   opacity: 0.75;
 }
-.kr-spotlight .row .column p .top {
+.kr-spotlight .row .column p.top {
   top: 1.5rem;
 }
-.kr-spotlight .row .column p .middle {
+.kr-spotlight .row .column p.middle {
   top: 30%;
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p .middle {
+  .kr-spotlight .row .column p.middle {
     top: 40%;
   }
 }
 @media print, screen and (min-width: 64em) {
-  .kr-spotlight .row .column p .middle {
+  .kr-spotlight .row .column p.middle {
     top: 45%;
   }
 }
-.kr-spotlight .row .column p .bottom.withbg {
+.kr-spotlight .row .column p.bottom.withbg {
   top: 75%;
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p .bottom.withbg {
+  .kr-spotlight .row .column p.bottom.withbg {
     top: 65%;
   }
 }
 @media print, screen and (min-width: 64em) {
-  .kr-spotlight .row .column p .bottom.withbg {
+  .kr-spotlight .row .column p.bottom.withbg {
     top: auto;
     bottom: 10px;
   }
 }
-.kr-spotlight .row .column p .bottom {
+.kr-spotlight .row .column p.bottom {
   top: 70%;
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p .bottom {
+  .kr-spotlight .row .column p.bottom {
     top: 75%;
   }
 }
 @media print, screen and (min-width: 64em) {
-  .kr-spotlight .row .column p .bottom {
+  .kr-spotlight .row .column p.bottom {
     top: auto;
     bottom: 10px;
   }
@@ -7365,7 +7367,7 @@ i.slick-nav:hover {
   color: #003c71;
 }
 
-#kr-alternatives.moduletable h3.h4 {
+#kr-alternatives.moduletable h3 {
   margin-bottom: 0.5rem;
   padding-bottom: 0 !important;
 }

@@ -161,58 +161,56 @@
 			overflow: hidden;
 			font-size: 1.7rem;
 		}
-		.center {
-			width: 76%;
-			left: 12%;
-			@include mixin.breakpoint(medium) {
-				width: 76%;
-				left: 12%;
-				top: 72%;
-			}
+	}
+	p.center {
+		width: 76%;
+		left: 12%;
+		@include mixin.breakpoint(medium) {
+			top: 72%;
 		}
-		.left {
-			width: 90%;
-			left: 5%;
-			text-align: center;
-			@include mixin.breakpoint(medium) {
-				text-align: left;
-			}
+	}
+	p.left {
+		width: 90%;
+		left: 5%;
+		text-align: center;
+		@include mixin.breakpoint(medium) {
+			text-align: left;
 		}
-		.withbg {
-			font-weight: 300;
-			opacity: 0.75;
+	}
+	p.withbg {
+		font-weight: 300;
+		opacity: 0.75;
+	}
+	p.top {
+		top: 1.5rem;
+	}
+	p.middle {
+		top: 30%;
+		@include mixin.breakpoint(medium) {
+			top: 40%;
 		}
-		.top {
-			top: 1.5rem;
+		@include mixin.breakpoint(large) {
+			top: 45%;
 		}
-		.middle {
-			top: 30%;
-			@include mixin.breakpoint(medium) {
-				top: 40%;
-			}
-			@include mixin.breakpoint(large) {
-				top: 45%;
-			}
+	}
+	p.bottom.withbg {
+		top: 75%;
+		@include mixin.breakpoint(medium) {
+			top: 65%;
 		}
-		.bottom.withbg {
+		@include mixin.breakpoint(large) {
+			top: auto;
+			bottom: 10px;
+		}
+	}
+	p.bottom {
+		top: 70%;
+		@include mixin.breakpoint(medium) {
 			top: 75%;
-			@include mixin.breakpoint(medium) {
-				top: 65%;
-			}
-			@include mixin.breakpoint(large) {
-				top: auto;
-				bottom: 10px;
-			}
 		}
-		.bottom {
-			top: 70%;
-			@include mixin.breakpoint(medium) {
-				top: 75%;
-			}
-			@include mixin.breakpoint(large) {
-				top: auto;
-				bottom: 10px;
-			}
+		@include mixin.breakpoint(large) {
+			top: auto;
+			bottom: 10px;
 		}
 	}
 }
@@ -278,7 +276,7 @@
 }
 
 #kr-alternatives.moduletable {
-	h3.h4 {
+	h3 {
 		margin-bottom: 0.5rem;
 		padding-bottom: 0 !important;
 	}

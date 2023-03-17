@@ -1,5 +1,6 @@
 @use '../resources/variables' as res;
 @use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
 #kr-property-slideshow,
 #kr-property-thumbs,
 .kr-featured,
@@ -15,6 +16,9 @@
 }
 .slideshow-wrapper {
 	margin-bottom: res.$global-margin;
+}
+.slickarrow {
+	color: res.$var-primary;
 }
 i.slick-nav {
 	cursor: pointer;

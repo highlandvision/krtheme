@@ -1,3 +1,6 @@
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
 /* Geriatric calendar */
 /* Legend */
 table.legend {
@@ -53,19 +56,19 @@ table.amonth {
 	tr {
 		padding: 0;
 		margin: 0;
-		background: #fefefe;
+		background: res.$white;
 	}
 	tr.monthrow th,
 	tr.daysrow th {
 		font-weight: 400;
 		background: #8a8a8a;
-		color: #fefefe;
+		color: res.$white;
 		padding: 0;
 		height: 16px;
 	}
 	tr.daysrow th {
 		background: #b0b0b0;
-		color: #fefefe;
+		color: res.$white;
 	}
 	tr td {
 		text-align: center;
@@ -81,14 +84,14 @@ table.amonth {
 		border-width: 10px;
 	}
 	tr td div.bgblank {
-		border-top-color: #fefefe;
-		border-left-color: #fefefe;
-		border-bottom-color: #fefefe;
+		border-top-color: res.$white;
+		border-left-color: res.$white;
+		border-bottom-color: res.$white;
 		border-right-width: 0;
 		border-bottom-width: 0;
 	}
 	tr td div.bgblank p.day {
-		color: #fefefe;
+		color: res.$white;
 	}
 	tr td div.bgtoday {
 		border-top-color: #cacaca;
