@@ -9,7 +9,7 @@
       "name": "template.krbstheme.krbstheme",
       "description": "CSS for KR theme.",
       "type": "style",
-      "uri": "krbstheme.min.css"
+      "uri": "kr.min.css"
     },
     {
       "name": "template.krbstheme.krmodules",
@@ -24,12 +24,6 @@
       "uri": "template.min.css"
     },
     {
-      "name": "template.krbstheme.foundation",
-      "description": "CSS for krbstheme foundation.",
-      "type": "style",
-      "uri": "foundation.min.css"
-    },
-    {
       "name": "fontawesome",
       "type": "style",
       "uri": "system/joomla-fontawesome.min.css"
@@ -39,7 +33,6 @@
       "type": "preset",
       "dependencies": [
         "fontawesome#style",
-        "template.krbstheme.foundation#style",
         "template.krbstheme.template#style",
         "template.krbstheme.krmodules#style",
         "template.krbstheme.kr#style"
