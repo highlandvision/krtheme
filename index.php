@@ -26,7 +26,7 @@ if ($menu->getActive() === $menu->getDefault())
 }
 
 $wa  = $this->getWebAssetManager();
-$wa->usePreset('template.krtheme.site');
+$wa->usePreset('template.krbstheme.site');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 ?>
 
