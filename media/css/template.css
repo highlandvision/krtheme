@@ -756,7 +756,7 @@ p.readmore a, a.readmore {
   margin-top: 3.5rem;
 }
 #main #sidebar-right .moduletable h3 {
-  padding-bottom: 1rem;
+  padding-bottom: 0;
 }
 #main #sidebar-right > div, #main #sidebar-left > div {
   margin-bottom: 2rem;

@@ -754,8 +754,8 @@ select[readonly] {
   display: block;
   flex: 0 0 9rem;
   font-size: 1rem;
-  padding: 0.5rem 0.3rem 0.5rem 0;
-  text-align: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  text-align: left;
 }
 .kr-property .list .relative-pricing .pricing .button.viewproperty i.fas, .kr-property .favs .relative-pricing .pricing .button.viewproperty i.fas {
   color: #fefefe;
