@@ -50,8 +50,8 @@ i.fas.fa-file-pdf {
   color: #ba0808;
 }
 
-.red, i.fas.red {
-  color: #cc0000;
+.red, i.fas.red, .error-message {
+  color: #cc0000 !important;
 }
 
 .whitebg {
@@ -385,6 +385,11 @@ img.responsive {
   font-weight: bold;
   text-align: center;
   width: 40px;
+}
+.input-number-group .input-number-decrement:disabled,
+.input-number-group .input-number-increment:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 .input-number-group .input-number-decrement {
   margin-right: 0.5rem;

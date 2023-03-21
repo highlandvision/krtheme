@@ -41,8 +41,8 @@ i.fas, i.fab {
 i.fas.fa-file-pdf {
 	color: #ba0808;
 }
-.red, i.fas.red {
-	color: #cc0000;
+.red, i.fas.red, .error-message {
+	color: #cc0000 !important;
 }
 .whitebg {
 	background: res.$white;
