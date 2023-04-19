@@ -18,8 +18,10 @@ use Joomla\Component\Users\Site\View\Login\HtmlView;
 
 /** @var HtmlView $cookieLogin */
 
-HTMLHelper::_('behavior.keepalive');
-HTMLHelper::_('behavior.formvalidator');
+/** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
+$wa = $this->document->getWebAssetManager();
+$wa->useScript('keepalive')
+    ->useScript('form.validate');
 
 $usersConfig = ComponentHelper::getParams('com_users');
 Factory::getLanguage()->load('com_knowres', JPATH_SITE . '/components/com_knowres');
