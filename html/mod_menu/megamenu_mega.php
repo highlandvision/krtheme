@@ -12,10 +12,10 @@ defined('_JEXEC') or die;
 
 use HighlandVision\KR\Framework\KrMethods;
 use HighlandVision\KR\Media;
-use HighlandVision\KR\Site;
+use HighlandVision\KR\SiteHelper;
 use Joomla\CMS\HTML\HTMLHelper;
 
-$Itemid   = Site::getComponentItemId('com_knowres', 'property');
+$Itemid   = SiteHelper::getItemId('com_knowres', 'property');
 $plink    = KrMethods::route('index.php?option=com_knowres&view=property&Itemid=' . $Itemid . '&id='
 	. (int) $property_id);
 $image    = Media\Images::getPropertyImageName($property_id);
