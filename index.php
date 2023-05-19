@@ -25,6 +25,8 @@ if ($menu->getActive() === $menu->getDefault())
 	$home = true;
 }
 
+$this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+
 $wa  = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
