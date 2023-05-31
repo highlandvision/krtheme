@@ -696,7 +696,12 @@ select[readonly] {
 .kr-property .list h2, .kr-property .favs h2 {
   color: #003c71;
   margin-bottom: 5px;
-  padding-top: 0.2rem;
+  padding-top: 1rem;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-property .list h2, .kr-property .favs h2 {
+    padding-top: 0.2rem;
+  }
 }
 @media print, screen and (min-width: 40em) {
   .kr-property .list .top-section, .kr-property .favs .top-section {
@@ -708,6 +713,13 @@ select[readonly] {
 }
 .kr-property .list .button.expanded, .kr-property .favs .button.expanded {
   margin-bottom: 0;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-property .list .relative-pricing, .kr-property .favs .relative-pricing {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+  }
 }
 .kr-property .list .relative-pricing .pricing, .kr-property .favs .relative-pricing .pricing {
   display: flex;

@@ -113,11 +113,6 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				<div class="show-for-large">
 					<jdoc:include type="modules" name="hero-slider" style="html5" />
 				</div>
-				<?php if ($this->countModules('hero-spot', true)): ?>
-					<div class="spot">
-						<jdoc:include type="modules" name="hero-spot" style="html5" />
-					</div>
-				<?php endif; ?>
 				<?php if ($this->countModules('hero-search', true)): ?>
 					<div class="search">
 						<jdoc:include type="modules" name="hero-search" style="html5" />

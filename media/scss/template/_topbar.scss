@@ -47,37 +47,40 @@
 				}
 			}
 		}
-		ul.dropdown.menu {
-			align-items: center;
-			justify-content: center;
-			> li {
-				border-right: 10px solid transparent;
-			}
-			li a {
-				height: 50px;
-				color: res.$white;
-			}
-			li.current a,
-			li.current a:hover,
-			li:hover a,
-			li.is-active a {
-				background-color: res.$var-hover;
-			}
-			ul.menu {
-				li {
-					padding-top: 0;
-					padding-bottom: 0;
-					width: 198px;
-					&:hover {
-						background: res.$var-primary;
-						border-left: 8px solid res.$var-hover;
-					}
-					a {
-						line-height: 1px;
-						height: 35px;
+		.top-bar-center {
+			flex-grow: 1;
+			ul.dropdown.menu {
+				align-items: center;
+				justify-content: center;
+				> li {
+					border-right: 10px solid transparent;
+				}
+				li a {
+					height: 50px;
+					color: res.$white;
+				}
+				li.current a,
+				li.current a:hover,
+				li:hover a,
+				li.is-active a {
+					background-color: res.$var-hover;
+				}
+				ul.menu {
+					li {
+						padding-top: 0;
+						padding-bottom: 0;
+						width: 198px;
 						&:hover {
 							background: res.$var-primary;
-							padding-left: 9px;
+							border-left: 8px solid res.$var-hover;
+						}
+						a {
+							line-height: 1px;
+							height: 35px;
+							&:hover {
+								background: res.$var-primary;
+								padding-left: 9px;
+							}
 						}
 					}
 				}
@@ -89,7 +92,7 @@
 					width: 198px;
 					padding-right: 0;
 					font-size: 0.9rem;
-					background: res.$var-primary;
+					background: res.$var-hover;
 				}
 			}
 		}
@@ -126,6 +129,7 @@ ul.offcanvas {
 		}
 	}
 }
+// Offcanvas vertical
 ul#offcanvas.nav.menu.vertical {
 	background: res.$var-primary;
 	li a {

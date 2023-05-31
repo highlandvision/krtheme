@@ -687,11 +687,13 @@ p.readmore a, a.readmore {
 }
 #hero.home i.slick-nav {
   height: auto;
+  background: #fefefe;
+  color: #003c71;
 }
 @media print, screen and (min-width: 64em) {
   #hero.home i.slick-nav {
-    padding: 2.4rem 0.8rem;
-    top: 45%;
+    padding: 2rem 0.6rem;
+    top: 40%;
   }
 }
 #hero.home .search {
@@ -719,13 +721,13 @@ p.readmore a, a.readmore {
 @media print, screen and (min-width: 64em) {
   #hero.home .search {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
-    padding: 1.2rem;
+    padding: 0.8rem;
     margin: 0 0 0 -480px;
     max-width: 960px;
     width: 100%;
-    height: 75px;
+    height: 63px;
   }
 }
 #hero.home .search .moduletable {
@@ -968,49 +970,52 @@ header,
 #header #bottomrow .top-bar-left .logo-image a img.logo {
   overflow: visible;
 }
-#header #bottomrow ul.dropdown.menu {
+#header #bottomrow .top-bar-center {
+  flex-grow: 1;
+}
+#header #bottomrow .top-bar-center ul.dropdown.menu {
   align-items: center;
   justify-content: center;
 }
-#header #bottomrow ul.dropdown.menu > li {
+#header #bottomrow .top-bar-center ul.dropdown.menu > li {
   border-right: 10px solid transparent;
 }
-#header #bottomrow ul.dropdown.menu li a {
+#header #bottomrow .top-bar-center ul.dropdown.menu li a {
   height: 50px;
   color: #fefefe;
 }
-#header #bottomrow ul.dropdown.menu li.current a,
-#header #bottomrow ul.dropdown.menu li.current a:hover,
-#header #bottomrow ul.dropdown.menu li:hover a,
-#header #bottomrow ul.dropdown.menu li.is-active a {
+#header #bottomrow .top-bar-center ul.dropdown.menu li.current a,
+#header #bottomrow .top-bar-center ul.dropdown.menu li.current a:hover,
+#header #bottomrow .top-bar-center ul.dropdown.menu li:hover a,
+#header #bottomrow .top-bar-center ul.dropdown.menu li.is-active a {
   background-color: #005199;
 }
-#header #bottomrow ul.dropdown.menu ul.menu li {
+#header #bottomrow .top-bar-center ul.dropdown.menu ul.menu li {
   padding-top: 0;
   padding-bottom: 0;
   width: 198px;
 }
-#header #bottomrow ul.dropdown.menu ul.menu li:hover {
+#header #bottomrow .top-bar-center ul.dropdown.menu ul.menu li:hover {
   background: #003c71;
   border-left: 8px solid #005199;
 }
-#header #bottomrow ul.dropdown.menu ul.menu li a {
+#header #bottomrow .top-bar-center ul.dropdown.menu ul.menu li a {
   line-height: 1px;
   height: 35px;
 }
-#header #bottomrow ul.dropdown.menu ul.menu li a:hover {
+#header #bottomrow .top-bar-center ul.dropdown.menu ul.menu li a:hover {
   background: #003c71;
   padding-left: 9px;
 }
-#header #bottomrow ul.dropdown.menu ul.megamenu.is-dropdown-submenu {
+#header #bottomrow .top-bar-center ul.megamenu.is-dropdown-submenu {
   width: 398px;
 }
-#header #bottomrow ul.dropdown.menu ul.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item {
+#header #bottomrow .top-bar-center ul.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item {
   float: left;
   width: 198px;
   padding-right: 0;
   font-size: 0.9rem;
-  background: #003c71;
+  background: #005199;
 }
 #header #bottomrow .top-bar-right {
   max-width: 320px;
