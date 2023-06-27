@@ -1,5 +1,5 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 #footer {
 	position: relative;
@@ -7,13 +7,22 @@
 	.top {
 		position: relative;
 		padding: 1.5rem 0 0;
-		background: res.$var-footer-bg-top;
+		background: var(--krtheme-footer-bg-top);
 	}
 	.moduletable {
 		margin-bottom: 0.5rem;
 	}
+	i {
+		color: var(--krtheme-accent);
+	}
+	a i {
+		color: res.$white;
+		&:hover {
+			color: var(--krtheme-footer-link-hover);
+		}
+	}
 	.middle {
-		background: res.$var-footer-bg;
+		background: var(--krtheme-footer-bg);
 		position: relative;
 		padding: res.$global-padding 0 1rem;
 		color: res.$white;
@@ -21,32 +30,28 @@
 			text-align: left;
 		}
 		h3 {
-			color: res.$var-footer-bg-top;
-			font-size: 1rem;
-			font-weight: bold;
+			color: var(--krtheme-footer-bg-top);
 			margin-bottom: 0.5rem;
 		}
-		i {
-			color: res.$medium_gray;
-		}
 		a {
-			color: res.$white;
+			color: var(--krtheme-footer-link);
 			&:hover {
-				color: res.$medium_gray;
+				color: var(--krtheme-footer-link-hover);
 			}
 		}
 		.columns.border {
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			//border-left: 1px solid res.$medium_gray;
 			.moduletable {
 				&:nth-last-child(n+2) ~ div:last-child {
 					margin-top: auto;
 				}
 			}
 			@include mixin.breakpoint(medium) {
-				border-left: 1px solid res.$medium_gray;
+				:not(:first-child) {
+					border-left: 1px solid res.$medium_gray;
+				}
 			}
 		}
 		.row {
@@ -75,9 +80,17 @@
 					padding-top: 0;
 					padding-bottom: 0;
 					&:hover {
-						color: res.$medium-gray;
+						color: var(--krtheme-footer-link-hover);
 					}
 				}
+			}
+		}
+		i.fab {
+			&.fa-cc-visa,
+			&.fa-cc-amex,
+			&.fa-cc-paypal,
+			&.fa-cc-mastercard {
+				font-size: 2rem;
 			}
 		}
 	}
@@ -91,9 +104,9 @@
 		}
 		div.copyright {
 			color: res.$dark-gray;
-			text-align: center;
-			@include mixin.breakpoint(medium) {
-				text-align: left;
+			margin-bottom: 0.5rem;
+			@include mixin.breakpoint(large) {
+				margin-bottom: 0;
 			}
 		}
 		ul {
@@ -101,10 +114,6 @@
 				color: res.$white;
 			}
 			list-style: none;
-			text-align: center;
-			@include mixin.breakpoint(medium) {
-				text-align: right;
-			}
 			li {
 				display: block;
 				@include mixin.breakpoint(medium) {

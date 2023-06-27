@@ -1,4 +1,4 @@
-@use '../resources/variables' as res;
+@use '../resources/resources' as res;
 
 .kr-property {
 	.image-wrapper {
@@ -40,7 +40,7 @@
 			}
 		}
 		.favicon-top.in {
-			color: res.$var-favorite;
+			color: var(--krtheme-favorite);
 		}
 	}
 }

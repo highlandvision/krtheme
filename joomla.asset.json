@@ -19,7 +19,7 @@
     },
     {
       "name": "template.krtheme.template",
-      "description": "CSS for krbstheme template.",
+      "description": "CSS for krtheme template.",
       "type": "style",
       "uri": "template.min.css"
     },

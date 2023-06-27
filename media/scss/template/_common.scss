@@ -1,8 +1,7 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 *, *:before, *:after {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .lowercase {
@@ -174,7 +173,7 @@ input[type="number"], .input-tiny {
 	display: none !important;
 }
 #errorModal {
-	background-color: scale-color(res.$var-red, $lightness: 90%);
+	background-color: scale-color(res.$krtheme-red, $lightness: 90%);
 }
 ul.tabs {
 	border: none;
@@ -184,9 +183,9 @@ ul.tabs {
 		flex-grow: 1;
 		min-height: 0;
 		text-align: center;
-		border-right: 4px solid res.$var-body-bg;
+		border-right: 4px solid var(--krtheme-body-bg);
 		@include mixin.breakpoint(medium) {
-			border-right: 6px solid res.$var-body-bg;
+			border-right: 6px solid var(--krtheme-body-bg);
 		}
 		&:last-child {
 			border-right: none;
@@ -202,7 +201,7 @@ ul.tabs {
 		padding: 1.5rem;
 	}
 	&.standout {
-		border: 1px solid res.$var-primary;
+		border: 1px solid var(--krtheme-primary);
 	}
 }
 ul.download {
@@ -263,20 +262,20 @@ $input-number-size: 80px;
 	.input-number-decrement,
 	.input-number-increment {
 		border: 1px solid res.$medium-gray;
-		height: $input-number-size/2;
+		height: calc($input-number-size / 2);
 		user-select: none;
 	}
 	.input-number-decrement,
 	.input-number-increment {
 		background: res.$white;
-		border: 1px solid res.$var-primary;
-		color: res.$var-primary;
+		border: 1px solid var(--krtheme-primary);
+		color: var(--krtheme-primary);
 		cursor: pointer;
 		display: inline-block;
 		font-size: 2rem;
 		font-weight: bold;
 		text-align: center;
-		width: $input-number-size/2;
+		width: calc($input-number-size / 2);
 		&:disabled {
 			opacity: 0.3;
 			cursor: default;
@@ -289,19 +288,12 @@ $input-number-size: 80px;
 		margin-left: 0.5rem;
 	}
 }
-i.fab {
-	&.fa-cc-visa,
-	&.fa-cc-amex,
-	&.fa-cc-mastercard {
-		font-size: 2.8rem;
-	}
-}
 .osmap-items {
 	font-size: 94%;
 	h2 {
 		font-size: 1.1rem !important;
 		margin-bottom: 0.3rem;
-		color: res.$var-secondary;
+		color: var(--krtheme-secondary);
 	}
 	ul.level_1 {
 		flex-wrap: wrap;

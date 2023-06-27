@@ -1,12 +1,6 @@
-@use '../resources/_custom-variables' as res;
+@import '../../../../../node_modules/foundation-sites/scss/components/callout';
+@import '../resources/_template-variables';
 
-.callout.dark {
-	@include callout-style(
-			$color: res.$var-callout-dark
-	);
-}
 .callout.formbg {
-	@include callout-style(
-			$color: res.$var-callout-form
-	);
+	@include callout-style(scale-color($krtheme-primary, $lightness: 60%));
 }

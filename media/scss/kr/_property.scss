@@ -1,5 +1,5 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-property {
 	position: relative;
@@ -23,7 +23,7 @@
 		}
 	}
 	.property-summary {
-		background: res.$var-accent;
+		background: var(--krtheme-accent);
 		color: res.$white;
 		padding: 0.75rem;
 		max-width: 300px;
@@ -47,7 +47,7 @@
 		padding: 0 0 .2rem;
 		margin-bottom: res.$global-margin;
 		i {
-			color: res.$var-secondary;
+			color: var(--krtheme-secondary);
 			opacity: .6;
 			font-size: 90%;
 		}
@@ -58,7 +58,7 @@
 		h5 {
 			text-align: center;
 			margin-bottom: 0.3rem;
-			color: res.$var-primary;
+			color: var(--krtheme-primary);
 		}
 		.abed {
 			text-align: center;
@@ -85,7 +85,7 @@
 			display: block;
 		}
 		span {
-			color: res.$var-secondary;
+			color: var(--krtheme-secondary);
 			position: absolute;
 			top: 0;
 			left: 0;
