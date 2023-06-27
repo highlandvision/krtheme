@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .kr-properties {
 	ul.menu.icons {
@@ -7,21 +7,21 @@
 		margin-left: 0;
 		width: 100%;
 		&.menu .is-active > a {
-			background: res.$var-secondary !important;
+			background: var(--krtheme-secondary) !important;
 		}
 		li {
 			border-right: 1px solid res.$white;
-			background: res.$var-primary;
+			background: var(--krtheme-primary);
 			cursor: pointer;
 			text-align: center;
 			&:last-child {
 				border-right: none;
 			}
 			&:hover {
-				background: res.$var-accent;
+				background: var(--krtheme-accent);
 			}
 			&.is-active {
-				background: res.$var-accent !important;
+				background: var(--krtheme-accent) !important;
 				cursor: default;
 			}
 			a.item {
@@ -36,7 +36,7 @@
 				padding-top: 0.5rem;
 				text-align: center;
 				span {
-					font-family: res.$var-font-family;
+					font-family: var(--krtheme-body-font-family);
 					font-weight: normal;
 					margin: 0 auto;
 					text-align: center;
@@ -67,7 +67,7 @@
 	.kr-filters.top {
 		width: 100%;
 		justify-content: flex-start;
-		background: res.$var-primary;
+		background: var(--krtheme-primary);
 		color: res.$white;
 		padding: 0.5rem;
 		margin-top: 2px;
@@ -102,10 +102,10 @@
 		}
 		.kr-filters-reset {
 			margin-bottom: 0;
-			color: res.$var-primary;
+			color: var(--krtheme-primary);
 			padding: 0.5rem 0 0 0;
 			i {
-				color: res.$var-primary;
+				color: var(--krtheme-primary);
 			}
 		}
 		ul.filter-sort-list {
@@ -118,7 +118,7 @@
 				margin-top: 0;
 			}
 			input[type="checkbox"].checkover + label.checklabel:before {
-				color: res.$var-primary;
+				color: var(--krtheme-primary);
 				vertical-align: bottom;
 			}
 			li {
@@ -154,7 +154,7 @@
 				label.disabled {
 					opacity: 0.5;
 					&:hover {
-						color: res.$var-body-font-color !important;
+						color: var(--krtheme-body-font-color) !important;
 					}
 				}
 			}
@@ -163,7 +163,7 @@
 	.kr-mobilebar {
 		margin-bottom: 1rem;
 		li {
-			background: res.$var-primary;
+			background: var(--krtheme-primary);
 		}
 		button {
 			padding: 1rem 0.5rem;
@@ -185,7 +185,7 @@
 }
 #kr-properties-filters-off-canvas,
 #kr-properties-sortby-off-canvas {
-	background: res.$var-primary;
+	background: var(--krtheme-primary);
 	.actions {
 		line-height: 1.6rem;
 		padding: 0.3rem 0.5rem;

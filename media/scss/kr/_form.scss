@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 form {
 	&.formbg {
@@ -9,7 +9,7 @@ form {
 	.fieldset legend {
 		font-size: 1.2rem;
 		padding: 0 0.3rem 0.3rem;
-		color: res.$var-primary;
+		color: var(--krtheme-primary);
 	}
 	.callout {
 		padding: 1rem;
@@ -62,7 +62,7 @@ form {
 		cursor: pointer;
 		margin-left: 0;
 		margin-right: 0;
-		color: res.$var-primary;
+		color: var(--krtheme-primary);
 	}
 	input[type="radio"].radioover.gateway + label.radiolabel {
 		font-size: 1rem;
@@ -77,7 +77,7 @@ form {
 		font-weight: 900;
 		font-size: 1rem;
 		padding-right: 5px;
-		color: res.$var-primary;
+		color: var(--krtheme-primary);
 	}
 	input[type="checkbox"].checkover + label.checklabel:before {
 		content: "\f0c8";
@@ -105,7 +105,7 @@ button i.fas, button i.fab {
 	color: res.$white;
 }
 .callout.small.form {
-	background: res.$var-callout;
+	background: var(--krtheme-callout);
 }
 .accordion-title::before {
 	top: 45%;

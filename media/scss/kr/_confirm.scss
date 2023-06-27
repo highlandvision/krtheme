@@ -28,7 +28,7 @@
 #kr-totals {
 	margin: 0 0 2rem;
 	padding: 1rem 0.5rem;
-	background: res.$var-primary;
+	background: var(--krtheme-primary);
 	text-align: center;
 	color: res.$white;
 	@include mixin.breakpoint(large) {
@@ -39,7 +39,7 @@
 	}
 	.hilite-total {
 		font-size: 2rem;
-		color: res.$var-secondary;
+		color: var(--krtheme-secondary);
 	}
 	.total-summary {
 		font-size: 0.9rem;
@@ -56,17 +56,17 @@
 			margin-top: 0.5rem;
 		}
 		#deposit {
-			color: res.$var-secondary;
+			color: var(--krtheme-secondary);
 			font-size: 1.8rem;
 		}
 		#balance {
-			color: res.$var-secondary;
+			color: var(--krtheme-secondary);
 			font-size: 1.6rem;
 			margin-bottom: 0.5rem;
 		}
 		.security {
 			padding-bottom: 0.3rem;
-			color: res.$var-secondary;
+			color: var(--krtheme-secondary);
 		}
 	}
 }
@@ -74,8 +74,8 @@
 #kr-guest-totals {
 	padding: 1rem 0.5rem;
 	font-size: 0.9rem;
-	background: res.$var-body-bg;
-	color: res.$var-body-font-color;
+	background: res.$krtheme-body-bg;
+	color: var(--krtheme-body-font-color);
 	line-height: 1.7;
 	margin-bottom: 0.5rem;
 }
@@ -101,7 +101,7 @@
 			}
 			span.paynow {
 				font-size: 1.8rem;
-				color: res.$var-accent;
+				color: var(--krtheme-accent);
 			}
 			span.accent {
 				color: res.$black;
@@ -140,7 +140,7 @@
 	box-shadow: 0 1px 3px 0 res.$medium-gray;
 }
 .StripeElement--invalid {
-	border-color: res.$var-accent;
+	border-color: var(--krtheme-accent);
 }
 .StripeElement--webkit-autofill {
 	background-color: res.$white !important;

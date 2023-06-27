@@ -62,17 +62,17 @@
 
 //@import "foundation-settings";
 @use 'custom-variables' as kr;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: mixin.rem-calc(1280);
-$global-lineheight: kr.$var-line-height;
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$global-width: mixin.rem-calc(var(--krtheme-width));
+$global-lineheight: 1.5;
+$light-gray: hsl(0, 0%, 90%);
+$medium-gray: hsl(0, 0%, 79%);
+$dark-gray: hsl(0, 0%, 54%);
 $foundation-palette: (
 		primary: kr.$var-primary,
 		secondary: kr.$var-secondary,
@@ -148,50 +148,50 @@ $header-font-family: kr.$var-header-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: kr.$var-header-font-color;
-$header-lineheight: kr.$var-line-height-header;
+$header-color: var(--krtheme-headings-font-color);
+$header-lineheight: 1.3;
 $header-margin-bottom: 1rem;
 $header-styles: (
 		small: (
-				'h1': ('font-size': 24),
-				'h2': ('font-size': 20),
-				'h3': ('font-size': 19),
-				'h4': ('font-size': 18),
-				'h5': ('font-size': 17),
-				'h6': ('font-size': 16),
+				'h1': ('fs': 24),
+				'h2': ('fs': 20),
+				'h3': ('fs': 19),
+				'h4': ('fs': 18),
+				'h5': ('fs': 17),
+				'h6': ('fs': 16),
 		),
 		medium: (
-				'h1': ('font-size': kr.$var-medium-h1-font-size),
-				'h2': ('font-size': kr.$var-medium-h2-font-size),
-				'h3': ('font-size': kr.$var-medium-h3-font-size),
-				'h4': ('font-size': kr.$var-medium-h4-font-size),
-				'h5': ('font-size': kr.$var-medium-h5-font-size),
-				'h6': ('font-size': 16),
+				'h1': ('fs': var(--krtheme-medium-h1-font-size)),
+				'h2': ('fs': var(--krtheme-medium-h2-font-size)),
+				'h3': ('fs': var(--krtheme-medium-h3-font-size)),
+				'h4': ('fs': var(--krtheme-medium-h4-font-size)),
+				'h5': ('fs': var(--krtheme-medium-h5-font-size)),
+				'h6': ('fs': 16),
 		),
 		large: (
-				'h1': ('font-size': kr.$var-large-h1-font-size),
-				'h2': ('font-size': kr.$var-large-h2-font-size),
-				'h3': ('font-size': kr.$var-large-h3-font-size),
-				'h4': ('font-size': kr.$var-large-h4-font-size),
-				'h5': ('font-size': kr.$var-large-h5-font-size),
-				'h6': ('font-size': 16),
-		)
+				'h1': ('fs': var(--krtheme-large-h1-font-size)),
+				'h2': ('fs': var(--krtheme-large-h2-font-size)),
+				'h3': ('fs': var(--krtheme-large-h3-font-size)),
+				'h4': ('fs': var(--krtheme-large-h4-font-size)),
+				'h5': ('fs': var(--krtheme-large-h5-font-size)),
+				'h6': ('fs': 16),
+				)
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: var(--krtheme-small-font-size);
 $header-small-font-color: $dark-gray;
-$paragraph-lineheight: kr.$var-line-height;
+$paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
-$anchor-color: kr.$var-primary;
+$anchor-color: hsl(0, 0%, 20%);
 $anchor-color-hover: scale-color($anchor-color, $lightness: 30%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: mixin.rem-calc(20) auto;
-$list-lineheight: $paragraph-lineheight;
+$list-lineheight: 1.5;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
@@ -253,7 +253,7 @@ $accordion-plusminus: true;
 $accordion-plus-content: '\002B';
 $accordion-minus-content: '\2013';
 $accordion-title-font-size: mixin.rem-calc(16);
-$accordion-item-color: kr.$var-primary;
+$accordion-item-color: custom.$krtheme-primary;
 $accordion-item-background-hover: $light-gray;
 $accordion-item-padding: 1rem 1rem;
 $accordion-content-background: $white;
@@ -268,7 +268,7 @@ $accordionmenu-padding: $global-menu-padding;
 $accordionmenu-nested-margin: $global-menu-nested-margin;
 $accordionmenu-submenu-padding: $accordionmenu-padding;
 $accordionmenu-arrows: true;
-$accordionmenu-arrow-color: kr.$var-primary;
+$accordionmenu-arrow-color: custom.$krtheme-primary;
 $accordionmenu-item-background: null;
 $accordionmenu-border: null;
 $accordionmenu-submenu-toggle-background: null;
@@ -280,7 +280,7 @@ $accordionmenu-arrow-size: 6px;
 // 9. Badge
 // --------
 
-$badge-background: kr.$var-primary;
+$badge-background: custom.$krtheme-primary;
 $badge-color: $white;
 $badge-color-alt: $black;
 $badge-palette: $foundation-palette;
@@ -293,8 +293,8 @@ $badge-font-size: 0.6rem;
 
 //$breadcrumbs-margin: 0 0 $global-margin 0;
 //$breadcrumbs-item-font-size: mixin.rem-calc(13);
-//$breadcrumbs-item-color: kr.$var-primary;
-//$breadcrumbs-item-color-current: kr.$var-body-font-color;
+//$breadcrumbs-item-color: kr.$krtheme-primary;
+//$breadcrumbs-item-color-current: kr.$krtheme-body-font-color;
 //$breadcrumbs-item-color-disabled: $medium-gray;
 //$breadcrumbs-item-margin: 0.5rem;
 //$breadcrumbs-item-uppercase: false;
@@ -308,11 +308,11 @@ $badge-font-size: 0.6rem;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 0.5rem 1rem;
+$button-padding: 0.6rem 1rem;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: kr.$var_button_background;
-$button-background-hover: scale-color($button-background, $lightness: 15%);
+$button-background: custom.$krtheme-button-bg;
+$button-background-hover: var(--krtheme-button-bg-hover);
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
@@ -346,7 +346,7 @@ $buttongroup-radius-on-each: true;
 $callout-background: $white;
 //$callout-background-fade: 85%;
 $callout-background-fade: 92%;
-//$callout-border: 1px solid kr.$var-neutral;
+//$callout-border: 1px solid kr.$krtheme-neutral;
 $callout-border: 1px solid darken($callout-background, 30%);
 $callout-margin: 0 0 1.5rem 0;
 $callout-sizes: (
@@ -405,7 +405,7 @@ $drilldown-nested-margin: 0;
 $drilldown-background: $white;
 $drilldown-submenu-padding: $drilldown-padding;
 $drilldown-submenu-background: $white;
-$drilldown-arrow-color: kr.$var-primary;
+$drilldown-arrow-color: custom.$krtheme-primary;
 $drilldown-arrow-size: 6px;
 
 // 17. Dropdown
@@ -431,14 +431,15 @@ $dropdownmenu-arrow-color: $white;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: kr.$var-primary;
-$dropdownmenu-submenu-background: kr.$var-primary;
+$dropdownmenu-background: var(--krtheme-topbar-bg);
+$dropdownmenu-submenu-background: var(--krtheme-topbar-bg);
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid transparent;
-$dropdown-menu-item-color-active: kr.$var-hover;
-$dropdown-menu-item-background-active: kr.$var-hover;
+//$dropdownmenu-border: 1px solid transparent;
+$dropdownmenu-border: none;
+$dropdown-menu-item-color-active: var(--krtheme-topbar-link-active);
+$dropdown-menu-item-background-active: var(--krtheme-topbar-bg-active);
 
 // 19. Flexbox Utilities
 // ---------------------
@@ -461,19 +462,19 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: kr.$var-body-font-color;
+$form-label-color: var(--krtheme-body-font-color);
 $form-label-font-size: mixin.rem-calc(15);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: kr.$var-primary;
+$select-triangle-color: hsl(0, 0%, 40%);
 $select-radius: $global-radius;
 $input-color: $body-font-color;
 $input-placeholder-color: $dark-gray;
 $input-font-family: inherit;
 $input-font-size: mixin.rem-calc(16);
 $input-font-weight: $global-weight-normal;
-$input-line-height: $global-lineheight;
+$input-line-height: 1.5;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
@@ -491,7 +492,7 @@ $form-button-radius: $global-radius;
 // 21. Label
 // ---------
 
-$label-background: kr.$var-primary;
+$label-background: custom.$krtheme-primary;
 $label-color: $white;
 $label-color-alt: $black;
 $label-palette: $foundation-palette;
@@ -515,7 +516,7 @@ $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
 $menu-item-color-alt-active: $black;
-$menu-item-background-active: kr.$var-accent;
+$menu-item-background-active: custom.$krtheme-accent;
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
@@ -540,7 +541,7 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
 		small: 250px,
 );
-$offcanvas-background: kr.$var-primary;
+$offcanvas-background: custom.$krtheme-primary;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
@@ -579,7 +580,7 @@ $pagination-item-padding: mixin.rem-calc(3 10);
 $pagination-item-spacing: mixin.rem-calc(1);
 $pagination-radius: $global-radius;
 $pagination-item-background-hover: $light-gray;
-$pagination-item-background-current: kr.$var-primary;
+$pagination-item-background-current: custom.$krtheme-primary;
 $pagination-item-color-current: $white;
 $pagination-item-color-disabled: $medium-gray;
 $pagination-ellipsis-color: $black;
@@ -595,7 +596,7 @@ $pagination-arrow-next: '\00BB';
 $progress-height: 1rem;
 $progress-background: $medium-gray;
 $progress-margin-bottom: $global-margin;
-$progress-meter-background: kr.$var-primary;
+$progress-meter-background: var(--krtheme-primary);
 $progress-radius: $global-radius;
 
 // 29. Prototype Arrow
@@ -702,7 +703,7 @@ $prototype-separator-breakpoints: $global-prototype-breakpoints;
 $prototype-separator-align: center;
 $prototype-separator-height: mixin.rem-calc(2);
 $prototype-separator-width: 3rem;
-$prototype-separator-background: kr.$var-primary;
+$prototype-separator-background: custom.$krtheme-primary;
 $prototype-separator-margin-top: $global-margin;
 
 // 40. Prototype Shadow
@@ -770,11 +771,11 @@ $responsive-embed-ratios: (
 // 47. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: lighten(custom.$krtheme-primary, 73%);
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
-$reveal-border: 1px solid kr.$var-primary;
+$reveal-border: 1px solid custom.$krtheme-primary;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
@@ -789,7 +790,7 @@ $slider-background: $light-gray;
 $slider-fill-background: $medium-gray;
 $slider-handle-height: 1.4rem;
 $slider-handle-width: 1.4rem;
-$slider-handle-background: kr.$var-primary;
+$slider-handle-background: custom.$krtheme-primary;
 $slider-opacity-disabled: 0.25;
 $slider-radius: $global-radius;
 
@@ -797,7 +798,7 @@ $slider-radius: $global-radius;
 // ----------
 
 $switch-background: $medium-gray;
-$switch-background-active: kr.$var-primary;
+$switch-background-active: var(--krtheme-primary);
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
@@ -838,9 +839,9 @@ $table-stack-breakpoint: medium;
 
 $tab-margin: 0;
 $tab-background: $light-gray;
-$tab-color: kr.$var-primary;
+$tab-color: custom.$krtheme-primary;
 $tab-background-active: $medium-gray;
-$tab-active-color: kr.$var-primary;;
+$tab-active-color: var(--krtheme-primary);
 $tab-item-font-size: mixin.rem-calc(16);
 $tab-item-background-hover: $medium-gray;
 $tab-item-padding: 1rem 0;
@@ -855,14 +856,14 @@ $tab-content-padding: 1.5rem 0.5rem;
 $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba(kr.$var-primary, 0.5);
+$thumbnail-shadow-hover: 0 0 6px 1px hsla(0, 0%, 40%, 50%);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
 // 53. Title Bar
 // -------------
 
-$titlebar-background: kr.$var-primary;
+$titlebar-background: var(--krtheme-primary);
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -889,8 +890,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem 1rem;
-$topbar-background: kr.$var-topbar-bg;
-$topbar-submenu-background: kr.$var-primary;
+$topbar-background: var(--krtheme-topbar-bg);
+$topbar-submenu-background: var(--krtheme-topbar-bg);
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 300px;
 $topbar-unstack-breakpoint: medium;

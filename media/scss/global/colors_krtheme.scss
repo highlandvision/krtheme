@@ -1,0 +1,47 @@
+// Variables
+@import "../resources/template-variables";
+
+:root {
+  --krtheme-width: #{$krtheme-width};
+  --krtheme-primary: #{$krtheme-primary};
+  --krtheme-secondary: #{$krtheme-secondary};
+  --krtheme-accent: #{$krtheme-accent};
+  --krtheme-neutral: #{$krtheme-neutral};
+  --krtheme-success: #{$krtheme-success};
+  --krtheme-warning: #{$krtheme-warning};
+  --krtheme-alert: #{$krtheme-alert};
+  --krtheme-gray: #{$krtheme-gray};
+  --krtheme-red: #{$krtheme-red};
+  --krtheme-black-light: #{$krtheme-black-light};
+  --krtheme-favorite: #{$krtheme-favorite};
+  --krtheme-hover: #{$krtheme-hover};
+  --krtheme-body-bg: #{$krtheme-body-bg};
+  --krtheme-footer-bg: #{$krtheme-footer-bg};
+  --krtheme-footer-bg-top: #{$krtheme-footer-bg-top};
+  --krtheme-button-bg: #{$krtheme-button-bg};
+  --krtheme-button-bg-hover: #{$krtheme-button-bg};
+  --krtheme-button-color: #{$krtheme-button-color};
+  --krtheme-body-font-family: #{$krtheme-body-font-family};
+  --krtheme-body-font-color: #{$krtheme-body-font-color};
+  --krtheme-headings-font-family: #{$krtheme-headings-font-family};
+  --krtheme-headings-font-color: #{$krtheme-headings-font-color};
+  --krtheme-lineheight: #{$krtheme-lineheight};
+  --krtheme-spacing: #{$krtheme-spacing};
+  --krtheme-lineheight-header: #{$krtheme-lineheight-header};
+  --krtheme-medium-h1-font-size: #{$krtheme-medium-h1-font-size};
+  --krtheme-medium-h2-font-size:  #{$krtheme-medium-h2-font-size};
+  --krtheme-medium-h3-font-size:  #{$krtheme-medium-h3-font-size};
+  --krtheme-medium-h4-font-size:  #{$krtheme-medium-h4-font-size};
+  --krtheme-medium-h5-font-size:  #{$krtheme-medium-h5-font-size};
+  --krtheme-large-h1-font-size: #{$krtheme-large-h1-font-size};
+  --krtheme-large-h2-font-size: #{$krtheme-large-h2-font-size};
+  --krtheme-large-h3-font-size: #{$krtheme-large-h3-font-size};
+  --krtheme-large-h4-font-size: #{$krtheme-large-h4-font-size};
+  --krtheme-large-h5-font-size: #{$krtheme-large-h5-font-size};
+  --krtheme-small-font-size: #{$krtheme-small-font-size};
+  --krtheme-topbar-bg: #{$krtheme-topbar-bg};
+  --krtheme-topbar-bg-toprow: #{$krtheme-topbar-bg};
+  --krtheme-topbar-link: #{$krtheme-topbar-link};
+  --krtheme-topbar-link-active: #{$krtheme-topbar-link-active};
+  --krtheme-topbar-bg-active: #{$krtheme-topbar-bg-active};
+}

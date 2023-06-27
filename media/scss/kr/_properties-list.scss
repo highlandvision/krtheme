@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .kr-property {
 	.list, .favs {
@@ -9,9 +9,12 @@
 			text-align: justify;
 		}
 		h2 {
-			color: res.$var-primary;
+			color: var(--krtheme-primary);
 			margin-bottom: 5px;
 			padding-top: 0.2rem;
+			@include mixin.breakpoint(medium) {
+				padding-top: 0.2rem;
+			}
 		}
 		.top-section {
 			@include mixin.breakpoint(medium) {
@@ -19,7 +22,7 @@
 			}
 		}
 		h3.tagline {
-			color: res.$var-accent;
+			color: var(--krtheme-accent);
 		}
 		.button.expanded {
 			margin-bottom: 0;
@@ -81,7 +84,7 @@
 				}
 				.kr-search-discounts {
 					.dropdown-pane {
-						background: res.$var-primary;
+						background: var(--krtheme-primary);
 						color: res.$white;
 						width: auto;
 						min-width: 300px;
@@ -113,7 +116,7 @@
 				height: 0;
 				border-style: solid;
 				border-width: 75px 75px 0 0;
-				border-color: res.$var-accent transparent transparent transparent;
+				border-color: var(--krtheme-accent) transparent transparent transparent;
 				.text {
 					transform: rotate(-45deg);
 					color: res.$white;

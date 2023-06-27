@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .kr-pager {
 	text-align: center;
@@ -7,7 +7,7 @@
 		text-align: right;
 	}
 	i {
-		color: res.$var-primary;
+		color: var(--krtheme-primary);
 	}
 }
 ul.pagination {

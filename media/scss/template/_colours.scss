@@ -1,5 +1,5 @@
 @use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .font-label {
 	color: res.$dark-gray;
@@ -7,19 +7,19 @@
 	line-height: 1.3;
 }
 .color-primary, .font-hilite {
-	color: res.$var-primary;
+	color: var(--krtheme-primary);
 }
 .color-secondary {
-	color: res.$var-secondary;
+	color: var(--krtheme-secondary);
 }
 .color-hover, .font-hilite2 {
-	color: res.$var-hover;
+	color: var(--krtheme-hover);
 }
 .color-accent, .font-contrast {
-	color: res.$var-accent;
+	color: var(--krtheme-accent);
 }
 .color-body {
-	color: res.$var-body-font-color;
+	color: var(--krtheme-body-font-color);
 }
 .color-light  {
 	color: res.$medium-gray;
@@ -31,7 +31,7 @@
 	color: res.$dark-gray;
 }
 i.fas, i.fab {
-	color: res.$var-primary;
+	color: var(--krtheme-primary);
 }
 ::-moz-selection,
 ::selection {
@@ -41,8 +41,8 @@ i.fas, i.fab {
 i.fas.fa-file-pdf {
 	color: #ba0808;
 }
-.red, i.fas.red {
-	color: #cc0000;
+.red, i.fas.red, .error-message {
+	color: #cc0000 !important;
 }
 .whitebg {
 	background: res.$white;

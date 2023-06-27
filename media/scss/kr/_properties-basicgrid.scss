@@ -20,13 +20,13 @@
 		font-size: 1.1rem;
 		font-weight: 400;
 		margin-bottom: 0.2rem;
-		color: res.$var-primary;
+		color: var(--krtheme-primary);
 		@include mixin.breakpoint(large) {
 			font-size: 1.3rem;
 		}
 	}
 	p {
-		color: res.$var-body-font-color;
+		color: var(--krtheme-body-font-color);
 	}
 	.callout {
 		font-size: 14px;

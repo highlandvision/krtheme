@@ -1,4 +1,4 @@
-@use '../resources/variables' as res;
+@use '../resources/resources' as res;
 
 span.jq-dte {
 	display: inline-block;
@@ -11,7 +11,7 @@ span.jq-dte {
 		box-shadow: none;
 		text-align: center;
 		&.error {
-			background-color: scale-color(res.$var-red, $lightness: 90%);
+			background-color: scale-color(res.$krtheme-red, $lightness: 90%);
 		}
 	}
 	span.jq-dte-inner {
@@ -39,7 +39,7 @@ span.jq-dte {
 	span.jq-dte-errorbox {
 		display: inline-block;
 		font-size: 13px;
-		background-color: scale-color(res.$var-red, $lightness: 90%);
+		background-color: scale-color(res.$krtheme-red, $lightness: 90%);
 		height: 37px;
 		margin: -5px 0 0;
 		padding: 8px 6px;
