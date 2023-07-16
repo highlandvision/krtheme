@@ -1,0 +1,51 @@
+// Variables
+@import '../resources/resources';
+
+:root {
+    --global-width: #{$default-global-width};
+    --global-lineheight: #{$default-global-lineheight};
+    --global-margin: #{$default-global-margin};
+    --global-padding: #{$default-global-padding};
+    --body-background: #{$default-body-background};
+    --body-font-family: #{$default-body-font-family};
+    --body-color: #{$default-body-color};
+    --primary-color: #{$default-primary-color};
+    --primary-color-hover: #{$default-primary-color-hover};
+    --secondary-color: #{$default-secondary-color};
+    --secondary-color-hover: #{$default-secondary-color-hover};
+    --accent-color: #{$default-accent-color};
+    --accent-color-hover: #{$default-accent-color-hover};
+    --alert-color: #{$default-alert-color};
+    --alert-color-hover: #{$default-alert-color-hover};
+    --success-color: #{$default-success-color};
+    --success-color-hover: #{$default-success-color-hover};
+    --warning-color: #{$default-warning-color};
+    --warning-color-hover: #{$default-warning-color-hover};
+    --favorite: #{$default-favorite};
+    --header-font-family: #{$default-header-font-family};
+    --header-color: #{$default-header-color};
+    --header-lineheight: #{$default-header-lineheight};
+    --medium-h1-font-size: #{$default-medium-h1-font-size};
+    --medium-h2-font-size: #{$default-medium-h2-font-size};
+    --medium-h3-font-size: #{$default-medium-h3-font-size};
+    --medium-h4-font-size: #{$default-medium-h4-font-size};
+    --medium-h5-font-size: #{$default-medium-h5-font-size};
+    --large-h1-font-size: #{$default-large-h1-font-size};
+    --large-h2-font-size: #{$default-large-h2-font-size};
+    --large-h3-font-size: #{$default-large-h3-font-size};
+    --large-h4-font-size: #{$default-large-h4-font-size};
+    --large-h5-font-size: #{$default-large-h5-font-size};
+    --small-font-size: #{$default-small-font-size};
+    --topbar-background-top: #{$default-topbar-background};
+    --topbar-background: #{$default-topbar-background};
+    --topbar-submenu-background: #{$default-topbar-submenu-background};
+    --topbar-link: #{$default-topbar-link};
+    --topbar-link-active: #{$default-topbar-link-active};
+    --topbar-background-active: #{$default-topbar-background-active};
+    --footer-background-top: #{$default-footer-background-top};
+    --footer-background: #{$default-footer-background};
+    --footer-icon: #{$default-footer-icon};
+    --footer-link: #{$default-footer-link};
+    --footer-link-hover: #{$default-footer-link-hover};
+    --form-background-color: #{$default-form-background-color};
+}

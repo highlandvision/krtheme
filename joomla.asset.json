@@ -1,27 +1,33 @@
 {
   "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
-  "name": "krbstheme",
+  "name": "krtheme",
   "version": "4.0.0",
-  "description": "This file contains details of the style assets used by KR Bootstrap Theme, a site template for KR.",
+  "description": "This file contains details of the style assets used by KR Theme, a site template for KR.",
   "license": "GPL-2.0-or-later",
   "assets": [
     {
-      "name": "template.krbstheme.krbstheme",
+      "name": "template.krtheme.kr",
       "description": "CSS for KR theme.",
       "type": "style",
       "uri": "kr.min.css"
     },
     {
-      "name": "template.krbstheme.krmodules",
+      "name": "template.krtheme.krmodules",
       "description": "CSS for KR modules.",
       "type": "style",
       "uri": "krmodules.min.css"
     },
     {
-      "name": "template.krbstheme.template",
-      "description": "CSS for krbstheme template.",
+      "name": "template.krtheme.template",
+      "description": "CSS for krtheme template.",
       "type": "style",
       "uri": "template.min.css"
+    },
+    {
+      "name": "template.krtheme.foundation",
+      "description": "CSS for krtheme foundation.",
+      "type": "style",
+      "uri": "foundation.min.css"
     },
     {
       "name": "fontawesome",
@@ -29,13 +35,22 @@
       "uri": "system/joomla-fontawesome.min.css"
     },
     {
-      "name": "template.krbstheme.site",
+      "name": "template.user",
+      "description": "Custom user css file.",
+      "type": "style",
+      "uri": "user.css",
+      "weight": 500
+    },
+    {
+      "name": "template.krtheme.site",
       "type": "preset",
       "dependencies": [
         "fontawesome#style",
-        "template.krbstheme.template#style",
-        "template.krbstheme.krmodules#style",
-        "template.krbstheme.kr#style"
+        "template.krtheme.foundation#style",
+        "template.krtheme.template#style",
+        "template.krtheme.krmodules#style",
+        "template.krtheme.kr#style",
+        "template.user#style"
       ]
     }
   ]

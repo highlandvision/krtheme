@@ -1,4 +1,4 @@
-@use '../resources/variables' as res;
+@use '../resources/resources' as res;
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 #kr-confirm {
@@ -28,7 +28,7 @@
 #kr-totals {
 	margin: 0 0 2rem;
 	padding: 1rem 0.5rem;
-	background: var(--krtheme-primary);
+	background: var(--primary-color);
 	text-align: center;
 	color: res.$white;
 	@include mixin.breakpoint(large) {
@@ -39,7 +39,7 @@
 	}
 	.hilite-total {
 		font-size: 2rem;
-		color: var(--krtheme-secondary);
+		color: var(--secondary-color);
 	}
 	.total-summary {
 		font-size: 0.9rem;
@@ -56,17 +56,17 @@
 			margin-top: 0.5rem;
 		}
 		#deposit {
-			color: var(--krtheme-secondary);
+			color: var(--secondary-color);
 			font-size: 1.8rem;
 		}
 		#balance {
-			color: var(--krtheme-secondary);
+			color: var(--secondary-color);
 			font-size: 1.6rem;
 			margin-bottom: 0.5rem;
 		}
 		.security {
 			padding-bottom: 0.3rem;
-			color: var(--krtheme-secondary);
+			color: var(--secondary-color);
 		}
 	}
 }
@@ -74,8 +74,8 @@
 #kr-guest-totals {
 	padding: 1rem 0.5rem;
 	font-size: 0.9rem;
-	background: res.$krtheme-body-bg;
-	color: var(--krtheme-body-font-color);
+	background: var(--body-background);
+	color: var(--body-color);
 	line-height: 1.7;
 	margin-bottom: 0.5rem;
 }
@@ -101,7 +101,7 @@
 			}
 			span.paynow {
 				font-size: 1.8rem;
-				color: var(--krtheme-accent);
+				color: var(--accent-color);
 			}
 			span.accent {
 				color: res.$black;
@@ -113,7 +113,7 @@
 	padding: 1rem 0;
 	border: none;
 	outline: none;
-	background: res.$var-modal-bg;
+	background: var(--form-background-color);
 	i.fas {
 		color: res.$dark-gray;
 	}
@@ -140,7 +140,7 @@
 	box-shadow: 0 1px 3px 0 res.$medium-gray;
 }
 .StripeElement--invalid {
-	border-color: var(--krtheme-accent);
+	border-color: var(--accent-color);
 }
 .StripeElement--webkit-autofill {
 	background-color: res.$white !important;

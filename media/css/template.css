@@ -1,46 +1,182 @@
 body {
-  background: var(--krtheme-body-bg);
-  font-family: var(--krtheme-body-font-family);
+  background: var(--body-background);
+  font-family: var(--body-font-family);
+  line-height: var(--global-lineheight);
+  color: var(--body-color);
 }
 
 .row {
-  max-width: var(--krtheme-width);
-}
-
-.button, .button.disabled, .button[disabled], .button.disabled:hover, .button[disabled]:hover, .button.disabled:focus, .button[disabled]:focus {
-  background-color: var(--krtheme-button-bg);
-  color: var(--krtheme-button-color);
-}
-.button:hover, .button.disabled:hover, .button[disabled]:hover, .button.disabled:hover:hover, .button[disabled]:hover:hover, .button.disabled:focus:hover, .button[disabled]:focus:hover {
-  background-color: var(--krtheme-button-bg-hover);
-}
-
-.font-label {
-  color: hsl(0, 0%, 54%);
-  font-size: 0.8rem;
-  line-height: 1.3;
+  max-width: var(--global-width);
 }
 
 .color-primary, .font-hilite {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 .color-secondary {
-  color: var(--krtheme-secondary);
-}
-
-.color-hover, .font-hilite2 {
-  color: var(--krtheme-hover);
+  color: var(--secondary-color);
 }
 
 .color-accent, .font-contrast {
-  color: var(--krtheme-accent);
+  color: var(--accent-color);
 }
 
 .color-body {
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
 }
 
+i.fas, i.fab {
+  color: var(--primary-color);
+}
+
+.formbg {
+  background-color: var(--form-background-color);
+}
+
+.button {
+  background-color: var(--primary-color);
+}
+.button:hover {
+  background-color: var(--primary-color-hover);
+}
+.button.primary {
+  background-color: var(--primary-color);
+}
+.button.primary:hover {
+  background-color: var(--primary-color-hover);
+}
+.button.secondary {
+  background-color: var(--secondary-color);
+}
+.button.secondary:hover {
+  background-color: var(--secondary-color-hover);
+}
+.button.accent {
+  background-color: var(--accent-color);
+}
+.button.accent:hover {
+  background-color: var(--accent-color-hover);
+}
+.button.alert {
+  background-color: var(--alert-color);
+}
+.button.alert:hover {
+  background-color: var(--alert-color-hover);
+}
+.button.success {
+  background-color: var(--success-color);
+}
+.button.success:hover {
+  background-color: var(--success-color-hover);
+}
+.button.warning {
+  background-color: var(--warning-color);
+}
+.button.warning:hover {
+  background-color: var(--warning-color-hover);
+}
+
+.button.hollow {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.button.hollow:hover {
+  border: 1px solid var(--primary-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+.button.hollow.primary {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.button.hollow.primary:hover {
+  border: 1px solid var(--primary-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+.button.hollow.secondary {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.button.hollow.secondary:hover {
+  border: 1px solid var(--secondary-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+.button.hollow.accent {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+.button.hollow.accent:hover {
+  border: 1px solid var(--accent-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+.button.hollow.alert {
+  border: 1px solid var(--alert-color);
+  color: var(--alert-color);
+}
+.button.hollow.alert:hover {
+  border: 1px solid var(--alert-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+.button.hollow.success {
+  border: 1px solid var(--success-color);
+  color: var(--success-color);
+}
+.button.hollow.success:hover {
+  border: 1px solid var(--success-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+.button.hollow.warning {
+  border: 1px solid var(--warning-color);
+  color: var(--warning-color);
+}
+.button.hollow.warning:hover {
+  border: 1px solid var(--warning-color-hover);
+  background: hsl(0, 0%, 90%);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: var(--header-color);
+  font-family: var(--header-font-family);
+  line-height: var(--header-lineheight);
+}
+
+small {
+  font-size: var(--small-font-size);
+}
+
+@media print, screen and (min-width: 40.0625em) {
+  h1, .h1 {
+    font-size: var(--medium-h1-font-size);
+  }
+  h2, .h2 {
+    font-size: var(--medium-h2-font-size);
+  }
+  h3, .h3 {
+    font-size: var(--medium-h3-font-size);
+  }
+  h4, .h4 {
+    font-size: var(--medium-h4-font-size);
+  }
+  h5, .h5 {
+    font-size: var(--medium-h5-font-size);
+  }
+}
+@media print, screen and (min-width: 64em) {
+  h1, .h1 {
+    font-size: var(--large-h1-font-size);
+  }
+  h2, .h2 {
+    font-size: var(--large-h2-font-size);
+  }
+  h3, .h3 {
+    font-size: var(--large-h3-font-size);
+  }
+  h4, .h4 {
+    font-size: var(--large-h4-font-size);
+  }
+  h5, .h5 {
+    font-size: var(--large-h5-font-size);
+  }
+}
 .color-light {
   color: hsl(0, 0%, 79%);
 }
@@ -53,13 +189,15 @@ body {
   color: hsl(0, 0%, 54%);
 }
 
-i.fas, i.fab {
-  color: var(--krtheme-primary);
+.font-label {
+  color: hsl(0, 0%, 54%);
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 
 ::-moz-selection,
 ::selection {
-  background: #fff3b2;
+  background-color: #fff3b2;
   color: hsl(0, 0%, 100%);
 }
 
@@ -72,7 +210,7 @@ i.fas.fa-file-pdf {
 }
 
 .whitebg {
-  background: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 *, *:before, *:after {
@@ -287,7 +425,8 @@ input[type=number], .input-tiny {
 }
 
 #errorModal {
-  background-color: #ffe0e0;
+  background-color: var(--alert-color);
+  opacity: 0.2;
 }
 
 ul.tabs {
@@ -299,11 +438,11 @@ ul.tabs li {
   flex-grow: 1;
   min-height: 0;
   text-align: center;
-  border-right: 4px solid var(--krtheme-body-bg);
+  border-right: 4px solid var(--body-background);
 }
 @media print, screen and (min-width: 40em) {
   ul.tabs li {
-    border-right: 6px solid var(--krtheme-body-bg);
+    border-right: 6px solid var(--body-background);
   }
 }
 ul.tabs li:last-child {
@@ -324,7 +463,7 @@ ul.tabs li:last-child {
   }
 }
 .callout.standout {
-  border: 1px solid var(--krtheme-primary);
+  border: 1px solid var(--primary-color);
 }
 
 ul.download {
@@ -395,8 +534,8 @@ img.responsive {
 .input-number-group .input-number-decrement,
 .input-number-group .input-number-increment {
   background: hsl(0, 0%, 100%);
-  border: 1px solid var(--krtheme-primary);
-  color: var(--krtheme-primary);
+  border: 1px solid var(--primary-color);
+  color: var(-primary-color);
   cursor: pointer;
   display: inline-block;
   font-size: 2rem;
@@ -422,7 +561,7 @@ img.responsive {
 .osmap-items h2 {
   font-size: 1.1rem !important;
   margin-bottom: 0.3rem;
-  color: var(--krtheme-secondary);
+  color: var(--secondary-color);
 }
 .osmap-items ul.level_1 {
   flex-wrap: wrap;
@@ -436,6 +575,16 @@ img.responsive {
 @media print, screen and (min-width: 64em) {
   .osmap-items ul.level_1 li {
     flex: 0 0 33.3%;
+  }
+}
+
+.intro-image {
+  text-align: center;
+}
+@media print, screen and (min-width: 40em) {
+  .intro-image {
+    float: left;
+    margin-left: 0 !important;
   }
 }
 
@@ -498,24 +647,24 @@ p.readmore a, a.readmore {
 #footer .top {
   position: relative;
   padding: 1.5rem 0 0;
-  background: var(--krtheme-footer-bg-top);
+  background: var(--footer-background-top);
 }
 #footer .moduletable {
   margin-bottom: 0.5rem;
 }
 #footer i {
-  color: var(--krtheme-accent);
+  color: var(--footer-icon);
 }
 #footer a i {
   color: hsl(0, 0%, 100%);
 }
 #footer a i:hover {
-  color: var(--krtheme-footer-link-hover);
+  color: var(--footer-link-hover);
 }
 #footer .middle {
-  background: var(--krtheme-footer-bg);
+  background: var(--footer-background);
   position: relative;
-  padding: var(--krtheme-spacing) 0 1rem;
+  padding: var(--global-padding) 0 1rem;
   color: hsl(0, 0%, 100%);
 }
 @media print, screen and (min-width: 40em) {
@@ -524,14 +673,14 @@ p.readmore a, a.readmore {
   }
 }
 #footer .middle h3 {
-  color: var(--krtheme-footer-bg-top);
+  color: var(--footer-background-top);
   margin-bottom: 0.5rem;
 }
 #footer .middle a {
-  color: var(--krtheme-footer-link);
+  color: var(--footer-link);
 }
 #footer .middle a:hover {
-  color: var(--krtheme-footer-link-hover);
+  color: var(--footer-link-hover);
 }
 #footer .middle .columns.border {
   display: flex;
@@ -571,7 +720,7 @@ p.readmore a, a.readmore {
   padding-bottom: 0;
 }
 #footer .middle ul.footer li a:hover {
-  color: var(--krtheme-footer-link-hover);
+  color: var(--footer-link-hover);
 }
 #footer .middle i.fab.fa-cc-visa, #footer .middle i.fab.fa-cc-amex, #footer .middle i.fab.fa-cc-paypal, #footer .middle i.fab.fa-cc-mastercard {
   font-size: 2rem;
@@ -624,7 +773,7 @@ p.readmore a, a.readmore {
 #hero.home {
   position: relative;
   width: 100%;
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-padding);
 }
 @media print, screen and (min-width: 40em) {
   #hero.home {
@@ -652,6 +801,13 @@ p.readmore a, a.readmore {
     visibility: visible;
   }
 }
+#hero.home .kr-slideshow .slick-slide img {
+  display: block;
+  height: 40vw;
+  max-height: 40vw !important;
+  width: 100%;
+  object-fit: cover;
+}
 #hero.home .caption {
   position: absolute;
   top: 8.5%;
@@ -659,17 +815,17 @@ p.readmore a, a.readmore {
   width: auto;
   min-width: 200px;
   max-width: 300px;
-  padding: 0.9375rem;
-  background: rgba(42, 84, 141, 0.5);
+  padding: 0.5rem;
+  background: hsla(0, 0%, 100%, 0.7);
   line-height: 1.1;
 }
-#hero.home .caption a {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.1rem;
-  font-weight: 400;
+#hero.home .caption:hover {
+  background: hsla(0, 0%, 100%, 0.9);
 }
-#hero.home .caption a:hover {
-  color: var(--krtheme-secondary);
+#hero.home .caption a {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 400;
 }
 #hero.home .spot {
   display: none;
@@ -700,12 +856,12 @@ p.readmore a, a.readmore {
 }
 #hero.home i.slick-nav {
   height: auto;
-  background: hsl(0, 0%, 100%);
-  color: var(--krtheme-primary);
+  background: hsla(0, 0%, 100%, 0.7);
+  color: var(--primary-color);
 }
 @media print, screen and (min-width: 64em) {
   #hero.home i.slick-nav {
-    padding: 2rem 0.6rem;
+    padding: 2.3rem 0.6rem;
     top: 40%;
   }
 }
@@ -733,23 +889,35 @@ p.readmore a, a.readmore {
 }
 @media print, screen and (min-width: 64em) {
   #hero.home .kr-search {
-    position: absolute;
+    background: hsla(0, 0%, 100%, 0.7);
+    box-shadow: none;
     left: 50%;
-    padding: 0.8rem;
+    height: auto;
     margin: 0 0 0 -480px;
     max-width: 960px;
+    padding: 1rem;
+    position: absolute;
     width: 100%;
-    box-shadow: none;
-    height: 63px;
-    top: 40%;
   }
   #hero.home .kr-search.top {
-    bottom: unset;
-    top: 2%;
+    top: 50px;
+    height: 70px;
+  }
+  #hero.home .kr-search.middle {
+    top: 40%;
+    height: 75px;
   }
   #hero.home .kr-search.bottom {
-    bottom: 1%;
+    background: hsla(0, 0%, 100%, 0.7);
+    bottom: 7px;
+    border: 3px solid var(--primary-color);
+    border-bottom: none;
+    height: 90px;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
     top: unset;
+  }
+  #hero.home .kr-search.bottom h3 {
+    margin-top: -6px;
   }
 }
 #hero.home .kr-search .moduletable {
@@ -787,10 +955,10 @@ p.readmore a, a.readmore {
   margin-top: 3.5rem;
 }
 #main #sidebar-right .moduletable h3 {
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 #main #sidebar-right > div, #main #sidebar-left > div {
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 #main #sidebar-right button, #main #sidebar-left button {
   margin-bottom: 0;
@@ -814,6 +982,9 @@ p.readmore a, a.readmore {
 .breadcrumb li:last-child::after {
   content: "";
   margin-right: 0;
+}
+.breadcrumb:hover {
+  text-decoration: underline;
 }
 
 @media print {
@@ -932,15 +1103,10 @@ p.readmore a, a.readmore {
   height: 51px;
 }
 .title-bar .logo {
-  position: absolute;
-  top: 7px;
-  right: 10px;
+  margin-bottom: 0;
+  max-width: 160px;
+  width: 160px;
   overflow: visible;
-}
-@media print, screen and (min-width: 64em) {
-  .title-bar .logo {
-    top: 0;
-  }
 }
 
 #header {
@@ -950,19 +1116,19 @@ p.readmore a, a.readmore {
 #header #toprow {
   display: flex;
   justify-content: flex-end;
-  background: var(--krtheme-topbar-bg-toprow);
+  background: var(--topbar-background-top);
   width: 100%;
   height: 35px;
 }
 #header #toprow.empty {
-  background: var(--krtheme-topbar-bg);
+  background: var(--topbar-background);
 }
 #header #toprow a {
   font-size: 14px;
   margin-right: 1rem;
 }
 #header #bottomrow {
-  background: var(--krtheme-topbar-bg);
+  background: var(--topbar-background);
   height: 50px;
   width: 100%;
   display: flex;
@@ -993,18 +1159,18 @@ p.readmore a, a.readmore {
 }
 #header #bottomrow .top-bar-center ul.dropdown.menu li a {
   height: 50px;
-  color: var(--krtheme-topbar-link);
+  color: var(--topbar-link);
   font-size: 1rem;
 }
 #header #bottomrow .top-bar-center ul.dropdown.menu li.current a,
 #header #bottomrow .top-bar-center ul.dropdown.menu li.current a:hover,
 #header #bottomrow .top-bar-center ul.dropdown.menu li:hover a,
 #header #bottomrow .top-bar-center ul.dropdown.menu li.is-active a {
-  background-color: var(--krtheme-topbar-bg-active);
-  color: var(--krtheme-topbar-link-active);
+  background-color: var(--topbar-background-active);
+  color: var(--topbar-link-active);
 }
 #header #bottomrow .top-bar-center ul.dropdown.menu ul.submenu {
-  background: var(--krtheme-topbar-bg-active);
+  background: var(--topbar-background-active);
   width: 200px;
 }
 #header #bottomrow .top-bar-center ul.dropdown.menu ul.submenu li {
@@ -1022,8 +1188,8 @@ p.readmore a, a.readmore {
   font-size: 0.9rem;
 }
 #header #bottomrow .top-bar-center ul.dropdown.menu ul.submenu li a:hover {
-  background: var(--krtheme-topbar-bg);
-  color: var(--krtheme-topbar-link-active);
+  background: var(--topbar-background);
+  color: var(--topbar-link-active);
   margin-left: -8px;
   padding-left: 8px;
 }
@@ -1049,22 +1215,16 @@ p.readmore a, a.readmore {
   width: 100%;
 }
 
-ul.offcanvas {
-  color: hsl(0, 0%, 100%);
-}
-ul.offcanvas li a {
-  color: hsl(0, 0%, 100%);
-}
-
-ul#offcanvas.nav.menu.vertical {
-  background: var(--krtheme-primary);
+ul#offcanvas.nav.menu.vertical li {
+  background: var(--primary-color);
 }
 ul#offcanvas.nav.menu.vertical li a {
   color: hsl(0, 0%, 100%);
-  border-bottom: 1px solid hsl(0, 0%, 100%);
+  border-bottom: 1px solid var(--primary-color-hover);
 }
 ul#offcanvas.nav.menu.vertical li a:hover {
-  color: var(--krtheme-hover);
+  background: var(--primary-color-hover);
+  color: hsl(0, 0%, 90%);
 }
 
 .off-canvas .close-button {

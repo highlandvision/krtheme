@@ -1,6 +1,3 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
-
 #main {
 	margin: 0;
 	.main-content {
@@ -22,7 +19,7 @@
 		}
 	}
 	#sidebar-right > div, #sidebar-left > div {
-		margin-bottom: res.$global-margin;
+		margin-bottom: var(--global-margin);
 	}
 	#sidebar-right button, #sidebar-left button {
 		margin-bottom: 0;
@@ -45,5 +42,8 @@
 	li:last-child::after {
 		content: "";
 		margin-right: 0;
+	}
+	&:hover {
+		text-decoration: underline;
 	}
 }

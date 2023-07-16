@@ -1,5 +1,5 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .mbsc-kr {
 	.dwwr,
@@ -8,12 +8,12 @@
 	.dw-cal-header,
 	.dw-cal-btnc.dw-cal-btnc-m {
 		font-family: Verdana, Arial, sans-serif;
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 	}
 	.dwv {
 		font-size: 0.8rem;
 		text-transform: uppercase;
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 	}
 	.dw-i, .dw-cal-day-ic-c {
 		font-size: 0.8rem;
@@ -29,7 +29,7 @@
 			text-align: center;
 			font-weight: 700;
 			opacity: 1;
-			color: var(--krtheme_primary);
+			color: var(--primary-color);
 		}
 		&.dw-cal-day-inv {
 			background: res.$light-gray;
@@ -59,15 +59,15 @@
 				background: none;
 			}
 			&.selected {
-				background: scale-color(res.$var-secondary, $lightness: 60%);
+				background: var(--secondary-color-hover);
 				&.dw-cal-day-inv.dw-cal-day-marked {
 					.dw-cal-day-fg {
-						color: var(--krtheme-primary);
+						color: var(--primary-color);
 						font-weight: 400;
 					}
 				}
 				&.checkin, &.checkout {
-					background: var(--krtheme-primary);
+					background: var(--primary-color);
 					.dw-cal-day-fg {
 						color: res.$white !important;
 						font-weight: 700;
@@ -85,14 +85,14 @@
 			&.arrival {
 				background: linear-gradient(to right bottom, res.$light-gray 50%, res.$white 50%);
 				.dw-cal-day-fg {
-					color: var(--krtheme-primary);
+					color: var(--primary-color);
 					font-weight: 700;
 				}
 			}
 			&.departure {
 				background: linear-gradient(to right bottom, res.$white 50%, res.$light-gray 50%);
 				.dw-cal-day-fg {
-					color: var(--krtheme-primary);
+					color: var(--primary-color);
 					font-weight: 700;
 				}
 			}
@@ -111,18 +111,18 @@
 		}
 	}
 	.dw-dr-t {
-		background: var(--krtheme-primary);
-		border-color: var(--krtheme-primary);
+		background: var(--primary-color);
+		border-color: var(--primary-color);
 	}
 	.dw-ltr .dw-dr1 {
-		border-color: var(--krtheme-primary);
+		border-color: var(--primary-color);
 	}
 	.mbsc-np-hdr {
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 		color: res.$white;
 	}
 	.mbsc-np-hdr {
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 		color: res.$white;
 	}
 	.dw-cal-day-m {
@@ -142,9 +142,9 @@
 		border-left: 1px solid res.$white;
 	}
 	.dwb-a {
-		color: var(--krtheme-primary);
+		color: var(--primary-color);
 	}
 	.dwwl .dwb-a:after {
-		border-color: var(--krtheme-primary);
+		border-color: var(--primary-color);
 	}
 }

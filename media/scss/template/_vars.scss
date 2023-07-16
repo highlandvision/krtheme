@@ -1,0 +1,130 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+body {
+	background: var(--body-background);
+	font-family: var(--body-font-family);
+	line-height: var(--global-lineheight);
+	color: var(--body-color);
+}
+.row {
+	max-width: var(--global-width);
+}
+.color-primary, .font-hilite {
+	color: var(--primary-color);
+}
+.color-secondary {
+	color: var(--secondary-color);
+}
+.color-accent, .font-contrast {
+	color: var(--accent-color);
+}
+.color-body {
+	color: var(--body-color);
+}
+i.fas, i.fab {
+	color: var(--primary-color);
+}
+.formbg {
+	background-color: var(--form-background-color);
+}
+
+@mixin kr-button-color($color, $hover) {
+	background-color: $color;
+	&:hover {
+		background-color: $hover;
+	}
+}
+.button {
+	@include kr-button-color(var(--primary-color), var(--primary-color-hover));
+	&.primary {
+		@include kr-button-color(var(--primary-color), var(--primary-color-hover));
+	}
+	&.secondary {
+		@include kr-button-color(var(--secondary-color), var(--secondary-color-hover));
+	}
+	&.accent {
+		@include kr-button-color(var(--accent-color), var(--accent-color-hover));
+	}
+	&.alert {
+		@include kr-button-color(var(--alert-color), var(--alert-color-hover));
+	}
+	&.success {
+		@include kr-button-color(var(--success-color), var(--success-color-hover));
+	}
+	&.warning {
+		@include kr-button-color(var(--warning-color), var(--warning-color-hover));
+	}
+}
+@mixin kr-button-hollow($color, $hover) {
+	border: 1px solid $color;
+	color: $color;
+	&:hover {
+		border: 1px solid $hover;
+		background: res.$light-gray;
+	}
+}
+.button.hollow {
+	@include kr-button-hollow(var(--primary-color), var(--primary-color-hover));
+	&.primary {
+		@include kr-button-hollow(var(--primary-color), var(--primary-color-hover));
+	}
+	&.secondary {
+		@include kr-button-hollow(var(--secondary-color), var(--secondary-color-hover));
+	}
+	&.accent {
+		@include kr-button-hollow(var(--accent-color), var(--accent-color-hover));
+	}
+	&.alert {
+		@include kr-button-hollow(var(--alert-color), var(--alert-color-hover));
+	}
+	&.success {
+		@include kr-button-hollow(var(--success-color), var(--success-color-hover));
+	}
+	&.warning {
+		@include kr-button-hollow(var(--warning-color), var(--warning-color-hover));
+	}
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	color: var(--header-color);
+	font-family: var(--header-font-family);
+	line-height: var(--header-lineheight);
+}
+small {
+	font-size: var(--small-font-size);
+}
+@media print,screen and (min-width: 40.0625em) {
+	h1,.h1 {
+		font-size: var(--medium-h1-font-size);
+	}
+	h2,.h2 {
+		font-size: var(--medium-h2-font-size);
+	}
+	h3,.h3 {
+		font-size: var(--medium-h3-font-size);
+	}
+	h4,.h4 {
+		font-size: var(--medium-h4-font-size);
+	}
+	h5,.h5 {
+		font-size: var(--medium-h5-font-size);
+	}
+}
+@media print,screen and (min-width: 64em) {
+	h1,.h1 {
+		font-size: var(--large-h1-font-size);
+	}
+	h2,.h2 {
+		font-size: var(--large-h2-font-size);
+	}
+	h3,.h3 {
+		font-size: var(--large-h3-font-size);
+	}
+	h4,.h4 {
+		font-size: var(--large-h4-font-size);
+	}
+	h5,.h5 {
+		font-size: var(--large-h5-font-size);
+	}
+}

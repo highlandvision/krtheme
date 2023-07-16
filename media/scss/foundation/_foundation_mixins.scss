@@ -1,6 +1,0 @@
-@import '../../../../../node_modules/foundation-sites/scss/components/callout';
-@import '../resources/_template-variables';
-
-.callout.formbg {
-	@include callout-style(scale-color($krtheme-primary, $lightness: 60%));
-}

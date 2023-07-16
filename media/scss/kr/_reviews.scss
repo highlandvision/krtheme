@@ -1,5 +1,5 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-reviews {
 	.xbig {
@@ -32,7 +32,7 @@
 				display: block;
 				text-align: right;
 				height: 100%;
-				background: var(--krtheme-accent);
+				background: var(--accent-color);
 				color: res.$white;
 				padding-right: 1rem;
 				padding-top: .2rem;
@@ -52,20 +52,20 @@
 			width: 35px;
 			height: 35px;
 			float: left;
-			border: 2px solid var(--krtheme-secondary);
-			background-color: var(--krtheme-secondary);
+			border: 2px solid var(--secondary-color);
+			background-color: var(--secondary-color);
 			margin: 2px;
 			text-decoration: none;
 			font-size: 16px;
 			line-height: 35px;
 			text-align: center;
-			color: var(--krtheme-black-light);
+			color: res.$black-light;
 			&.br-active {
-				border: 2px solid var(--krtheme-accent);
+				border: 2px solid var(--accent-color);
 			}
 			&.br-current {
-				border: 2px solid var(--krtheme-accent);
-				background: var(--krtheme-primary);
+				border: 2px solid var(--accent-color);
+				background: var(--primary-color);
 				color: res.$white;
 			}
 		}

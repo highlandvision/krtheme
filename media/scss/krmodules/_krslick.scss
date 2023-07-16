@@ -1,4 +1,4 @@
-@use '../resources/variables' as res;
+@use '../resources/resources' as res;
 @use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 #kr-property-slideshow,
@@ -15,10 +15,10 @@
 	visibility: visible;
 }
 .slideshow-wrapper {
-	margin-bottom: res.$global-margin;
+	margin-bottom: var(--global-margin);
 }
 .slickarrow {
-	color: var(--krtheme-primary);
+	color: var(--primary-color);
 }
 i.slick-nav {
 	cursor: pointer;
@@ -40,11 +40,11 @@ i.slick-nav {
 	}
 	&.prev {
 		left: 0;
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 	}
 	&.next {
 		right: 0;
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 	}
 	&:hover {
 		opacity: 0.9;
@@ -145,7 +145,7 @@ i.slick-nav {
 			right: 0;
 		}
 		&.fas {
-			color: var(--krtheme-primary);
+			color: var(--primary-color);
 		}
 	}
 }

@@ -6767,12 +6767,12 @@
 .mbsc-kr .dw-cal-header,
 .mbsc-kr .dw-cal-btnc.dw-cal-btnc-m {
   font-family: Verdana, Arial, sans-serif;
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 .mbsc-kr .dwv {
   font-size: 0.8rem;
   text-transform: uppercase;
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 .mbsc-kr .dw-i, .mbsc-kr .dw-cal-day-ic-c {
   font-size: 0.8rem;
@@ -6789,7 +6789,7 @@
   text-align: center;
   font-weight: 700;
   opacity: 1;
-  color: hsl(208, 100%, 22%);
+  color: var(--primary-color);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-inv {
   background: hsl(0, 0%, 90%);
@@ -6818,14 +6818,14 @@
   background: none;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.selected {
-  background: #ffe078;
+  background: var(--secondary-color-hover);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.selected.dw-cal-day-inv.dw-cal-day-marked .dw-cal-day-fg {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   font-weight: 400;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.selected.checkin, .mbsc-kr .dw-cal-day.dw-cal-day-marked.selected.checkout {
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.selected.checkin .dw-cal-day-fg, .mbsc-kr .dw-cal-day.dw-cal-day-marked.selected.checkout .dw-cal-day-fg {
   color: hsl(0, 0%, 100%) !important;
@@ -6843,14 +6843,14 @@
   background: linear-gradient(to right bottom, hsl(0, 0%, 90%) 50%, hsl(0, 0%, 100%) 50%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.arrival .dw-cal-day-fg {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   font-weight: 700;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure {
   background: linear-gradient(to right bottom, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 90%) 50%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure .dw-cal-day-fg {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   font-weight: 700;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.arrival.blocked, .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure.blocked {
@@ -6866,18 +6866,18 @@
   font-weight: 400;
 }
 .mbsc-kr .dw-dr-t {
-  background: var(--krtheme-primary);
-  border-color: var(--krtheme-primary);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
 }
 .mbsc-kr .dw-ltr .dw-dr1 {
-  border-color: var(--krtheme-primary);
+  border-color: var(--primary-color);
 }
 .mbsc-kr .mbsc-np-hdr {
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
   color: hsl(0, 0%, 100%);
 }
 .mbsc-kr .mbsc-np-hdr {
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
   color: hsl(0, 0%, 100%);
 }
 .mbsc-kr .dw-cal-day-m {
@@ -6897,10 +6897,10 @@
   border-left: 1px solid hsl(0, 0%, 100%);
 }
 .mbsc-kr .dwb-a {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 .mbsc-kr .dwwl .dwb-a:after {
-  border-color: var(--krtheme-primary);
+  border-color: var(--primary-color);
 }
 
 #kr-property-slideshow,
@@ -6919,11 +6919,11 @@
 }
 
 .slideshow-wrapper {
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 
 .slickarrow {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 i.slick-nav {
@@ -6949,11 +6949,11 @@ i.slick-nav.fas {
 }
 i.slick-nav.prev {
   left: 0;
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 i.slick-nav.next {
   right: 0;
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 i.slick-nav:hover {
   opacity: 0.9;
@@ -7066,7 +7066,7 @@ i.slick-nav:hover {
   right: 0;
 }
 .kr-double-arrows i.slick-nav.fas {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 .slick-disabled {
@@ -7075,7 +7075,7 @@ i.slick-nav:hover {
 
 .moduletable {
   width: 100%;
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 
 .datepicker-wrapper {
@@ -7090,7 +7090,7 @@ i.slick-nav:hover {
   right: 8px;
   top: 8px;
   font-size: 1.3rem;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -7137,7 +7137,7 @@ i.slick-nav:hover {
   line-height: 1;
 }
 #kr-form-mailchimp .signup h3 span {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 #kr-autosearch-wrapper {
@@ -7152,15 +7152,15 @@ i.slick-nav:hover {
 }
 #kr-autosearch-wrapper input.kr-autosearch::-webkit-input-placeholder {
   font-size: 0.9rem;
-  font-family: var(krtheme-font-family);
+  font-family: var(--body-font-family);
 }
 #kr-autosearch-wrapper input.kr-autosearch::-ms-input-placeholder {
   font-size: 0.9rem;
-  font-family: var(krtheme-font-family);
+  font-family: var(--body-font-family);
 }
 #kr-autosearch-wrapper input.kr-autosearch::placeholder {
   font-size: 0.9rem;
-  font-family: var(krtheme-font-family);
+  font-family: var(--body-font-family);
 }
 #kr-autosearch-wrapper span i {
   color: hsl(0, 0%, 100%);
@@ -7197,7 +7197,7 @@ i.slick-nav:hover {
   padding-left: 1.2rem;
 }
 #kr-autosearch-wrapper .tt-menu .tt-suggestion a i {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   padding: 0;
   width: 15px;
 }
@@ -7225,6 +7225,17 @@ i.slick-nav:hover {
   width: 100%;
   height: 100%;
   vertical-align: middle;
+}
+.kr-imagegrid .gitem.left {
+  width: 90%;
+  left: 0;
+  text-align: left;
+}
+
+.kr-spotlight .row .column .left {
+  width: 90%;
+  left: 1rem;
+  text-align: left;
 }
 
 .kr-spotlight .row .column,
@@ -7262,14 +7273,8 @@ i.slick-nav:hover {
 }
 .kr-spotlight .row .column p.center,
 .kr-imagegrid .gitem p.center {
-  width: 76%;
-  left: 12%;
-}
-.kr-spotlight .row .column p.left,
-.kr-imagegrid .gitem p.left {
-  width: 90%;
-  left: 5%;
-  text-align: left;
+  width: 80%;
+  left: 10%;
 }
 .kr-spotlight .row .column p.withbg,
 .kr-imagegrid .gitem p.withbg {
@@ -7330,20 +7335,21 @@ i.slick-nav:hover {
   background: hsl(0, 0%, 100%);
   width: 75%;
   padding: 0.5rem;
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
   font-style: italic;
   font-weight: 300;
 }
 .kr-featured a.property .content, .kr-alternatives a.property .content {
   padding: 1rem;
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
   margin-top: 0;
 }
-.kr-featured a.property h4.h3, .kr-alternatives a.property h4.h3 {
-  font-size: 1.5rem;
+.kr-featured a.property h3.h4, .kr-alternatives a.property h3.h4 {
+  font-size: 1.2rem;
   font-weight: 300;
-  line-height: 1;
-  color: var(--krtheme-primary);
+  line-height: 1.2;
+  color: var(--primary-color);
+  height: 40px;
 }
 .kr-featured a.property p, .kr-alternatives a.property p {
   font-size: 0.95rem;
@@ -7363,7 +7369,7 @@ i.slick-nav:hover {
   }
 }
 .kr-featured a.property .occupancy i, .kr-alternatives a.property .occupancy i {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 #kr-alternatives.moduletable h3 {
@@ -7403,11 +7409,11 @@ i.slick-nav:hover {
 }
 #kr-searchregion-drop input,
 #kr-searchguest-drop input {
-  border: 1px solid var(--krtheme-primary);
+  border: 1px solid var(--primary-color);
 }
 #kr-searchregion-drop label,
 #kr-searchguest-drop label {
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
 }
 #kr-searchregion-drop a,
 #kr-searchguest-drop a {
@@ -7421,11 +7427,11 @@ i.slick-nav:hover {
 }
 #kr-searchregion-drop a:hover,
 #kr-searchguest-drop a:hover {
-  color: var(--krtheme-secondary);
+  color: var(--secondary-color);
 }
 #kr-searchregion-drop h6,
 #kr-searchguest-drop h6 {
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
   font-size: 15px;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -7455,11 +7461,11 @@ ul#categories li {
 }
 ul#categories li a {
   font-weight: 500;
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
   padding-bottom: 0;
 }
 ul#categories li a:hover {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 .kr-destinations.tabs-content {
@@ -7469,7 +7475,7 @@ ul#categories li a:hover {
   padding: 0;
 }
 .kr-destinations .kr-destination-detail {
-  margin: var(--krtheme-spacing) 0;
+  margin: var(--global-margin);
 }
 .kr-destinations .kr-destination-detail a.button {
   margin: 0 0 2.5rem;

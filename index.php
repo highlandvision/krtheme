@@ -29,6 +29,10 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 
 $wa  = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
+
+$color = $this->params->get('colors', 'colors_default');
+$asset  = 'theme.' . $color;
+$wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 ?>
 
@@ -71,9 +75,11 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 						</button>
 					</div>
 					<div class="title-bar-title text-right">
-						<a href="/index.php" style="color:#fefefe;" title="<?php echo $sitename; ?>">
-							<?php echo $sitename; ?>
-						</a>
+						<div class="logo-image">
+							<a href="/index.php" title="<?php echo $sitename; ?>">
+								<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -87,7 +93,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 							<div class="top-bar-left">
 								<div class="logo-image">
 									<a href="/index.php" title="<?php echo $sitename; ?>">
-										<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
+										<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
 									</a>
 								</div>
 							</div>

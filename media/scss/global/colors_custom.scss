@@ -1,0 +1,51 @@
+// Variables
+@import '../resources/resources';
+
+:root {
+    --global-width: #{$custom-global-width};
+    --global-lineheight: #{$custom-global-lineheight};
+    --global-margin: #{$custom-global-margin};
+    --global-padding: #{$custom-global-padding};
+    --body-background: #{$custom-body-background};
+    --body-font-family: #{$custom-body-font-family};
+    --body-color: #{$custom-body-color};
+    --primary-color: #{$custom-primary-color};
+    --primary-color-hover: #{$custom-primary-color-hover};
+    --secondary-color: #{$custom-secondary-color};
+    --secondary-color-hover: #{$custom-secondary-color-hover};
+    --accent-color: #{$custom-accent-color};
+    --accent-color-hover: #{$custom-accent-color-hover};
+    --alert-color: #{$custom-alert-color};
+    --alert-color-hover: #{$custom-accent-color-hover};
+    --success-color: #{$custom-success-color};
+    --success-color-hover: #{$custom-success-color-hover};
+    --warning-color: #{$custom-warning-color};
+    --warning-color-hover: #{$custom-warning-color-hover};
+    --favorite: #{$custom-favorite};
+    --header-font-family: #{$custom-header-font-family};
+    --header-color: #{$custom-header-color};
+    --header-lineheight: #{$custom-header-lineheight};
+    --medium-h1-font-size: #{$custom-medium-h1-font-size};
+    --medium-h2-font-size: #{$custom-medium-h2-font-size};
+    --medium-h3-font-size: #{$custom-medium-h3-font-size};
+    --medium-h4-font-size: #{$custom-medium-h4-font-size};
+    --medium-h5-font-size: #{$custom-medium-h5-font-size};
+    --large-h1-font-size: #{$custom-large-h1-font-size};
+    --large-h2-font-size: #{$custom-large-h2-font-size};
+    --large-h3-font-size: #{$custom-large-h3-font-size};
+    --large-h4-font-size: #{$custom-large-h4-font-size};
+    --large-h5-font-size: #{$custom-large-h5-font-size};
+    --small-font-size: #{$custom-small-font-size};
+    --topbar-background-top: #{$custom-topbar-background};
+    --topbar-background: #{$custom-topbar-background};
+    --topbar-submenu-background: #{$custom-topbar-submenu-background};
+    --topbar-link: #{$custom-topbar-link};
+    --topbar-link-active: #{$custom-topbar-link-active};
+    --topbar-background-active: #{$custom-topbar-background-active};
+    --footer-background-top: #{$custom-footer-background-top};
+    --footer-background: #{$custom-footer-background};
+    --footer-icon: #{$custom-footer-icon};
+    --footer-link: #{$custom-footer-link};
+    --footer-link-hover: #{$custom-footer-link-hover};
+    --form-background-color: #{$custom-form-background-color};
+}

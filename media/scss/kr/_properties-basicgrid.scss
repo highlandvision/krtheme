@@ -1,4 +1,4 @@
-@use '../resources/variables' as res;
+@use '../resources/resources' as res;
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-properties .items.basicgrid {
@@ -20,13 +20,13 @@
 		font-size: 1.1rem;
 		font-weight: 400;
 		margin-bottom: 0.2rem;
-		color: var(--krtheme-primary);
+		color: var(--primary-color);
 		@include mixin.breakpoint(large) {
 			font-size: 1.3rem;
 		}
 	}
 	p {
-		color: var(--krtheme-body-font-color);
+		color: var(--body-color);
 	}
 	.callout {
 		font-size: 14px;

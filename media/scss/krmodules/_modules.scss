@@ -1,67 +1,72 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .moduletable {
-	width: 100%;
-	margin-bottom: res.$global-padding;
+    width: 100%;
+    margin-bottom: var(--global-margin);
+}
+.datepicker-wrapper {
+    position: relative;
+    input[type="text"][readonly] {
+        cursor: pointer;
+        background: res.$white;
+    }
+    i {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
 }
 
-.datepicker-wrapper {
-	position: relative;
-	input[type="text"][readonly] {
-		cursor: pointer;
-		background: res.$white;
-	}
-	i {
-		position: absolute;
-		right: 8px;
-		top: 8px;
-		font-size: 1.3rem;
-		color: var(--krtheme-primary);
-		cursor: pointer;
-	}
-}
 #kr-properties-search-off-canvas {
-	padding: 1rem;
-	height: auto;
-	width: 300px;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	.sidebar > div {
-		margin-bottom: 0;
-	}
-	h3 {
-		display: none;
-	}
+    padding: 1rem;
+    height: auto;
+    width: 300px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    .sidebar > div {
+        margin-bottom: 0;
+    }
+    h3 {
+        display: none;
+    }
 }
 
 #kr-form-mailchimp {
-	input[type="text"],
-	input[type="email"] {
-		border: res.$input-prefix-border;
-		padding-top: 1.4rem;
-		padding-bottom: 1.4rem;
-		font-size: 105%;
-	}
-	button.expanded {
-		padding-top: 0.8rem;
-		padding-bottom: 0.8rem;
-		font-size: 110%;
-		margin-top: 1px;
-	}
-	.signup {
-		@include mixin.breakpoint(large) {
-			max-width: 320px;
-		}
-		h3 {
-			color: var(--krtheme-accent);
-			line-height: 1;
-			span {
-				color: var(--krtheme-primary);
-			}
-		}
-	}
+    input[type="text"],
+    input[type="email"] {
+        border: res.$input-prefix-border;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+        font-size: 105%;
+    }
+    button.expanded {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        font-size: 110%;
+        margin-top: 1px;
+        @include mixin.breakpoint(small) {
+            margin-bottom: 1rem;
+        }
+        @include mixin.breakpoint(medium) {
+            margin-bottom: 0;
+        }
+    }
+    .signup {
+        @include mixin.breakpoint(large) {
+            max-width: 320px;
+        }
+        h3 {
+            line-height: 1;
+            span {
+                color: var(--primary-color);
+            }
+        }
+    }
 }
 
 #kr-autosearch-wrapper {
@@ -74,15 +79,15 @@
         background: res.$white;
         &::-webkit-input-placeholder {
             font-size: 0.9rem;
-            font-family: var(krtheme-font-family);
+            font-family: var(--body-font-family);
         }
         &::-ms-input-placeholder {
             font-size: 0.9rem;
-            font-family: var(krtheme-font-family);
+            font-family: var(--body-font-family);
         }
         &::placeholder {
             font-size: 0.9rem;
-            font-family: var(krtheme-font-family);
+            font-family: var(--body-font-family);
         }
     }
     span i {
@@ -119,7 +124,7 @@
                     padding-left: 1.2rem;
                 }
                 i {
-                    color: var(--krtheme-primary);
+                    color: var(--primary-color);
                     padding: 0;
                     width: 15px;
                 }
@@ -150,9 +155,21 @@
             height: 100%;
             vertical-align: middle;
         }
+        &.left {
+            width: 90%;
+            left: 0;
+            text-align: left;
+        }
     }
 }
 
+.kr-spotlight .row .column {
+    .left {
+        width: 90%;
+        left: 1rem;
+        text-align: left;
+    }
+}
 .kr-spotlight .row .column,
 .kr-imagegrid .gitem {
     position: relative;
@@ -177,13 +194,8 @@
             overflow: hidden;
         }
         &.center {
-            width: 76%;
-            left: 12%;
-        }
-        &.left {
-            width: 90%;
-            left: 5%;
-            text-align: left;
+            width: 80%;
+            left: 10%;
         }
         &.withbg {
             font-weight: 300;
@@ -235,20 +247,21 @@
             background: res.$white;
             width: 75%;
             padding: 0.5rem;
-            color: var(--krtheme-body-font-color);
+            color: var(--body-color);
             font-style: italic;
             font-weight: 300;
         }
         .content {
             padding: 1rem;
-            color: var(--krtheme-body-font-color);
+            color: var(--body-color);
             margin-top: 0;
         }
-        h4.h3 {
-            font-size: 1.5rem;
+        h3.h4 {
+            font-size: 1.2rem;
             font-weight: 300;
-            line-height: 1;
-            color: var(--krtheme-primary);
+            line-height: 1.2;
+            color: var(--primary-color);
+            height: 40px;
         }
         p {
             font-size: 0.95rem;
@@ -265,7 +278,7 @@
                 left: 1rem;
             }
             i {
-                color: var(--krtheme-primary);
+                color: var(--primary-color);
             }
         }
     }
@@ -310,10 +323,10 @@
     line-height: 1.8;
     width: 100%;
     input {
-        border: 1px solid var(--krtheme-primary);
+        border: 1px solid var(--primary-color);
     }
     label {
-        color: var(--krtheme-body-font-color);
+        color: var(--body-color);
     }
     a {
         padding-left: 0.5rem;
@@ -321,11 +334,11 @@
             padding-left: 0;
         }
         &:hover {
-            color: var(--krtheme-secondary);
+            color: var(--secondary-color);
         }
     }
     h6 {
-        color: var(--krtheme-body-font-color);
+        color: var(--body-color);
         font-size: 15px;
         margin-bottom: 0.5rem;
         text-transform: uppercase;
@@ -354,11 +367,11 @@ ul#categories {
         padding-left: 0.7rem;
         a {
             font-weight: 500;
-            color: var(--krtheme-body-font-color);
+            color: var(--body-color);
             padding-bottom: 0;
         }
         a:hover {
-            color: var(--krtheme-primary);
+            color: var(--primary-color);
         }
     }
 }
@@ -371,7 +384,7 @@ ul#categories {
         padding: 0;
     }
     .kr-destination-detail {
-        margin: res.$global-margin 0;
+        margin: var(--global-margin);
         a.button {
             margin: 0 0 2.5rem;
         }

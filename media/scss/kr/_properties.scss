@@ -1,5 +1,5 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-properties {
 	ul.menu.icons {
@@ -7,21 +7,21 @@
 		margin-left: 0;
 		width: 100%;
 		&.menu .is-active > a {
-			background: var(--krtheme-secondary) !important;
+			background: var(--secondary-color) !important;
 		}
 		li {
 			border-right: 1px solid res.$white;
-			background: var(--krtheme-primary);
+			background: var(--primary-color);
 			cursor: pointer;
 			text-align: center;
 			&:last-child {
 				border-right: none;
 			}
 			&:hover {
-				background: var(--krtheme-accent);
+				background: var(--accent-color);
 			}
 			&.is-active {
-				background: var(--krtheme-accent) !important;
+				background: var(--accent-color) !important;
 				cursor: default;
 			}
 			a.item {
@@ -36,7 +36,7 @@
 				padding-top: 0.5rem;
 				text-align: center;
 				span {
-					font-family: var(--krtheme-body-font-family);
+					font-family: var(--body-font-family);
 					font-weight: normal;
 					margin: 0 auto;
 					text-align: center;
@@ -67,7 +67,7 @@
 	.kr-filters.top {
 		width: 100%;
 		justify-content: flex-start;
-		background: var(--krtheme-primary);
+		background: var(--primary-color);
 		color: res.$white;
 		padding: 0.5rem;
 		margin-top: 2px;
@@ -102,10 +102,10 @@
 		}
 		.kr-filters-reset {
 			margin-bottom: 0;
-			color: var(--krtheme-primary);
+			color: var(--primary-color);
 			padding: 0.5rem 0 0 0;
 			i {
-				color: var(--krtheme-primary);
+				color: var(--primary-color);
 			}
 		}
 		ul.filter-sort-list {
@@ -118,7 +118,7 @@
 				margin-top: 0;
 			}
 			input[type="checkbox"].checkover + label.checklabel:before {
-				color: var(--krtheme-primary);
+				color: var(--primary-color);
 				vertical-align: bottom;
 			}
 			li {
@@ -154,23 +154,24 @@
 				label.disabled {
 					opacity: 0.5;
 					&:hover {
-						color: var(--krtheme-body-font-color) !important;
+						color: res.$body-font-color !important;
 					}
 				}
 			}
 		}
 	}
 	.kr-mobilebar {
+		margin-top: 0.5rem;
 		margin-bottom: 1rem;
 		li {
-			background: var(--krtheme-primary);
+			background: var(--primary-color);
 		}
 		button {
 			padding: 1rem 0.5rem;
 		}
 	}
 	.kr-properties-header {
-		margin-bottom: res.$global-margin;
+		margin-bottom: var(--global-margin);
 		h3 {
 			text-transform: uppercase;
 			margin-bottom: 0;
@@ -185,7 +186,7 @@
 }
 #kr-properties-filters-off-canvas,
 #kr-properties-sortby-off-canvas {
-	background: var(--krtheme-primary);
+	background: var(--primary-color);
 	.actions {
 		line-height: 1.6rem;
 		padding: 0.3rem 0.5rem;
