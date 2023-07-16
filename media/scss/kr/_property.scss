@@ -23,7 +23,7 @@
 		}
 	}
 	.property-summary {
-		background: var(--krtheme-accent);
+		background: var(--accent-color);
 		color: res.$white;
 		padding: 0.75rem;
 		max-width: 300px;
@@ -45,9 +45,9 @@
 	}
 	.kr-amenities {
 		padding: 0 0 .2rem;
-		margin-bottom: res.$global-margin;
+		margin-bottom: var(--global-margin);
 		i {
-			color: var(--krtheme-secondary);
+			color: var(--accent-color);
 			opacity: .6;
 			font-size: 90%;
 		}
@@ -58,7 +58,7 @@
 		h5 {
 			text-align: center;
 			margin-bottom: 0.3rem;
-			color: var(--krtheme-primary);
+			color: var(--primary-color);
 		}
 		.abed {
 			text-align: center;
@@ -85,7 +85,7 @@
 			display: block;
 		}
 		span {
-			color: var(--krtheme-secondary);
+			color: var(--accent-color);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -100,7 +100,7 @@
 #kr-map-solo {
 	max-width: 100%;
 	height: 25rem;
-	margin-bottom: res.$global-margin;
+	margin-bottom: var(--global-margin);
 	@include mixin.breakpoint(medium) {
 		height: 35rem;
 	}

@@ -172,7 +172,8 @@ input[type="number"], .input-tiny {
 	display: none !important;
 }
 #errorModal {
-	background-color: scale-color(res.$krtheme-red, $lightness: 90%);
+	background-color: var(--alert-color);
+	opacity: 0.2;
 }
 ul.tabs {
 	border: none;
@@ -182,9 +183,9 @@ ul.tabs {
 		flex-grow: 1;
 		min-height: 0;
 		text-align: center;
-		border-right: 4px solid var(--krtheme-body-bg);
+		border-right: 4px solid var(--body-background);
 		@include mixin.breakpoint(medium) {
-			border-right: 6px solid var(--krtheme-body-bg);
+			border-right: 6px solid var(--body-background);
 		}
 		&:last-child {
 			border-right: none;
@@ -200,7 +201,7 @@ ul.tabs {
 		padding: 1.5rem;
 	}
 	&.standout {
-		border: 1px solid var(--krtheme-primary);
+		border: 1px solid var(--primary-color);
 	}
 }
 ul.download {
@@ -267,8 +268,8 @@ $input-number-size: 80px;
 	.input-number-decrement,
 	.input-number-increment {
 		background: res.$white;
-		border: 1px solid var(--krtheme-primary);
-		color: var(--krtheme-primary);
+		border: 1px solid var(--primary-color);
+		color: var(-primary-color);
 		cursor: pointer;
 		display: inline-block;
 		font-size: 2rem;
@@ -292,7 +293,7 @@ $input-number-size: 80px;
 	h2 {
 		font-size: 1.1rem !important;
 		margin-bottom: 0.3rem;
-		color: var(--krtheme-secondary);
+		color: var(--secondary-color);
 	}
 	ul.level_1 {
 		flex-wrap: wrap;

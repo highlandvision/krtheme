@@ -20,7 +20,7 @@
 #kr-totals {
   margin: 0 0 2rem;
   padding: 1rem 0.5rem;
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
   text-align: center;
   color: hsl(0, 0%, 100%);
 }
@@ -34,7 +34,7 @@
 }
 #kr-totals .hilite-total {
   font-size: 2rem;
-  color: var(--krtheme-secondary);
+  color: var(--secondary-color);
 }
 #kr-totals .total-summary {
   font-size: 0.9rem;
@@ -52,24 +52,24 @@
   margin-top: 0.5rem;
 }
 #kr-totals .payment-info #deposit {
-  color: var(--krtheme-secondary);
+  color: var(--secondary-color);
   font-size: 1.8rem;
 }
 #kr-totals .payment-info #balance {
-  color: var(--krtheme-secondary);
+  color: var(--secondary-color);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 #kr-totals .payment-info .security {
   padding-bottom: 0.3rem;
-  color: var(--krtheme-secondary);
+  color: var(--secondary-color);
 }
 
 #kr-guest-totals {
   padding: 1rem 0.5rem;
   font-size: 0.9rem;
-  background: hsl(0, 0%, 100%);
-  color: var(--krtheme-body-font-color);
+  background: var(--body-background);
+  color: var(--body-color);
   line-height: 1.7;
   margin-bottom: 0.5rem;
 }
@@ -94,7 +94,7 @@
 }
 #kr-payment #sidebar-right .summary span.paynow {
   font-size: 1.8rem;
-  color: var(--krtheme-accent);
+  color: var(--accent-color);
 }
 #kr-payment #sidebar-right .summary span.accent {
   color: hsl(0, 0%, 4%);
@@ -134,7 +134,7 @@
 }
 
 .StripeElement--invalid {
-  border-color: var(--krtheme-accent);
+  border-color: var(--accent-color);
 }
 
 .StripeElement--webkit-autofill {
@@ -168,7 +168,8 @@ span.jq-dte input[type=text] {
   text-align: center;
 }
 span.jq-dte input[type=text].error {
-  background-color: #ffe0e0;
+  background-color: var(--alert-color);
+  opacity: 0.2;
 }
 span.jq-dte span.jq-dte-inner {
   border: none;
@@ -195,7 +196,8 @@ span.jq-dte span.jq-dte-inner span.separator {
 span.jq-dte span.jq-dte-errorbox {
   display: inline-block;
   font-size: 13px;
-  background-color: #ffe0e0;
+  background-color: var(--alert-color);
+  opacity: 0.2;
   height: 37px;
   margin: -5px 0 0;
   padding: 8px 6px;
@@ -205,7 +207,7 @@ span.jq-dte span.jq-dte-errorbox {
 form .fieldset legend {
   font-size: 1.2rem;
   padding: 0 0.3rem 0.3rem;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 form .callout {
   padding: 1rem;
@@ -228,7 +230,7 @@ form .tooltip {
   line-height: 16px;
 }
 form.horizontal select, form.horizontal input, form.horizontal button {
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 @media print, screen and (min-width: 40em) {
   form.horizontal select, form.horizontal input, form.horizontal button {
@@ -258,7 +260,7 @@ form input[type=radio].radioover + label.radiolabel {
   cursor: pointer;
   margin-left: 0;
   margin-right: 0;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 form input[type=radio].radioover.gateway + label.radiolabel {
   font-size: 1rem;
@@ -275,7 +277,7 @@ form input[type=radio].radioover + label.radiolabel:before {
   font-weight: 900;
   font-size: 1rem;
   padding-right: 5px;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 form input[type=checkbox].checkover + label.checklabel:before {
   content: "\f0c8";
@@ -315,7 +317,7 @@ ul.kr-arrival-means.menu.icons li.amitem:not(:last-child) {
   border-right: 1px solid hsl(0, 0%, 54%);
 }
 ul.kr-arrival-means.menu.icons li.amitem a {
-  font-family: var(--krtheme-body-font-family);
+  font-family: var(--body-font-family);
   font-weight: normal;
 }
 ul.kr-arrival-means.menu.icons li.amitem.active, ul.kr-arrival-means.menu.icons li.amitem.active a {
@@ -361,11 +363,11 @@ select[readonly] {
   width: 100%;
 }
 .kr-properties ul.menu.icons.menu .is-active > a {
-  background: hsl(46, 100%, 34%) !important;
+  background: var(--secondary-color) !important;
 }
 .kr-properties ul.menu.icons li {
   border-right: 1px solid hsl(0, 0%, 100%);
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
   cursor: pointer;
   text-align: center;
 }
@@ -373,10 +375,10 @@ select[readonly] {
   border-right: none;
 }
 .kr-properties ul.menu.icons li:hover {
-  background: var(--krtheme-accent);
+  background: var(--accent-color);
 }
 .kr-properties ul.menu.icons li.is-active {
-  background: hsl(207, 74%, 42%) !important;
+  background: var(--accent-color) !important;
   cursor: default;
 }
 .kr-properties ul.menu.icons li a.item {
@@ -392,7 +394,7 @@ select[readonly] {
   text-align: center;
 }
 .kr-properties ul.menu.icons li a.item span {
-  font-family: Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-weight: normal;
   margin: 0 auto;
   text-align: center;
@@ -425,7 +427,7 @@ select[readonly] {
 .kr-properties .kr-filters.top {
   width: 100%;
   justify-content: flex-start;
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
   color: hsl(0, 0%, 100%);
   padding: 0.5rem;
   margin-top: 2px;
@@ -467,11 +469,11 @@ select[readonly] {
 }
 .kr-properties #kr-properties-filters .kr-filters-reset {
   margin-bottom: 0;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   padding: 0.5rem 0 0 0;
 }
 .kr-properties #kr-properties-filters .kr-filters-reset i {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 .kr-properties #kr-properties-filters ul.filter-sort-list {
   width: 100%;
@@ -484,7 +486,7 @@ select[readonly] {
   margin-top: 0;
 }
 .kr-properties #kr-properties-filters ul.filter-sort-list input[type=checkbox].checkover + label.checklabel:before {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   vertical-align: bottom;
 }
 .kr-properties #kr-properties-filters ul.filter-sort-list li {
@@ -529,13 +531,13 @@ select[readonly] {
   margin-bottom: 1rem;
 }
 .kr-properties .kr-mobilebar li {
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 .kr-properties .kr-mobilebar button {
   padding: 1rem 0.5rem;
 }
 .kr-properties .kr-properties-header {
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 .kr-properties .kr-properties-header h3 {
   text-transform: uppercase;
@@ -550,7 +552,7 @@ select[readonly] {
 
 #kr-properties-filters-off-canvas,
 #kr-properties-sortby-off-canvas {
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
 }
 #kr-properties-filters-off-canvas .actions,
 #kr-properties-sortby-off-canvas .actions {
@@ -641,7 +643,7 @@ select[readonly] {
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 0.2rem;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 @media print, screen and (min-width: 64em) {
   .kr-properties .items.basicgrid h2.item {
@@ -649,7 +651,7 @@ select[readonly] {
   }
 }
 .kr-properties .items.basicgrid p {
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
 }
 .kr-properties .items.basicgrid .callout {
   font-size: 14px;
@@ -672,7 +674,7 @@ select[readonly] {
   line-height: 1;
   font-size: 0.9rem;
   margin-bottom: 0.2rem;
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
 }
 
 .kr-property .grid:hover .content {
@@ -683,14 +685,14 @@ select[readonly] {
 }
 
 .kr-property .list, .kr-property .favs {
-  margin: 0 auto var(--krtheme-spacing);
+  margin: 0 auto var(--global-margin);
   position: relative;
 }
 .kr-property .list .slider, .kr-property .list .content, .kr-property .favs .slider, .kr-property .favs .content {
   text-align: justify;
 }
 .kr-property .list h2, .kr-property .favs h2 {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   margin-bottom: 5px;
   padding-top: 1rem;
 }
@@ -700,7 +702,7 @@ select[readonly] {
   }
 }
 .kr-property .list h3.tagline, .kr-property .favs h3.tagline {
-  color: var(--krtheme-accent);
+  color: var(--accent-color);
 }
 .kr-property .list .property-description, .kr-property .favs .property-description {
   font-size: 1rem;
@@ -767,7 +769,7 @@ select[readonly] {
 }
 .kr-property .list .kr-relative-pricing .pricing .button.discounts-none :hover, .kr-property .favs .kr-relative-pricing .pricing .button.discounts-none :hover {
   cursor: default !important;
-  background: hsl(208, 100%, 22%) !important;
+  background: var(--primary-color) !important;
   opacity: 1 !important;
 }
 .kr-property .list .kr-relative-pricing .pricing .button.rate, .kr-property .favs .kr-relative-pricing .pricing .button.rate {
@@ -806,7 +808,7 @@ select[readonly] {
   }
 }
 .kr-property .list .kr-relative-pricing .pricing .kr-search-discounts .dropdown-pane, .kr-property .favs .kr-relative-pricing .pricing .kr-search-discounts .dropdown-pane {
-  background: var(--krtheme-primary);
+  background: var(--primary-color);
   color: hsl(0, 0%, 100%);
   width: auto;
   min-width: 300px;
@@ -836,7 +838,7 @@ select[readonly] {
   height: 0;
   border-style: solid;
   border-width: 75px 75px 0 0;
-  border-color: hsl(207, 74%, 42%) transparent transparent transparent;
+  border-color: var(--accent-color) transparent transparent transparent;
 }
 .kr-property .list .badge .triangle .text, .kr-property .favs .badge .triangle .text {
   transform: rotate(-45deg);
@@ -924,7 +926,7 @@ select[readonly] {
   }
 }
 .kr-pager i {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 
 ul.pagination {
@@ -990,7 +992,7 @@ ul.pagination li.active a {
   font-size: 2rem;
 }
 .kr-property .favspan .favicon-top.in {
-  color: var(--krtheme-favorite);
+  color: var(--favorite);
 }
 
 .kr-properties .items .thumb #ptext {
@@ -1032,7 +1034,7 @@ ul.pagination li.active a {
   color: hsl(0, 0%, 100%);
 }
 .kr-property .property-summary {
-  background: var(--krtheme-accent);
+  background: var(--accent-color);
   color: hsl(0, 0%, 100%);
   padding: 0.75rem;
   max-width: 300px;
@@ -1054,10 +1056,10 @@ ul.pagination li.active a {
 }
 .kr-property .kr-amenities {
   padding: 0 0 0.2rem;
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 .kr-property .kr-amenities i {
-  color: var(--krtheme-secondary);
+  color: var(--accent-color);
   opacity: 0.6;
   font-size: 90%;
 }
@@ -1068,7 +1070,7 @@ ul.pagination li.active a {
 .kr-property .aroom h5 {
   text-align: center;
   margin-bottom: 0.3rem;
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 .kr-property .aroom .abed {
   text-align: center;
@@ -1095,7 +1097,7 @@ ul.pagination li.active a {
   display: block;
 }
 .kr-property .score span {
-  color: var(--krtheme-secondary);
+  color: var(--accent-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -1109,7 +1111,7 @@ ul.pagination li.active a {
 #kr-map-solo {
   max-width: 100%;
   height: 25rem;
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 @media print, screen and (min-width: 40em) {
   #kr-map-solo {
@@ -1118,7 +1120,7 @@ ul.pagination li.active a {
 }
 
 .kr-property-quote {
-  background: hsl(0, 0%, 90%);
+  background: var(--gray-color);
   margin-top: -3.5rem;
   padding: 0.5rem 1rem 0;
 }
@@ -1132,29 +1134,29 @@ ul.pagination li.active a {
 }
 .kr-property-quote #kr-bookmodule {
   padding: 0;
-  margin-bottom: var(--krtheme-spacing);
+  margin-bottom: var(--global-margin);
 }
 .kr-property-quote #kr-bookmodule h4, .kr-property-quote #kr-bookmodule h6 {
   margin-bottom: 0;
-  color: var(--krtheme-body-font-color);
+  color: var(--body-color);
 }
 .kr-property-quote #kr-bookmodule .total-price {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   font-size: 1.8rem;
 }
 .kr-property-quote #kr-bookmodule .discount {
-  color: hsl(0, 100%, 40%);
+  color: var(--alert-color);
 }
 .kr-property-quote #kr-bookmodule .discount i {
-  color: hsl(0, 100%, 40%);
+  color: var(--alert-color);
 }
 .kr-property-quote #kr-bookmodule .deposit {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
 .kr-property-quote #kr-bookmodule .deposit i {
-  color: var(--krtheme-primary);
+  color: var(--primary-color);
 }
 .kr-property-quote #kr-bookmodule .booknow {
   margin-top: 1rem;
@@ -1349,7 +1351,7 @@ table.amonth tr td div.duo p.day {
   display: block;
   text-align: right;
   height: 100%;
-  background: var(--krtheme-accent);
+  background: var(--accent-color);
   color: hsl(0, 0%, 100%);
   padding-right: 1rem;
   padding-top: 0.2rem;
@@ -1367,21 +1369,21 @@ table.amonth tr td div.duo p.day {
   width: 35px;
   height: 35px;
   float: left;
-  border: 2px solid var(--krtheme-secondary);
-  background-color: var(--krtheme-secondary);
+  border: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color);
   margin: 2px;
   text-decoration: none;
   font-size: 16px;
   line-height: 35px;
   text-align: center;
-  color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 42%);
 }
 .kr-ratings .br-widget a.br-active {
-  border: 2px solid var(--krtheme-accent);
+  border: 2px solid var(--accent-color);
 }
 .kr-ratings .br-widget a.br-current {
-  border: 2px solid var(--krtheme-accent);
-  background: var(--krtheme-primary);
+  border: 2px solid var(--accent-color);
+  background: var(--primary-color);
   color: hsl(0, 0%, 100%);
 }
 

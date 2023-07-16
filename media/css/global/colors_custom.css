@@ -1,0 +1,50 @@
+:root {
+  --global-width: 1120;
+  --global-lineheight: 1.5;
+  --global-margin: 2rem;
+  --global-padding: 2rem;
+  --body-background: hsl(0, 0%, 96%);
+  --body-font-family: Arial, sans-serif;
+  --body-color: hsl(0, 0%, 27%);
+  --primary-color: hsl(206, 98%, 18%);
+  --primary-color-hover: hsl(206, 88%, 28%);
+  --secondary-color: hsl(176, 68%, 62%);
+  --secondary-color-hover: hsl(176, 58%, 52%);
+  --accent-color: hsl(44, 93%, 58%);
+  --accent-color-hover: hsl(44, 83%, 48%);
+  --alert-color: hsl(45, 100%, 63%);
+  --alert-color-hover: hsl(45, 90%, 53%);
+  --success-color: hsl(128, 29%, 70%);
+  --success-color-hover: hsl(128, 39%, 80%);
+  --warning-color: hsl(24, 90%, 56%);
+  --warning-color-hover: hsl(24, 100%, 66%);
+  --favorite: hsl(338, 87%, 55%);
+  --header-font-family: Tahoma, Arial, sans-serif;
+  --header-color: var(--primary-color);
+  --header-lineheight: 1.3;
+  --medium-h1-font-size: 30px;
+  --medium-h2-font-size: 26px;
+  --medium-h3-font-size: 20px;
+  --medium-h4-font-size: 18px;
+  --medium-h5-font-size: 16px;
+  --large-h1-font-size: 34px;
+  --large-h2-font-size: 28px;
+  --large-h3-font-size: 22px;
+  --large-h4-font-size: 18px;
+  --large-h5-font-size: 17px;
+  --small-font-size: 75%;
+  --topbar-background-top: var(--primary-color);
+  --topbar-background: var(--primary-color);
+  --topbar-submenu-background: var(--accent-color);
+  --topbar-link: hsl(0, 0%, 100%);
+  --topbar-link-active: hsl(0, 0%, 100%);
+  --topbar-background-active: var(--accent-color);
+  --footer-background-top: var(--accent-color);
+  --footer-background: var(--primary-color);
+  --footer-icon: var(--secondary-color);
+  --footer-link: hsl(0, 0%, 96%);
+  --footer-link-hover: var(--secondary-color);
+  --form-background-color: hsl(208, 100%, 98%);
+}
+
+/*# sourceMappingURL=colors_custom.css.map */

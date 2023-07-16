@@ -1,66 +1,83 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-property {
 	.list, .favs {
-		margin: 0 auto res.$global-margin;
+		margin: 0 auto var(--global-margin);
 		position: relative;
 		.slider, .content {
 			text-align: justify;
 		}
 		h2 {
-			color: var(--krtheme-primary);
+			color: var(--primary-color);
 			margin-bottom: 5px;
-			padding-top: 0.2rem;
+			padding-top: 1rem;
 			@include mixin.breakpoint(medium) {
 				padding-top: 0.2rem;
 			}
 		}
-		.top-section {
-			@include mixin.breakpoint(medium) {
-				margin-bottom: 2rem;
-			}
-		}
 		h3.tagline {
-			color: var(--krtheme-accent);
+			color: var(--accent-color);
+		}
+		.property-description {
+			font-size: 1rem;
+			@include mixin.breakpoint(medium) {
+				font-size: 15px;
+			}
+			@include mixin.breakpoint(large) {
+				font-size: 1rem;
+			}
 		}
 		.button.expanded {
 			margin-bottom: 0;
 		}
-		.relative-pricing {
+		.kr-relative-pricing {
+			@include mixin.breakpoint(medium) {
+				margin-top: 1rem;
+			}
+			@include mixin.breakpoint(large) {
+				position: absolute;
+				bottom: 0;
+				width: 50%;
+			}
 			.pricing {
 				display: flex;
 				flex: 1;
+				.kr-search-discounts {
+					display: block;
+					flex: 0 0 38px;
+					button i.fas {
+						color: res.$white;
+						font-size: 90%;
+						text-align: center;
+					}
+				}
 				.button {
 					font-size: 0.95rem;
+					@include mixin.breakpoint(medium) {
+						font-size: 0.8rem;
+					}
+					@include mixin.breakpoint(large) {
+						font-size: 0.95rem;
+					}
 					padding: 0.5rem;
 					margin-top: auto;
 					margin-bottom: 0;
 					&.discounts-none {
 						display: block;
 						flex: 0 0 38px;
-						font-size: 1rem;
 						padding: 0.5rem;
 						width: 38px;
 						:hover {
 							cursor: default !important;
-							background: res.$var-primary !important;
+							background: var(--primary-color) !important;
 							opacity: 1 !important;
-						}
-					}
-					&.discounts {
-						display: block;
-						flex: 0 0 38px;
-						i.fas {
-							color: res.$white;
-							text-align: center;
 						}
 					}
 					&.rate {
 						color: res.$white;
 						display: block;
 						flex: 1 0 auto;
-						font-size: 1rem;
 						padding-top: 0.5rem;
 						padding-bottom: 0.5rem;
 						text-align: left;
@@ -70,9 +87,14 @@
 						border-left: 1px solid res.$white;
 						display: block;
 						flex: 0 0 9rem;
-						font-size: 1rem;
-						padding: 0.5rem 0.3rem 0.5rem 0;
-						text-align: center;
+						padding: 0.5rem 0.5rem 0.5rem 1rem;
+						text-align: left;
+						@include mixin.breakpoint(medium) {
+							flex: 0 0 8rem;
+						}
+						@include mixin.breakpoint(large) {
+							flex: 0 0 9rem;
+						}
 						i.fas {
 							color: res.$white;
 							float: right;
@@ -84,7 +106,7 @@
 				}
 				.kr-search-discounts {
 					.dropdown-pane {
-						background: var(--krtheme-primary);
+						background: var(--primary-color);
 						color: res.$white;
 						width: auto;
 						min-width: 300px;
@@ -116,7 +138,7 @@
 				height: 0;
 				border-style: solid;
 				border-width: 75px 75px 0 0;
-				border-color: var(--krtheme-accent) transparent transparent transparent;
+				border-color: var(--accent-color) transparent transparent transparent;
 				.text {
 					transform: rotate(-45deg);
 					color: res.$white;

@@ -1,5 +1,5 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 #footer {
 	position: relative;
@@ -7,34 +7,42 @@
 	.top {
 		position: relative;
 		padding: 1.5rem 0 0;
-		background: var(--krtheme-footer-bg-top);
+		background: var(--footer-background-top);
 	}
 	.moduletable {
 		margin-bottom: 0.5rem;
 	}
+	i {
+		color: var(--footer-icon);
+	}
+	a i {
+		color: res.$white;
+		&:hover {
+			color: var(--footer-link-hover);
+		}
+	}
 	.middle {
-		background: var(--krtheme-footer-bg);
+		background: var(--footer-background);
 		position: relative;
-		padding: res.$global-padding 0 1rem;
+		padding: var(--global-padding) 0 1rem;
 		color: res.$white;
 		@include mixin.breakpoint(medium) {
 			text-align: left;
 		}
 		h3 {
-			color: var(--krtheme-footer-bg-top);
+			color: var(--footer-background-top);
 			margin-bottom: 0.5rem;
 		}
 		a {
-			color: var(--krtheme-footer-link);
+			color: var(--footer-link);
 			&:hover {
-				color: var(--krtheme-footer-link-hover);
+				color: var(--footer-link-hover);
 			}
 		}
 		.columns.border {
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			//border-left: 1px solid res.$medium_gray;
 			.moduletable {
 				&:nth-last-child(n+2) ~ div:last-child {
 					margin-top: auto;
@@ -72,7 +80,7 @@
 					padding-top: 0;
 					padding-bottom: 0;
 					&:hover {
-						color: var(--krtheme-footer-link-hover);
+						color: var(--footer-link-hover);
 					}
 				}
 			}
