@@ -1,5 +1,5 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .kr-properties {
 	ul.menu.icons {
@@ -7,7 +7,7 @@
 		margin-left: 0;
 		width: 100%;
 		&.menu .is-active > a {
-			background: res.$krtheme-secondary !important;
+			background: var(--krtheme-secondary) !important;
 		}
 		li {
 			border-right: 1px solid res.$white;
@@ -21,7 +21,7 @@
 				background: var(--krtheme-accent);
 			}
 			&.is-active {
-				background: res.$krtheme-accent !important;
+				background: var(--krtheme-accent) !important;
 				cursor: default;
 			}
 			a.item {
@@ -36,7 +36,7 @@
 				padding-top: 0.5rem;
 				text-align: center;
 				span {
-					font-family: res.$krtheme-body-font-family;
+					font-family: var(--krtheme-body-font-family);
 					font-weight: normal;
 					margin: 0 auto;
 					text-align: center;
@@ -154,14 +154,13 @@
 				label.disabled {
 					opacity: 0.5;
 					&:hover {
-						color: res.$krtheme-body-font-color !important;
+						color: var(--krtheme-body-font-color) !important;
 					}
 				}
 			}
 		}
 	}
 	.kr-mobilebar {
-		margin-top: 0.5rem;
 		margin-bottom: 1rem;
 		li {
 			background: var(--krtheme-primary);

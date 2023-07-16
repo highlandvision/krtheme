@@ -1,5 +1,5 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 p.readmore a, a.readmore {
 	font-size:   .9em;

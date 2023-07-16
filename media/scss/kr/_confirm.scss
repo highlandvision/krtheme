@@ -1,4 +1,4 @@
-@use '../resources/resources' as res;
+@use '../resources/variables' as res;
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 #kr-confirm {
@@ -113,6 +113,7 @@
 	padding: 1rem 0;
 	border: none;
 	outline: none;
+	background: res.$var-modal-bg;
 	i.fas {
 		color: res.$dark-gray;
 	}

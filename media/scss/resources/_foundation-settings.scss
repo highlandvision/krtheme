@@ -60,38 +60,38 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-//@use 'foundation-settings';
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
-@use 'template-variables' as custom;
+//@import "foundation-settings";
+@use 'custom-variables' as kr;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 // 1. Global
 // ---------
 
-$global-font-size: custom.$krtheme-global-font-size;
+$global-font-size: 100%;
 $global-width: mixin.rem-calc(var(--krtheme-width));
 $global-lineheight: 1.5;
 $light-gray: hsl(0, 0%, 90%);
 $medium-gray: hsl(0, 0%, 79%);
 $dark-gray: hsl(0, 0%, 54%);
 $foundation-palette: (
-		primary: custom.$krtheme-primary,
-		secondary: custom.$krtheme-secondary,
-		accent: custom.$krtheme-accent,
-		success: custom.$krtheme-success,
-		warning: custom.$krtheme-warning,
-		neutral: custom.$krtheme-neutral,
-		alert: custom.$krtheme-alert,
-		customgray: custom.$krtheme-gray
+		primary: kr.$var-primary,
+		secondary: kr.$var-secondary,
+		accent: kr.$var-accent,
+		success: kr.$var-success,
+		warning: kr.$var-warning,
+		neutral: kr.$var-neutral,
+		alert: kr.$var-alert,
+		customgray: kr.$var-gray
 );
-$black: hsl(0, 0%, 4%);
-$white: hsl(0, 0%, 100%);
-$body-background: custom.$krtheme-body-bg;
-$body-font-color: custom.$krtheme-body-font-color;
-$body-font-family: var(--krtheme-body-font-family);
+$black: #0a0a0a;
+$white: #fefefe;
+$body-background: kr.$var-body-bg;
+$body-font-color: kr.$var-body-font-color;
+$body-font-family: kr.$var-font-family;
 $body-safe-padding: false;
 $body-antialiased: true;
-$global-margin: var(--krtheme-spacing);
-$global-padding: var(--krtheme-spacing);
+$global-margin: kr.$var-spacing;
+$global-padding: kr.$var-spacing;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
@@ -125,7 +125,7 @@ $breakpoints-hidpi: (
   hidpi-3: 3
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge);
+$breakpoint-classes: (small medium large);
 
 // 3. The Grid
 // -----------
@@ -137,13 +137,14 @@ $grid-column-gutter: (
 		medium: 30px,
 );
 //$grid-column-align-edge: true;
-$grid-column-align-edge: true;
+$grid-column-align-edge: false;
 $grid-column-alias: 'columns';
 $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-$header-font-family: var(--krtheme-headings-font-family);
+
+$header-font-family: kr.$var-header-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

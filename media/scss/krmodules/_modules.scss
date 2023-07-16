@@ -1,73 +1,67 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .moduletable {
-    width: 100%;
-    margin-bottom: res.$global-padding;
+	width: 100%;
+	margin-bottom: res.$global-padding;
 }
 
 .datepicker-wrapper {
-    position: relative;
-    input[type="text"][readonly] {
-        cursor: pointer;
-        background: res.$white;
-    }
-    i {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        font-size: 1.3rem;
-        color: var(--krtheme-primary);
-        cursor: pointer;
-    }
+	position: relative;
+	input[type="text"][readonly] {
+		cursor: pointer;
+		background: res.$white;
+	}
+	i {
+		position: absolute;
+		right: 8px;
+		top: 8px;
+		font-size: 1.3rem;
+		color: var(--krtheme-primary);
+		cursor: pointer;
+	}
 }
-
 #kr-properties-search-off-canvas {
-    padding: 1rem;
-    height: auto;
-    width: 300px;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    .sidebar > div {
-        margin-bottom: 0;
-    }
-    h3 {
-        display: none;
-    }
+	padding: 1rem;
+	height: auto;
+	width: 300px;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	.sidebar > div {
+		margin-bottom: 0;
+	}
+	h3 {
+		display: none;
+	}
 }
 
 #kr-form-mailchimp {
-    input[type="text"],
-    input[type="email"] {
-        border: res.$input-prefix-border;
-        padding-top: 1.4rem;
-        padding-bottom: 1.4rem;
-        font-size: 105%;
-    }
-    button.expanded {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-        font-size: 110%;
-        margin-top: 1px;
-        @include mixin.breakpoint(small) {
-            margin-bottom: 1rem;
-        }
-        @include mixin.breakpoint(medium) {
-            margin-bottom: 0;
-        }
-    }
-    .signup {
-        @include mixin.breakpoint(large) {
-            max-width: 320px;
-        }
-        h3 {
-            line-height: 1;
-            span {
-                color: var(--krtheme-primary);
-            }
-        }
-    }
+	input[type="text"],
+	input[type="email"] {
+		border: res.$input-prefix-border;
+		padding-top: 1.4rem;
+		padding-bottom: 1.4rem;
+		font-size: 105%;
+	}
+	button.expanded {
+		padding-top: 0.8rem;
+		padding-bottom: 0.8rem;
+		font-size: 110%;
+		margin-top: 1px;
+	}
+	.signup {
+		@include mixin.breakpoint(large) {
+			max-width: 320px;
+		}
+		h3 {
+			color: var(--krtheme-accent);
+			line-height: 1;
+			span {
+				color: var(--krtheme-primary);
+			}
+		}
+	}
 }
 
 #kr-autosearch-wrapper {

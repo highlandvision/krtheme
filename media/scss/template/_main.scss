@@ -1,5 +1,5 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 #main {
 	margin: 0;
@@ -18,7 +18,7 @@
 	#sidebar-right {
 		margin-top: 3.5rem;
 		.moduletable h3 {
-			padding-bottom: 0;
+			padding-bottom: 1rem;
 		}
 	}
 	#sidebar-right > div, #sidebar-left > div {

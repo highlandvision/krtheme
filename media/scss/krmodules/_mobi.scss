@@ -1,5 +1,5 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .mbsc-kr {
 	.dwwr,
@@ -29,7 +29,7 @@
 			text-align: center;
 			font-weight: 700;
 			opacity: 1;
-			color: res.$krtheme_primary;
+			color: var(--krtheme_primary);
 		}
 		&.dw-cal-day-inv {
 			background: res.$light-gray;
@@ -59,7 +59,7 @@
 				background: none;
 			}
 			&.selected {
-				background: scale-color(res.$krtheme-secondary, $lightness: 60%);
+				background: scale-color(res.$var-secondary, $lightness: 60%);
 				&.dw-cal-day-inv.dw-cal-day-marked {
 					.dw-cal-day-fg {
 						color: var(--krtheme-primary);

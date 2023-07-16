@@ -1,5 +1,5 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 #footer {
 	position: relative;
@@ -11,15 +11,6 @@
 	}
 	.moduletable {
 		margin-bottom: 0.5rem;
-	}
-	i {
-		color: var(--krtheme-accent);
-	}
-	a i {
-		color: res.$white;
-		&:hover {
-			color: var(--krtheme-footer-link-hover);
-		}
 	}
 	.middle {
 		background: var(--krtheme-footer-bg);
@@ -43,6 +34,7 @@
 			display: flex;
 			flex-direction: column;
 			height: 100%;
+			//border-left: 1px solid res.$medium_gray;
 			.moduletable {
 				&:nth-last-child(n+2) ~ div:last-child {
 					margin-top: auto;

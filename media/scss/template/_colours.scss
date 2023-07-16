@@ -1,20 +1,6 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
-body {
-	background: var(--krtheme-body-bg);
-	font-family: var(--krtheme-body-font-family);
-}
-.row {
-	max-width: var(--krtheme-width);
-}
-.button, .button.disabled, .button[disabled], .button.disabled:hover, .button[disabled]:hover, .button.disabled:focus, .button[disabled]:focus {
-	background-color: var(--krtheme-button-bg);
-	color: var(--krtheme-button-color);
-	&:hover {
-		background-color: var(--krtheme-button-bg-hover);
-	}
-}
 .font-label {
 	color: res.$dark-gray;
 	font-size: 0.8rem;

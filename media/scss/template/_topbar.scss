@@ -1,5 +1,5 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .title-bar {
 	margin-top: 2rem;
@@ -9,9 +9,6 @@
 		top: 7px;
 		right: 10px;
 		overflow: visible;
-		@include mixin.breakpoint(large) {
-			top: 0;
-		}
 	}
 }
 #header {

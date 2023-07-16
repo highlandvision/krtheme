@@ -1,7 +1,11 @@
-@use '../resources/resources' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+@use '../resources/variables' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 form {
+	&.formbg {
+		//background: res.$var-form_bg;
+		//padding: 1.5rem;
+	}
 	.fieldset legend {
 		font-size: 1.2rem;
 		padding: 0 0.3rem 0.3rem;
@@ -91,6 +95,9 @@ form {
 	}
 	input[type="checkbox"].checkover + label.checklabel.disabled {
 		cursor: default;
+	}
+	i.fas, i.fab {
+		color: res.$var-primary
 	}
 }
 
