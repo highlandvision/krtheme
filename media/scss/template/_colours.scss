@@ -1,26 +1,6 @@
-@use '../resources/variables' as res;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
-.font-label {
-	color: res.$dark-gray;
-	font-size: 0.8rem;
-	line-height: 1.3;
-}
-.color-primary, .font-hilite {
-	color: var(--krtheme-primary);
-}
-.color-secondary {
-	color: var(--krtheme-secondary);
-}
-.color-hover, .font-hilite2 {
-	color: var(--krtheme-hover);
-}
-.color-accent, .font-contrast {
-	color: var(--krtheme-accent);
-}
-.color-body {
-	color: var(--krtheme-body-font-color);
-}
 .color-light  {
 	color: res.$medium-gray;
 }
@@ -30,12 +10,14 @@
 .color-label, .font-light {
 	color: res.$dark-gray;
 }
-i.fas, i.fab {
-	color: var(--krtheme-primary);
+.font-label {
+	color: res.$dark-gray;
+	font-size: 0.8rem;
+	line-height: 1.3;
 }
 ::-moz-selection,
 ::selection {
-	background: #fff3b2;
+	background-color: #fff3b2;
 	color: res.$white;
 }
 i.fas.fa-file-pdf {
@@ -45,5 +27,5 @@ i.fas.fa-file-pdf {
 	color: #cc0000 !important;
 }
 .whitebg {
-	background: res.$white;
+	background-color: res.$white;
 }
