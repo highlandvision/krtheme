@@ -7,6 +7,7 @@
     <authorEmail>hazel@highlandvision.com</authorEmail>
     <copyright>(C) 2023 Highland Vision</copyright>
     <description>TPL_KRTHEME_XML_DESCRIPTION</description>
+    <inheritable>1</inheritable>
     <files>
         <filename>component.php</filename>
         <filename>error.jpg</filename>
@@ -50,7 +51,7 @@
         <position>sidebar-right</position>
         <position>under-content</position>
     </positions>
-    <languages folder="site">
+    <languages folder="language">
         <language tag="en-GB">en-GB/tpl_krtheme.ini</language>
         <language tag="en-GB">en-GB/tpl_krtheme.sys.ini</language>
     </languages>

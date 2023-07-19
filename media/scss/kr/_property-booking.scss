@@ -1,7 +1,7 @@
 @use '../resources/resources' as res;
 
 .kr-property-quote {
-	background: var(--gray-color);
+	background: res.$light-gray;
 	margin-top: -3.5rem;
 	padding: 0.5rem 1rem 0;
 	.kr-quote-heading {
@@ -45,7 +45,7 @@
 		}
 		.booking-summary {
 			margin: 0;
-			padding: 0.5rem 0.5rem 1rem 0.5rem;
+			padding: 0.5rem;
 			p {
 				margin-bottom: 0.2rem;
 				font-size: 0.9rem;

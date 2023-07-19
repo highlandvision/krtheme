@@ -954,9 +954,6 @@ p.readmore a, a.readmore {
 #main #sidebar-right {
   margin-top: 3.5rem;
 }
-#main #sidebar-right .moduletable h3 {
-  padding-bottom: 1rem;
-}
 #main #sidebar-right > div, #main #sidebar-left > div {
   margin-bottom: var(--global-margin);
 }
