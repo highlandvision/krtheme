@@ -173,7 +173,7 @@ table th {
 }
 
 .overlay {
-  text-shadow: 1px 3px 6px #373737;
+  text-shadow: 1px 3px 6px rgb(55, 55, 55);
 }
 
 img.right {
@@ -794,118 +794,102 @@ p.readmore a, a.readmore {
     overflow: visible !important;
     opacity: 1;
   }
-
   body > * {
     font: 13pt Georgia, "Times New Roman", Times, serif;
     line-height: 1.3;
     background: #fefefe !important;
     color: #0a0a0a;
   }
-
   .reveal-overlay,
-.reveal {
+  .reveal {
     border: none !important;
     width: 100% !important;
     height: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
-
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
-
   a[href]:after {
     content: none !important;
   }
-
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #8a8a8a;
     page-break-inside: avoid;
   }
-
   thead {
     display: table-header-group;
   }
-
   tr,
-img {
+  img {
     page-break-inside: avoid;
     page-break-after: avoid;
   }
-
   table {
     page-break-inside: auto !important;
     display: table !important;
     text-align: left;
     height: 100% !important;
   }
-
   table tr {
     page-break-inside: avoid !important;
     page-break-after: auto !important;
   }
-
   table td {
     text-align: left;
   }
-
   table.adp-directions,
-table.adp-placemark {
+  table.adp-placemark {
     page-break-after: always !important;
     display: table !important;
   }
   table.adp-directions tbody tr td div.adp-stepicon,
-table.adp-placemark tbody tr td div.adp-stepicon {
+  table.adp-placemark tbody tr td div.adp-stepicon {
     page-break-before: auto !important;
   }
-
   img {
     max-width: 100% !important;
   }
-
   h1.logo, .logo {
     width: 100%;
   }
-
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-
   h1.logo, h2, h3, h4, h5, h6, form, section {
     page-break-after: avoid;
     margin: 0;
   }
-
   .search,
-.navbar,
-.tab-bar,
-.left-off-canvas-menu,
-.main-nav,
-header,
-#footer,
-.support,
-.print,
-#printme,
-.default,
-.top-bar,
-.top-logo a img,
-#sidebar-left,
-#sidebar-right,
-.top-bar-section,
-.breadcrumbs,
-#btnPrint,
-.top-logo,
-.topnav,
-#topmenu,
-#chatlio-widget,
-.kr-carousel,
-#top,
-.reveal-modal-bg,
-.close-button {
+  .navbar,
+  .tab-bar,
+  .left-off-canvas-menu,
+  .main-nav,
+  header,
+  #footer,
+  .support,
+  .print,
+  #printme,
+  .default,
+  .top-bar,
+  .top-logo a img,
+  #sidebar-left,
+  #sidebar-right,
+  .top-bar-section,
+  .breadcrumbs,
+  #btnPrint,
+  .top-logo,
+  .topnav,
+  #topmenu,
+  #chatlio-widget,
+  .kr-carousel,
+  #top,
+  .reveal-modal-bg,
+  .close-button {
     display: none;
     height: 0;
   }
