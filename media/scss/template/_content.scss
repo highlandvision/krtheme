@@ -1,6 +1,13 @@
-@use '../resources/variables' as res;
+@use '../resources/resources' as res;
 @use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
+.intro-image {
+	text-align: center;
+	@include mixin.breakpoint(medium) {
+		float: left;
+		margin-left: 0 !important;
+	}
+}
 p.readmore a, a.readmore {
 	font-size:   .9em;
 	line-height: 100%;
@@ -32,7 +39,7 @@ p.readmore a, a.readmore {
 	margin-bottom: 10px;
 }
 .item-image {
-	margin: 0.5rem 2rem;
+	margin: 0.5rem 2rem 2rem;
 }
 .visually-hidden, .sr-only,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {

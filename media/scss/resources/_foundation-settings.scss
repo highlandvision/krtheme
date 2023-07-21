@@ -60,38 +60,133 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-//@import "foundation-settings";
-@use 'custom-variables' as kr;
-@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+//@use 'foundation-settings';
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+// Default colors
+$default-global-width: 70rem !default;
+$default-global-lineheight: 1.5 !default;
+$default-global-margin: 2rem !default;
+$default-global-padding: 2rem !default;
+$default-body-background: hsl(0, 0%, 100%) !default;
+$default-body-font-family: Arial, sans-serif !default;
+$default-body-color: hsl(0, 0%, 27%) !default;
+// For hover values increase or decrease the  percentage values (saturation and lightness) as required
+$default-primary-color: hsl(208, 100%, 22%) !default;
+$default-primary-color-hover: hsl(208, 90%, 12%) !default;
+$default-secondary-color: hsl(46, 100%, 34%) !default;
+$default-secondary-color-hover: hsl(46, 90%, 24%) !default;
+$default-accent-color: hsl(208, 50%, 42%) !default;
+$default-accent-color-hover: hsl(208, 40%, 32%) !default;
+$default-alert-color: hsl(0, 100%, 33%) !default;
+$default-alert-color-hover: hsl(0, 90%, 23%) !default;
+$default-success-color: hsl(128, 29%, 70%) !default;
+$default-success-color-hover: hsl(128, 19%, 60%) !default;
+$default-warning-color: hsl(24, 100%, 56%) !default;
+$default-warning-color-hover: hsl(24, 90%, 46%) !default;
+$default-favorite: hsl(338, 87%, 55%) !default;
+$default-header-font-family: Tahoma, Arial, sans-serif !default;
+$default-header-color: hsl(208, 100%, 22%) !default;
+$default-header-lineheight: 1.3 !default;
+$default-medium-h1-font-size: 30px !default;
+$default-medium-h2-font-size: 26px !default;
+$default-medium-h3-font-size: 20px !default;
+$default-medium-h4-font-size: 18px !default;
+$default-medium-h5-font-size: 16px !default;
+$default-large-h1-font-size: 32px !default;
+$default-large-h2-font-size: 28px !default;
+$default-large-h3-font-size: 22px !default;
+$default-large-h4-font-size: 18px !default;
+$default-large-h5-font-size: 17px !default;
+$default-small-font-size: 75% !default;
+$default-topbar-background-top: hsl(208, 100%, 22%) !default;
+$default-topbar-background: hsl(208, 100%, 22%) !default;
+$default-topbar-submenu-background: hsl(208, 100%, 22%) !default;
+$default-topbar-link: hsl(0, 0%, 100%) !default;
+$default-topbar-link-active: hsl(0, 0%, 100%) !default;
+$default-topbar-background-active: hsl(207, 74%, 42%) !default;
+$default-footer-background-top: hsl(46, 100%, 34%) !default;
+$default-footer-background: hsl(208, 100%, 22%) !default;
+$default-footer-icon: hsl(46, 100%, 34%) !default;
+$default-footer-link: hsl(0, 0%, 96%) !default;
+$default-footer-link-hover: hsl(0, 0%, 48%) !default;
+$default-form-background-color: hsl(202, 45%, 96%) !default;
+
+// Custom
+$custom-global-width: 70rem !default;
+$custom-global-lineheight: 1.5 !default;
+$custom-global-margin: 2rem !default;
+$custom-global-padding: 2rem !default;
+$custom-body-background: hsl(0, 0%, 96%) !default;
+$custom-body-font-family: Arial, sans-serif !default;
+$custom-body-color: hsl(0, 0%, 27%) !default;
+$custom-primary-color: hsl(202,22%,40%) !default;
+$custom-primary-color-hover: hsl(202,32%,50%) !default;
+$custom-secondary-color: hsl(348,90%,35%) !default;
+$custom-secondary-color-hover: hsl(348,100%,45%) !default;
+$custom-accent-color: hsl(348,90%,35%) !default;
+$custom-accent-color-hover: hsl(348,100%,45%) !default;
+$custom-alert-color: hsl(0, 90%, 33%) !default;
+$custom-alert-color-hover: hsl(0, 100%, 23%) !default;
+$custom-success-color: hsl(128, 29%, 70%) !default;
+$custom-success-color-hover: hsl(128, 39%, 80%) !default;
+$custom-warning-color: hsl(24, 90%, 56%) !default;
+$custom-warning-color-hover: hsl(24, 100%, 66%) !default;
+$custom-favorite: hsl(338, 87%, 55%) !default;
+$custom-header-font-family: Tahoma, Arial, sans-serif !default;
+$custom-header-color: hsl(202,22%,40%) !default;
+$custom-header-lineheight: 1.3 !default;
+$custom-medium-h1-font-size: 30px !default;
+$custom-medium-h2-font-size: 26px !default;
+$custom-medium-h3-font-size: 20px !default;
+$custom-medium-h4-font-size: 18px !default;
+$custom-medium-h5-font-size: 16px !default;
+$custom-large-h1-font-size: 34px !default;
+$custom-large-h2-font-size: 28px !default;
+$custom-large-h3-font-size: 22px !default;
+$custom-large-h4-font-size: 18px !default;
+$custom-large-h5-font-size: 17px !default;
+$custom-small-font-size: 75% !default;
+$custom-topbar-background-top: hsl(202,22%,40%) !default;
+$custom-topbar-background: hsl(202,22%,40%) !default;
+$custom-topbar-submenu-background: hsl(348,100%,35%) !default;
+$custom-topbar-link: hsl(0, 0%, 100%) !default;
+$custom-topbar-link-active: hsl(0, 0%, 100%) !default;
+$custom-topbar-background-active: hsl(348,100%,35%) !default;
+$custom-footer-background-top: hsl(348,100%,35%) !default;
+$custom-footer-background: hsl(202,22%,40%) !default;
+$custom-footer-icon: hsl(202,32%,50%) !default;
+$custom-footer-link: hsl(0, 0%, 96%) !default;
+$custom-footer-link-hover: hsl(348,100%,35%) !default;
+$custom-form-background-color: hsl(208, 100%, 98%) !default;
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: mixin.rem-calc(1280);
-$global-lineheight: kr.$var-line-height;
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$global-width: $default-global-width;
+$global-lineheight: $default-global-lineheight;
 $foundation-palette: (
-		primary: kr.$var-primary,
-		secondary: kr.$var-secondary,
-		accent: kr.$var-accent,
-		success: kr.$var-success,
-		warning: kr.$var-warning,
-		neutral: kr.$var-neutral,
-		alert: kr.$var-alert,
-		customgray: kr.$var-gray
+        primary: $default-primary-color,
+        secondary: $default-secondary-color,
+		accent: $default-accent-color,
+		alert: $default-alert-color,
+		success: $default-success-color,
+		warning: $default-warning-color
 );
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: kr.$var-body-bg;
-$body-font-color: kr.$var-body-font-color;
-$body-font-family: kr.$var-font-family;
+$black: hsl(0, 0%, 4%);
+$black-light: hsl(0, 0%, 42%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 90%);
+$medium-gray: hsl(0, 0%, 79%);
+$dark-gray: hsl(0, 0%, 54%);
+$body-background: $default-body-background;
+$body-font-color: $default-body-color;
+$body-font-family: $default-body-font-family;
 $body-safe-padding: false;
 $body-antialiased: true;
-$global-margin: kr.$var-spacing;
-$global-padding: kr.$var-spacing;
+$global-margin: $default-global-margin;
+$global-padding: $default-global-padding;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
@@ -106,7 +201,7 @@ $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 $print-hrefs: false;
 
-//@include add-foundation-colors;
+//@include mixin.add-foundation-colors;
 
 // 2. Breakpoints
 // --------------
@@ -125,7 +220,7 @@ $breakpoints-hidpi: (
   hidpi-3: 3
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge);
 
 // 3. The Grid
 // -----------
@@ -137,61 +232,60 @@ $grid-column-gutter: (
 		medium: 30px,
 );
 //$grid-column-align-edge: true;
-$grid-column-align-edge: false;
+$grid-column-align-edge: true;
 $grid-column-alias: 'columns';
 $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-
-$header-font-family: kr.$var-header-font-family;
+$header-font-family: $default-header-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: kr.$var-header-font-color;
-$header-lineheight: kr.$var-line-height-header;
+$font-family-monospace: $default-body-font-family;
+$header-color: $default-header-color;
+$header-lineheight: $default-header-lineheight;
 $header-margin-bottom: 1rem;
 $header-styles: (
 		small: (
-				'h1': ('font-size': 24),
-				'h2': ('font-size': 20),
-				'h3': ('font-size': 19),
-				'h4': ('font-size': 18),
-				'h5': ('font-size': 17),
-				'h6': ('font-size': 16),
+				'h1': ('fs': 24),
+				'h2': ('fs': 20),
+				'h3': ('fs': 19),
+				'h4': ('fs': 18),
+				'h5': ('fs': 17),
+				'h6': ('fs': 16),
 		),
 		medium: (
-				'h1': ('font-size': kr.$var-medium-h1-font-size),
-				'h2': ('font-size': kr.$var-medium-h2-font-size),
-				'h3': ('font-size': kr.$var-medium-h3-font-size),
-				'h4': ('font-size': kr.$var-medium-h4-font-size),
-				'h5': ('font-size': kr.$var-medium-h5-font-size),
-				'h6': ('font-size': 16),
+                'h1': ('fs': $default-medium-h1-font-size),
+                'h2': ('fs': $default-medium-h2-font-size),
+                'h3': ('fs': $default-medium-h3-font-size),
+                'h4': ('fs': $default-medium-h4-font-size),
+                'h5': ('fs': $default-medium-h5-font-size),
+				'h6': ('fs': 16),
 		),
 		large: (
-				'h1': ('font-size': kr.$var-large-h1-font-size),
-				'h2': ('font-size': kr.$var-large-h2-font-size),
-				'h3': ('font-size': kr.$var-large-h3-font-size),
-				'h4': ('font-size': kr.$var-large-h4-font-size),
-				'h5': ('font-size': kr.$var-large-h5-font-size),
-				'h6': ('font-size': 16),
-		)
+                'h1': ('fs': $default-large-h1-font-size),
+                'h2': ('fs': $default-large-h2-font-size),
+                'h3': ('fs': $default-large-h3-font-size),
+                'h4': ('fs': $default-large-h4-font-size),
+                'h5': ('fs': $default-large-h5-font-size),
+				'h6': ('fs': 16),
+				)
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: $default-small-font-size;
 $header-small-font-color: $dark-gray;
-$paragraph-lineheight: kr.$var-line-height;
+$paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
-$anchor-color: kr.$var-primary;
-$anchor-color-hover: scale-color($anchor-color, $lightness: 30%);
+$anchor-color: $default-primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -20%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: mixin.rem-calc(20) auto;
-$list-lineheight: $paragraph-lineheight;
+$list-lineheight: 1.5;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
@@ -253,7 +347,7 @@ $accordion-plusminus: true;
 $accordion-plus-content: '\002B';
 $accordion-minus-content: '\2013';
 $accordion-title-font-size: mixin.rem-calc(16);
-$accordion-item-color: kr.$var-primary;
+$accordion-item-color: $default-primary-color;
 $accordion-item-background-hover: $light-gray;
 $accordion-item-padding: 1rem 1rem;
 $accordion-content-background: $white;
@@ -268,7 +362,7 @@ $accordionmenu-padding: $global-menu-padding;
 $accordionmenu-nested-margin: $global-menu-nested-margin;
 $accordionmenu-submenu-padding: $accordionmenu-padding;
 $accordionmenu-arrows: true;
-$accordionmenu-arrow-color: kr.$var-primary;
+$accordionmenu-arrow-color: $default-primary-color;
 $accordionmenu-item-background: null;
 $accordionmenu-border: null;
 $accordionmenu-submenu-toggle-background: null;
@@ -280,7 +374,7 @@ $accordionmenu-arrow-size: 6px;
 // 9. Badge
 // --------
 
-$badge-background: kr.$var-primary;
+$badge-background: $default-primary-color;
 $badge-color: $white;
 $badge-color-alt: $black;
 $badge-palette: $foundation-palette;
@@ -293,8 +387,8 @@ $badge-font-size: 0.6rem;
 
 //$breadcrumbs-margin: 0 0 $global-margin 0;
 //$breadcrumbs-item-font-size: mixin.rem-calc(13);
-//$breadcrumbs-item-color: kr.$var-primary;
-//$breadcrumbs-item-color-current: kr.$var-body-font-color;
+//$breadcrumbs-item-color:$default-primary-color;
+//$breadcrumbs-item-color-current: $default-body-font-color;
 //$breadcrumbs-item-color-disabled: $medium-gray;
 //$breadcrumbs-item-margin: 0.5rem;
 //$breadcrumbs-item-uppercase: false;
@@ -308,11 +402,11 @@ $badge-font-size: 0.6rem;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 0.5rem 1rem;
+$button-padding: 0.6rem 1rem;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: kr.$var_button_background;
-$button-background-hover: scale-color($button-background, $lightness: 15%);
+$button-background: $default-primary-color;
+$button-background-hover-lightness: -20%;
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
@@ -326,8 +420,8 @@ $button-sizes: (
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
-$button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
+$button-hollow-background-hover: lighten($default-primary-color, 50%);
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 $button-responsive-expanded: false;
 
@@ -346,7 +440,6 @@ $buttongroup-radius-on-each: true;
 $callout-background: $white;
 //$callout-background-fade: 85%;
 $callout-background-fade: 92%;
-//$callout-border: 1px solid kr.$var-neutral;
 $callout-border: 1px solid darken($callout-background, 30%);
 $callout-margin: 0 0 1.5rem 0;
 $callout-sizes: (
@@ -405,7 +498,7 @@ $drilldown-nested-margin: 0;
 $drilldown-background: $white;
 $drilldown-submenu-padding: $drilldown-padding;
 $drilldown-submenu-background: $white;
-$drilldown-arrow-color: kr.$var-primary;
+$drilldown-arrow-color: $default-primary-color;
 $drilldown-arrow-size: 6px;
 
 // 17. Dropdown
@@ -431,14 +524,15 @@ $dropdownmenu-arrow-color: $white;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: kr.$var-primary;
-$dropdownmenu-submenu-background: kr.$var-primary;
+$dropdownmenu-background: var(--default-dropdown-background);
+$dropdownmenu-submenu-background: var(--default-dropdown-submenu-background);
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid transparent;
-$dropdown-menu-item-color-active: kr.$var-hover;
-$dropdown-menu-item-background-active: kr.$var-hover;
+//$dropdownmenu-border: 1px solid transparent;
+$dropdownmenu-border: none;
+$dropdown-menu-item-color-active: var(--default-dropdown-link-active);
+$dropdown-menu-item-background-active: var(--default-droppdown-background-active);
 
 // 19. Flexbox Utilities
 // ---------------------
@@ -461,19 +555,19 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: kr.$var-body-font-color;
+$form-label-color: $default-body-color;
 $form-label-font-size: mixin.rem-calc(15);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: kr.$var-primary;
+$select-triangle-color: hsl(0, 0%, 40%);
 $select-radius: $global-radius;
 $input-color: $body-font-color;
 $input-placeholder-color: $dark-gray;
 $input-font-family: inherit;
 $input-font-size: mixin.rem-calc(16);
 $input-font-weight: $global-weight-normal;
-$input-line-height: $global-lineheight;
+$input-line-height: 1.5;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
@@ -491,7 +585,7 @@ $form-button-radius: $global-radius;
 // 21. Label
 // ---------
 
-$label-background: kr.$var-primary;
+$label-background: $default-primary-color;
 $label-color: $white;
 $label-color-alt: $black;
 $label-palette: $foundation-palette;
@@ -515,7 +609,7 @@ $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
 $menu-item-color-alt-active: $black;
-$menu-item-background-active: kr.$var-accent;
+$menu-item-background-active: $default-accent-color;
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
@@ -540,7 +634,7 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
 		small: 250px,
 );
-$offcanvas-background: kr.$var-primary;
+$offcanvas-background: $default-primary-color;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
@@ -579,7 +673,7 @@ $pagination-item-padding: mixin.rem-calc(3 10);
 $pagination-item-spacing: mixin.rem-calc(1);
 $pagination-radius: $global-radius;
 $pagination-item-background-hover: $light-gray;
-$pagination-item-background-current: kr.$var-primary;
+$pagination-item-background-current: $default-primary-color;
 $pagination-item-color-current: $white;
 $pagination-item-color-disabled: $medium-gray;
 $pagination-ellipsis-color: $black;
@@ -595,7 +689,7 @@ $pagination-arrow-next: '\00BB';
 $progress-height: 1rem;
 $progress-background: $medium-gray;
 $progress-margin-bottom: $global-margin;
-$progress-meter-background: kr.$var-primary;
+$progress-meter-background: $default-primary-color;
 $progress-radius: $global-radius;
 
 // 29. Prototype Arrow
@@ -702,7 +796,7 @@ $prototype-separator-breakpoints: $global-prototype-breakpoints;
 $prototype-separator-align: center;
 $prototype-separator-height: mixin.rem-calc(2);
 $prototype-separator-width: 3rem;
-$prototype-separator-background: kr.$var-primary;
+$prototype-separator-background: $default-primary-color;
 $prototype-separator-margin-top: $global-margin;
 
 // 40. Prototype Shadow
@@ -770,11 +864,11 @@ $responsive-embed-ratios: (
 // 47. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: lighten($default-primary-color, 73%);
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
-$reveal-border: 1px solid kr.$var-primary;
+$reveal-border: 1px solid $default-primary-color;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
@@ -789,7 +883,7 @@ $slider-background: $light-gray;
 $slider-fill-background: $medium-gray;
 $slider-handle-height: 1.4rem;
 $slider-handle-width: 1.4rem;
-$slider-handle-background: kr.$var-primary;
+$slider-handle-background: $default-primary-color;
 $slider-opacity-disabled: 0.25;
 $slider-radius: $global-radius;
 
@@ -797,7 +891,7 @@ $slider-radius: $global-radius;
 // ----------
 
 $switch-background: $medium-gray;
-$switch-background-active: kr.$var-primary;
+$switch-background-active: $default-primary-color;
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
@@ -838,9 +932,9 @@ $table-stack-breakpoint: medium;
 
 $tab-margin: 0;
 $tab-background: $light-gray;
-$tab-color: kr.$var-primary;
+$tab-color: $default-primary-color;
 $tab-background-active: $medium-gray;
-$tab-active-color: kr.$var-primary;;
+$tab-active-color: $default-primary-color;
 $tab-item-font-size: mixin.rem-calc(16);
 $tab-item-background-hover: $medium-gray;
 $tab-item-padding: 1rem 0;
@@ -855,14 +949,14 @@ $tab-content-padding: 1.5rem 0.5rem;
 $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba(kr.$var-primary, 0.5);
+$thumbnail-shadow-hover: 0 0 6px 1px hsla(0, 0%, 40%, 50%);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
 // 53. Title Bar
 // -------------
 
-$titlebar-background: kr.$var-primary;
+$titlebar-background: $default-primary-color;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -889,8 +983,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem 1rem;
-$topbar-background: kr.$var-topbar-bg;
-$topbar-submenu-background: kr.$var-primary;
+$topbar-background: $default-topbar-background;
+$topbar-submenu-background: $default-topbar-submenu-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 300px;
 $topbar-unstack-breakpoint: medium;

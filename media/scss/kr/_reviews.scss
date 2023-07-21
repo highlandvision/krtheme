@@ -1,0 +1,73 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+.kr-reviews {
+	.xbig {
+		line-height: 1;
+	}
+	.review-score {
+		margin-top: 1rem;
+		text-align: center;
+		@include mixin.breakpoint(large) {
+			margin-top: 3rem;
+		}
+	}
+	.chart {
+		width: 95%;
+		font-size: 0.95rem;
+		margin: 5px 0 0;
+		dt {
+			float: left;
+			margin: 3px 0 0 10px;
+			font-weight: 400;
+			color: res.$white;
+		}
+		dd {
+			height: 26px;
+			margin: 0 0 1px;
+			-webkit-border-radius: 0 15px 15px 0;
+			-moz-border-radius: 0 15px 15px 0;
+			border-radius: 0 15px 15px 0;
+			span {
+				display: block;
+				text-align: right;
+				height: 100%;
+				background: var(--accent-color);
+				color: res.$white;
+				padding-right: 1rem;
+				padding-top: .2rem;
+				-webkit-border-radius: 0 15px 15px 0;
+				-moz-border-radius: 0 15px 15px 0;
+				border-radius: 0 15px 15px 0;
+			}
+		}
+	}
+}
+.kr-ratings {
+	.br-widget {
+		height: 35px;
+		margin-bottom: 20px;
+		a {
+			display: block;
+			width: 35px;
+			height: 35px;
+			float: left;
+			border: 2px solid var(--secondary-color);
+			background-color: var(--secondary-color);
+			margin: 2px;
+			text-decoration: none;
+			font-size: 16px;
+			line-height: 35px;
+			text-align: center;
+			color: res.$black-light;
+			&.br-active {
+				border: 2px solid var(--accent-color);
+			}
+			&.br-current {
+				border: 2px solid var(--accent-color);
+				background: var(--primary-color);
+				color: res.$white;
+			}
+		}
+	}
+}

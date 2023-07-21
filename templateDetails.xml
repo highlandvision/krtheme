@@ -1,65 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" client="site" method="upgrade">
-	<name>krtheme</name>
-	<version>4.0.0</version>
-	<creationDate>May 2022</creationDate>
-	<author>Hazel Wilson</author>
-	<authorEmail>hazel@highlandvision.com</authorEmail>
-	<copyright>(C) 2023 Highland Vision</copyright>
-	<description>TPL_KRTHEME_XML_DESCRIPTION</description>
-	<inheritable>1</inheritable>
-	<files>
-		<filename>component.php</filename>
-		<filename>error.jpg</filename>
-		<filename>error.php</filename>
-		<filename>favicon.ico</filename>
-		<filename>index.php</filename>
-		<filename>joomla.asset.json</filename>
-		<filename>templateDetails.xml</filename>
-		<folder>html</folder>
-		<folder>language</folder>
-	</files>
-	<media destination="templates/site/krtheme" folder="media">
-		<folder>css</folder>
-		<folder>fonts</folder>
-		<folder>images</folder>
-		<folder>scss</folder>
-	</media>
-	<positions>
-		<position>above-content</position>
-		<position>above-bottom</position>
-		<position>autosearch</position>
-		<position>below-content</position>
-		<position>below-left</position>
-		<position>below-right</position>
-		<position>bottom-left</position>
-		<position>bottom-mid</position>
-		<position>bottom-right</position>
-		<position>breadcrumbs</position>
-		<position>dashboard-bottom1</position>
-		<position>dashboard-bottom2</position>
-		<position>dashboard-bottom3</position>
-		<position>dashboard-bottom4</position>
-		<position>debug</position>
-		<position>footer-left</position>
-		<position>footer-right</position>
-		<position>hero-slider</position>
-		<position>hero-search</position>
-		<position>hero-spot</position>
-		<position>menu</position>
-		<position>menu-mobile</position>
-		<position>sidebar-left</position>
-		<position>sidebar-right</position>
-		<position>under-content</position>
-	</positions>
-	<config>
-		<fields name="params">
-			<fieldset name="advanced">
-				<field name="logo"
-					type="media"
-					label="TPL_KRTHEME_LOGO_LABEL"
-					description="TPL_KRTHEME_LOGO_DSC" />
-			</fieldset>
-		</fields>
-	</config>
+    <name>krtheme</name>
+    <version>4.2.0</version>
+    <creationDate>March 2023</creationDate>
+    <author>Hazel Wilson</author>
+    <authorEmail>hazel@highlandvision.com</authorEmail>
+    <copyright>(C) 2023 Highland Vision</copyright>
+    <description>TPL_KRTHEME_XML_DESCRIPTION</description>
+    <inheritable>1</inheritable>
+    <files>
+        <filename>component.php</filename>
+        <filename>error.jpg</filename>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.php</filename>
+        <filename>joomla.asset.json</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>html</folder>
+        <folder>language</folder>
+    </files>
+    <media destination="templates/site/krtheme" folder="media">
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>images</folder>
+        <folder>scss</folder>
+    </media>
+    <positions>
+        <position>above-content</position>
+        <position>above-bottom</position>
+        <position>autosearch</position>
+        <position>below-content</position>
+        <position>below-left</position>
+        <position>below-right</position>
+        <position>bottom-left</position>
+        <position>bottom-mid</position>
+        <position>bottom-right</position>
+        <position>breadcrumbs</position>
+        <position>dashboard-bottom1</position>
+        <position>dashboard-bottom2</position>
+        <position>dashboard-bottom3</position>
+        <position>dashboard-bottom4</position>
+        <position>debug</position>
+        <position>footer-left</position>
+        <position>footer-right</position>
+        <position>hero-slider</position>
+        <position>hero-search</position>
+        <position>menu</position>
+        <position>menu-mobile</position>
+        <position>sidebar-left</position>
+        <position>sidebar-right</position>
+        <position>under-content</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/tpl_krtheme.ini</language>
+        <language tag="en-GB">en-GB/tpl_krtheme.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="logo"
+                       type="media"
+                       label="TPL_KRTHEME_LOGO_LBL"
+                       description="TPL_KRTHEME_LOGO_DSC"/>
+                <field name="colors"
+                       type="filelist"
+                       default="colors_default"
+                       fileFilter="^custom.+[^min]\.css$"
+                       exclude="^colors.+"
+                       stripext="true"
+                       hide_none="true"
+                       hide_default="true"
+                       directory="media/templates/site/krtheme/css/global/"
+                       validate="options"
+                       label="TPL_KRTHEME_COLOR_NAME_LBL"
+                       description="TPL_KRTHEME_COLOR_NAME_DSC">
+                    <option value="colors_default">TPL_KRTHEME_COLOR_NAME_DEFAULT</option>
+                    <option value="colors_custom">TPL_KRTHEME_COLOR_NAME_CUSTOM</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>

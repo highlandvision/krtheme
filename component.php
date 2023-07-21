@@ -13,39 +13,13 @@ use Joomla\CMS\Factory;
 
 /** @var Joomla\CMS\Document\HtmlDocument $this */
 $app = Factory::getApplication();
+
 $wa  = $this->getWebAssetManager();
-
-//// Color Theme
-//$paramsColorName = $this->params->get('colorName', 'colors_standard');
-//$assetColorName  = 'theme.' . $paramsColorName;
-//$wa->registerAndUseStyle($assetColorName, 'media/templates/site/cassiopeia/css/global/' . $paramsColorName . '.css');
-
-//// Use a font scheme if set in the template style options
-//$paramsFontScheme = $this->params->get('useFontScheme', false);
-//$fontStyles       = '';
-//
-//if ($paramsFontScheme) {
-//	if (stripos($paramsFontScheme, 'https://') === 0) {
-//		$this->getPreloadManager()->preconnect('https://fonts.googleapis.com/', ['crossorigin' => 'anonymous']);
-//		$this->getPreloadManager()->preconnect('https://fonts.gstatic.com/', ['crossorigin' => 'anonymous']);
-//		$this->getPreloadManager()->preload($paramsFontScheme, ['as' => 'style', 'crossorigin' => 'anonymous']);
-//		$wa->registerAndUseStyle('fontscheme.current', $paramsFontScheme, [], ['media' => 'print', 'rel' => 'lazy-stylesheet', 'onload' => 'this.media=\'all\'', 'crossorigin' => 'anonymous']);
-//
-//		if (preg_match_all('/family=([^?:]*):/i', $paramsFontScheme, $matches) > 0) {
-//			$fontStyles = '--cassiopeia-font-family-body: "' . str_replace('+', ' ', $matches[1][0]) . '", sans-serif;
-//			--cassiopeia-font-family-headings: "' . str_replace('+', ' ', isset($matches[1][1]) ? $matches[1][1] : $matches[1][0]) . '", sans-serif;
-//			--cassiopeia-font-weight-normal: 400;
-//			--cassiopeia-font-weight-headings: 700;';
-//		}
-//	} else {
-//		$wa->registerAndUseStyle('fontscheme.current', $paramsFontScheme, ['version' => 'auto'], ['media' => 'print', 'rel' => 'lazy-stylesheet', 'onload' => 'this.media=\'all\'']);
-//		$this->getPreloadManager()->preload($wa->getAsset('style', 'fontscheme.current')->getUri() . '?' . $this->getMediaVersion(), ['as' => 'style']);
-//	}
-//}
-
-// Enable assets
-$wa = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
+
+$color = $this->params->get('colors', 'colors_default');
+$asset  = 'theme.' . $color;
+$wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 ?>
 

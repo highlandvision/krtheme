@@ -1,15 +1,15 @@
 {
   "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
   "name": "krtheme",
-  "version": "4.0.0",
-  "description": "This file contains details of the style assets used by KrTheme, a site template for KR.",
+  "version": "4.2.0",
+  "description": "This file contains details of the style assets used by KR Theme, a site template for KR.",
   "license": "GPL-2.0-or-later",
   "assets": [
     {
-      "name": "template.krtheme.krtheme",
+      "name": "template.krtheme.kr",
       "description": "CSS for KR theme.",
       "type": "style",
-      "uri": "krtheme.min.css"
+      "uri": "kr.min.css"
     },
     {
       "name": "template.krtheme.krmodules",
@@ -35,6 +35,13 @@
       "uri": "system/joomla-fontawesome.min.css"
     },
     {
+      "name": "template.user",
+      "description": "Custom user css file.",
+      "type": "style",
+      "uri": "user.css",
+      "weight": 500
+    },
+    {
       "name": "template.krtheme.site",
       "type": "preset",
       "dependencies": [
@@ -42,7 +49,8 @@
         "template.krtheme.foundation#style",
         "template.krtheme.template#style",
         "template.krtheme.krmodules#style",
-        "template.krtheme.krtheme#style"
+        "template.krtheme.kr#style",
+        "template.user#style"
       ]
     }
   ]

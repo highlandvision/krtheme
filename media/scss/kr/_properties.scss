@@ -1,0 +1,247 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+.kr-properties {
+	ul.menu.icons {
+		margin-bottom: 0;
+		margin-left: 0;
+		width: 100%;
+		&.menu .is-active > a {
+			background: var(--secondary-color) !important;
+		}
+		li {
+			border-right: 1px solid res.$white;
+			background: var(--primary-color);
+			cursor: pointer;
+			text-align: center;
+			&:last-child {
+				border-right: none;
+			}
+			&:hover {
+				background: var(--accent-color);
+			}
+			&.is-active {
+				background: var(--accent-color) !important;
+				cursor: default;
+			}
+			a.item {
+				color: res.$white;
+				cursor: pointer;
+				display: flex;
+				flex-grow: 1;
+				flex-shrink: 1;
+				font-size: 1rem;
+				justify-content: center;
+				padding-bottom: 0.5rem;
+				padding-top: 0.5rem;
+				text-align: center;
+				span {
+					font-family: var(--body-font-family);
+					font-weight: normal;
+					margin: 0 auto;
+					text-align: center;
+					@include mixin.breakpoint(medium) {
+						font-size: 0.8rem;
+					}
+					@include mixin.breakpoint(large) {
+						font-size: initial;
+					}
+				}
+				i {
+					color: res.$white;
+					font-size: 1.2rem;
+					margin: 0 auto 3px;
+					text-align: center;
+					@include mixin.breakpoint(medium) {
+						font-size: 0.9rem;
+					}
+				}
+			}
+			button {
+				font-size: 1rem;
+			}
+		}
+	}
+	// Top sort and filters
+	.kr-sortby.top,
+	.kr-filters.top {
+		width: 100%;
+		justify-content: flex-start;
+		background: var(--primary-color);
+		color: res.$white;
+		padding: 0.5rem;
+		margin-top: 2px;
+		font-size: 13px;
+		ul.filter-sort-list {
+			margin: 0;
+			padding: 0;
+			flex: 1;
+			li {
+				padding: 0.2rem 0.3rem;
+				&.head {
+					font-weight: 400;
+				}
+			}
+		}
+		input[type="checkbox"].checkover + label.checklabel,
+		input[type="radio"].radioover + label.radiolabel,
+		input[type="checkbox"].checkover + label.checklabel:before,
+		input[type="radio"].radioover + label.radiolabel:before {
+			color: res.$white;
+			font-size: 14px;
+		}
+	}
+	// Sidebar filter
+	#kr-properties-filters {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		h3 {
+			float: left;
+			margin-bottom: 1rem;
+		}
+		.kr-filters-reset {
+			margin-bottom: 0;
+			color: var(--primary-color);
+			padding: 0.5rem 0 0 0;
+			i {
+				color: var(--primary-color);
+			}
+		}
+		ul.filter-sort-list {
+			width: 100%;
+			margin: 1rem 0;
+			padding: 0;
+			background: res.$white;
+			list-style: none;
+			&:first-of-type {
+				margin-top: 0;
+			}
+			input[type="checkbox"].checkover + label.checklabel:before {
+				color: var(--primary-color);
+				vertical-align: bottom;
+			}
+			li {
+				margin: 0;
+				position: relative;
+				&.head {
+					margin-bottom: 0.75rem;
+					font-weight: 400;
+					font-size: 1rem;
+					&.button {
+						padding: 0.5rem;
+						text-align: left;
+					}
+				}
+				&.head:after {
+					content: "\f078";
+					font-family: 'Font Awesome 5 Free', sans-serif;
+					font-size: 1.2rem;
+					font-weight: 900;
+					position: absolute;
+					right: 0.6rem;
+					top: 0.4rem;
+				}
+				&.head.active:after {
+					content: "\f077";
+					font-family: 'Font Awesome 5 Free', sans-serif;
+					font-size: 1.2rem;
+					font-weight: 900;
+					position: absolute;
+					right: 0.6rem;
+					top: 0.4rem;
+				}
+				label.disabled {
+					opacity: 0.5;
+					&:hover {
+						color: res.$body-font-color !important;
+					}
+				}
+			}
+		}
+	}
+	.kr-mobilebar {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		li {
+			background: var(--primary-color);
+		}
+		button {
+			padding: 1rem 0.5rem;
+		}
+	}
+	.kr-properties-header {
+		margin-bottom: var(--global-margin);
+		h3 {
+			text-transform: uppercase;
+			margin-bottom: 0;
+			margin-top: 1.25rem;
+		}
+	}
+	#kr-properties-data,
+	#kr-properties-data-off-canvas {
+		min-height: 387px;
+		position: relative;
+	}
+}
+#kr-properties-filters-off-canvas,
+#kr-properties-sortby-off-canvas {
+	background: var(--primary-color);
+	.actions {
+		line-height: 1.6rem;
+		padding: 0.3rem 0.5rem;
+		border-bottom: 1px solid res.$black;
+		.button-group {
+			margin-bottom: 0;
+		}
+		.button.clear {
+			color: res.$white;
+			margin-bottom: 0;
+		}
+		i.fas {
+			color: res.$white;
+		}
+	}
+	ul.filter-sort-list {
+		margin-bottom: 0;
+		li {
+			display: block;
+			float: none;
+			color: res.$white;
+			margin: 0;
+			padding: 0.5rem;
+			line-height: 1.6rem;
+			border-bottom: 1px solid res.$black;
+			&.head {
+				text-transform: uppercase;
+				text-align: left;
+			}
+			label.radiolabel,
+			label.checklabel {
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				font-weight: 400;
+				display: flex;
+				align-items: center;
+				color: res.$white;
+				&:before {
+					color: res.$white;
+					margin-right: 0.3rem;
+				}
+			}
+		}
+	}
+	// Filters close button
+	.filters-close {
+		position: absolute;
+		top: 0.5rem;
+		right: 1.5rem;
+	}
+	.filters-close:after {
+		content: "\f00d";
+		font-family: 'Font Awesome 5 Free', sans-serif;
+		color: res.$dark-gray;
+		font-size: 1.3rem;
+		font-weight: 900;
+	}
+}

@@ -25,8 +25,14 @@ if ($menu->getActive() === $menu->getDefault())
 	$home = true;
 }
 
+$this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+
 $wa  = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
+
+$color = $this->params->get('colors', 'colors_default');
+$asset  = 'theme.' . $color;
+$wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 ?>
 
@@ -69,14 +75,16 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 						</button>
 					</div>
 					<div class="title-bar-title text-right">
-						<a href="/index.php" style="color:#fefefe;" title="<?php echo $sitename; ?>">
-							<?php echo $sitename; ?>
-						</a>
+						<div class="logo-image">
+							<a href="/index.php" title="<?php echo $sitename; ?>">
+								<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id="header" class="show-for-large">
+			<div id="header" class="collapse show-for-large">
 				<div id="toprow" class="empty">
 				</div>
 				<div class="row expanded">
@@ -85,8 +93,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 							<div class="top-bar-left">
 								<div class="logo-image">
 									<a href="/index.php" title="<?php echo $sitename; ?>">
-										<img src="/images/logo.png" class="logo" alt="<?php echo $sitename; ?>" width="137"
-										     height="75">
+										<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
 									</a>
 								</div>
 							</div>
@@ -111,15 +118,8 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				<div class="show-for-large">
 					<jdoc:include type="modules" name="hero-slider" style="html5" />
 				</div>
-				<?php if ($this->countModules('hero-spot', true)): ?>
-					<div class="spot">
-						<jdoc:include type="modules" name="hero-spot" style="html5" />
-					</div>
-				<?php endif; ?>
 				<?php if ($this->countModules('hero-search', true)): ?>
-					<div class="search">
-						<jdoc:include type="modules" name="hero-search" style="html5" />
-					</div>
+					<jdoc:include type="modules" name="hero-search" style="html5" />
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
@@ -154,7 +154,6 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			<div class="main-content">
 				<div class="row">
 					<?php if ($this->countModules('sidebar-left', true) && $this->countModules('sidebar-right', true)): ?>
-						<?php echo " hello there both!"; ?>
 						<div id="sidebar-left" class="small-12 medium-4 columns">
 							<jdoc:include type="modules" name="sidebar-left" style="html5" />
 						</div>
@@ -197,7 +196,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 							<jdoc:include type="component" />
 
 							<?php if ($this->countModules('under-content', true)): ?>
-								<jdoc:include type="modules" name="below-content" style="html5" />
+								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>
@@ -258,14 +257,14 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 		<div class="bottom">
 			<div class="row">
-				<div class="copyright small-12 small-text-center medium-6 medium-text-left columns">
-					<?php if ($this->countModules('footer-left', true)): ?>
-						<jdoc:include type="modules" name="footer-left" style="html5" />
-					<?php endif; ?>
-				</div>
-				<div class="small-12 small-text-center medium-6 medium-text-left columns">
+				<div class="small-12 text-center large-6 large-text-left columns">
 					<?php if ($this->countModules('footer-right', true)): ?>
 						<jdoc:include type="modules" name="footer-right" style="html5" />
+					<?php endif; ?>
+				</div>
+				<div class="copyright small-12 text-center large-6 large-text-right columns">
+					<?php if ($this->countModules('footer-left', true)): ?>
+						<jdoc:include type="modules" name="footer-left" style="html5" />
 					<?php endif; ?>
 				</div>
 			</div>
