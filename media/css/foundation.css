@@ -498,7 +498,7 @@ select {
   font-weight: normal;
   line-height: 1.5;
   color: hsl(0, 0%, 27%);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%28102, 102, 102%29"></polygon></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%280, 60, 112%29"></polygon></svg>');
   background-origin: content-box;
   background-position: right -1rem center;
   background-repeat: no-repeat;
@@ -2635,8 +2635,8 @@ a.button:hover, a.button:focus {
 }
 .button-group .button {
   margin: 0;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-right: 1px;
+  margin-bottom: 1px;
   font-size: 0.9rem;
   flex: 0 0 auto;
 }
@@ -3187,7 +3187,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .card-divider {
   display: flex;
   flex: 0 1 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   background: hsl(0, 0%, 90%);
 }
 .card-divider > :last-child {
@@ -3196,7 +3196,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .card-section {
   flex: 1 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 .card-section > :last-child {
   margin-bottom: 0;
@@ -3213,7 +3213,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   width: 300px;
   padding: 1rem;
   visibility: hidden;
-  border: 1px solid hsl(0, 0%, 79%);
+  border: 0;
   border-radius: 0;
   background-color: hsl(0, 0%, 100%);
   font-size: 1rem;

@@ -2,64 +2,19 @@
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-properties {
-	ul.menu.icons {
+	.kr-searchbar {
 		margin-bottom: 0;
-		margin-left: 0;
-		width: 100%;
-		&.menu .is-active > a {
-			background: var(--secondary-color) !important;
-		}
-		li {
-			border-right: 1px solid res.$white;
-			background: var(--primary-color);
-			cursor: pointer;
-			text-align: center;
-			&:last-child {
-				border-right: none;
-			}
-			&:hover {
-				background: var(--accent-color);
-			}
+		a.button {
 			&.is-active {
-				background: var(--accent-color) !important;
+				background: var(--primary-color-hover) !important;
 				cursor: default;
 			}
-			a.item {
+			i {
 				color: res.$white;
-				cursor: pointer;
-				display: flex;
-				flex-grow: 1;
-				flex-shrink: 1;
-				font-size: 1rem;
-				justify-content: center;
-				padding-bottom: 0.5rem;
-				padding-top: 0.5rem;
-				text-align: center;
-				span {
-					font-family: var(--body-font-family);
-					font-weight: normal;
-					margin: 0 auto;
-					text-align: center;
-					@include mixin.breakpoint(medium) {
-						font-size: 0.8rem;
-					}
-					@include mixin.breakpoint(large) {
-						font-size: initial;
-					}
-				}
-				i {
-					color: res.$white;
-					font-size: 1.2rem;
-					margin: 0 auto 3px;
-					text-align: center;
-					@include mixin.breakpoint(medium) {
-						font-size: 0.9rem;
-					}
-				}
 			}
-			button {
-				font-size: 1rem;
-			}
+		}
+		.button-group {
+			margin-bottom: 0;
 		}
 	}
 	// Top sort and filters
@@ -70,7 +25,7 @@
 		background: var(--primary-color);
 		color: res.$white;
 		padding: 0.5rem;
-		margin-top: 2px;
+		margin-bottom: 2px;
 		font-size: 13px;
 		ul.filter-sort-list {
 			margin: 0;
@@ -92,74 +47,76 @@
 		}
 	}
 	// Sidebar filter
-	#kr-properties-filters {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		h3 {
-			float: left;
-			margin-bottom: 1rem;
-		}
-		.kr-filters-reset {
-			margin-bottom: 0;
-			color: var(--primary-color);
-			padding: 0.5rem 0 0 0;
-			i {
-				color: var(--primary-color);
-			}
-		}
-		ul.filter-sort-list {
-			width: 100%;
-			margin: 1rem 0;
-			padding: 0;
-			background: res.$white;
-			list-style: none;
-			&:first-of-type {
-				margin-top: 0;
-			}
-			input[type="checkbox"].checkover + label.checklabel:before {
-				color: var(--primary-color);
-				vertical-align: bottom;
-			}
-			li {
-				margin: 0;
-				position: relative;
-				&.head {
-					margin-bottom: 0.75rem;
-					font-weight: 400;
-					font-size: 1rem;
-					&.button {
-						padding: 0.5rem;
-						text-align: left;
-					}
-				}
-				&.head:after {
-					content: "\f078";
-					font-family: 'Font Awesome 5 Free', sans-serif;
-					font-size: 1.2rem;
-					font-weight: 900;
-					position: absolute;
-					right: 0.6rem;
-					top: 0.4rem;
-				}
-				&.head.active:after {
-					content: "\f077";
-					font-family: 'Font Awesome 5 Free', sans-serif;
-					font-size: 1.2rem;
-					font-weight: 900;
-					position: absolute;
-					right: 0.6rem;
-					top: 0.4rem;
-				}
-				label.disabled {
-					opacity: 0.5;
-					&:hover {
-						color: res.$body-font-color !important;
-					}
-				}
-			}
-		}
-	}
+	//.kr-filters-reset {
+	//	width:25%;
+	//	cursor:pointer;
+	//}
+	//#kr-properties-filters {
+	//	margin: 0;
+	//	padding: 0;
+	//	width: 100%;
+	//	h3 {
+	//		float: left;
+	//		margin-bottom: 1rem;
+	//	}
+	//	.kr-filters-reset {
+	//		margin-bottom: 0;
+	//		color: var(--primary-color);
+	//		padding: 0.5rem 0 0 0;
+	//		i {
+	//			color: var(--primary-color);
+	//		}
+	//	}
+	//	ul.filter-sort-list {
+	//		width: 100%;
+	//		margin: 1rem 0;
+	//		padding: 0;
+	//		background: res.$white;
+	//		list-style: none;
+	//		&:first-of-type {
+	//			margin-top: 0;
+	//		}
+	//		input[type="checkbox"].checkover + label.checklabel:before {
+	//			color: var(--primary-color);
+	//			vertical-align: bottom;
+	//		}
+	//		li {
+	//			margin: 0;
+	//			position: relative;
+	//			&.head {
+	//				margin-bottom: 0.75rem;
+	//				font-weight: 400;
+	//				&.button {
+	//					text-align: left;
+	//				}
+	//			}
+	//			&.head:after {
+	//				content: "\f078";
+	//				font-family: 'Font Awesome 5 Free', sans-serif;
+	//				font-size: 1.2rem;
+	//				font-weight: 900;
+	//				position: absolute;
+	//				right: 0.6rem;
+	//				top: 0.4rem;
+	//			}
+	//			&.head.active:after {
+	//				content: "\f077";
+	//				font-family: 'Font Awesome 5 Free', sans-serif;
+	//				font-size: 1.2rem;
+	//				font-weight: 900;
+	//				position: absolute;
+	//				right: 0.6rem;
+	//				top: 0.4rem;
+	//			}
+	//			label.disabled {
+	//				opacity: 0.5;
+	//				&:hover {
+	//					color: res.$body-font-color !important;
+	//				}
+	//			}
+	//		}
+	//	}
+	//}
 	.kr-mobilebar {
 		margin-top: 0.5rem;
 		margin-bottom: 1rem;
@@ -188,8 +145,8 @@
 #kr-properties-sortby-off-canvas {
 	background: var(--primary-color);
 	.actions {
-		line-height: 1.6rem;
-		padding: 0.3rem 0.5rem;
+		line-height: 1.4rem;
+		padding: 0.2rem 0.5rem;
 		border-bottom: 1px solid res.$black;
 		.button-group {
 			margin-bottom: 0;
@@ -209,21 +166,23 @@
 			float: none;
 			color: res.$white;
 			margin: 0;
-			padding: 0.5rem;
-			line-height: 1.6rem;
+			padding: 0.3rem 0.5rem;
+			line-height: 1.4rem;
 			border-bottom: 1px solid res.$black;
+			font-size: 0.9rem;
 			&.head {
 				text-transform: uppercase;
 				text-align: left;
 			}
 			label.radiolabel,
 			label.checklabel {
-				padding-left: 0.5rem;
-				padding-right: 0.5rem;
-				font-weight: 400;
-				display: flex;
 				align-items: center;
 				color: res.$white;
+				display: flex;
+				font-size: 0.8rem;
+				font-weight: 400;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
 				&:before {
 					color: res.$white;
 					margin-right: 0.3rem;

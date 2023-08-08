@@ -39,21 +39,6 @@
 				color: var(--footer-link-hover);
 			}
 		}
-		.columns.border {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			.moduletable {
-				&:nth-last-child(n+2) ~ div:last-child {
-					margin-top: auto;
-				}
-			}
-			@include mixin.breakpoint(medium) {
-				:not(:first-child) {
-					border-left: 1px solid res.$medium_gray;
-				}
-			}
-		}
 		.row {
 			.moduletable {
 				&:nth-last-child(n+2) ~ div:last-child {

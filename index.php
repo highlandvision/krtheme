@@ -57,10 +57,8 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 	</div>
 	<div id="kr-properties-sortby-off-canvas" class="off-canvas-absolute position-left kr-offcanvas kr-sortby"
 	     data-off-canvas data-transition="overlap"></div>
-
 	<div id="kr-properties-filters-off-canvas" class="off-canvas-absolute position-right kr-offcanvas kr-filters"
 	     data-off-canvas data-transition="overlap"></div>
-
 	<div id="kr-properties-search-off-canvas" class="off-canvas-absolute position-top kr-offcanvas"
 	     data-off-canvas data-transition="overlap" data-force-to="top">
 	</div>
@@ -85,10 +83,9 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 
 			<div id="header" class="collapse show-for-large">
-				<div id="toprow" class="empty">
-				</div>
+				<div id="toprow" class="empty"></div>
 				<div class="row expanded">
- 				    <div id="bottomrow">
+	                <div id="bottomrow">
 						<div class="large-2 columns">
 							<div class="top-bar-left">
 								<div class="logo-image">
@@ -113,7 +110,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		</nav>
 
-		<?php if ($this->countModules('hero-slider', true)): ?>
+		<?php if ($home && $this->countModules('hero-slider', true)): ?>
 			<div id="hero" class="home">
 				<div class="show-for-large">
 					<jdoc:include type="modules" name="hero-slider" style="html5" />
@@ -122,24 +119,24 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					<jdoc:include type="modules" name="hero-search" style="html5" />
 				<?php endif; ?>
 			</div>
-		<?php endif; ?>
-
-		<?php if ($this->countModules('breadcrumbs', true)) : ?>
-			<div class="row">
-				<div class="medium-12 columns end">
-					<jdoc:include type="modules" name="breadcrumbs" style="html5" />
+		<?php elseif (!$home && $this->countModules('hero-search', true)): ?>
+			<div data-sticky-container>
+				<div data-sticky data-margin-top="0" data-top-anchor="header:bottom" data-check-every="-1">
+					<div id="hero" class="sub">
+						<jdoc:include type="modules" name="hero-search" style="html5" />
+					</div>
 				</div>
 			</div>
 		<?php endif; ?>
 
-		<div class="row">
-			<div class="small-12 columns">
-				<jdoc:include type="message" />
-			</div>
-		</div>
-
 		<!--main section-->
 		<section id="main">
+			<div class="row">
+				<div class="small-12 columns">
+					<jdoc:include type="message" />
+				</div>
+			</div>
+
 			<?php if ($home && $this->countModules('above-content', true)): ?>
 				<div class="row">
 					<div class="small-12 columns">

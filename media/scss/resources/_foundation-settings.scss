@@ -73,13 +73,13 @@ $default-body-font-family: Arial, sans-serif !default;
 $default-body-color: hsl(0, 0%, 27%) !default;
 // For hover values increase or decrease the  percentage values (saturation and lightness) as required
 $default-primary-color: hsl(208, 100%, 22%) !default;
-$default-primary-color-hover: hsl(208, 90%, 12%) !default;
+$default-primary-color-hover: hsl(208, 100%, 32%) !default;
 $default-secondary-color: hsl(46, 100%, 34%) !default;
-$default-secondary-color-hover: hsl(46, 90%, 24%) !default;
+$default-secondary-color-hover: hsl(46, 100%, 44%) !default;
 $default-accent-color: hsl(208, 50%, 42%) !default;
-$default-accent-color-hover: hsl(208, 40%, 32%) !default;
+$default-accent-color-hover: hsl(208, 50%, 42%) !default;
 $default-alert-color: hsl(0, 100%, 33%) !default;
-$default-alert-color-hover: hsl(0, 90%, 23%) !default;
+$default-alert-color-hover: hsl(0, 100%, 43%) !default;
 $default-success-color: hsl(128, 29%, 70%) !default;
 $default-success-color-hover: hsl(128, 19%, 60%) !default;
 $default-warning-color: hsl(24, 100%, 56%) !default;
@@ -429,7 +429,7 @@ $button-responsive-expanded: false;
 // ----------------
 
 $buttongroup-margin: 1rem;
-$buttongroup-spacing: 5px;
+$buttongroup-spacing: 1px;
 $buttongroup-child-selector: '.button';
 $buttongroup-expand-max: 6;
 $buttongroup-radius-on-each: true;
@@ -461,7 +461,8 @@ $card-divider-background: $light-gray;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
-$card-padding: $global-padding;
+//$card-padding: $global-padding;
+$card-padding: 0.5rem;
 $card-margin-bottom: $global-margin;
 
 // 15. Close Button
@@ -505,8 +506,8 @@ $drilldown-arrow-size: 6px;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-background: $body-background;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-background: $default-body-background;
+$dropdown-border: 0;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
@@ -560,7 +561,7 @@ $form-label-font-size: mixin.rem-calc(15);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: hsl(0, 0%, 40%);
+$select-triangle-color: $default-primary-color;
 $select-radius: $global-radius;
 $input-color: $body-font-color;
 $input-placeholder-color: $dark-gray;
@@ -974,7 +975,7 @@ $tooltip-background-color: $dark-gray;
 $tooltip-color: $white;
 $tooltip-padding: 0.5rem;
 $tooltip-max-width: 20rem;
-$tooltip-font-size: $small-font-size;
+$tooltip-font-size: $default-small-font-size;
 $tooltip-pip-width: 0.75rem;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;
