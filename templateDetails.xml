@@ -15,6 +15,7 @@
         <filename>favicon.ico</filename>
         <filename>index.php</filename>
         <filename>joomla.asset.json</filename>
+        <filename>KrthemeInstallerScript.php</filename>
         <filename>templateDetails.xml</filename>
         <folder>html</folder>
         <folder>language</folder>
