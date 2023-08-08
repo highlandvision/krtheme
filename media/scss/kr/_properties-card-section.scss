@@ -1,0 +1,54 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+.card {
+    .card-section {
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            padding-top: 1rem;
+            @include mixin.breakpoint(medium) {
+                padding-top: 0.2rem;
+            }
+        }
+        h3.tagline {
+            color: var(--accent-color);
+        }
+        .info {
+            font-size: 13px;
+            color: var(--body-color);
+        }
+        .amenities {
+            margin: 0.5rem 0;
+            .badge {
+                border-radius: 40px;
+                background: res.$light-gray;
+                color: var(--body-color);
+                font-size: 13px;
+                height: 18px;
+                margin-right: 5px;
+                padding: .1rem .4rem;
+                white-space: nowrap;
+                width: auto;
+            }
+        }
+        .rating {
+            div {
+                background-color: var(--accent-color);
+                width: 60px;
+                height: 30px;
+                border-radius: 40px;
+                color: white;
+                font-size: 1.6rem;
+                p {
+                    text-align: center;
+                    padding: 3px;
+                    font-size: 1rem;
+                }
+                .fa-star {
+                    color: #f0c230;
+                }
+            }
+        }
+    }
+}

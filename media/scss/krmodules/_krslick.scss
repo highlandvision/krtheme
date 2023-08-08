@@ -29,7 +29,7 @@ i.slick-nav {
 	line-height: 0;
 	border: 0;
 	outline: 0;
-	z-index: 11;
+	z-index: 1;
 	font-size: 2rem;
 	padding: 1.6rem 0.8rem;
 	@include mixin.breakpoint(large) {

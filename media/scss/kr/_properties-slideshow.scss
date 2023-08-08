@@ -1,0 +1,78 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+.card {
+    .slideshow {
+        position: relative;
+        line-height: 0;
+        padding: 0;
+        margin: 0;
+        .price {
+            position: absolute;
+            left: 0;
+            bottom: 8%;
+            opacity: 0.8;
+            width: 75%;
+            padding: 1.5% 3%;
+            color: res.$white;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        a:not(:first-of-type) {
+            display: none;
+        }
+        i.slick-nav {
+            font-size: 2.4rem;
+        }
+        i.slick-nav.next,
+        i.slick-nav.prev {
+            background: none;
+        }
+    }
+    .topcorner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 70px 70px 0 0;
+            border-color: var(--secondary-color) transparent transparent transparent;
+            .text {
+                transform: rotate(-45deg);
+                color: res.$white;
+                position: absolute;
+                font-weight: 700;
+                top: 26px;
+                left: 0;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .favspan {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        width: 3rem;
+        height: 3rem;
+        margin: 0;
+        .fa-stack {
+            height: 3rem;
+            line-height: 3rem;
+            width: 3rem;
+            .favicon-base {
+                color: res.$white;
+                font-size: 3rem;
+            }
+            .favicon-top {
+                color: res.$dark-gray;
+                font-size: 2rem;
+            }
+        }
+        .favicon-top.in {
+            color: var(--favorite);
+        }
+    }
+}

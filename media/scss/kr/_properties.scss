@@ -3,7 +3,7 @@
 
 .kr-properties {
 	.kr-searchbar {
-		margin-bottom: 0;
+		margin-bottom: var(--global-margin);
 		a.button {
 			&.is-active {
 				background: var(--primary-color-hover) !important;
@@ -46,77 +46,6 @@
 			font-size: 14px;
 		}
 	}
-	// Sidebar filter
-	//.kr-filters-reset {
-	//	width:25%;
-	//	cursor:pointer;
-	//}
-	//#kr-properties-filters {
-	//	margin: 0;
-	//	padding: 0;
-	//	width: 100%;
-	//	h3 {
-	//		float: left;
-	//		margin-bottom: 1rem;
-	//	}
-	//	.kr-filters-reset {
-	//		margin-bottom: 0;
-	//		color: var(--primary-color);
-	//		padding: 0.5rem 0 0 0;
-	//		i {
-	//			color: var(--primary-color);
-	//		}
-	//	}
-	//	ul.filter-sort-list {
-	//		width: 100%;
-	//		margin: 1rem 0;
-	//		padding: 0;
-	//		background: res.$white;
-	//		list-style: none;
-	//		&:first-of-type {
-	//			margin-top: 0;
-	//		}
-	//		input[type="checkbox"].checkover + label.checklabel:before {
-	//			color: var(--primary-color);
-	//			vertical-align: bottom;
-	//		}
-	//		li {
-	//			margin: 0;
-	//			position: relative;
-	//			&.head {
-	//				margin-bottom: 0.75rem;
-	//				font-weight: 400;
-	//				&.button {
-	//					text-align: left;
-	//				}
-	//			}
-	//			&.head:after {
-	//				content: "\f078";
-	//				font-family: 'Font Awesome 5 Free', sans-serif;
-	//				font-size: 1.2rem;
-	//				font-weight: 900;
-	//				position: absolute;
-	//				right: 0.6rem;
-	//				top: 0.4rem;
-	//			}
-	//			&.head.active:after {
-	//				content: "\f077";
-	//				font-family: 'Font Awesome 5 Free', sans-serif;
-	//				font-size: 1.2rem;
-	//				font-weight: 900;
-	//				position: absolute;
-	//				right: 0.6rem;
-	//				top: 0.4rem;
-	//			}
-	//			label.disabled {
-	//				opacity: 0.5;
-	//				&:hover {
-	//					color: res.$body-font-color !important;
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
 	.kr-mobilebar {
 		margin-top: 0.5rem;
 		margin-bottom: 1rem;
@@ -138,6 +67,9 @@
 	#kr-properties-data,
 	#kr-properties-data-off-canvas {
 		min-height: 387px;
+		position: relative;
+	}
+	.kr-list-property {
 		position: relative;
 	}
 }
