@@ -455,10 +455,10 @@ $callout-link-tint: 30%;
 // 14. Card
 // --------
 
-$card-background: $white;
+$card-background: #efefef;
 $card-font-color: $body-font-color;
 $card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-border: 0px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 //$card-padding: $global-padding;
