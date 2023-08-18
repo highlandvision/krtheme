@@ -166,7 +166,6 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 							<jdoc:include type="modules" name="sidebar-right" style="html5" />
 						</div>
 					<?php elseif ($this->countModules('sidebar-left', true)): ?>
-						<?php echo "hello there left!"; ?>
 						<div id="sidebar-left" class="small-12 medium-4 columns">
 							<jdoc:include type="modules" name="sidebar-left" style="html5" />
 						</div>

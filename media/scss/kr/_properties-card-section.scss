@@ -2,6 +2,12 @@
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .card {
+    &:hover {
+        box-shadow: inset 1px 0 1px 0 rgba(0, 0, 0, 0.1), 2px 0 2px -2px rgba(0, 0, 0, 0.3), 0 5px 3px -3px rgba(119, 119, 119, 0.6);
+        .slick-btn {
+            opacity: 0.9;
+        }
+    }
     .card-section {
         h2 {
             color: var(--primary-color);
@@ -15,19 +21,19 @@
             color: var(--accent-color);
         }
         .info {
-            font-size: 13px;
+            font-size: 0.8rem;
             color: var(--body-color);
         }
         .amenities {
             margin: 0.5rem 0;
             .badge {
                 border-radius: 40px;
-                background: res.$light-gray;
+                background: res.$white;
                 color: var(--body-color);
-                font-size: 13px;
+                font-size: 11px;
                 height: 18px;
                 margin-right: 5px;
-                padding: .1rem .4rem;
+                padding: .1rem .3rem;
                 white-space: nowrap;
                 width: auto;
             }

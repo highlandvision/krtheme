@@ -94,10 +94,6 @@ input[type="checkbox"].checkover:checked + label.checklabel:before {
 input[type="checkbox"].checkover + label.checklabel.disabled {
 	cursor: default;
 }
-i.fas, i.fab {
-	color: var(--primary-color);
-}
-
 button i.fas, button i.fab {
 	color: res.$white;
 }

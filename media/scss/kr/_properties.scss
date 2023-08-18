@@ -17,35 +17,6 @@
 			margin-bottom: 0;
 		}
 	}
-	// Top sort and filters
-	.kr-sortby.top,
-	.kr-filters.top {
-		width: 100%;
-		justify-content: flex-start;
-		background: var(--primary-color);
-		color: res.$white;
-		padding: 0.5rem;
-		margin-bottom: 2px;
-		font-size: 13px;
-		ul.filter-sort-list {
-			margin: 0;
-			padding: 0;
-			flex: 1;
-			li {
-				padding: 0.2rem 0.3rem;
-				&.head {
-					font-weight: 400;
-				}
-			}
-		}
-		input[type="checkbox"].checkover + label.checklabel,
-		input[type="radio"].radioover + label.radiolabel,
-		input[type="checkbox"].checkover + label.checklabel:before,
-		input[type="radio"].radioover + label.radiolabel:before {
-			color: res.$white;
-			font-size: 14px;
-		}
-	}
 	.kr-mobilebar {
 		margin-top: 0.5rem;
 		margin-bottom: 1rem;
@@ -57,7 +28,6 @@
 		}
 	}
 	.kr-properties-header {
-		margin-bottom: var(--global-margin);
 		h3 {
 			text-transform: uppercase;
 			margin-bottom: 0;
@@ -77,18 +47,15 @@
 #kr-properties-sortby-off-canvas {
 	background: var(--primary-color);
 	.actions {
-		line-height: 1.4rem;
-		padding: 0.2rem 0.5rem;
 		border-bottom: 1px solid res.$black;
+		color: res.$white;
+		margin-bottom: 0;
 		.button-group {
 			margin-bottom: 0;
 		}
-		.button.clear {
+		.button, i {
 			color: res.$white;
-			margin-bottom: 0;
-		}
-		i.fas {
-			color: res.$white;
+			font-size: 13px;
 		}
 	}
 	ul.filter-sort-list {
@@ -98,12 +65,18 @@
 			float: none;
 			color: res.$white;
 			margin: 0;
-			padding: 0.3rem 0.5rem;
-			line-height: 1.4rem;
+			padding: 0 0.5rem;
+			line-height: 1.6rem;
 			border-bottom: 1px solid res.$black;
-			font-size: 0.9rem;
+			font-size: 13px;
+			&:hover {
+				background: var(--primary-color-hover);
+			}
 			&.head {
-				text-transform: uppercase;
+				background: var(--primary-color-hover);
+				color: res.$white;
+				font-size: 0.9rem;
+				padding-left: 1rem;
 				text-align: left;
 			}
 			label.radiolabel,
@@ -121,18 +94,5 @@
 				}
 			}
 		}
-	}
-	// Filters close button
-	.filters-close {
-		position: absolute;
-		top: 0.5rem;
-		right: 1.5rem;
-	}
-	.filters-close:after {
-		content: "\f00d";
-		font-family: 'Font Awesome 5 Free', sans-serif;
-		color: res.$dark-gray;
-		font-size: 1.3rem;
-		font-weight: 900;
 	}
 }
