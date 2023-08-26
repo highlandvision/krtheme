@@ -55,7 +55,7 @@
 		}
 		.button, i {
 			color: res.$white;
-			font-size: 0.7rem;
+			font-size: 0.8rem;
 		}
 	}
 	ul.filter-sort-list {
@@ -65,32 +65,54 @@
 			float: none;
 			color: res.$white;
 			margin: 0;
-			padding: 0 0.5rem;
-			line-height: 1.6rem;
-			border-bottom: 1px solid res.$black;
-			font-size: 0.7rem;
+			padding: 0.2rem 0.7rem;
+			line-height: 1.8rem;
+			border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+			font-size: 0.8rem;
+			&.disabled {
+				cursor: default;
+				opacity: .5;
+			}
 			&:hover {
-				background: var(--primary-color-hover);
+				background: var(--accent-color-hover);
 			}
 			&.head {
-				background: var(--primary-color-hover);
+				background: var(--accent-color);
 				color: res.$white;
-				font-size: 0.7rem;
+				font-size: 0.8rem;
 				padding-left: 1rem;
 				text-align: left;
+			}
+			&.head:after {
+				content: "\f078";
+				float: right;
+				font-family: 'Font Awesome 5 Free', sans-serif;
+				font-weight: 900;
+				margin-right: 0.5rem;
+			}
+			&.head.active:after {
+				content: "\f077";
+				font-family: 'Font Awesome 5 Free', sans-serif;
+				float: right;
+				font-weight: 900;
+				margin-right: 0.5rem;
 			}
 			label.radiolabel,
 			label.checklabel {
 				align-items: center;
 				color: res.$white;
 				display: flex;
-				font-size: 0.7rem;
+				font-size: 0.8rem;
 				font-weight: 400;
 				padding-left: 0.5rem;
 				padding-right: 0.5rem;
 				&:before {
 					color: res.$white;
 					margin-right: 0.3rem;
+				}
+				&.disabled {
+					cursor: default;
+					opacity: .5;
 				}
 			}
 		}

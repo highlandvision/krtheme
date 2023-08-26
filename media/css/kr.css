@@ -492,7 +492,7 @@ select[readonly] {
 #kr-properties-sortby-off-canvas .actions .button,
 #kr-properties-sortby-off-canvas .actions i {
   color: hsl(0, 0%, 100%);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 #kr-properties-filters-off-canvas ul.filter-sort-list,
 #kr-properties-sortby-off-canvas ul.filter-sort-list {
@@ -504,22 +504,43 @@ select[readonly] {
   float: none;
   color: hsl(0, 0%, 100%);
   margin: 0;
-  padding: 0 0.5rem;
-  line-height: 1.6rem;
-  border-bottom: 1px solid hsl(0, 0%, 4%);
-  font-size: 0.7rem;
+  padding: 0.2rem 0.7rem;
+  line-height: 1.8rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+  font-size: 0.8rem;
+}
+#kr-properties-filters-off-canvas ul.filter-sort-list li.disabled,
+#kr-properties-sortby-off-canvas ul.filter-sort-list li.disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 #kr-properties-filters-off-canvas ul.filter-sort-list li:hover,
 #kr-properties-sortby-off-canvas ul.filter-sort-list li:hover {
-  background: var(--primary-color-hover);
+  background: var(--accent-color-hover);
 }
 #kr-properties-filters-off-canvas ul.filter-sort-list li.head,
 #kr-properties-sortby-off-canvas ul.filter-sort-list li.head {
-  background: var(--primary-color-hover);
+  background: var(--accent-color);
   color: hsl(0, 0%, 100%);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   padding-left: 1rem;
   text-align: left;
+}
+#kr-properties-filters-off-canvas ul.filter-sort-list li.head:after,
+#kr-properties-sortby-off-canvas ul.filter-sort-list li.head:after {
+  content: "\f078";
+  float: right;
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+#kr-properties-filters-off-canvas ul.filter-sort-list li.head.active:after,
+#kr-properties-sortby-off-canvas ul.filter-sort-list li.head.active:after {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  float: right;
+  font-weight: 900;
+  margin-right: 0.5rem;
 }
 #kr-properties-filters-off-canvas ul.filter-sort-list li label.radiolabel,
 #kr-properties-filters-off-canvas ul.filter-sort-list li label.checklabel,
@@ -528,7 +549,7 @@ select[readonly] {
   align-items: center;
   color: hsl(0, 0%, 100%);
   display: flex;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -539,6 +560,13 @@ select[readonly] {
 #kr-properties-sortby-off-canvas ul.filter-sort-list li label.checklabel:before {
   color: hsl(0, 0%, 100%);
   margin-right: 0.3rem;
+}
+#kr-properties-filters-off-canvas ul.filter-sort-list li label.radiolabel.disabled,
+#kr-properties-filters-off-canvas ul.filter-sort-list li label.checklabel.disabled,
+#kr-properties-sortby-off-canvas ul.filter-sort-list li label.radiolabel.disabled,
+#kr-properties-sortby-off-canvas ul.filter-sort-list li label.checklabel.disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 
 .kr-slideshow-wrapper {
