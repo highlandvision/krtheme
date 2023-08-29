@@ -23,7 +23,19 @@
 	width: 99.95%;
 	height: 800px;
 }
-// Infowindow
+.kr-map-bubble {
+	color: res.$white;
+	font-size: 1rem;
+	margin-top: 5px;
+	text-align: center;
+}
+.gm-style-iw.gm-style-iw-c,
+.gm-style .gm-style-iw-tc::after {
+	background: var(--primary-color);
+}
+.gm-ui-hover-effect > span {
+	background-color: res.$white;
+}
 #kr-infowindow {
 	display: none;
 	position: absolute;
@@ -32,14 +44,16 @@
 	width: 20rem;
 	padding: .5rem;
 	height: auto;
-	min-height: 450px;
 	background: res.$white;
 	line-height: 1.3rem;
-	font-size: 86%;
 	border: 1px solid res.$medium-gray;
-	h3 {
-		line-height: 1.2;
-		margin: 0.5rem 0 0.2rem;
+	h4 {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	p {
+		font-size: 80%;
+		margin-bottom: 1rem;
 	}
 	.close-button {
 		color: res.$white;
