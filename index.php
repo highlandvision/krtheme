@@ -156,7 +156,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 						</div>
 						<div class="article small-12 medium-8 columns">
 							<jdoc:include type="component" />
-
+							<div style="clear:both;"></div>
 							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
@@ -171,7 +171,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 						</div>
 						<div class="article small-12 medium-8 columns">
 							<jdoc:include type="component" />
-
+							<div style="clear:both;"></div>
 							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
@@ -179,7 +179,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					<?php elseif ($this->countModules('sidebar-right', true)): ?>
 						<div class="article small-12 medium-8 columns">
 							<jdoc:include type="component" />
-
+							<div style="clear:both;"></div>
 							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
@@ -190,7 +190,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					<?php else: ?>
 						<div class="article small-12 columns">
 							<jdoc:include type="component" />
-
+							<div style="clear:both;"></div>
 							<?php if ($this->countModules('under-content', true)): ?>
 								<jdoc:include type="modules" name="under-content" style="html5" />
 							<?php endif; ?>
