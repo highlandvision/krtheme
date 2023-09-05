@@ -455,6 +455,9 @@ select[readonly] {
   white-space: nowrap;
   width: auto;
 }
+#kr-properties-filters-top .badge:hover {
+  background: var(--primary-color-hover);
+}
 #kr-properties-filters-top .badge i.close {
   padding-left: 0.3rem;
   padding-right: 0.3rem;

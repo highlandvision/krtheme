@@ -16,6 +16,9 @@
 		margin-right: 5px;
 		white-space: nowrap;
 		width: auto;
+		&:hover {
+			background: var(--primary-color-hover);
+		}
 		i.close {
 			padding-left: 0.3rem;
 			padding-right: 0.3rem;
