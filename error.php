@@ -10,11 +10,10 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
 
-if (!isset($this->error))
-{
-	$this->error = JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
-	$this->debug = false;
+if (!isset($this->error)) {
+	$this->error = Text::_('JERROR_AN_ERROR_HAS_OCCURRED');
 }
 
 //get language and direction
@@ -35,15 +34,15 @@ $notify      = 'Our technical team have been notified';
 	<meta name="HandheldFriendly" content="True">
 	<title>Error Page</title>
 	<style>
-		body {
-			margin:      0;
-			font-family: sans-serif;
-		}
-		.object {
-			margin-top: 5%;
-			text-align: center;
-			color:      #666;
-		}
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .object {
+            margin-top: 5%;
+            text-align: center;
+            color: #666;
+        }
 	</style>
 </head>
 
@@ -52,8 +51,7 @@ $notify      = 'Our technical team have been notified';
 	<div class="error">
 		<h1><?php echo $title; ?></h1>
 	</div>
-	<img src="<?php echo $this->baseurl . "/templates/" . Factory::getApplication()
-	                                                              ->getTemplate() . "/error.jpg"; ?>" width="360px">
+	<img alt="Stop Error occurred" src='media/templates/site/krtheme/images/error.jpg' width='360'>
 	<div class="desc">
 		<h2><?php echo $description; ?></h2>
 	</div>
@@ -61,8 +59,8 @@ $notify      = 'Our technical team have been notified';
 		<h4><?php echo $notify; ?></h4>
 	</div>
 	<div>
-		<a href="<?php echo $this->baseurl; ?>/index.php" title="<?php echo JText::_('HOME'); ?>">
-			<?php echo JText::_('HOME'); ?>
+		<a href="<?php echo $this->baseurl; ?>/" title="<?php echo Text::_('HOME'); ?>">
+			<?php echo Text::_('HOME'); ?>
 		</a>
 	</div>
 </div>

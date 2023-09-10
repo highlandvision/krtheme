@@ -74,7 +74,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					</div>
 					<div class="title-bar-title text-right">
 						<div class="logo-image">
-							<a href="/index.php" title="<?php echo $sitename; ?>">
+							<a href="/" title="<?php echo $sitename; ?>">
 								<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
 							</a>
 						</div>
@@ -82,47 +82,35 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			</div>
 
-			<div id="header" class="collapse show-for-large">
-				<div id="toprow" class="empty"></div>
-				<div class="row expanded">
-	                <div id="bottomrow">
-						<div class="large-2 columns">
-							<div class="top-bar-left">
-								<div class="logo-image">
-									<a href="/index.php" title="<?php echo $sitename; ?>">
-										<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="large-8 columns">
-							<div class="top-bar-center">
-								<jdoc:include type="modules" name="menu" style="none" />
-							</div>
-						</div>
-						<div class="large-2 columns">
-							<div class="top-bar-right">
-								<jdoc:include type="modules" name="autosearch" style="none" />
-							</div>
-						</div>
+			<div id="header" class="show-for-large">
+				<div class="row">
+					<div class="large-3 columns topbar-left">
+						<a href="/" title="<?php echo $sitename; ?>">
+							<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
+						</a>
+					</div>
+					<div class="large-9 columns topbar-right">
+						<jdoc:include type="modules" name="topbar-right" style="html5" />
 					</div>
 				</div>
 			</div>
 		</nav>
 
-		<?php if ($home && $this->countModules('hero-slider', true)): ?>
+		<?php if ($home): ?>
 			<div id="hero" class="home">
-				<div class="show-for-large">
-					<jdoc:include type="modules" name="hero-slider" style="html5" />
+				<div class="show-for-medium">
+					<?php if ($this->countModules('hero-slider')): ?>
+						<jdoc:include type="modules" name="hero-slider" style="html5" />
+					<?php endif; ?>
 				</div>
 				<?php if ($this->countModules('hero-search', true)): ?>
 					<jdoc:include type="modules" name="hero-search" style="html5" />
 				<?php endif; ?>
 			</div>
-		<?php elseif (!$home && $this->countModules('hero-search', true)): ?>
+		<?php elseif ($this->countModules('hero-search', true)): ?>
 			<div data-sticky-container>
 				<div data-sticky data-margin-top="0" data-top-anchor="header:bottom" data-check-every="-1">
-					<div id="hero" class="sub">
+					<div id="hero" class="subpage">
 						<jdoc:include type="modules" name="hero-search" style="html5" />
 					</div>
 				</div>
@@ -213,7 +201,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 			<?php if ($this->countModules('below-content', true)): ?>
 				<div class="modules-below">
-					<jdoc:include type="modules" name="below-left" style="html5" />
+					<jdoc:include type="modules" name="below-content" style="html5" />
 				</div>
 			<?php endif; ?>
 		</section>

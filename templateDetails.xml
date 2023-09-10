@@ -50,6 +50,8 @@
         <position>menu-mobile</position>
         <position>sidebar-left</position>
         <position>sidebar-right</position>
+        <position>topbar-left</position>
+        <position>topbar-right</position>
         <position>under-content</position>
     </positions>
     <languages folder="language">

@@ -7001,6 +7001,9 @@ i.slick-nav:hover {
   width: 100%;
   margin-bottom: var(--global-margin);
 }
+.moduletable h3 {
+  text-transform: uppercase;
+}
 
 #kr-properties-search-off-canvas {
   padding: 1rem;
@@ -7252,12 +7255,12 @@ i.slick-nav:hover {
   color: var(--body-color);
   margin-top: 0;
 }
-.kr-featured a.property h3.h4, .kr-alternatives a.property h3.h4 {
+.kr-featured a.property h4, .kr-alternatives a.property h4 {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.2;
   color: var(--primary-color);
-  height: 40px;
+  margin-bottom: 0.5rem;
 }
 .kr-featured a.property p, .kr-alternatives a.property p {
   font-size: 0.95rem;
@@ -7338,6 +7341,169 @@ ul#categories li a:hover {
   margin: 0 0 2.5rem;
 }
 
+.kr-search {
+  position: absolute;
+  display: block;
+  margin: 1rem 0;
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 0 0;
+  height: auto;
+}
+.kr-search input, .kr-search select {
+  border: 1px solid var(--primary-color);
+}
+@media print, screen and (min-width: 40em) {
+  .kr-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem 2%;
+    max-width: 240px;
+    width: 100%;
+    height: 300px;
+    -webkit-box-shadow: 3px 5px 3px 0 rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 3px 5px 3px 0 rgba(50, 50, 50, 0.4);
+    box-shadow: 3px 5px 3px 0 rgba(50, 50, 50, 0.4);
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .kr-search {
+    background: hsl(0, 0%, 98%);
+    box-shadow: none;
+    left: 50%;
+    height: auto;
+    margin: 0 0 0 -480px;
+    max-width: 960px;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+  }
+  .kr-search.top {
+    top: 50px;
+    height: 70px;
+  }
+  .kr-search.middle {
+    top: 40%;
+    height: 70px;
+  }
+  .kr-search.bottom {
+    background: hsla(0, 0%, 100%, 0.7);
+    bottom: 7px;
+    border: 3px solid var(--primary-color);
+    border-bottom: none;
+    height: 90px;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    top: unset;
+  }
+  .kr-search.bottom h3 {
+    margin-top: -6px;
+  }
+}
+.kr-search .moduletable {
+  padding-bottom: 0;
+}
+@media print, screen and (min-width: 64em) {
+  .kr-search .columns {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .kr-search .columns:first-child, .kr-search .columns:last-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.kr-search {
+  position: relative;
+  display: block;
+  margin: 1rem 1.5rem;
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 0 0;
+  height: auto;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem 2%;
+    max-width: 240px;
+    width: 100%;
+    -webkit-box-shadow: 3px 5px 3px 0 rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 3px 5px 3px 0 rgba(50, 50, 50, 0.4);
+    box-shadow: 3px 5px 3px 0 rgba(50, 50, 50, 0.4);
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .kr-search {
+    background: hsl(0, 0%, 98%);
+    box-shadow: none;
+    left: 50%;
+    margin: 0 0 0 calc(var(--global-width) / 2 * -1 + 1rem);
+    max-width: calc(var(--global-width) - 2rem);
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+  }
+  .kr-search.top {
+    top: 20px;
+    height: 70px;
+  }
+  .kr-search.middle {
+    top: 44%;
+  }
+  .kr-search.bottom {
+    background: hsla(0, 0%, 100%, 0.7);
+    bottom: 0;
+    border: 1px solid var(--primary-color);
+    border-bottom: none;
+    height: 90px;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    top: unset;
+  }
+  .kr-search.bottom h3 {
+    margin-top: -6px;
+  }
+}
+.kr-search .moduletable {
+  padding-bottom: 0;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-search .columns {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}
+@media print, screen and (min-width: 40em) {
+  .kr-search .columns:first-child, .kr-search .columns:last-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.kr-search.horizontal {
+  background: var(--accent-color);
+}
+.kr-search.horizontal .moduletable {
+  margin-bottom: 0;
+}
+@media print, screen and (min-width: 64em) {
+  .kr-search .subpage {
+    background: none;
+    height: auto;
+    position: relative;
+    padding: 0;
+  }
+  .kr-search .subpage button {
+    margin-bottom: 0;
+  }
+}
+
+.sticky {
+  width: 100%;
+}
+
 .datepicker-wrapper {
   position: relative;
 }
@@ -7352,13 +7518,6 @@ ul#categories li a:hover {
   font-size: 1.3rem;
   color: var(--primary-color);
   cursor: pointer;
-}
-
-.kr-search.horizontal {
-  background: var(--accent-color);
-}
-.kr-search.horizontal .moduletable {
-  margin-bottom: 0;
 }
 
 #kr-properties-search-off-canvas {

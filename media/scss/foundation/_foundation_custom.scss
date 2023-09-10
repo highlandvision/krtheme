@@ -78,7 +78,7 @@
 @import '../../../../../node_modules/foundation-sites/scss/components/visibility';
 //@import 'prototype/prototype';
 @mixin foundation-everything(
-	$flex: true,
+	$flex: false,
 	$prototype: false,
 	$xy-grid: false,
 	$global-flexbox: true
