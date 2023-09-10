@@ -3,20 +3,8 @@
 
 .moduletable {
     width: 100%;
-    margin-bottom: var(--global-margin);
-}
-#kr-properties-search-off-canvas {
-    padding: 1rem;
-    height: auto;
-    width: 300px;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    .sidebar > div {
-        margin-bottom: 0;
-    }
     h3 {
-        display: none;
+        text-transform: uppercase;
     }
 }
 #kr-form-mailchimp {
@@ -235,12 +223,12 @@
             color: var(--body-color);
             margin-top: 0;
         }
-        h3.h4 {
+        h4 {
             font-size: 1.2rem;
             font-weight: 300;
             line-height: 1.2;
             color: var(--primary-color);
-            height: 40px;
+            margin-bottom: 0.5rem;
         }
         p {
             font-size: 0.95rem;

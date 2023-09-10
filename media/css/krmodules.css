@@ -6999,22 +6999,9 @@ i.slick-nav:hover {
 
 .moduletable {
   width: 100%;
-  margin-bottom: var(--global-margin);
 }
-
-#kr-properties-search-off-canvas {
-  padding: 1rem;
-  height: auto;
-  width: 300px;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-#kr-properties-search-off-canvas .sidebar > div {
-  margin-bottom: 0;
-}
-#kr-properties-search-off-canvas h3 {
-  display: none;
+.moduletable h3 {
+  text-transform: uppercase;
 }
 
 #kr-form-mailchimp input[type=text],
@@ -7252,12 +7239,12 @@ i.slick-nav:hover {
   color: var(--body-color);
   margin-top: 0;
 }
-.kr-featured a.property h3.h4, .kr-alternatives a.property h3.h4 {
+.kr-featured a.property h4, .kr-alternatives a.property h4 {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.2;
   color: var(--primary-color);
-  height: 40px;
+  margin-bottom: 0.5rem;
 }
 .kr-featured a.property p, .kr-alternatives a.property p {
   font-size: 0.95rem;
@@ -7338,6 +7325,14 @@ ul#categories li a:hover {
   margin: 0 0 2.5rem;
 }
 
+.kr-search input, .kr-search select {
+  border: 1px solid var(--primary-color);
+}
+
+.sticky {
+  width: 100%;
+}
+
 .datepicker-wrapper {
   position: relative;
 }
@@ -7354,17 +7349,10 @@ ul#categories li a:hover {
   cursor: pointer;
 }
 
-.kr-search.horizontal {
-  background: var(--accent-color);
-}
-.kr-search.horizontal .moduletable {
-  margin-bottom: 0;
-}
-
 #kr-properties-search-off-canvas {
-  padding: 1rem;
-  height: auto;
-  width: 300px;
+  border: 1px solid var(--primary-color);
+  min-height: 310px;
+  width: 265px;
   right: 0;
   margin-left: auto;
   margin-right: auto;
@@ -7382,18 +7370,8 @@ ul#categories li a:hover {
 
 #kr-searchregion-drop,
 #kr-searchguest-drop {
-  z-index: 9999;
+  z-index: 99;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-}
-#kr-searchregion-drop .header,
-#kr-searchguest-drop .header {
-  background: var(--primary-color);
-  color: hsl(0, 0%, 100%);
-  font-size: 0.8rem;
-  margin-bottom: 0.3rem;
-  padding: 0.3rem 0 0.2rem;
-  text-align: center;
-  text-transform: uppercase;
 }
 #kr-searchregion-drop .dropdown-body,
 #kr-searchguest-drop .dropdown-body {
@@ -7403,9 +7381,7 @@ ul#categories li a:hover {
   line-height: 1.8;
   max-height: 300px;
   overflow-x: scroll;
-  padding-bottom: 1.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
 }
 #kr-searchregion-drop .footer,
 #kr-searchguest-drop .footer {
@@ -7470,18 +7446,19 @@ ul#categories li a:hover {
 
 #kr-searchguest-drop .dropdown-body {
   line-height: 1.8;
-  text-align: center;
+}
+#kr-searchguest-drop .input-number-group {
+  justify-content: left;
 }
 #kr-searchguest-drop #age-help {
-  font-size: 13px;
+  font-size: 0.9rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
   color: var(--body-font-color);
 }
 #kr-searchguest-drop #child-ages-container input {
   display: inline-block;
-  text-align: center;
-  margin: 0 0.1rem 0.5rem 0.1rem;
+  margin: 0 0.2rem 0.5rem 0.2rem;
 }
 #kr-searchguest-drop #child-ages-container input[type=number] {
   min-width: 3.5rem !important;

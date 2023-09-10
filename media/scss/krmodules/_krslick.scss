@@ -2,86 +2,90 @@
 @use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .kr-slick {
-	position: relative;
-	visibility: hidden;
+    position: relative;
+    visibility: hidden;
 }
 .slick-initialized.kr-slick {
-	visibility: visible;
+    visibility: visible;
 }
 .slideshow-wrapper {
-	margin-bottom: var(--global-margin);
+    margin-bottom: var(--global-margin);
 }
 .slickarrow {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
+
 i.slick-nav {
-	cursor: pointer;
-	opacity: 0.6;
-	top: 47%;
-	position: absolute;
-	display: block;
-	line-height: 0;
-	border: 0;
-	outline: 0;
-	z-index: 1;
-	font-size: 2rem;
-	padding: 1.6rem 0.8rem;
-	@include mixin.breakpoint(large) {
-		font-size: 2.2rem;
-	}
-	&.fas {
-		color: res.$white;
-	}
-	&.prev {
-		left: 0;
-		background: var(--primary-color);
-	}
-	&.next {
-		right: 0;
-		background: var(--primary-color);
-	}
-	&:hover {
-		opacity: 0.9;
-	}
+    cursor: pointer;
+    opacity: 0.6;
+    top: 47%;
+    position: absolute;
+    display: block;
+    line-height: 0;
+    border: 0;
+    outline: 0;
+    z-index: 1;
+    font-size: 2rem;
+    padding: 1.6rem 0.8rem;
+    @include mixin.breakpoint(large) {
+        font-size: 2.2rem;
+    }
+    &.fas {
+        color: res.$white;
+    }
+    &.prev {
+        left: 0;
+        background: var(--primary-color);
+    }
+    &.next {
+        right: 0;
+        background: var(--primary-color);
+    }
+    &:hover {
+        opacity: 0.9;
+    }
 }
+
 .kr-double-arrows {
-	float: right;
-	position: relative;
-	margin-top: 1.5rem;
-	width: 4rem;
-	i.slick-nav {
-		font-size: 1.8rem;
-		top: -0.6rem;
-		background: none;
-		padding: 0;
-		opacity: 1;
-		&.prev {
-			left: 0;
-		}
-		&.next {
-			right: 0;
-		}
-		&.fas {
-			color: var(--primary-color);
-		}
-	}
+    float: right;
+    position: relative;
+    margin-top: 1.5rem;
+    width: 4rem;
+    i.slick-nav {
+        font-size: 1.8rem;
+        top: -0.6rem;
+        background: none;
+        padding: 0;
+        opacity: 1;
+        &.prev {
+            left: 0;
+        }
+        &.next {
+            right: 0;
+        }
+        &.fas {
+            color: var(--primary-color);
+        }
+    }
 }
+
 .slick-disabled {
-	opacity: 0.3 !important;
+    opacity: 0.3 !important;
 }
+
 .slick-btn {
-	color: res.$white;
-	cursor: pointer;
-	font-size: 2rem;
-	padding: 20px 10px;
-	position: absolute;
-	opacity: 0;
-	top: 40%;
-	z-index: 20;
-	&.prev {
-		left: 0;
-	}
-	&.next {
-		right: 0;
-	}
+    color: res.$white;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 20px 10px;
+    position: absolute;
+    opacity: 0;
+    top: 40%;
+    z-index: 20;
+    &.prev {
+        left: 0;
+    }
+    &.next {
+        right: 0;
+    }
 }
