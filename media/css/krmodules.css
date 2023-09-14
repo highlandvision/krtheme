@@ -6999,6 +6999,7 @@ i.slick-nav:hover {
 
 .moduletable {
   width: 100%;
+  margin-bottom: var(--global-margin);
 }
 .moduletable h3 {
   text-transform: uppercase;
