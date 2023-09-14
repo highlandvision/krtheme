@@ -270,7 +270,7 @@ $input-number-size: 80px;
 	.input-number-increment {
 		background: res.$white;
 		border: 1px solid var(--primary-color);
-		color: var(-primary-color);
+		color: var(--primary-color);
 		cursor: pointer;
 		display: inline-block;
 		font-size: 2rem;

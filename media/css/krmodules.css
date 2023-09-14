@@ -7329,6 +7329,18 @@ ul#categories li a:hover {
 .kr-search input, .kr-search select {
   border: 1px solid var(--primary-color);
 }
+@media print, screen and (min-width: 40em) {
+  .kr-search .row.adjust-padding .columns {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .kr-search .row.adjust-padding .columns:first-child {
+    padding-left: 1rem;
+  }
+  .kr-search .row.adjust-padding .columns:last-child {
+    padding-right: 1rem;
+  }
+}
 
 .sticky {
   width: 100%;
@@ -7382,7 +7394,7 @@ ul#categories li a:hover {
   line-height: 1.8;
   max-height: 300px;
   overflow-x: scroll;
-  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 1.5rem 0.6rem;
 }
 #kr-searchregion-drop .footer,
 #kr-searchguest-drop .footer {
@@ -7459,13 +7471,13 @@ ul#categories li a:hover {
 }
 #kr-searchguest-drop #child-ages-container input {
   display: inline-block;
-  margin: 0 0.2rem 0.5rem 0.2rem;
+  margin: 0 0.2rem 0.5rem 0;
 }
 #kr-searchguest-drop #child-ages-container input[type=number] {
-  min-width: 3.5rem !important;
-  max-width: 3.5rem !important;
+  min-width: 3rem !important;
+  max-width: 3rem !important;
   width: 100% !important;
-  padding-left: 0.2rem !important;
+  padding-left: 0.5rem !important;
   padding-right: 0.2rem !important;
 }
 

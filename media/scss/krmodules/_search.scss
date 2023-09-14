@@ -5,18 +5,18 @@
      input, select {
         border: 1px solid var(--primary-color);
     }
-    //.columns {
-    //    @include mixin.breakpoint(medium) {
-    //        padding-left: 0.2rem;
-    //        padding-right: 0.2rem;
-    //    }
-    //    &:first-child, &:last-child {
-    //        @include mixin.breakpoint(medium) {
-    //            padding-left: 0;
-    //            padding-right: 0;
-    //        }
-    //    }
-    //}
+    .row.adjust-padding .columns {
+        @include mixin.breakpoint(medium) {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            &:first-child {
+                padding-left: 1rem;
+            }
+            &:last-child {
+                padding-right: 1rem;
+            }
+        }
+    }
 }
 .sticky {
     width: 100%;
@@ -64,7 +64,7 @@
         line-height: 1.8;
         max-height: 300px;
         overflow-x: scroll;
-        padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+        padding: 0.5rem 0.5rem 1.5rem 0.6rem;
     }
     .footer {
         background: var(--primary-color);
@@ -130,13 +130,13 @@
     #child-ages-container {
         input {
             display: inline-block;
-            margin: 0 0.2rem 0.5rem 0.2rem;
+            margin: 0 0.2rem 0.5rem 0;
         }
         input[type=number] {
-            min-width: 3.5rem !important;
-            max-width: 3.5rem !important;
+            min-width: 3rem !important;
+            max-width: 3rem !important;
             width: 100% !important;
-            padding-left: 0.2rem !important;
+            padding-left: 0.5rem !important;
             padding-right: 0.2rem !important;
         }
     }

@@ -535,7 +535,7 @@ img.responsive {
 .input-number-group .input-number-increment {
   background: hsl(0, 0%, 100%);
   border: 1px solid var(--primary-color);
-  color: var(-primary-color);
+  color: var(--primary-color);
   cursor: pointer;
   display: inline-block;
   font-size: 2rem;
