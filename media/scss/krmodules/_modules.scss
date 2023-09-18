@@ -132,61 +132,51 @@
         }
     }
 }
-.kr-spotlight .row .column {
-    .left {
-        width: 90%;
-        left: 1rem;
-        text-align: left;
-    }
-}
-.kr-spotlight .row .column,
+.kr-spotlight,
 .kr-imagegrid .gitem {
-    position: relative;
-    @include mixin.breakpoint(medium) {
-        margin-bottom: 0;
-    }
-    a img:hover {
-        -webkit-box-shadow: 0 6px 8px -6px rgba(15, 15, 15, 0.5);
-        -moz-box-shadow: 0 6px 8px -6px rgba(15, 15, 15, 0.5);
-        box-shadow: 0 6px 8px -6px rgba(15, 15, 15, 0.5);
-    }
-    p {
-        color: res.$white;
-        position: absolute;
-        margin-bottom: 0;
-        width: 90%;
-        left: 0;
-        opacity: 1;
-        padding: 0 0 0 0.5rem;
-        font-size: 1rem;
-        @include mixin.breakpoint(medium) {
-            overflow: hidden;
-        }
-        &.center {
-            width: 80%;
-            left: 10%;
-        }
-        &.withbg {
-            font-weight: 300;
-            opacity: 0.75;
-        }
-        &.top {
-            top: 0.5rem;
-        }
-        &.middle {
-            top: 30%;
+    a {
+        cursor: pointer;
+        img {
+            object-fit: cover;
+            width: 100%;
+            @include mixin.breakpoint(small) {
+                height: calc(25vh - 30px);
+            }
             @include mixin.breakpoint(medium) {
-                top: 40%;
+                height: calc(33vh - (4 * 12px));
             }
             @include mixin.breakpoint(large) {
-                top: 45%;
+                height: calc(33vh - (4 * 16px));
             }
         }
-        &.bottom {
-            top: auto;
-            bottom: 5px;
-            &.withbg {
-                bottom: 10px;
+        .overlay {
+            text-shadow: 2px 2px 4px res.$black;
+        }
+        p {
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 0;
+            padding: 0 0.5rem;
+            width: 100%;
+            z-index: 1;
+            &.nobg {
+                margin-top: -2rem;
+            }
+            &.left {
+                text-align: left;
+                margin-bottom: 0;
+            }
+            &.center {
+                text-align: center;
+                @include mixin.breakpoint(small) {
+                    margin-bottom: var(--global-margin);
+                    &.last {
+                        margin-bottom: 0;
+                    }
+                }
+                @include mixin.breakpoint(medium) {
+                    margin-bottom: 0;
+                }
             }
         }
     }
