@@ -6,6 +6,9 @@ body {
 	font-family: var(--body-font-family);
 	line-height: var(--global-lineheight);
 	color: var(--body-color);
+	min-width: 380px;
+	width: 100%;
+	position: relative;
 }
 .row {
 	max-width: var(--global-width);

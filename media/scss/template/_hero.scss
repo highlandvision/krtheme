@@ -5,13 +5,15 @@
     clear: both;
     position: relative;
     width: 100%;
-    display: flex;
     &.home {
-        @include mixin.breakpoint(medium) {
-            background-size: cover;
+        @include mixin.breakpoint(small) {
             height: 300px;
-            margin-bottom: 1.5rem;
-            min-height: 300px;
+            img {
+                background-size: cover;
+                height: 300px;
+                margin-bottom: 1.5rem;
+                min-height: 300px;
+            }
         }
         @include mixin.breakpoint(large) {
             height: 100%;
@@ -32,7 +34,7 @@
                 }
                 .caption {
                     background: hsla(0, 0%, 100%, 0.7);
-                    bottom: 8px;
+                    bottom: 32px;
                     line-height: 1;
                     padding: 0.5rem 1rem;
                     position: absolute;
@@ -50,9 +52,10 @@
             }
         }
         i.slick-nav {
+            color: res.$white;
+            background: none;
+            font-size: 3rem;
             height: auto;
-            background: hsla(0, 0%, 100%, 0.7);
-            color: var(--primary-color);
             @include mixin.breakpoint(large) {
                 padding: 2.2rem 0.6rem;
                 top: 40%;
@@ -82,15 +85,15 @@
         .kr-search {
             position: relative;
             display: block;
-            margin: 1rem 0 0;
+            margin: 0.3rem 0 0;
             background: res.$white;
             padding: 0;
             @include mixin.breakpoint(small) {
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 300px;
-                margin: 0.3rem 0.8rem 0;
+                height: 290px;
+                margin: 0.3rem 0 0;
                 max-width: 240px;
                 padding: 1rem 0 0;
                 width: 100%;
@@ -104,17 +107,19 @@
             @include mixin.breakpoint(large) {
                 background: hsl(0, 0%, 98%);
                 box-shadow: none;
-                margin: 0 0 0 -545px;
-                max-width: 1090px;
+                margin: 0;
+                max-width: 960px;
                 left: 50%;
                 top: 47%;
                 width: 100%;
+                text-align: center;
+                transform: translate(-50%, -50%);
                 &.top {
                     top: 20px;
                     height: 70px;
                 }
                 &.middle {
-                    top: 40%;
+                    top: 47%;
                     height: 70px;
                 }
                 &.bottom {

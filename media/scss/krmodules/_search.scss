@@ -6,7 +6,7 @@
         border: 1px solid var(--primary-color);
     }
     .row.adjust-padding .columns {
-        @include mixin.breakpoint(medium) {
+        @include mixin.breakpoint(large) {
             padding-left: 0.5rem;
             padding-right: 0.5rem;
             &:first-child {
@@ -55,8 +55,9 @@
 }
 #kr-searchregion-drop,
 #kr-searchguest-drop {
-    z-index: 99;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: none;
+    z-index: 99;
     .dropdown-body {
         background: rgba(255,255,255,1);
         color: var(--primary-color);

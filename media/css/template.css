@@ -3,6 +3,9 @@ body {
   font-family: var(--body-font-family);
   line-height: var(--global-lineheight);
   color: var(--body-color);
+  min-width: 380px;
+  width: 100%;
+  position: relative;
 }
 
 .row {
@@ -496,12 +499,6 @@ dl.fancylist dd {
 img.responsive {
   width: 100%;
   height: auto;
-  margin-bottom: 10px;
-}
-@media print, screen and (min-width: 40em) {
-  img.responsive {
-    margin-bottom: 0;
-  }
 }
 
 .input-number-group {
@@ -648,15 +645,15 @@ ul#offcanvas.nav.menu.vertical li a:hover {
   clear: both;
   position: relative;
   width: 100%;
-  display: flex;
 }
-@media print, screen and (min-width: 40em) {
-  #hero.home {
-    background-size: cover;
-    height: 300px;
-    margin-bottom: 1.5rem;
-    min-height: 300px;
-  }
+#hero.home {
+  height: 300px;
+}
+#hero.home img {
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  min-height: 300px;
 }
 @media print, screen and (min-width: 64em) {
   #hero.home {
@@ -682,7 +679,7 @@ ul#offcanvas.nav.menu.vertical li a:hover {
 @media print, screen and (min-width: 64em) {
   #hero.home .kr-slideshow .caption {
     background: hsla(0, 0%, 100%, 0.7);
-    bottom: 8px;
+    bottom: 32px;
     line-height: 1;
     padding: 0.5rem 1rem;
     position: absolute;
@@ -699,9 +696,10 @@ ul#offcanvas.nav.menu.vertical li a:hover {
   }
 }
 #hero.home i.slick-nav {
+  color: hsl(0, 0%, 100%);
+  background: none;
+  font-size: 3rem;
   height: auto;
-  background: hsla(0, 0%, 100%, 0.7);
-  color: var(--primary-color);
 }
 @media print, screen and (min-width: 64em) {
   #hero.home i.slick-nav {
@@ -739,14 +737,14 @@ ul#offcanvas.nav.menu.vertical li a:hover {
 #hero.home .kr-search {
   position: relative;
   display: block;
-  margin: 1rem 0 0;
+  margin: 0.3rem 0 0;
   background: hsl(0, 0%, 100%);
   padding: 0;
   position: absolute;
   top: 0;
   left: 0;
-  height: 300px;
-  margin: 0.3rem 0.8rem 0;
+  height: 290px;
+  margin: 0.3rem 0 0;
   max-width: 240px;
   padding: 1rem 0 0;
   width: 100%;
@@ -761,18 +759,20 @@ ul#offcanvas.nav.menu.vertical li a:hover {
   #hero.home .kr-search {
     background: hsl(0, 0%, 98%);
     box-shadow: none;
-    margin: 0 0 0 -545px;
-    max-width: 1090px;
+    margin: 0;
+    max-width: 960px;
     left: 50%;
     top: 47%;
     width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
   }
   #hero.home .kr-search.top {
     top: 20px;
     height: 70px;
   }
   #hero.home .kr-search.middle {
-    top: 40%;
+    top: 47%;
     height: 70px;
   }
   #hero.home .kr-search.bottom {

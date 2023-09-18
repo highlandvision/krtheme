@@ -233,10 +233,6 @@ dl.fancylist {
 img.responsive {
 	width: 100%;
 	height: auto;
-	margin-bottom: 10px;
-	@include mixin.breakpoint(medium) {
-		margin-bottom: 0;
-	}
 }
 //Number increment
 $input-number-size: 80px;

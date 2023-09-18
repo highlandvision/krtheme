@@ -7128,83 +7128,64 @@ i.slick-nav:hover {
   text-align: left;
 }
 
-.kr-spotlight .row .column .left {
-  width: 90%;
-  left: 1rem;
-  text-align: left;
+.kr-spotlight a,
+.kr-imagegrid .gitem a {
+  cursor: pointer;
 }
-
-.kr-spotlight .row .column,
-.kr-imagegrid .gitem {
-  position: relative;
-}
-@media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column,
-  .kr-imagegrid .gitem {
-    margin-bottom: 0;
-  }
-}
-.kr-spotlight .row .column a img:hover,
-.kr-imagegrid .gitem a img:hover {
-  -webkit-box-shadow: 0 6px 8px -6px rgba(15, 15, 15, 0.5);
-  -moz-box-shadow: 0 6px 8px -6px rgba(15, 15, 15, 0.5);
-  box-shadow: 0 6px 8px -6px rgba(15, 15, 15, 0.5);
-}
-.kr-spotlight .row .column p,
-.kr-imagegrid .gitem p {
-  color: hsl(0, 0%, 100%);
-  position: absolute;
-  margin-bottom: 0;
-  width: 90%;
-  left: 0;
-  opacity: 1;
-  padding: 0 0 0 0.5rem;
-  font-size: 1rem;
+.kr-spotlight a img,
+.kr-imagegrid .gitem a img {
+  object-fit: cover;
+  width: 100%;
+  height: calc(25vh - 30px);
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p,
-  .kr-imagegrid .gitem p {
-    overflow: hidden;
-  }
-}
-.kr-spotlight .row .column p.center,
-.kr-imagegrid .gitem p.center {
-  width: 80%;
-  left: 10%;
-}
-.kr-spotlight .row .column p.withbg,
-.kr-imagegrid .gitem p.withbg {
-  font-weight: 300;
-  opacity: 0.75;
-}
-.kr-spotlight .row .column p.top,
-.kr-imagegrid .gitem p.top {
-  top: 0.5rem;
-}
-.kr-spotlight .row .column p.middle,
-.kr-imagegrid .gitem p.middle {
-  top: 30%;
-}
-@media print, screen and (min-width: 40em) {
-  .kr-spotlight .row .column p.middle,
-  .kr-imagegrid .gitem p.middle {
-    top: 40%;
+  .kr-spotlight a img,
+  .kr-imagegrid .gitem a img {
+    height: calc(33vh - 48px);
   }
 }
 @media print, screen and (min-width: 64em) {
-  .kr-spotlight .row .column p.middle,
-  .kr-imagegrid .gitem p.middle {
-    top: 45%;
+  .kr-spotlight a img,
+  .kr-imagegrid .gitem a img {
+    height: calc(33vh - 64px);
   }
 }
-.kr-spotlight .row .column p.bottom,
-.kr-imagegrid .gitem p.bottom {
-  top: auto;
-  bottom: 5px;
+.kr-spotlight a .overlay,
+.kr-imagegrid .gitem a .overlay {
+  text-shadow: 2px 2px 4px hsl(0, 0%, 4%);
 }
-.kr-spotlight .row .column p.bottom.withbg,
-.kr-imagegrid .gitem p.bottom.withbg {
-  bottom: 10px;
+.kr-spotlight a p,
+.kr-imagegrid .gitem a p {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 0;
+  padding: 0 0.5rem;
+  width: 100%;
+  z-index: 1;
+}
+.kr-spotlight a p.nobg,
+.kr-imagegrid .gitem a p.nobg {
+  margin-top: -2rem;
+}
+.kr-spotlight a p.left,
+.kr-imagegrid .gitem a p.left {
+  text-align: left;
+  margin-bottom: 0;
+}
+.kr-spotlight a p.center,
+.kr-imagegrid .gitem a p.center {
+  text-align: center;
+  margin-bottom: var(--global-margin);
+}
+.kr-spotlight a p.center.last,
+.kr-imagegrid .gitem a p.center.last {
+  margin-bottom: 0;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-spotlight a p.center,
+  .kr-imagegrid .gitem a p.center {
+    margin-bottom: 0;
+  }
 }
 
 .kr-featured a.property, .kr-alternatives a.property {
@@ -7329,7 +7310,7 @@ ul#categories li a:hover {
 .kr-search input, .kr-search select {
   border: 1px solid var(--primary-color);
 }
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: 64em) {
   .kr-search .row.adjust-padding .columns {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -7383,8 +7364,9 @@ ul#categories li a:hover {
 
 #kr-searchregion-drop,
 #kr-searchguest-drop {
-  z-index: 99;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: none;
+  z-index: 99;
 }
 #kr-searchregion-drop .dropdown-body,
 #kr-searchguest-drop .dropdown-body {
