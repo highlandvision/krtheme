@@ -4,28 +4,6 @@
 #kr-properties-filter-heading {
 	margin-bottom: 1rem;
 }
-#kr-properties-filters-top {
-	margin-bottom: 1rem;
-	.badge {
-		background: var(--primary-color);
-		color: res.$white;
-		cursor: pointer;
-		font-size: 0.8rem;
-		height: 18px;
-		padding: 0.3rem 0 0.3rem 0.3rem;
-		margin-right: 5px;
-		white-space: nowrap;
-		width: auto;
-		&:hover {
-			background: var(--primary-color-hover);
-		}
-		i.close {
-			padding-left: 0.3rem;
-			padding-right: 0.3rem;
-			padding-bottom: 0.1rem;
-		}
-	}
-}
 .kr-properties {
 	.kr-searchbar {
 		margin-bottom: 1rem;

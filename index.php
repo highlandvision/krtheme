@@ -63,6 +63,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 	</div>
 
 	<div class="off-canvas-content" data-off-canvas-content>
+		<div id="dd-overlay"></div>
 		<nav class="nav-section">
 			<!-- hamburger and logo for small / medium -->
 			<div class="hide-for-large">
