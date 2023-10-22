@@ -278,7 +278,7 @@ input[type=radio].radioover.gateway + label.radiolabel {
 input[type=checkbox].checkover + label.checklabel:before,
 input[type=radio].radioover + label.radiolabel:before {
   content: "\f111";
-  font-family: "Font Awesome 5 Free", sans-serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   font-size: 1rem;
   padding-right: 5px;
@@ -292,13 +292,13 @@ input[type=checkbox].checkover + label.checklabel:before {
 input[type=checkbox].checkover:checked + label.checklabel:before,
 input[type=radio].radioover:checked + label.radiolabel:before {
   content: "\f058";
-  font-family: "Font Awesome 5 Free", sans-serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
 }
 
 input[type=checkbox].checkover:checked + label.checklabel:before {
   content: "\f14a";
-  font-family: "Font Awesome 5 Free", sans-serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
 }
 
@@ -534,14 +534,14 @@ select[readonly] {
 #kr-properties-sortby-off-canvas ul.filter-sort-list li.head:after {
   content: "\f078";
   float: right;
-  font-family: "Font Awesome 5 Free", sans-serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   margin-right: 0.5rem;
 }
 #kr-properties-filters-off-canvas ul.filter-sort-list li.head.active:after,
 #kr-properties-sortby-off-canvas ul.filter-sort-list li.head.active:after {
   content: "\f077";
-  font-family: "Font Awesome 5 Free", sans-serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   float: right;
   font-weight: 900;
   margin-right: 0.5rem;
@@ -970,7 +970,7 @@ ul.pagination li.active a {
   font-size: 1.2rem;
   color: hsl(0, 0%, 79%);
   position: relative;
-  font-family: "Font Awesome 5 Free", sans-serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
 }
 .kr-property .score::before {

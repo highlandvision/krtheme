@@ -71,7 +71,7 @@ input[type="radio"].radioover.gateway + label.radiolabel {
 input[type="checkbox"].checkover + label.checklabel:before,
 input[type="radio"].radioover + label.radiolabel:before {
 	content: "\f111";
-	font-family: 'Font Awesome 5 Free', sans-serif;
+	font-family: 'Font Awesome 6 Free', sans-serif;
 	font-weight: 900;
 	font-size: 1rem;
 	padding-right: 5px;
@@ -83,12 +83,12 @@ input[type="checkbox"].checkover + label.checklabel:before {
 input[type="checkbox"].checkover:checked + label.checklabel:before,
 input[type="radio"].radioover:checked + label.radiolabel:before {
 	content: "\f058";
-	font-family: 'Font Awesome 5 Free', sans-serif;
+	font-family: 'Font Awesome 6 Free', sans-serif;
 	font-weight: 900;
 }
 input[type="checkbox"].checkover:checked + label.checklabel:before {
 	content: "\f14a";
-	font-family: 'Font Awesome 5 Free', sans-serif;
+	font-family: 'Font Awesome 6 Free', sans-serif;
 	font-weight: 900;
 }
 input[type="checkbox"].checkover + label.checklabel.disabled {
