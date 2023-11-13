@@ -1,0 +1,89 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
+#kr-thumb {
+    #pinfo {
+        background-color: res.$light-gray;
+        border: 1px solid res.$medium-gray;
+        min-height: 387px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        h4 {
+            color: res.$black-light;
+        }
+        p {
+            font-size: 14px;
+            color: res.$dark-gray;
+        }
+    }
+    .container img {
+        border: 1px solid res.$black;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    .thumbs {
+        display: grid;
+        grid-gap: 6px;
+        @include mixin.breakpoint(small) {
+            grid-template-columns: repeat(3, 30.8vw);
+            grid-column-gap: 6px;
+            grid-auto-rows: 30.8vw;
+        }
+        @include mixin.breakpoint(medium) {
+            grid-template-columns: repeat(6, 15.5vw);
+            grid-column-gap: 6px;
+            grid-auto-rows: 15.5vw;
+        }
+        @include mixin.breakpoint(large) {
+            grid-template-columns: 90px 90px 90px 90px 90px 90px;
+            grid-template-rows: 90px 90px 90px 90px 90px 90px;
+        }
+    }
+}
+
+
+//    .column.column-block {
+//        margin-bottom: 4px;
+//        //&:nth-child(6n + 1) {
+//        //    padding-left: 0.9375rem;
+//        //}
+//        @include mixin.breakpoint(small-only) {
+//            &:nth-child(6n + 1) {
+//                padding-left: 0.9375rem;
+//            }
+//        }
+//        @include mixin.breakpoint(medium-only) {
+//            &:nth-child(6n + 1) {
+//                padding-left: 0.9375rem;
+//            }
+//        }
+//        @include mixin.breakpoint(large-only) {
+//            padding-left: 2px;
+//            padding-right: 2px;
+//        }
+//    }
+//    a {
+//        img {
+//            border: 1px solid black;
+//            width: 100%;
+//            object-fit: cover;
+//            overflow: hidden;
+//            @include mixin.breakpoint(medium) {
+//                width: 124px;
+//                max-width: 124px;
+//                height: 124px;
+//                max-height: 124px;
+//            }
+//            @include mixin.breakpoint(large) {
+//                max-width: 85px;
+//                min-width: 85px;
+//                max-height: 85px;
+//                min-height: 85px;
+//            }
+//        }
+//    }
+//}
