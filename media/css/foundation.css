@@ -319,7 +319,7 @@ textarea:focus {
   outline: none;
   border: 2px solid hsl(0, 0%, 54%);
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 0 5px hsl(0, 0%, 90%);
+  box-shadow: 0 0 5px hsl(0, 0%, 94%);
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 }
 
@@ -333,7 +333,7 @@ textarea[rows] {
 input:disabled, input[readonly],
 textarea:disabled,
 textarea[readonly] {
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 94%);
   cursor: not-allowed;
 }
 
@@ -424,7 +424,7 @@ label.middle {
 .input-group-label {
   padding: 0 1rem;
   border: 1px solid hsl(0, 0%, 79%);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
   color: hsl(0, 0%, 4%);
   text-align: center;
   white-space: nowrap;
@@ -515,11 +515,11 @@ select:focus {
   outline: none;
   border: 2px solid hsl(0, 0%, 54%);
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 0 5px hsl(0, 0%, 90%);
+  box-shadow: 0 0 5px hsl(0, 0%, 94%);
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 }
 select:disabled {
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 94%);
   cursor: not-allowed;
 }
 select::-ms-expand {
@@ -790,7 +790,7 @@ figure {
 kbd {
   margin: 0;
   padding: 0.125rem 0.25rem 0;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 94%);
   font-family: Arial, sans-serif;
   color: hsl(0, 0%, 4%);
 }
@@ -832,7 +832,7 @@ ul.no-bullet, ol.no-bullet {
 
 .code-inline, code {
   border: 1px solid hsl(0, 0%, 79%);
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 94%);
   font-family: Arial, sans-serif;
   font-weight: normal;
   color: hsl(0, 0%, 4%);
@@ -844,7 +844,7 @@ ul.no-bullet, ol.no-bullet {
 
 .code-block {
   border: 1px solid hsl(0, 0%, 79%);
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 94%);
   font-family: Arial, sans-serif;
   font-weight: normal;
   color: hsl(0, 0%, 4%);
@@ -2567,7 +2567,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   flex-direction: column;
   flex-grow: 1;
   margin-bottom: 2rem;
-  border: 0px solid hsl(0, 0%, 90%);
+  border: 0px solid hsl(0, 0%, 94%);
   border-radius: 0;
   background: #efefef;
   box-shadow: none;
@@ -2582,7 +2582,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   display: flex;
   flex: 0 1 auto;
   padding: 0.5rem;
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .card-divider > :last-child {
   margin-bottom: 0;
@@ -2806,7 +2806,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .tabs {
   margin: 0;
   border: 1px solid hsl(0, 0%, 100%);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
   list-style-type: none;
 }
 .tabs::before, .tabs::after {

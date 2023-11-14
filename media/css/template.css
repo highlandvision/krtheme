@@ -85,7 +85,7 @@ i.fas, i.fab {
 }
 .button.hollow:hover {
   border: 1px solid var(--primary-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .button.hollow.primary {
   border: 1px solid var(--primary-color);
@@ -93,7 +93,7 @@ i.fas, i.fab {
 }
 .button.hollow.primary:hover {
   border: 1px solid var(--primary-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .button.hollow.secondary {
   border: 1px solid var(--secondary-color);
@@ -101,7 +101,7 @@ i.fas, i.fab {
 }
 .button.hollow.secondary:hover {
   border: 1px solid var(--secondary-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .button.hollow.accent {
   border: 1px solid var(--accent-color);
@@ -109,7 +109,7 @@ i.fas, i.fab {
 }
 .button.hollow.accent:hover {
   border: 1px solid var(--accent-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .button.hollow.alert {
   border: 1px solid var(--alert-color);
@@ -117,7 +117,7 @@ i.fas, i.fab {
 }
 .button.hollow.alert:hover {
   border: 1px solid var(--alert-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .button.hollow.success {
   border: 1px solid var(--success-color);
@@ -125,7 +125,7 @@ i.fas, i.fab {
 }
 .button.hollow.success:hover {
   border: 1px solid var(--success-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .button.hollow.warning {
   border: 1px solid var(--warning-color);
@@ -133,7 +133,7 @@ i.fas, i.fab {
 }
 .button.hollow.warning:hover {
   border: 1px solid var(--warning-color-hover);
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -628,7 +628,7 @@ ul#offcanvas.nav.menu.vertical li a {
 }
 ul#offcanvas.nav.menu.vertical li a:hover {
   background: var(--primary-color-hover);
-  color: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 94%);
 }
 
 .off-canvas .close-button {
@@ -991,7 +991,7 @@ p.readmore a, a.readmore {
   font-size: 2rem;
 }
 #footer .bottom {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
   padding: 1.5rem 0 0;
   font-size: 0.8rem;
   position: relative;

@@ -335,7 +335,7 @@ ul.kr-arrival-means.menu.icons li.amitem.active, ul.kr-arrival-means.menu.icons 
 input[type=text][readonly],
 select[readonly] {
   cursor: pointer;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 94%);
 }
 
 ::-webkit-input-placeholder {
@@ -788,7 +788,7 @@ select[readonly] {
   left: 0;
   font-size: 0.65rem;
   padding: 0.1rem 0.5rem;
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 
 #kr-search-map-full {
@@ -888,6 +888,49 @@ ul.pagination li a {
 ul.pagination li.active a {
   cursor: default;
   opacity: 0.4;
+}
+
+#kr-thumb #pinfo {
+  background-color: hsl(0, 0%, 94%);
+  border: 1px solid hsl(0, 0%, 79%);
+  min-height: 387px;
+  padding: 1rem 1rem 0;
+}
+#kr-thumb #pinfo h4 {
+  color: hsl(0, 0%, 42%);
+}
+#kr-thumb #pinfo p {
+  font-size: 14px;
+  color: hsl(0, 0%, 54%);
+}
+#kr-thumb .container img {
+  border: 1px solid hsl(0, 0%, 4%);
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+#kr-thumb .thumbs {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(3, 30.8vw);
+  grid-column-gap: 6px;
+  grid-auto-rows: 30.8vw;
+}
+@media print, screen and (min-width: 40em) {
+  #kr-thumb .thumbs {
+    grid-template-columns: repeat(6, 15.5vw);
+    grid-column-gap: 6px;
+    grid-auto-rows: 15.5vw;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  #kr-thumb .thumbs {
+    grid-template-columns: 90px 90px 90px 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px 90px 90px 90px;
+  }
 }
 
 .kr-property {
@@ -1084,7 +1127,7 @@ ul.pagination li.active a {
 }
 
 .kr-property-quote {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
   margin-top: -3.5rem;
   padding: 0.5rem 1rem 0;
 }

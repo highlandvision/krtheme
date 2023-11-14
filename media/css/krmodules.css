@@ -6792,7 +6792,7 @@
   color: var(--primary-color);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-inv {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-inv .dw-cal-day-fg {
   color: hsl(0, 0%, 54%);
@@ -6807,7 +6807,7 @@
   background: hsl(0, 0%, 100%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.blocked {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.blocked .dw-cal-day-fg {
   color: hsl(0, 0%, 54%);
@@ -6840,21 +6840,21 @@
   font-weight: 400;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.arrival {
-  background: linear-gradient(to right bottom, hsl(0, 0%, 90%) 50%, hsl(0, 0%, 100%) 50%);
+  background: linear-gradient(to right bottom, hsl(0, 0%, 94%) 50%, hsl(0, 0%, 100%) 50%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.arrival .dw-cal-day-fg {
   color: var(--primary-color);
   font-weight: 700;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure {
-  background: linear-gradient(to right bottom, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 90%) 50%);
+  background: linear-gradient(to right bottom, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 94%) 50%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure .dw-cal-day-fg {
   color: var(--primary-color);
   font-weight: 700;
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.arrival.blocked, .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure.blocked {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 .mbsc-kr .dw-cal-day.dw-cal-day-marked.arrival.blocked .dw-cal-day-fg, .mbsc-kr .dw-cal-day.dw-cal-day-marked.departure.blocked .dw-cal-day-fg {
   color: hsl(0, 0%, 54%);
@@ -7083,7 +7083,7 @@ i.slick-nav:hover {
   box-decoration-break: clone;
 }
 #kr-autosearch-wrapper .tt-menu .tt-suggestion:hover {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 94%);
 }
 #kr-autosearch-wrapper .tt-menu .tt-suggestion a:hover {
   text-decoration: none;
@@ -7192,7 +7192,7 @@ i.slick-nav:hover {
   display: block;
   position: relative;
   background: hsl(0, 0%, 100%);
-  border: 1px solid hsl(0, 0%, 90%);
+  border: 1px solid hsl(0, 0%, 94%);
 }
 .kr-featured a.property:hover, .kr-alternatives a.property:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
