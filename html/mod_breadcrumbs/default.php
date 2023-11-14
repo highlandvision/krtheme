@@ -13,9 +13,10 @@ defined('_JEXEC') or die;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
+use Joomla\CMS\Uri\Uri;
 use Joomla\CMS\WebAsset\WebAssetManager;
-
 ?>
+
 <nav class="mod-breadcrumbs__wrapper" aria-label="<?php echo htmlspecialchars($module->title, ENT_QUOTES, 'UTF-8'); ?>">
     <ol class="mod-breadcrumbs breadcrumb px-3 py-2">
         <?php if ($params->get('showHere', 1)) : ?>
@@ -70,6 +71,7 @@ use Joomla\CMS\WebAsset\WebAssetManager;
     $data = [
             '@context'        => 'https://schema.org',
             '@type'           => 'BreadcrumbList',
+            '@id'             => Uri::root() . '#/schema/BreadcrumbList/' . (int) $module->id,
             'itemListElement' => []
     ];
 
@@ -115,7 +117,8 @@ use Joomla\CMS\WebAsset\WebAssetManager;
     if ($itemsCounter) {
         /** @var WebAssetManager $wa */
         $wa = $app->getDocument()->getWebAssetManager();
-        $wa->addInline('script', json_encode($data, JSON_UNESCAPED_UNICODE), [], ['type' => 'application/ld+json']);
+        $prettyPrint = JDEBUG ? JSON_PRETTY_PRINT : 0;
+        $wa->addInline('script', json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | $prettyPrint), [], ['type' => 'application/ld+json']);
     }
     ?>
 </nav>

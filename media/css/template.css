@@ -899,9 +899,9 @@ p.readmore a, a.readmore {
   background-color: rgba(0, 0, 0, 0.03);
   display: flex;
   flex-wrap: wrap;
-  font-size: 86%;
+  font-size: 13px;
   list-style: none;
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   padding: 0.5rem;
 }

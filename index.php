@@ -127,6 +127,16 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			</div>
 
+			<?php if ($this->countModules('breadcrumbs', true)): ?>
+			<div class="row">
+				<div class="small-12 columns">
+					<div class="modules-above">
+						<jdoc:include type="modules" name="breadcrumbs" style="none" />
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+
 			<?php if ($home && $this->countModules('above-content', true)): ?>
 				<div class="row">
 					<div class="small-12 columns">
