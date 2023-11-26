@@ -83,211 +83,207 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 
 			<div id="header" class="show-for-large">
-				<div class="row">
-					<div class="large-3 columns topbar-left">
-						<a href="/" title="<?php echo $sitename; ?>">
-							<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
-						</a>
-					</div>
-					<div class="large-9 columns topbar-right">
-						<jdoc:include type="modules" name="topbar-right" style="html5"/>
+				<div class="grid-container">
+					<div class="grid-x">
+						<div class="large-3 cell topbar-left">
+							<a href="/" title="<?php echo $sitename; ?>">
+								<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
+							</a>
+						</div>
+						<div class="large-9 cell topbar-right">
+							<jdoc:include type="modules" name="topbar-right" style="html5"/>
+						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
 
-		<?php if ($home): ?>
-			<div id="hero" class="home">
-				<?php if ($this->countModules('hero-slider')): ?>
-					<jdoc:include type="modules" name="hero-slider" style="html5"/>
-				<?php endif; ?>
+		<section id="hero">
+			<?php if ($home): ?>
+				<div class="home">
+					<?php if ($this->countModules('hero-slider')): ?>
+						<jdoc:include type="modules" name="hero-slider" style="html5"/>
+					<?php endif; ?>
+					<?php if ($this->countModules('hero-search', true)): ?>
+						<jdoc:include type="modules" name="hero-search" style="html5"/>
+					<?php endif; ?>
+				</div>
+			<?php else: ?>
 				<?php if ($this->countModules('hero-search', true)): ?>
-					<jdoc:include type="modules" name="hero-search" style="html5"/>
-				<?php endif; ?>
-			</div>
-		<?php else: ?>
-			<?php if ($this->countModules('hero-search', true)): ?>
-				<div class="show-for-large">
-					<div data-sticky-container>
-						<div data-sticky data-margin-top="0" data-top-anchor="header:bottom" data-check-every="-1">
-							<div id="hero" class="subpage">
-								<jdoc:include type="modules" name="hero-search" style="html5"/>
+					<div class="show-for-large">
+						<div data-sticky-container>
+							<div data-sticky data-margin-top="0" data-top-anchor="header:bottom" data-check-every="-1">
+								<div class="subpage">
+									<jdoc:include type="modules" name="hero-search" style="html5"/>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				<?php endif; ?>
 			<?php endif; ?>
-		<?php endif; ?>
+		</section>
 
 		<!--main section-->
-		<section id="main">
-			<div class="row">
-				<div class="small-12 columns">
+		<section id="main" class="grid-container">
+			<div class="grid-x grid-margin-x">
+				<div class="small-12 cell">
 					<jdoc:include type="message"/>
 				</div>
-			</div>
 
-			<?php if ($this->countModules('breadcrumbs', true)): ?>
-			<div class="row">
-				<div class="small-12 columns">
-					<div class="modules-above">
-						<jdoc:include type="modules" name="breadcrumbs" style="none" />
+				<?php if ($this->countModules('breadcrumbs', true)): ?>
+					<div class="small-12 cell">
+						<div class="modules-above">
+							<jdoc:include type="modules" name="breadcrumbs" style="none"/>
+						</div>
 					</div>
-				</div>
-			</div>
-			<?php endif; ?>
+				<?php endif; ?>
 
-			<?php if ($home && $this->countModules('above-content', true)): ?>
-				<div class="row">
-					<div class="small-12 columns">
+				<?php if ($home && $this->countModules('above-content', true)): ?>
+					<div class="small-12 cell">
 						<div class="modules-above">
 							<jdoc:include type="modules" name="above-content" style="html5"/>
 						</div>
 					</div>
-				</div>
-			<?php endif; ?>
+				<?php endif; ?>
 
-			<!--main content-->
-			<div class="main-content">
-				<div class="row">
-					<?php if ($this->countModules('sidebar-left', true) &&
-						$this->countModules('sidebar-right', true)): ?>
-						<div id="sidebar-left" class="small-12 medium-4 columns">
-							<jdoc:include type="modules" name="sidebar-left" style="html5"/>
-						</div>
-						<div class="article small-12 medium-8 columns">
-							<jdoc:include type="component"/>
-							<div style="clear:both;"></div>
-							<?php if ($this->countModules('under-content', true)): ?>
-								<jdoc:include type="modules" name="under-content" style="html5"/>
-							<?php endif; ?>
-						</div
+				<!--main content-->
+				<?php if ($this->countModules('sidebar-left', true) &&
+					$this->countModules('sidebar-right', true)): ?>
+					<div id="sidebar-left" class="small-12 medium-4 cell">
+						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
+					</div>
+					<div class="article small-12 medium-8 cell">
+						<jdoc:include type="component"/>
+						<div style="clear:both;"></div>
+						<?php if ($this->countModules('under-content', true)): ?>
+							<jdoc:include type="modules" name="under-content" style="html5"/>
+						<?php endif; ?>
+					</div
 
-						<div id="sidebar-right" class="medium-4 columns">
-							<jdoc:include type="modules" name="sidebar-right" style="html5"/>
+					<div id="sidebar-right" class="medium-4 cell">
+						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
+					</div>
+				<?php elseif ($this->countModules('sidebar-left', true)): ?>
+					<div id="sidebar-left" class="small-12 medium-4 cell">
+						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
+					</div>
+					<div class="article small-12 medium-8 cell">
+						<jdoc:include type="component"/>
+						<div style="clear:both;"></div>
+						<?php if ($this->countModules('under-content', true)): ?>
+							<jdoc:include type="modules" name="under-content" style="html5"/>
+						<?php endif; ?>
+					</div>
+				<?php elseif ($this->countModules('sidebar-right', true)): ?>
+					<div class="article small-12 medium-8 cell">
+						<jdoc:include type="component"/>
+						<div style="clear:both;"></div>
+						<?php if ($this->countModules('under-content', true)): ?>
+							<jdoc:include type="modules" name="under-content" style="html5"/>
+						<?php endif; ?>
+					</div>
+					<div id="sidebar-right" class="small-12 text-center medium-4 medium-text-left cell">
+						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
+					</div>
+				<?php else: ?>
+					<div class="article small-12 cell">
+						<jdoc:include type="component"/>
+						<div style="clear:both;"></div>
+						<?php if ($this->countModules('under-content', true)): ?>
+							<jdoc:include type="modules" name="under-content" style="html5"/>
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
+
+				<!--modules below content-->
+				<?php if ($this->countModules('below-left', true) || $this->countModules('below-right', true)): ?>
+					<div class="grid-x grid-margin-x hide-for-small modules-below double">
+						<div class="medium-8 cell below left">
+							<jdoc:include type="modules" name="below-left" style="html5"/>
 						</div>
-					<?php elseif ($this->countModules('sidebar-left', true)): ?>
-						<div id="sidebar-left" class="small-12 medium-4 columns">
-							<jdoc:include type="modules" name="sidebar-left" style="html5"/>
+						<div class="medium-4 cell below right">
+							<jdoc:include type="modules" name="below-right" style="html5"/>
 						</div>
-						<div class="article small-12 medium-8 columns">
-							<jdoc:include type="component"/>
-							<div style="clear:both;"></div>
-							<?php if ($this->countModules('under-content', true)): ?>
-								<jdoc:include type="modules" name="under-content" style="html5"/>
-							<?php endif; ?>
-						</div>
-					<?php elseif ($this->countModules('sidebar-right', true)): ?>
-						<div class="article small-12 medium-8 columns">
-							<jdoc:include type="component"/>
-							<div style="clear:both;"></div>
-							<?php if ($this->countModules('under-content', true)): ?>
-								<jdoc:include type="modules" name="under-content" style="html5"/>
-							<?php endif; ?>
-						</div>
-						<div id="sidebar-right" class="small-12 text-center medium-4 medium-text-left columns">
-							<jdoc:include type="modules" name="sidebar-right" style="html5"/>
-						</div>
-					<?php else: ?>
-						<div class="article small-12 columns">
-							<jdoc:include type="component"/>
-							<div style="clear:both;"></div>
-							<?php if ($this->countModules('under-content', true)): ?>
-								<jdoc:include type="modules" name="under-content" style="html5"/>
-							<?php endif; ?>
-						</div>
-					<?php endif; ?>
-				</div>
+					</div>
+				<?php endif; ?>
+
+				<?php if ($this->countModules('below-content', true)): ?>
+					<div class="modules-below">
+						<jdoc:include type="modules" name="below-content" style="html5"/>
+					</div>
+				<?php endif; ?>
 			</div>
-			<!--//main content-->
-
-			<?php if ($this->countModules('below-left', true) || $this->countModules('below-right', true)): ?>
-				<div class="row hide-for-small modules-below double">
-					<div class="medium-8 columns below left">
-						<jdoc:include type="modules" name="below-left" style="html5"/>
-					</div>
-					<div class="medium-4 columns below right">
-						<jdoc:include type="modules" name="below-right" style="html5"/>
-					</div>
-				</div>
-			<?php endif; ?>
-
-			<?php if ($this->countModules('below-content', true)): ?>
-				<div class="modules-below">
-					<jdoc:include type="modules" name="below-content" style="html5"/>
-				</div>
-			<?php endif; ?>
 		</section>
+		<!--//end main-->
+
+		<!--//footer-->
+		<section id="footer">
+			<div class="top">
+				<?php if ($this->countModules('above-bottom', true)): ?>
+					<jdoc:include type="modules" name="above-bottom" style="none"/>
+				<?php endif; ?>
+			</div>
+
+			<div class="middle" data-equalizer data-equalize-on="medium">
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x text-center medium-text-left">
+						<div class="hide-for-small medium-4 cell border" data-equalizer-watch>
+							<?php if ($this->countModules('bottom-left', true)): ?>
+								<jdoc:include type="modules" name="bottom-left" style="html5"/>
+							<?php endif; ?>
+						</div>
+						<div class="hide-for-small medium-4 cell border" data-equalizer-watch>
+							<?php if ($this->countModules('bottom-mid', true)): ?>
+								<jdoc:include type="modules" name="bottom-mid" style="html5"/>
+							<?php endif; ?>
+						</div>
+						<div class="small-12 text-center medium-4 medium-text-left cell border" data-equalizer-watch>
+							<?php if ($this->countModules('bottom-right', true)): ?>
+								<jdoc:include type="modules" name="bottom-right" style="html5"/>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom">
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x">
+						<div class="small-12 text-center large-6 large-text-left cell">
+							<?php if ($this->countModules('footer-right', true)): ?>
+								<jdoc:include type="modules" name="footer-right" style="html5"/>
+							<?php endif; ?>
+						</div>
+						<div class="copyright small-12 text-center large-6 large-text-right cell">
+							<?php if ($this->countModules('footer-left', true)): ?>
+								<jdoc:include type="modules" name="footer-left" style="html5"/>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--//end footer-->
 	</div>
-	<!--//main-->
 
-	<section id="footer">
-		<div class="top">
-			<div class="row">
-				<div class="small-12 columns">
-					<?php if ($this->countModules('above-bottom', true)): ?>
-						<jdoc:include type="modules" name="above-bottom" style="none"/>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
+	<jdoc:include type="modules" name="debug" style="none"/>
 
-		<div class="middle" data-equalizer data-equalize-on="medium">
-			<div class="row text-center medium-text-left">
-				<div class="hide-for-small medium-4 columns border" data-equalizer-watch>
-					<?php if ($this->countModules('bottom-left', true)): ?>
-						<jdoc:include type="modules" name="bottom-left" style="html5"/>
-					<?php endif; ?>
-				</div>
-				<div class="hide-for-small medium-4 columns border" data-equalizer-watch>
-					<?php if ($this->countModules('bottom-mid', true)): ?>
-						<jdoc:include type="modules" name="bottom-mid" style="html5"/>
-					<?php endif; ?>
-				</div>
-				<div class="small-12 text-center medium-4 medium-text-left columns border" data-equalizer-watch>
-					<?php if ($this->countModules('bottom-right', true)): ?>
-						<jdoc:include type="modules" name="bottom-right" style="html5"/>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
+	<div id="kr-lang" data-krlang="<?php echo $this->language; ?>"></div>
 
-		<div class="bottom">
-			<div class="row">
-				<div class="small-12 text-center large-6 large-text-left columns">
-					<?php if ($this->countModules('footer-right', true)): ?>
-						<jdoc:include type="modules" name="footer-right" style="html5"/>
-					<?php endif; ?>
-				</div>
-				<div class="copyright small-12 text-center large-6 large-text-right columns">
-					<?php if ($this->countModules('footer-left', true)): ?>
-						<jdoc:include type="modules" name="footer-left" style="html5"/>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--//footer-->
-</div>
+	<div id="KrAjaxModalError" class="reveal tiny" data-reveal>
+		<button class="close-button" aria-label="Close" data-close type="button">
+			<span>&times;</span>
+		</button>
+		<div class="kr-ajax-modal-error-message"></div>
+	</div>
 
-<jdoc:include type="modules" name="debug" style="none"/>
-
-<div id="kr-lang" data-krlang="<?php echo $this->language; ?>"></div>
-
-<div id="KrAjaxModalError" class="reveal tiny" data-reveal>
-	<button class="close-button" aria-label="Close" data-close type="button">
-		<span>&times;</span>
-	</button>
-	<div class="kr-ajax-modal-error-message"></div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        [].slice.call(document.head.querySelectorAll('link[rel="lazy-stylesheet"]')).forEach(function ($link) {
-            $link.rel = "stylesheet";
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            [].slice.call(document.head.querySelectorAll('link[rel="lazy-stylesheet"]')).forEach(function ($link) {
+                $link.rel = "stylesheet";
+            });
         });
-    });
-</script>
-<script src='https://js.stripe.com/v3/' defer></script>
+	</script>
+	<script src='https://js.stripe.com/v3/' defer></script>
 </body>
 </html>

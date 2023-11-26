@@ -3,7 +3,7 @@
 
 #footer {
 	position: relative;
-	padding: 0;
+	padding-top: var(--global-padding);
 	.top {
 		position: relative;
 		padding: 1.5rem 0 0;
@@ -39,7 +39,7 @@
 				color: var(--footer-link-hover);
 			}
 		}
-		.row {
+		.grid-x {
 			.moduletable {
 				&:nth-last-child(n+2) ~ div:last-child {
 					align-self: flex-end;

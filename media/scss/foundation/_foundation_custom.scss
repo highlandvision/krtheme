@@ -31,8 +31,8 @@
 @import '../../../../../node_modules/foundation-sites/scss/typography/typography';
 
 // Grids
-@import '../../../../../node_modules/foundation-sites/scss/grid/grid';
-//@import '../../../Z:/apps/ProjectKR/node_modules/foundation-sites/scss/xy-grid/xy-grid';
+//@import '../../../../../node_modules/foundation-sites/scss/grid/grid';
+@import '../../../../../node_modules/foundation-sites/scss/xy-grid/xy-grid';
 // Generic components
 @import '../../../../../node_modules/foundation-sites/scss/components/button';
 @import '../../../../../node_modules/foundation-sites/scss/components/button-group';
@@ -80,7 +80,7 @@
 @mixin foundation-everything(
 	$flex: true,
 	$prototype: false,
-	$xy-grid: false,
+	$xy-grid: true,
 	$global-flexbox: true
 ) {
 	@if $flex {

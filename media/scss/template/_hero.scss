@@ -5,7 +5,7 @@
     clear: both;
     position: relative;
     width: 100%;
-    &.home {
+    .home {
         @include mixin.breakpoint(small) {
             height: 300px;
             img {
@@ -138,7 +138,7 @@
             }
         }
     }
-    &.subpage {
+    .subpage {
         background: res.$white;
         box-shadow: 0 10px 6px -6px res.$dark-gray;
         height: 70px;

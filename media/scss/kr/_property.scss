@@ -26,7 +26,6 @@
 		background: var(--accent-color);
 		color: res.$white;
 		padding: 0.75rem;
-		max-width: 300px;
 		margin: 0 auto 1.5rem;
 	}
 	.heading p {
@@ -43,29 +42,35 @@
 		font-weight: 700;
 		font-family: 'proxima-nova', sans-serif;
 	}
-	.kr-amenities {
-		padding: 0 0 .2rem;
-		margin-bottom: var(--global-margin);
-		i {
-			color: var(--accent-color);
-			opacity: .6;
-			font-size: 90%;
-		}
-	}
-	.aroom {
-		float: left;
-		margin: 0 2rem 1rem 0;
-		h5 {
-			text-align: center;
-			margin-bottom: 0.3rem;
+	.page {
+		.header {
+			background: res.$white;
+			border-bottom: 1px solid res.$medium-gray;
+			border-top: 1px solid res.$light-gray;
 			color: var(--primary-color);
+			font-weight: 200;
+			font-size: 1.1rem;
+			line-height: 1rem;
+			padding: .75rem 0.3rem;
+			margin: 1rem -0.25rem 0.5rem;
 		}
-		.abed {
-			text-align: center;
-			float: left;
-			width: 4.3rem;
-			color: res.$dark-gray;
-			line-height: 1.5;
+		p {
+			font-size: 0.84rem;
+		}
+		.rooms {
+			h6 {
+				color: var(--primary-color);
+				font-size: 0.8rem;
+				margin-top: 0.3rem;
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+			.amenities {
+				font-size: 0.85rem;
+				margin-bottom: 0;
+			}
 		}
 	}
 	#phototour p {
@@ -95,6 +100,10 @@
 				display: block;
 			}
 		}
+	}
+	.kr-areview {
+		border-radius: 5px;
+		box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 	}
 }
 #kr-map-solo {

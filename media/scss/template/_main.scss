@@ -1,13 +1,9 @@
 #main {
-	margin: var(--global-margin) 0 0;
+	margin-top: var(--global-margin);
 	.main-content {
-		margin-bottom: 1rem;
-	}
-	.main-content,
-	.modules-above {
-		width: 100%;
-		padding-top: 0;
-		display: block;
+		.modules-above {
+			display: block;
+		}
 	}
 	#sidebar-left, #sidebar-right {
 		text-align: left;

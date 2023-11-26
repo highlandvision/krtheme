@@ -961,7 +961,6 @@ ul.pagination li.active a {
   background: var(--accent-color);
   color: hsl(0, 0%, 100%);
   padding: 0.75rem;
-  max-width: 300px;
   margin: 0 auto 1.5rem;
 }
 .kr-property .heading p {
@@ -978,30 +977,32 @@ ul.pagination li.active a {
   font-weight: 700;
   font-family: "proxima-nova", sans-serif;
 }
-.kr-property .kr-amenities {
-  padding: 0 0 0.2rem;
-  margin-bottom: var(--global-margin);
-}
-.kr-property .kr-amenities i {
-  color: var(--accent-color);
-  opacity: 0.6;
-  font-size: 90%;
-}
-.kr-property .aroom {
-  float: left;
-  margin: 0 2rem 1rem 0;
-}
-.kr-property .aroom h5 {
-  text-align: center;
-  margin-bottom: 0.3rem;
+.kr-property .page .header {
+  background: hsl(0, 0%, 100%);
+  border-bottom: 1px solid hsl(0, 0%, 79%);
+  border-top: 1px solid hsl(0, 0%, 94%);
   color: var(--primary-color);
+  font-weight: 200;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  padding: 0.75rem 0.3rem;
+  margin: 1rem -0.25rem 0.5rem;
 }
-.kr-property .aroom .abed {
-  text-align: center;
-  float: left;
-  width: 4.3rem;
-  color: hsl(0, 0%, 54%);
-  line-height: 1.5;
+.kr-property .page p {
+  font-size: 0.84rem;
+}
+.kr-property .page .rooms h6 {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+.kr-property .page .rooms p {
+  margin-bottom: 0;
+}
+.kr-property .page .rooms .amenities {
+  font-size: 0.85rem;
+  margin-bottom: 0;
 }
 .kr-property #phototour p {
   padding: 0.3rem 0.5rem;
@@ -1030,6 +1031,10 @@ ul.pagination li.active a {
 .kr-property .score span::after {
   content: "\f005\f005\f005\f005\f005";
   display: block;
+}
+.kr-property .kr-areview {
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 #kr-map-solo {

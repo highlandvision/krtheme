@@ -5,18 +5,6 @@
      input, select {
         border: 1px solid var(--primary-color);
     }
-    .row.adjust-padding .columns {
-        @include mixin.breakpoint(large) {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            &:first-child {
-                padding-left: 1rem;
-            }
-            &:last-child {
-                padding-right: 1rem;
-            }
-        }
-    }
 }
 .sticky {
     width: 100%;
