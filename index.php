@@ -48,7 +48,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<!-- Off Canvas Menu -->
 		<div class="left-off-canvas-menu">
 			<button class="close-button" aria-label="Close menu" type="button" data-close>
-				<i class="fas fa-long-arrow-left" aria-hidden="true"></i>
+				<i class='fa-solid fa-long-arrow-left' aria-hidden="true"></i>
 			</button>
 			<jdoc:include type="modules" name="menu-mobile"/>
 		</div>
