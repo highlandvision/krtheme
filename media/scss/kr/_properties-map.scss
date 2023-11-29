@@ -23,19 +23,6 @@
 	width: 99.95%;
 	height: 800px;
 }
-.kr-map-bubble {
-	color: res.$white;
-	font-size: 1rem;
-	margin-top: 5px;
-	text-align: center;
-}
-.gm-style-iw.gm-style-iw-c,
-.gm-style .gm-style-iw-tc::after {
-	background: var(--primary-color);
-}
-.gm-ui-hover-effect > span {
-	background-color: res.$white;
-}
 #kr-infowindow {
 	display: none;
 	position: absolute;
@@ -76,4 +63,11 @@
 		background-position: top center;
 		height: 150px;
 	}
+}
+.kr-gmarker {
+	color: var(--primary-color);
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1;
+	padding: 0.3rem;
 }

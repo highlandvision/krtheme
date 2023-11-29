@@ -796,22 +796,6 @@ select[readonly] {
   height: 800px;
 }
 
-.kr-map-bubble {
-  color: hsl(0, 0%, 100%);
-  font-size: 1rem;
-  margin-top: 5px;
-  text-align: center;
-}
-
-.gm-style-iw.gm-style-iw-c,
-.gm-style .gm-style-iw-tc::after {
-  background: var(--primary-color);
-}
-
-.gm-ui-hover-effect > span {
-  background-color: hsl(0, 0%, 100%);
-}
-
 #kr-infowindow {
   display: none;
   position: absolute;
@@ -853,6 +837,14 @@ select[readonly] {
   background-size: 200px 150px;
   background-position: top center;
   height: 150px;
+}
+
+.kr-gmarker {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.3rem;
 }
 
 .kr-pager {
@@ -1004,8 +996,29 @@ ul.pagination li.active a {
   font-size: 0.85rem;
   margin-bottom: 0;
 }
+.kr-property .tabs-panel .header {
+  color: var(--primary-color);
+  font-weight: 200;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+.kr-property .tabs-panel .rooms h6 {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+.kr-property .tabs-panel .rooms p {
+  margin-bottom: 0;
+}
+.kr-property .tabs-panel .rooms .amenities {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
 .kr-property #phototour p {
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.5rem 1rem;
   margin-bottom: 0;
   text-align: center;
 }

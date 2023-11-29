@@ -34,13 +34,13 @@
 	ul.overview {
 		margin: 3px 0 0;
 		padding: 0;
-	}
-	ul.overview li span.title {
-		float: left;
-		width: 25%;
-		color: res.$dark-gray;
-		font-weight: 700;
-		font-family: 'proxima-nova', sans-serif;
+		li span.title {
+			float: left;
+			width: 25%;
+			color: res.$dark-gray;
+			font-weight: 700;
+			font-family: 'proxima-nova', sans-serif;
+		}
 	}
 	.page {
 		.header {
@@ -73,8 +73,33 @@
 			}
 		}
 	}
+	.tabs-panel {
+		.header {
+			color: var(--primary-color);
+			font-weight: 200;
+			font-size: 1.1rem;
+			line-height: 1rem;
+			margin-bottom: 0.5rem;
+			margin-top: 1rem;
+		}
+		.rooms {
+			h6 {
+				color: var(--primary-color);
+				font-size: 0.95rem;
+				margin-top: 0.3rem;
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+			.amenities {
+				font-size: 0.85rem;
+				margin-bottom: 0;
+			}
+		}
+	}
 	#phototour p {
-		padding: 0.3rem 0.5rem;
+		padding: 0.3rem 0.5rem 1rem;
 		margin-bottom: 0;
 		text-align: center;
 	}
