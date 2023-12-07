@@ -82,7 +82,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			</div>
 
-			<div id="header" class="show-for-large">
+			<div id="topbar" class="show-for-large">
 				<div class="grid-container">
 					<div class="grid-x">
 						<div class="large-3 cell topbar-left">
@@ -112,7 +112,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				<?php if ($this->countModules('hero-search', true)): ?>
 					<div class="show-for-large">
 						<div data-sticky-container>
-							<div data-sticky data-margin-top="0" data-top-anchor="header:bottom" data-check-every="-1">
+							<div data-sticky data-margin-top="0" data-top-anchor="topbar:bottom" data-check-every="-1">
 								<div class="subpage">
 									<jdoc:include type="modules" name="hero-search" style="html5"/>
 								</div>

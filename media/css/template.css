@@ -576,7 +576,6 @@ img.responsive {
 }
 
 .title-bar {
-  margin-top: 2rem;
   height: 51px;
 }
 .title-bar .logo {
@@ -586,41 +585,70 @@ img.responsive {
   overflow: visible;
 }
 
-#header {
-  background: var(--primary-color);
-  height: 70px;
-  width: 100%;
+@media print, screen and (min-width: 64em) {
+  #topbar {
+    background: var(--topbar-background);
+    height: 70px;
+    width: 100%;
+  }
+  #topbar .topbar-left {
+    margin-top: 10px;
+  }
+  #topbar .topbar-right {
+    font-size: 15px;
+  }
+  #topbar .topbar-right ul#main-nav {
+    float: right;
+    margin-top: 24px;
+  }
+  #topbar .topbar-right ul#main-nav a {
+    color: var(--topbar-link);
+    font-size: 1rem;
+    height: 46px;
+  }
+  #topbar .topbar-right ul#main-nav a:hover {
+    color: var(--topbar-link-active);
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu li a {
+    font-size: 0.9rem;
+    height: 35px;
+    line-height: 1px;
+    width: 190px;
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu li a:hover {
+    background: var(--topbar-background);
+    margin-left: 8px;
+    padding-left: 8px;
+    width: 182px;
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu.megamenu.is-dropdown-submenu {
+    width: 390px;
+    z-index: 99;
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item {
+    float: left;
+    padding-right: 0;
+    width: 190px;
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item:hover {
+    background: var(--topbar-background);
+    padding-left: 8px;
+    margin-left: 8px;
+    width: 182px;
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item a {
+    height: 35px;
+    line-height: 1px;
+    padding-right: 0;
+  }
+  #topbar .topbar-right ul#main-nav ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item a:hover {
+    background: var(--topbar-background);
+    margin-left: -8px;
+    padding-left: 8px;
+  }
 }
-#header .topbar-left {
-  margin-top: 10px;
-}
-#header .topbar-right {
-  text-align: right;
-}
-#header .topbar-right .moduletable {
-  margin-bottom: 0;
-}
-#header .topbar-right ul#topbar {
-  color: hsl(0, 0%, 100%);
-  margin-bottom: 0;
-  padding-top: 2rem;
-}
-#header .topbar-right ul#topbar > li {
-  border-right: 10px solid transparent;
-}
-#header .topbar-right ul#topbar li a {
-  color: var(--topbar-link);
-  font-size: 0.8rem;
-}
-#header .topbar-right ul#topbar li.current a,
-#header .topbar-right ul#topbar li.current a:hover,
-#header .topbar-right ul#topbar li:hover a,
-#header .topbar-right ul#topbar li.is-active a {
-  color: var(--footer-link-hover);
-}
-
 ul#offcanvas.nav.menu.vertical li {
-  background: var(--primary-color);
+  background: var(--topbar-background);
 }
 ul#offcanvas.nav.menu.vertical li a {
   color: hsl(0, 0%, 100%);
@@ -680,7 +708,7 @@ ul#offcanvas.nav.menu.vertical li a:hover {
   #hero .home .kr-slideshow .caption {
     background: hsla(0, 0%, 100%, 0.7);
     position: absolute;
-    top: 3%;
+    bottom: 5%;
     line-height: 1.1;
     margin-left: 5px;
     max-width: 400px;
@@ -694,7 +722,7 @@ ul#offcanvas.nav.menu.vertical li a:hover {
   }
   #hero .home .kr-slideshow .caption a {
     color: var(--primary-color);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
   }
 }
@@ -908,7 +936,7 @@ p.readmore a, a.readmore {
   content: "";
   margin-right: 0;
 }
-.breadcrumb:hover {
+.breadcrumb li a:hover {
   text-decoration: underline;
 }
 
@@ -1027,6 +1055,43 @@ p.readmore a, a.readmore {
 }
 #footer .bottom ul li a:hover {
   text-decoration: underline;
+}
+
+.kr-destinations ul, .kr-destinations p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.kr-destinations ul {
+  font-size: 0.85rem;
+  margin: 0;
+}
+.kr-destinations ul.map li:before {
+  color: green;
+  content: "\f030";
+  display: inline-block;
+  font-family: "Font Awesome 6 Free", serif;
+  font-weight: 900;
+  width: 1.3rem;
+}
+.kr-destinations ul.beach li:before {
+  color: blue;
+  content: "\f13d";
+  display: inline-block;
+  font-family: "Font Awesome 6 Free", serif;
+  font-weight: 900;
+  width: 1.3rem;
+}
+.kr-destinations ul.food li:before {
+  color: red;
+  content: "\f2e7";
+  display: inline-block;
+  font-family: "Font Awesome 6 Free", serif;
+  font-weight: 900;
+  width: 1.3rem;
+}
+.kr-destinations ul li {
+  margin-bottom: 0.5rem;
+  padding: 0;
 }
 
 @media print {

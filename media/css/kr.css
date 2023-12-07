@@ -616,9 +616,8 @@ select[readonly] {
 .kr-slideshow-wrapper .kr-search-pricing .discounts .button.discounts-none:hover {
   cursor: default !important;
 }
-.kr-slideshow-wrapper .kr-search-pricing .discounts .button i.fas {
+.kr-slideshow-wrapper .kr-search-pricing .discounts .button i {
   color: hsl(0, 0%, 100%);
-  font-size: 0.85rem;
   text-align: center;
 }
 .kr-slideshow-wrapper .kr-search-pricing .discounts .dropdown-pane {

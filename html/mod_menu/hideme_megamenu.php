@@ -19,37 +19,52 @@ $tagId = $params->get('tag_id', '');
 if ($tagId) {
 	$id = ' id="' . $tagId . '"';
 }
+$cs = 'dropdown menu';
+if ($class_sfx) {
+	$cs = $cs . ' ' . $class_sfx;
+}
+$class = [];
 ?>
 
-<ul<?php echo $id; ?> class="nav dropdown menu" data-dropdown-menu data-disable-hover="true" data-click-open="true">
+<ul<?php echo $id; ?> class="kr-megamenu dropdown menu" data-dropdown-menu>
 	<?php foreach ($list as $i => &$item) {
-		$class   = [];
-		$class[] = 'item-' . $item->id;
+		$itemParams = $item->getParams();
 
-		if ($item->id == $default_id) {
-			$class[] = 'default';
+		if ($item->deeper) {
+			$class[]  = 'is-dropdown-submenu-parent';
+		}
+		if ($item->deeper) {
+			$class[]  = 'menu';
 		}
 
-		if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id)) {
-			$class[] = 'current';
-		}
 
-		if (in_array($item->id, $path)) {
-			$class[] = 'active';
-		} elseif ($item->type == 'alias') {
-			$aliasToId = $item->params->get('aliasoptions');
+//		if ($item->id == $default_id) {
+//			$class[] = 'default';
+//		}
 
-			if (count($path) > 0 && $aliasToId == $path[count($path) - 1]) {
-				$class[] = 'active';
-			}
-			elseif (in_array($aliasToId, $path)) {
-				$class[] = 'alias-parent-active';
-			}
-		}
+//		if (($item->id == $active_id) || ($item->type == 'alias' && $itemParams->get('aliasoptions') == $active_id)) {
+//			$class[] = 'current';
+//		}
 
-		if ($item->type == 'separator') {
-			$class[] = 'divider';
-		}
+//		if (in_array($item->id, $path)) {
+//			$class[] = 'active';
+//		} else if ($item->type == 'alias') {
+//			$aliasToId = $itemParams->get('aliasoptions');
+//
+//			if (count($path) > 0 && $aliasToId == $path[count($path) - 1]) {
+//				$class[] = 'active';
+//			} else if (in_array($aliasToId, $path)) {
+//				$class[]  = 'alias-parent-active';
+//			}
+//		}
+
+//		if ($item->type == 'separator') {
+//			$class[] = 'divider';
+//		}
+
+//		if ($item->parent) {
+//			$class[] = 'parent';
+//		}
 
 		if (count($class)) {
 			echo '<li class="' . implode(' ', $class) . '">';
@@ -62,20 +77,20 @@ if ($tagId) {
 			case 'url':
 				require ModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
 				break;
-
 			default:
 				require ModuleHelper::getLayoutPath('mod_menu', 'default_url');
 				break;
 		endswitch;
 
+		// The next item is deeper.
 		if ($item->deeper) {
 			echo '<ul class="menu ' . $item->anchor_css . '">';
-		} elseif ($item->shallower) {
+		} else if ($item->shallower) {
 			echo '</li>';
 			echo str_repeat('</ul></li>', $item->level_diff);
-		} else {
+		}
+		else {
 			echo '</li>';
 		}
 	}
-	?>
-</ul>
+?></ul>

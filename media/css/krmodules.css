@@ -7001,9 +7001,6 @@ i.slick-nav:hover {
   width: 100%;
   margin-bottom: var(--global-margin);
 }
-.moduletable h3 {
-  text-transform: uppercase;
-}
 
 #kr-form-mailchimp input[type=text],
 #kr-form-mailchimp input[type=email] {

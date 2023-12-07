@@ -35,7 +35,7 @@
                 .caption {
                     background: hsla(0, 0%, 100%, 0.7);
                     position: absolute;
-                    top: 3%;
+                    bottom: 5%;
                     line-height: 1.1;
                     margin-left: 5px;
                     max-width: 400px;
@@ -48,7 +48,7 @@
                     }
                     a {
                         color: var(--primary-color);
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                         font-weight: 400;
                     }
                 }

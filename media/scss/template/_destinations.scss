@@ -1,0 +1,41 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
+
+.kr-destinations {
+    ul, p {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+    ul {
+        font-size: 0.85rem;
+        margin: 0;
+        &.map li:before {
+            color: green;
+            content: "\f030";
+            display: inline-block;
+            font-family: 'Font Awesome 6 Free', serif;
+            font-weight: 900;
+            width: 1.3rem;
+        }
+        &.beach li:before {
+            color: blue;
+            content: "\f13d";
+            display: inline-block;
+            font-family: 'Font Awesome 6 Free', serif;
+            font-weight: 900;
+            width: 1.3rem;
+        }
+        &.food li:before {
+            color: red;
+            content: "\f2e7";
+            display: inline-block;
+            font-family: 'Font Awesome 6 Free', serif;
+            font-weight: 900;
+            width: 1.3rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            padding: 0;
+        }
+    }
+}

@@ -39,6 +39,6 @@ if ($item->menu_icon) {
         $linktype .= '<span class="image-title">' . $item->title . '</span>';
     }
 }
-
 ?>
+
 <a href="#" class="mod-menu_heading nav-header <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype; ?></a>
