@@ -1,0 +1,122 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
+#kr-hero {
+    clear: both;
+    position: relative;
+    width: 100%;
+    &.slider {
+        @include mixin.breakpoint(small) {
+            height: 300px;
+            img {
+                background-size: cover;
+                height: 300px;
+                min-height: 300px;
+            }
+        }
+        @include mixin.breakpoint(large) {
+            height: 100%;
+            margin-bottom: var(--global-margin);
+            .kr-slideshow {
+                @include mixin.breakpoint(large) {
+                    display: block;
+                    height: auto;
+                    visibility: hidden;
+                    &.slick-initialized {
+                        visibility: visible;
+                    }
+                    .slick-slide img {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .caption {
+                    background: hsla(0, 0%, 100%, 0.7);
+                    position: absolute;
+                    bottom: 5%;
+                    line-height: 1.1;
+                    margin-left: 5px;
+                    max-width: 400px;
+                    min-width: 200px;
+                    padding: 0.5rem;
+                    width: auto;
+                    z-index: 9999;
+                    &:hover {
+                        background: hsla(0, 0%, 100%, 0.9);
+                    }
+                    a {
+                        color: var(--primary-color);
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                    }
+                }
+                i.slick-nav {
+                    color: res.$white;
+                    background: none;
+                    font-size: 2.8rem;
+                    height: auto;
+                    @include mixin.breakpoint(large) {
+                        padding: 2.5rem 0.1rem;
+                        top: 42%;
+                    }
+                }
+                .spot {
+                    display: none;
+                    @include mixin.breakpoint(medium) {
+                        position: absolute;
+                        top: 2%;
+                        right: 0;
+                        display: block;
+                    }
+                    @include mixin.breakpoint(large) {
+                        top: 3%;
+                        right: 2%;
+                    }
+                    img {
+                        @include mixin.breakpoint(medium) {
+                            width: 70%;
+                        }
+                        @include mixin.breakpoint(large) {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kr-search {
+        @include mixin.breakpoint(small) {
+            background: var(--primary-color);
+            margin-top: 4px;
+            max-width: 300px;
+            opacity: 0.9;
+            padding: 1rem 0.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            .button {
+                border: 1px solid res.$white;
+                margin-bottom: 0;
+            }
+        }
+        @include mixin.breakpoint(large) {
+            background: hsl(0, 0%, 98%);
+            box-shadow: none;
+            height: 75px;
+            margin: 0 auto;
+            max-width: calc(var(--global-width) - 30px);
+            opacity: 0.9;
+            padding: 1rem;
+            position: absolute;
+            top: 40%;
+            left: 0;
+            right: 0;
+            .button {
+                border: none;
+            }
+        }
+    }
+}

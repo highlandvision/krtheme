@@ -1,0 +1,43 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
+#kr-hero.top {
+    #kr-offcanvas-top-search {
+        @include mixin.breakpoint(small) {
+            height: 80%;
+            top: 3.2rem;
+        }
+        @include mixin.breakpoint(large) {
+            height: 70px;
+            top: 0;
+        }
+    }
+    .sticky {
+        top: 0 !important;
+        .moduletable {
+            margin: 0;
+            .kr-search {
+                @include mixin.breakpoint(small) {
+                    max-width: 350px;
+                    padding: 1rem 1rem 1rem 0;
+                    width: 100%;
+                    .button {
+                        border: 1px solid res.$white;
+                        margin-bottom: 0;
+                    }
+                }
+                @include mixin.breakpoint(large) {
+                    background: res.$white;
+                    box-shadow: 0 10px 6px -6px res.$dark-gray;
+                    display: block;
+                    height: 70px !important;
+                    margin-bottom: var(--global-margin);
+                    max-width: none;
+                    padding: 1rem 0;
+                    width: 100%;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}

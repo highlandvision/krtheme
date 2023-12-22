@@ -28,12 +28,7 @@ if ($class_sfx) {
 $class = [];
 ?>
 
-<ul<?php echo $id; ?> class="nav menu dropdownm mod-menu mod-list nav <?php echo $cs; ?>" data-dropdown-menu
-                      data-disable-hover="true"
-                      data-click-open="true">
-
 <ul<?php echo $id; ?> class="nav menu dropdown" data-dropdown-menu data-disable-hover="true" data-click-open="true">
-
 	<?php foreach ($list as $i => $item) {
 		$itemParams = $item->getParams();
 		$class[]    = 'item-' . $item->id;

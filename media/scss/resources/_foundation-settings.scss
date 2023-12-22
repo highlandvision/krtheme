@@ -505,12 +505,12 @@ $drilldown-arrow-size: 6px;
 // 17. Dropdown
 // ------------
 
-$dropdown-padding: 1rem;
+$dropdown-padding: 1rem 0.5rem;
 $dropdown-background: $default-body-background;
 $dropdown-border: 0;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
-$dropdown-radius: $global-radius;
+$dropdown-radius: 0;
 $dropdown-sizes: (
 		tiny: 100px,
 		small: 200px,
@@ -634,7 +634,7 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
 		small: 250px,
 );
-$offcanvas-background: $default-primary-color;
+$offcanvas-background: $white;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
