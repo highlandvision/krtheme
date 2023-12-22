@@ -4584,7 +4584,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   z-index: 10;
   display: none;
   width: 300px;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   visibility: hidden;
   border: 0;
   border-radius: 0;
@@ -5542,7 +5542,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   z-index: 12;
   transition: transform 0.5s ease;
   backface-visibility: hidden;
-  background: hsl(208, 100%, 22%);
+  background: hsl(0, 0%, 100%);
 }
 [data-whatinput=mouse] .off-canvas {
   outline: 0;
@@ -5568,7 +5568,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   z-index: 12;
   transition: transform 0.5s ease;
   backface-visibility: hidden;
-  background: hsl(208, 100%, 22%);
+  background: hsl(0, 0%, 100%);
 }
 [data-whatinput=mouse] .off-canvas-absolute {
   outline: 0;

@@ -41,4 +41,5 @@ if ($item->menu_icon) {
 }
 ?>
 
-<a href="#" class="mod-menu_heading nav-header <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype; ?></a>
+<a class="mod-menu_heading nav-header <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype;
+?></a>

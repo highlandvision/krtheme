@@ -144,8 +144,8 @@ hr {
 	margin: 0 auto;
 }
 input[type="number"], .input-tiny {
-	min-width: 5rem !important;
-	max-width: 5rem !important;
+	min-width: 3rem !important;
+	max-width: 3rem !important;
 	width: 100% !important;
 	padding-left: .8rem !important;
 	padding-right: .8rem !important;
@@ -236,6 +236,10 @@ img.responsive {
 }
 //Number increment
 $input-number-size: 80px;
+.input-group [class*="col-"] {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
 .input-number-group {
 	display: flex;
 	justify-content: center;
@@ -248,7 +252,7 @@ $input-number-size: 80px;
 	}
 	.input-number {
 		width: $input-number-size;
-		padding: 0 0.75rem;
+		padding: 0 12px;
 		vertical-align: top;
 		text-align: center;
 		outline: none;
@@ -258,8 +262,7 @@ $input-number-size: 80px;
 	.input-number,
 	.input-number-decrement,
 	.input-number-increment {
-		border: 1px solid res.$medium-gray;
-		height: calc($input-number-size / 2);
+		height: $input-number-size/2;
 		user-select: none;
 	}
 	.input-number-decrement,
@@ -271,18 +274,19 @@ $input-number-size: 80px;
 		display: inline-block;
 		font-size: 2rem;
 		font-weight: bold;
+		padding-top: 0.15rem;
 		text-align: center;
-		width: calc($input-number-size / 2);
+		width: $input-number-size/2;
 		&:disabled {
 			opacity: 0.3;
 			cursor: default;
 		}
 	}
 	.input-number-decrement {
-		margin-right: 0.5rem;
+		border-right: none;
 	}
 	.input-number-increment {
-		margin-left: 0.5rem;
+		border-left: none;
 	}
 }
 .osmap-items {

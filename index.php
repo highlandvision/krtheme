@@ -44,44 +44,52 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 <body>
 <div class="off-canvas-wrapper">
-	<div id="offCanvasLeft" class="off-canvas-absolute position-left is-closed" data-off-canvas data-transition="pull">
-		<!-- Off Canvas Menu -->
-		<div class="left-off-canvas-menu">
-			<button class="close-button" aria-label="Close menu" type="button" data-close>
-				<i class='fa-solid fa-long-arrow-left' aria-hidden="true"></i>
-			</button>
-			<jdoc:include type="modules" name="menu-mobile"/>
-		</div>
+	<div class="off-canvas position-left kr-offcanvas" id="kr-offcanvas-left-menu" data-off-canvas
+	     data-transition="overlap">
+		<button class="close-button" aria-label="Close menu" type="button" data-close>
+			<i class='fa-solid fa-close' aria-hidden="true"></i>
+		</button>
+		<jdoc:include type="modules" name="menu-mobile"/>
 	</div>
-	<div id="kr-properties-sortby-off-canvas" class="off-canvas-absolute position-left kr-offcanvas kr-sortby"
-	     data-off-canvas data-transition="overlap"></div>
-	<div id="kr-properties-filters-off-canvas" class="off-canvas-absolute position-right kr-offcanvas kr-filters"
-	     data-off-canvas data-transition="overlap"></div>
-	<div id="kr-properties-search-off-canvas" class="off-canvas-absolute position-top kr-offcanvas"
-	     data-off-canvas data-transition="overlap" data-force-to="top">
+	<div class="off-canvas position-left kr-offcanvas kr-sortby" id="kr-offcanvas-properties-sortby"
+	     data-off-canvas data-transition="overlap">
+	</div>
+	<div class="off-canvas position-right kr-offcanvas kr-filters" id="kr-offcanvas-properties-filter"
+	     data-off-canvas data-transition="overlap">
 	</div>
 
+	<!--	Main content -->
 	<div class="off-canvas-content" data-off-canvas-content>
 		<div id="kr-overlay"></div>
 		<nav class="nav-section">
 			<!-- hamburger and logo for small / medium -->
-			<div class="hide-for-large">
-				<div class="title-bar">
-					<!-- top bar hamburger for off canvas left menu link and logo-->
-					<div class="title-bar-left">
-						<button type="button" class="menu-icon" aria-label="Toggle menu" data-toggle="offCanvasLeft">
-						</button>
+			<div class="title-bar hide-for-large">
+				<!-- top bar hamburger for off canvas left menu link and logo-->
+				<div class="title-bar-left">
+					<button type="button" class="menu-icon" aria-label="Toggle menu"
+					        data-toggle="kr-offcanvas-left-menu">
+					</button>
+					<button type="button" class="search-icon hide-for-large" aria-label="Toggle search"
+					        data-toggle="kr-offcanvas-top-search">
+					</button>
+				</div>
+				<div class="title-bar-title text-right">
+					<div class="logo-image">
+						<a href="/" title="<?php echo $sitename; ?>">
+							<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
+						</a>
 					</div>
-					<div class="title-bar-title text-right">
-						<div class="logo-image">
-							<a href="/" title="<?php echo $sitename; ?>">
-								<img src="<?php echo $logo; ?>" class="responsive logo" alt="<?php echo $sitename; ?>">
-							</a>
+				</div>
+			</div>
+			<div id="userbar" class="show-for-large">
+				<div class="grid-container">
+					<div class="grid-x">
+						<div class="large-12 cell align-right">
+							<jdoc:include type="modules" name="userbar" style="html5"/>
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div id="topbar" class="show-for-large">
 				<div class="grid-container">
 					<div class="grid-x">
@@ -90,7 +98,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 								<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
 							</a>
 						</div>
-						<div class="large-9 cell topbar-right">
+						<div class="large-8 cell topbar-right">
 							<jdoc:include type="modules" name="topbar-right" style="html5"/>
 						</div>
 					</div>
@@ -98,30 +106,26 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		</nav>
 
-		<section id="hero">
-			<?php if ($home): ?>
-				<div class="home">
-					<?php if ($this->countModules('hero-slider')): ?>
-						<jdoc:include type="modules" name="hero-slider" style="html5"/>
-					<?php endif; ?>
-					<?php if ($this->countModules('hero-search', true)): ?>
-						<jdoc:include type="modules" name="hero-search" style="html5"/>
-					<?php endif; ?>
-				</div>
-			<?php else: ?>
-				<?php if ($this->countModules('hero-search', true)): ?>
-					<div class="show-for-large">
-						<div data-sticky-container>
-							<div data-sticky data-margin-top="0" data-top-anchor="topbar:bottom" data-check-every="-1">
-								<div class="subpage">
-									<jdoc:include type="modules" name="hero-search" style="html5"/>
-								</div>
-							</div>
+		<?php if ($this->countModules('hero-sticky', true)): ?>
+			<div id="kr-hero" class="top">
+				<div class="off-canvas position-top" id="kr-offcanvas-top-search" data-off-canvas
+				     data-options="inCanvasOn:large;" data-transition="overlap" data-content-scroll="false">
+					<div data-sticky-container>
+						<div data-sticky data-sticky-on="large" data-margin-top="0" data-top-anchor="topbar:bottom"
+						     data-check-every="-1">
+								<jdoc:include type="modules" name="hero-sticky" style="html5"/>
 						</div>
 					</div>
+				</div>
+			</div>
+		<?php elseif ($this->countModules('hero-slider', true)): ?>
+			<div id="kr-hero" class="slider">
+				<jdoc:include type="modules" name="hero-slider" style="html5"/>
+				<?php if ($this->countModules('hero-search', true)): ?>
+					<jdoc:include type="modules" name="hero-search" style="html5"/>
 				<?php endif; ?>
-			<?php endif; ?>
-		</section>
+			</div>
+		<?php endif; ?>
 
 		<!--main section-->
 		<section id="main" class="grid-container">
@@ -152,19 +156,18 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					<div id="sidebar-left" class="small-12 medium-4 cell">
 						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
 					</div>
-					<div class="article small-12 medium-8 cell">
+					<div class="article small-12 medium-8 large-9 cell">
 						<jdoc:include type="component"/>
 						<div style="clear:both;"></div>
 						<?php if ($this->countModules('under-content', true)): ?>
 							<jdoc:include type="modules" name="under-content" style="html5"/>
 						<?php endif; ?>
 					</div
-
-					<div id="sidebar-right" class="medium-4 cell">
+					<div id="sidebar-right" class="small-12 medium-4 large-3 cell">
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php elseif ($this->countModules('sidebar-left', true)): ?>
-					<div id="sidebar-left" class="small-12 medium-4 cell">
+					<div id="sidebar-left" class="small-12 medium-4 large-3 cell">
 						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
 					</div>
 					<div class="article small-12 medium-8 cell">
@@ -174,15 +177,15 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 							<jdoc:include type="modules" name="under-content" style="html5"/>
 						<?php endif; ?>
 					</div>
-				<?php elseif ($this->countModules('sidebar-right', true)): ?>
-					<div class="article small-12 medium-8 cell">
+				<?php elseif ($this->countModules('sidebar-right')): ?>
+					<div class="article small-12 medium-8 large-9 cell">
 						<jdoc:include type="component"/>
 						<div style="clear:both;"></div>
 						<?php if ($this->countModules('under-content', true)): ?>
 							<jdoc:include type="modules" name="under-content" style="html5"/>
 						<?php endif; ?>
 					</div>
-					<div id="sidebar-right" class="small-12 text-center medium-4 medium-text-left cell">
+					<div id="sidebar-right" class="small-12 text-center medium-4 large-3 medium-text-left cell">
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php else: ?>
@@ -224,20 +227,20 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				<?php endif; ?>
 			</div>
 
-			<div class="middle" data-equalizer data-equalize-on="medium">
+			<div class="middle" data-equalizer data-equalize-on="large">
 				<div class="grid-container">
-					<div class="grid-x grid-margin-x text-center medium-text-left">
-						<div class="hide-for-small medium-4 cell border" data-equalizer-watch>
+					<div class="grid-x grid-margin-x text-center large-text-left">
+						<div class="small-12 large-4 cell border" data-equalizer-watch>
 							<?php if ($this->countModules('bottom-left', true)): ?>
 								<jdoc:include type="modules" name="bottom-left" style="html5"/>
 							<?php endif; ?>
 						</div>
-						<div class="hide-for-small medium-4 cell border" data-equalizer-watch>
+						<div class="small-12 large-4 cell border" data-equalizer-watch>
 							<?php if ($this->countModules('bottom-mid', true)): ?>
 								<jdoc:include type="modules" name="bottom-mid" style="html5"/>
 							<?php endif; ?>
 						</div>
-						<div class="small-12 text-center medium-4 medium-text-left cell border" data-equalizer-watch>
+						<div class="small-12 text-center large-4 large-text-left cell border" data-equalizer-watch>
 							<?php if ($this->countModules('bottom-right', true)): ?>
 								<jdoc:include type="modules" name="bottom-right" style="html5"/>
 							<?php endif; ?>
@@ -270,12 +273,12 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 	<div id="kr-lang" data-krlang="<?php echo $this->language; ?>"></div>
 
-	<div id="KrAjaxModalError" class="reveal tiny" data-reveal>
-		<button class="close-button" aria-label="Close" data-close type="button">
-			<span>&times;</span>
-		</button>
-		<div class="kr-ajax-modal-error-message"></div>
-	</div>
+	<!--	<div id="KrAjaxModalError" class="reveal tiny" data-reveal>-->
+	<!--		<button class="close-button" aria-label="Close" data-close type="button">-->
+	<!--			<span>&times;</span>-->
+	<!--		</button>-->
+	<!--		<div class="kr-ajax-modal-error-message"></div>-->
+	<!--	</div>-->
 
 	<script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -285,5 +288,6 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
         });
 	</script>
 	<script src='https://js.stripe.com/v3/' defer></script>
+</div>
 </body>
 </html>
