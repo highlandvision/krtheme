@@ -25,7 +25,7 @@ if (!empty($params->get('tag_id')))
 	<div class="small-12 medium-9 columns">
 		<ul class="nav menu<?php echo $class_sfx; ?>" <?php echo $tag_id; ?>>
 		<?php
-		foreach ($list as $i => &$item) {
+		foreach ($list as $i => $item) {
 			$itemParams = $item->getParams();
 			$class      = 'item-' . $item->id;
 			if ($item->id == $active_id)

@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 
 /** @var Joomla\CMS\Document\HtmlDocument $this */
+/** @noinspection PhpUnhandledExceptionInspection */
 $app = Factory::getApplication();
 
 $wa  = $this->getWebAssetManager();

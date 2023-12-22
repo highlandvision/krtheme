@@ -22,7 +22,7 @@ if ($tagId) {
 ?>
 
 <ul<?php echo $id; ?> class="nav dropdown menu" data-dropdown-menu data-disable-hover="true" data-click-open="true">
-	<?php foreach ($list as $i => &$item) {
+	<?php foreach ($list as $i => $item) {
 		$class   = [];
 		$class[] = 'item-' . $item->id;
 

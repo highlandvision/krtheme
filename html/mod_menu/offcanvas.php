@@ -21,7 +21,7 @@ if ($tagId) {
 
 <ul<?php echo $id; ?> class="nav mod-menu <?php echo $class_sfx; ?>">
 	<?php
-	foreach ($list as $i => &$item) {
+	foreach ($list as $i => $item) {
 		$itemParams = $item->getParams();
 		$class      = 'item-' . $item->id;
 		if ($item->id == $default_id) {

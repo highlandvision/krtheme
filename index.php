@@ -18,7 +18,8 @@ $app = Factory::getApplication();
 $logo     = $this->params->get('logo');
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
 $home     = false;
-$menu     = $app->getMenu();
+/** @noinspection PhpPossiblePolymorphicInvocationInspection */
+$menu = $app->getMenu();
 if ($menu->getActive() === $menu->getDefault()) {
 	$home = true;
 }
