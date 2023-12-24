@@ -4584,7 +4584,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   z-index: 10;
   display: none;
   width: 300px;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   visibility: hidden;
   border: 0;
   border-radius: 0;

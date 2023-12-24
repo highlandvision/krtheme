@@ -288,7 +288,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
             });
         });
 	</script>
-	<script src='https://js.stripe.com/v3/' defer></script>
+<!--	<script src='https://js.stripe.com/v3/' defer></script>-->
 </div>
 </body>
 </html>

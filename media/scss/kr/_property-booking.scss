@@ -4,7 +4,8 @@
 	background: res.$light-gray;
 	margin-top: -3.5rem;
 	padding: 0.5rem 1rem 0;
-	.kr-quote-heading {
+	.heading {
+		margin-bottom: 0;
 		padding-top: 0;
 		text-align: center;
 	}
@@ -12,9 +13,9 @@
 		font-size: 90%;
 		text-align: center;
 	}
-	#kr-bookmodule {
+	.property-book {
 		padding: 0;
-		margin-bottom: var(--global-margin);
+		text-align: center;
 		h4, h6 {
 			margin-bottom: 0;
 			color: var(--body-color);
