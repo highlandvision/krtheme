@@ -309,17 +309,3 @@ ul#categories {
         }
     }
 }
-.kr-destinations {
-    &.tabs-content {
-        border: none;
-    }
-    .tabs-panel.image {
-        padding: 0;
-    }
-    .kr-destination-detail {
-        margin: var(--global-margin);
-        a.button {
-            margin: 0 0 2.5rem;
-        }
-    }
-}

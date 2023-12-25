@@ -7315,19 +7315,6 @@ ul#categories li a:hover {
   color: var(--primary-color);
 }
 
-.kr-destinations.tabs-content {
-  border: none;
-}
-.kr-destinations .tabs-panel.image {
-  padding: 0;
-}
-.kr-destinations .kr-destination-detail {
-  margin: var(--global-margin);
-}
-.kr-destinations .kr-destination-detail a.button {
-  margin: 0 0 2.5rem;
-}
-
 .kr-search input, .kr-search select {
   border: 1px solid var(--primary-color);
   cursor: pointer;

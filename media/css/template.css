@@ -1133,6 +1133,28 @@ p.readmore a, a.readmore {
   text-decoration: underline;
 }
 
+.kr-destinations.tabs-content {
+  border: none;
+}
+.kr-destinations .tabs-panel.image {
+  padding: 0;
+}
+.kr-destinations .kr-destination-detail {
+  margin: var(--global-margin);
+}
+.kr-destinations .kr-destination-detail a.button {
+  margin: 0 0 2.5rem;
+}
+.kr-destinations h2 {
+  background: hsl(0, 0%, 100%);
+  margin-top: -2.5rem;
+  padding: 0.5rem;
+  opacity: 0.6;
+}
+.kr-destinations h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
 .kr-destinations ul, .kr-destinations p {
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
