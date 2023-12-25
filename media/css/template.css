@@ -396,11 +396,11 @@ hr {
 }
 
 input[type=number], .input-tiny {
-  min-width: 3rem !important;
-  max-width: 3rem !important;
+  min-width: 4rem !important;
+  max-width: 4rem !important;
   width: 100% !important;
-  padding-left: 0.8rem !important;
-  padding-right: 0.8rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .form-text {
@@ -960,11 +960,12 @@ p.readmore a, a.readmore {
 #main .main-content .modules-above {
   display: block;
 }
-#main #sidebar-left, #main #sidebar-right {
+#main #sidebar-left {
   text-align: left;
 }
 #main #sidebar-right {
   margin-top: 3.5rem;
+  text-align: left;
 }
 #main #sidebar-right > div, #main #sidebar-left > div {
   margin-bottom: var(--global-margin);

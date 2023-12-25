@@ -5,11 +5,12 @@
 			display: block;
 		}
 	}
-	#sidebar-left, #sidebar-right {
+	#sidebar-left {
 		text-align: left;
 	}
 	#sidebar-right {
 		margin-top: 3.5rem;
+		text-align: left;
 	}
 	#sidebar-right > div, #sidebar-left > div {
 		margin-bottom: var(--global-margin);

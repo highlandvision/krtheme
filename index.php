@@ -152,8 +152,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				<?php endif; ?>
 
 				<!--main content-->
-				<?php if ($this->countModules('sidebar-left', true) &&
-					$this->countModules('sidebar-right', true)): ?>
+				<?php if ($this->countModules('sidebar-left', true) && $this->countModules('sidebar-right', true)): ?>
 					<div id="sidebar-left" class="small-12 medium-4 cell">
 						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
 					</div>
@@ -186,7 +185,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 							<jdoc:include type="modules" name="under-content" style="html5"/>
 						<?php endif; ?>
 					</div>
-					<div id="sidebar-right" class="small-12 text-center medium-4 large-3 medium-text-left cell">
+					<div id="sidebar-right" class="small-12 medium-4 large-3 cell text-center">
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php else: ?>
