@@ -7384,9 +7384,6 @@ ul#categories li a:hover {
 .kr-search #kr-searchguest-drop::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-color-hover);
 }
-.kr-search #kr-searchregion-drop .regionspane-item {
-  text-align: left;
-}
 .kr-search #kr-searchguest-drop .input-number-group {
   justify-content: left;
 }
