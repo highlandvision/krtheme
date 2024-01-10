@@ -671,6 +671,7 @@ img.responsive {
     width: 182px;
   }
   #topbar .topbar-right ul ul.submenu.megamenu.is-dropdown-submenu {
+    padding: 0.3rem 0;
     width: 390px;
   }
   #topbar .topbar-right ul ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item {
