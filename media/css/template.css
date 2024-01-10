@@ -396,8 +396,8 @@ hr {
 }
 
 input[type=number], .input-tiny {
-  min-width: 4rem !important;
-  max-width: 4rem !important;
+  min-width: 2rem !important;
+  max-width: 3rem !important;
   width: 100% !important;
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
@@ -458,11 +458,6 @@ ul.tabs li:last-child {
 @media print, screen and (min-width: 40em) {
   .callout {
     padding: 1rem;
-  }
-}
-@media print, screen and (min-width: 64em) {
-  .callout {
-    padding: 1.5rem;
   }
 }
 .callout.standout {

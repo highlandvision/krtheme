@@ -144,8 +144,8 @@ hr {
 	margin: 0 auto;
 }
 input[type="number"], .input-tiny {
-	min-width: 4rem !important;
-	max-width: 4rem !important;
+	min-width: 2rem !important;
+	max-width: 3rem !important;
 	width: 100% !important;
 	padding-left: .5rem !important;
 	padding-right: .5rem !important;
@@ -197,9 +197,6 @@ ul.tabs {
 	padding: 0.5rem;
 	@include mixin.breakpoint(medium) {
 		padding: 1rem;
-	}
-	@include mixin.breakpoint(large) {
-		padding: 1.5rem;
 	}
 	&.standout {
 		border: 1px solid var(--primary-color);
