@@ -7327,6 +7327,11 @@ ul#categories li a:hover {
     margin-bottom: 0;
   }
 }
+.kr-search .hero-search-text {
+  margin-top: -6px;
+  text-align: right;
+  line-height: 1.2;
+}
 .kr-search .datepicker-wrapper {
   position: relative;
 }
