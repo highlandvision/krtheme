@@ -2,16 +2,17 @@
 @use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 #kr-thumb {
-    #pinfo {
+    .pinfo {
         background-color: res.$light-gray;
         border: 1px solid res.$medium-gray;
-        min-height: 387px;
-        padding: 1rem 1rem 0;
+        max-height: 379px;
+        min-height: 379px;
+        padding: 1rem 0.5rem 0;
         h4 {
             color: res.$black-light;
         }
         p {
-            font-size: 14px;
+            font-size: 13px;
             color: res.$dark-gray;
         }
     }
