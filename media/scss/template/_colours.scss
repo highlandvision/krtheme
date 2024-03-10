@@ -20,11 +20,11 @@
 	background-color: #fff3b2;
 	color: res.$white;
 }
-i.fas.fa-file-pdf {
+i.solid.fa-file-pdf {
 	color: #ba0808;
 }
-.red, i.fas.red, .error-message {
-	color: #cc0000 !important;
+.red, i.solid.red, .error-message {
+	color: var(--alert-color) !important;
 }
 .whitebg {
 	background-color: res.$white;

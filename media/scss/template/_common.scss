@@ -4,6 +4,12 @@
 *, *:before, *:after {
 	box-sizing: border-box;
 }
+a:hover {
+	text-decoration: underline;
+	&.suppress-underline {
+		text-decoration: none;
+	}
+}
 .lowercase {
 	text-transform: lowercase;
 }
@@ -32,6 +38,9 @@
 	margin-bottom: 0 !important;
 }
 .small-margin-bottom {
+	margin-bottom: 0.5rem !important;
+}
+.vsmall-margin-bottom {
 	margin-bottom: 0.25rem !important;
 }
 .no-margin-left {

@@ -1,5 +1,8 @@
 #kr-dashboard-reservations {
 	margin-top: 2rem;
+	.stacked {
+		margin-top: 1.6rem;
+	}
 }
 #holder input {
 	display: inline;
@@ -8,4 +11,8 @@
 }
 address {
 	font-style: normal;
+}
+.guestformlink.button {
+	margin-top: -0.5rem;
+	margin-bottom: 0;
 }

@@ -3,13 +3,17 @@
 
 #kr-hero.top {
     #kr-offcanvas-top-search {
-        @include mixin.breakpoint(small) {
-            height: 80%;
-            top: 3.2rem;
-        }
-        @include mixin.breakpoint(large) {
+        height: 80%;
+        top: 3.2rem;
+        @include mixin.breakpoint(medium) {
             height: 70px;
             top: 0;
+        }
+    }
+    form {
+        padding: 1rem;
+        @include mixin.breakpoint(medium) {
+            padding: 0;
         }
     }
     .sticky {

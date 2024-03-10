@@ -238,6 +238,7 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
+
 $header-font-family: $default-header-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
@@ -402,7 +403,7 @@ $accordionmenu-arrow-size: 6px;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 0.6rem 1rem;
+$button-padding: 0.6em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $default-primary-color;
@@ -628,6 +629,7 @@ $menu-icons-back-compat: true;
 
 // 25. Off-canvas
 // --------------
+
 $offcanvas-sizes: (
 		small: 250px,
 );
@@ -864,7 +866,7 @@ $responsive-embed-ratios: (
 // 47. Reveal
 // ----------
 
-$reveal-background: lighten($default-primary-color, 73%);
+$reveal-background: $white;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;

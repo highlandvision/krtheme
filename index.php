@@ -17,18 +17,22 @@ $app = Factory::getApplication();
 
 $logo     = $this->params->get('logo');
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
-$home     = false;
+$homepage = false;
 /** @noinspection PhpPossiblePolymorphicInvocationInspection */
 $menu = $app->getMenu();
 if ($menu->getActive() === $menu->getDefault()) {
-	$home = true;
+	$homepage = true;
+}
+
+$live = true;
+if (str_contains($_SERVER['SERVER_NAME'], '.test')) {
+	$live = false;
 }
 
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 
 $wa = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
-
 $color = $this->params->get('colors', 'colors_default');
 $asset = 'theme.' . $color;
 $wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
@@ -108,13 +112,13 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		</nav>
 
 		<?php if ($this->countModules('hero-sticky', true)): ?>
-			<div id="kr-hero" class="top">
+			<div id="kr-hero" class="top" style="height:70px">
 				<div class="off-canvas position-top" id="kr-offcanvas-top-search" data-off-canvas
 				     data-options="inCanvasOn:large;" data-transition="overlap" data-content-scroll="false">
 					<div data-sticky-container>
 						<div data-sticky data-sticky-on="large" data-margin-top="0" data-top-anchor="topbar:bottom"
 						     data-check-every="-1">
-								<jdoc:include type="modules" name="hero-sticky" style="html5"/>
+							<jdoc:include type="modules" name="hero-sticky" style="html5"/>
 						</div>
 					</div>
 				</div>
@@ -136,14 +140,14 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 
 				<?php if ($this->countModules('breadcrumbs', true)): ?>
-					<div class="small-12 cell">
+					<div class="show-for-medium medium-12 cell">
 						<div class="modules-above">
 							<jdoc:include type="modules" name="breadcrumbs" style="none"/>
 						</div>
 					</div>
 				<?php endif; ?>
 
-				<?php if ($home && $this->countModules('above-content', true)): ?>
+				<?php if ($homepage && $this->countModules('above-content', true)): ?>
 					<div class="small-12 cell">
 						<div class="modules-above">
 							<jdoc:include type="modules" name="above-content" style="html5"/>
@@ -200,7 +204,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 				<!--modules below content-->
 				<?php if ($this->countModules('below-left', true) || $this->countModules('below-right', true)): ?>
-					<div class="grid-x grid-margin-x hide-for-small modules-below double">
+					<div class="grid-x grid-margin-x show-for-medium modules-below double">
 						<div class="medium-8 cell below left">
 							<jdoc:include type="modules" name="below-left" style="html5"/>
 						</div>
@@ -226,7 +230,6 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					<jdoc:include type="modules" name="above-bottom" style="none"/>
 				<?php endif; ?>
 			</div>
-
 			<div class="middle" data-equalizer data-equalize-on="large">
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x text-center large-text-left">
@@ -273,12 +276,12 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 	<div id="kr-lang" data-krlang="<?php echo $this->language; ?>"></div>
 
-	<!--	<div id="KrAjaxModalError" class="reveal tiny" data-reveal>-->
-	<!--		<button class="close-button" aria-label="Close" data-close type="button">-->
-	<!--			<span>&times;</span>-->
-	<!--		</button>-->
-	<!--		<div class="kr-ajax-modal-error-message"></div>-->
-	<!--	</div>-->
+	<div id="KrAjaxModalError" class="reveal tiny" data-reveal>
+		<button class="close-button" aria-label="Close" data-close type="button">
+			<span>&times;</span>
+		</button>
+		<div class="kr-ajax-modal-error-message"></div>
+	</div>
 
 	<script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -287,7 +290,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
             });
         });
 	</script>
-<!--	<script src='https://js.stripe.com/v3/' defer></script>-->
+	<script src='https://js.stripe.com/v3/' defer></script>
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 #main {
-	margin-top: var(--global-margin);
+	margin-top: 1rem;
 	.main-content {
 		.modules-above {
 			display: block;
@@ -56,5 +56,5 @@
 	z-index: 0;
 }
 .off-canvas {
-	background: var(--primary-color);
+	background: var(--topbar-background-top);
 }

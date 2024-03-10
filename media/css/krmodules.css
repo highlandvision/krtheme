@@ -6905,11 +6905,14 @@
 
 .kr-slick {
   position: relative;
+  opacity: 0;
   visibility: hidden;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
 }
-
-.slick-initialized.kr-slick {
+.kr-slick.slick-initialized {
   visibility: visible;
+  opacity: 1;
 }
 
 .slideshow-wrapper {
@@ -6921,24 +6924,23 @@
 }
 
 i.slick-nav {
-  cursor: pointer;
-  opacity: 0.6;
-  top: 47%;
-  position: absolute;
-  display: block;
-  line-height: 0;
   border: 0;
-  outline: 0;
-  z-index: 1;
+  cursor: pointer;
+  display: block;
   font-size: 2rem;
-  padding: 1.6rem 0.8rem;
+  line-height: 0;
+  opacity: 0.6;
+  outline: 0;
+  position: absolute;
+  top: 47%;
+  z-index: 1;
 }
 @media print, screen and (min-width: 64em) {
   i.slick-nav {
     font-size: 2.2rem;
   }
 }
-i.slick-nav.fas {
+i.slick-nav.fa-solid {
   color: hsl(0, 0%, 100%);
 }
 i.slick-nav.prev {
@@ -6954,6 +6956,7 @@ i.slick-nav:hover {
 }
 
 .kr-double-arrows {
+  cursor: pointer;
   float: right;
   position: relative;
   margin-top: 1.5rem;
@@ -6972,7 +6975,7 @@ i.slick-nav:hover {
 .kr-double-arrows i.slick-nav.next {
   right: 0;
 }
-.kr-double-arrows i.slick-nav.fas {
+.kr-double-arrows i.slick-nav.fa-solid {
   color: var(--primary-color);
 }
 
@@ -6997,6 +7000,24 @@ i.slick-nav:hover {
   right: 0;
 }
 
+.slick-slide {
+  opacity: 0.5;
+}
+.slick-slide.slick-current {
+  opacity: 1;
+}
+
+#kr-property-thumbs {
+  margin: 0 auto;
+  text-align: center;
+}
+#kr-property-thumbs .slick-slide {
+  opacity: 1;
+}
+#kr-property-thumbs .slick-slide.slick-current {
+  opacity: 0.3;
+}
+
 .moduletable {
   width: 100%;
   margin-bottom: var(--global-margin);
@@ -7014,9 +7035,13 @@ i.slick-nav:hover {
   padding-bottom: 0.8rem;
   font-size: 110%;
   margin-top: 1px;
-  margin-bottom: 1rem;
 }
 @media print, screen and (min-width: 40em) {
+  #kr-form-mailchimp button.expanded {
+    margin-bottom: 1rem;
+  }
+}
+@media print, screen and (min-width: 64em) {
   #kr-form-mailchimp button.expanded {
     margin-bottom: 0;
   }
@@ -7101,68 +7126,56 @@ i.slick-nav:hover {
 .kr-imagegrid {
   display: flex;
   flex-wrap: wrap;
+  gap: 0;
   justify-content: space-between;
 }
-.kr-imagegrid :after {
-  content: "";
-  flex-grow: 999;
-}
 .kr-imagegrid .gitem {
+  border-bottom: 6px solid hsl(0, 0%, 100%);
+  border-left: 3px solid hsl(0, 0%, 100%);
+  border-right: 3px solid hsl(0, 0%, 100%);
+  flex: 1 1 50%;
   position: relative;
-  cursor: pointer;
-  flex: 1 1 25%;
-  border: 2px solid hsl(0, 0%, 100%);
 }
-.kr-imagegrid .gitem img {
+.kr-imagegrid .gitem a {
+  margin-bottom: 0;
+}
+.kr-imagegrid .gitem a :hover {
+  text-decoration: none;
+}
+.kr-imagegrid .gitem a img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
   vertical-align: middle;
-}
-.kr-imagegrid .gitem.left {
-  width: 90%;
-  left: 0;
-  text-align: left;
 }
 
 .kr-spotlight a,
 .kr-imagegrid .gitem a {
   cursor: pointer;
 }
+.kr-spotlight a:hover,
+.kr-imagegrid .gitem a:hover {
+  text-decoration: none;
+}
 .kr-spotlight a img,
 .kr-imagegrid .gitem a img {
   object-fit: cover;
-  width: 100%;
-  height: calc(25vh - 30px);
 }
-@media print, screen and (min-width: 40em) {
-  .kr-spotlight a img,
-  .kr-imagegrid .gitem a img {
-    height: calc(33vh - 48px);
-  }
-}
-@media print, screen and (min-width: 64em) {
-  .kr-spotlight a img,
-  .kr-imagegrid .gitem a img {
-    height: calc(33vh - 64px);
-  }
-}
-.kr-spotlight a .overlay,
-.kr-imagegrid .gitem a .overlay {
-  text-shadow: 2px 2px 4px hsl(0, 0%, 4%);
+.kr-spotlight a img:hover,
+.kr-imagegrid .gitem a img:hover {
+  opacity: 0.8;
 }
 .kr-spotlight a p,
 .kr-imagegrid .gitem a p {
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: 0;
+  line-height: 1.2;
   padding: 0 0.5rem;
+  position: relative;
   width: 100%;
   z-index: 1;
 }
-.kr-spotlight a p.nobg,
-.kr-imagegrid .gitem a p.nobg {
-  margin-top: -2rem;
+.kr-spotlight a p.strong,
+.kr-imagegrid .gitem a p.strong {
+  font-weight: bold;
 }
 .kr-spotlight a p.left,
 .kr-imagegrid .gitem a p.left {
@@ -7182,6 +7195,65 @@ i.slick-nav:hover {
   .kr-spotlight a p.center,
   .kr-imagegrid .gitem a p.center {
     margin-bottom: 0;
+  }
+}
+.kr-spotlight a p.top,
+.kr-imagegrid .gitem a p.top {
+  top: 5%;
+}
+.kr-spotlight a p.middle,
+.kr-imagegrid .gitem a p.middle {
+  top: 40%;
+}
+.kr-spotlight a p.bottom,
+.kr-imagegrid .gitem a p.bottom {
+  bottom: 23%;
+  height: 0;
+}
+
+.kr-imagegrid ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+  list-style: none;
+}
+.kr-imagegrid ul li {
+  background-color: hsl(0, 0%, 94%);
+  border: 1px solid hsl(0, 0%, 79%);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+.kr-imagegrid ul li::before {
+  content: "\f111";
+  color: var(--primary-color);
+  display: inline-block;
+  font-family: "Font Awesome 6 Free", sans-serif;
+  font-size: 7px;
+  font-weight: 900;
+  opacity: 0.5;
+  position: relative;
+  vertical-align: middle;
+}
+
+.kr-spotlight a p {
+  height: 30px;
+  line-height: 30px;
+}
+.kr-spotlight a p.nobg {
+  margin-top: -35px;
+}
+.kr-spotlight a img {
+  width: 100%;
+  height: calc(25vh - 30px);
+}
+@media print, screen and (min-width: 40em) {
+  .kr-spotlight a img {
+    height: calc(33vh - 48px);
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .kr-spotlight a img {
+    height: calc(33vh - 64px);
   }
 }
 
@@ -7214,14 +7286,14 @@ i.slick-nav:hover {
   background: hsl(0, 0%, 100%);
   width: 75%;
   padding: 0.5rem;
-  color: var(--body-color);
+  color: var(--body-font-color);
   font-style: italic;
   font-weight: 300;
 }
 .kr-alternatives a.property .content, .kr-featured a.property .content {
   background: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 94%);
-  color: var(--body-color);
+  color: var(--body-font-color);
   grid-template-rows: repeat(1, 3fr);
   margin-top: 0;
   height: 100%;
@@ -7308,7 +7380,7 @@ ul#categories li {
 }
 ul#categories li a {
   font-weight: 500;
-  color: var(--body-color);
+  color: var(--body-font-color);
   padding-bottom: 0;
 }
 ul#categories li a:hover {
@@ -7316,21 +7388,7 @@ ul#categories li a:hover {
 }
 
 .kr-search input, .kr-search select {
-  border: 1px solid var(--primary-color);
   cursor: pointer;
-}
-@media print, screen and (min-width: 64em) {
-  .kr-search .moduletable {
-    margin-bottom: 0;
-  }
-  .kr-search .moduletable .button, .kr-search .moduletable input, .kr-search .moduletable select {
-    margin-bottom: 0;
-  }
-}
-.kr-search .hero-search-text {
-  margin-top: -6px;
-  text-align: right;
-  line-height: 1.2;
 }
 .kr-search .datepicker-wrapper {
   position: relative;
@@ -7414,6 +7472,14 @@ ul#categories li a:hover {
   width: 100% !important;
   padding-left: 0.5rem !important;
   padding-right: 0.2rem !important;
+}
+.kr-search .sidebar input, .kr-search .sidebar select {
+  margin-bottom: 0.75rem;
+}
+.kr-search .hero-search .hero-search-text, .kr-search .hero-sticky .hero-search-text {
+  margin-top: -6px;
+  text-align: right;
+  line-height: 1.2;
 }
 
 /*# sourceMappingURL=krmodules.css.map */

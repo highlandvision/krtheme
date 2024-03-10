@@ -3,21 +3,7 @@
 
 .kr-search {
     input, select {
-        border: 1px solid var(--primary-color);
         cursor: pointer;
-    }
-    .moduletable {
-        @include mixin.breakpoint(large) {
-            .button, input, select {
-                margin-bottom: 0;
-            }
-            margin-bottom: 0;
-        }
-    }
-    .hero-search-text {
-        margin-top: -6px;
-        text-align: right;
-        line-height: 1.2;
     }
     .datepicker-wrapper {
         position: relative;
@@ -98,6 +84,18 @@
                 padding-left: 0.5rem !important;
                 padding-right: 0.2rem !important;
             }
+        }
+    }
+    .sidebar {
+        input, select {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .hero-search, .hero-sticky {
+        .hero-search-text {
+            margin-top: -6px;
+            text-align: right;
+            line-height: 1.2;
         }
     }
 }

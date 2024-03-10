@@ -13,12 +13,11 @@
 		position: absolute;
 		right: 25%;
 		top: -1rem;
-		font-size: 1rem;
 		@include mixin.breakpoint(medium) {
 			top: 0;
 			right: 0;
 		}
-		i.fas {
+		i.solid {
 			color: res.$white;
 		}
 	}
@@ -68,8 +67,8 @@
 				margin-bottom: 0;
 			}
 			.amenities {
-				font-size: 0.85rem;
-				margin-bottom: 0;
+				font-size: 0.8rem;
+				margin-bottom: 0.75rem;
 			}
 		}
 	}
@@ -78,23 +77,23 @@
 			color: var(--primary-color);
 			font-weight: 200;
 			font-size: 1.1rem;
-			line-height: 1rem;
-			margin-bottom: 0.5rem;
-			margin-top: 1rem;
+			margin-bottom: 0.2rem;
 		}
 		.rooms {
 			h6 {
-				color: var(--primary-color);
-				font-size: 0.95rem;
-				margin-top: 0.3rem;
+				color: res.$light-gray;
+				font-size: 1.1rem;
+				margin-top: 0.2rem;
 				margin-bottom: 0;
 			}
 			p {
+				color: var(--accent-color);
+				font-size: 1rem;
 				margin-bottom: 0;
 			}
 			.amenities {
-				font-size: 0.85rem;
-				margin-bottom: 0;
+				font-size: 15px;
+				margin-bottom: 1rem;
 			}
 		}
 	}

@@ -5,7 +5,7 @@ body {
 	background: var(--body-background);
 	font-family: var(--body-font-family);
 	line-height: var(--global-lineheight);
-	color: var(--body-color);
+	color: var(--body-font-color);
 	min-width: 380px;
 	width: 100%;
 	position: relative;
@@ -25,7 +25,7 @@ body {
 .color-body {
 	color: var(--body-color);
 }
-i.fas, i.fab {
+i.solid, i.fab {
 	color: var(--primary-color);
 }
 .formbg {
@@ -60,9 +60,10 @@ i.fas, i.fab {
 	}
 }
 @mixin kr-button-hollow($color, $hover) {
+	background: none;
 	border: 1px solid $color;
 	color: $color;
-	&:hover {
+	&:hover, &:focus {
 		border: 1px solid $hover;
 		background: res.$light-gray;
 	}

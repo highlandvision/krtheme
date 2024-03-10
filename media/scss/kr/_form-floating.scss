@@ -1,0 +1,79 @@
+@use '../resources/resources' as res;
+@use '../../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
+.form-floating-label {
+    position: relative;
+    margin: 0 0.3rem 0.4rem;
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='url'],
+    [type='color'],
+    textarea {
+        margin-bottom: 0;
+        padding: 28px 0 0 0;
+        font-size: 14px;
+        height: auto;
+    }
+    select {
+        margin: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-bottom: 0;
+        padding-left: 0.1rem;
+        font-size: 14px;
+        height: 1.7rem;
+    }
+    select:focus {
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid var(--secondary-color);;
+        background-color: res.$white;
+        box-shadow: none;
+        transition: none;
+    }
+    label {
+        position: absolute;
+        pointer-events: none;
+        padding-top: 0;
+        bottom: 0;
+        transition: all 0.2s ease-in;
+        color: res.$dark-gray;
+        font-size: 0.75rem;
+        font-style: italic;
+        line-height: 2;
+        margin: 0;
+    }
+    label.extraslabel,
+    label#jform_month-lbl,
+    label#jform_country_id-lbl,
+    label#jform_region_id-lbl,
+    label#jform_mobile_country_id-lbl {
+        position: relative;
+    }
+    textarea ~ label {
+        top: 20px;
+    }
+    /* active state */
+    input:focus ~ label,
+    input:disabled[value] ~ label,
+    &.has-value input ~ label {
+        top: 0;
+    }
+    textarea:focus ~ label,
+    &.has-value textarea ~ label {
+        top: 0;
+    }
+}

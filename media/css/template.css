@@ -2,7 +2,7 @@ body {
   background: var(--body-background);
   font-family: var(--body-font-family);
   line-height: var(--global-lineheight);
-  color: var(--body-color);
+  color: var(--body-font-color);
   min-width: 380px;
   width: 100%;
   position: relative;
@@ -28,7 +28,7 @@ body {
   color: var(--body-color);
 }
 
-i.fas, i.fab {
+i.solid, i.fab {
   color: var(--primary-color);
 }
 
@@ -80,58 +80,65 @@ i.fas, i.fab {
 }
 
 .button.hollow {
+  background: none;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
-.button.hollow:hover {
+.button.hollow:hover, .button.hollow:focus {
   border: 1px solid var(--primary-color-hover);
   background: hsl(0, 0%, 94%);
 }
 .button.hollow.primary {
+  background: none;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
-.button.hollow.primary:hover {
+.button.hollow.primary:hover, .button.hollow.primary:focus {
   border: 1px solid var(--primary-color-hover);
   background: hsl(0, 0%, 94%);
 }
 .button.hollow.secondary {
+  background: none;
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
 }
-.button.hollow.secondary:hover {
+.button.hollow.secondary:hover, .button.hollow.secondary:focus {
   border: 1px solid var(--secondary-color-hover);
   background: hsl(0, 0%, 94%);
 }
 .button.hollow.accent {
+  background: none;
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
 }
-.button.hollow.accent:hover {
+.button.hollow.accent:hover, .button.hollow.accent:focus {
   border: 1px solid var(--accent-color-hover);
   background: hsl(0, 0%, 94%);
 }
 .button.hollow.alert {
+  background: none;
   border: 1px solid var(--alert-color);
   color: var(--alert-color);
 }
-.button.hollow.alert:hover {
+.button.hollow.alert:hover, .button.hollow.alert:focus {
   border: 1px solid var(--alert-color-hover);
   background: hsl(0, 0%, 94%);
 }
 .button.hollow.success {
+  background: none;
   border: 1px solid var(--success-color);
   color: var(--success-color);
 }
-.button.hollow.success:hover {
+.button.hollow.success:hover, .button.hollow.success:focus {
   border: 1px solid var(--success-color-hover);
   background: hsl(0, 0%, 94%);
 }
 .button.hollow.warning {
+  background: none;
   border: 1px solid var(--warning-color);
   color: var(--warning-color);
 }
-.button.hollow.warning:hover {
+.button.hollow.warning:hover, .button.hollow.warning:focus {
   border: 1px solid var(--warning-color-hover);
   background: hsl(0, 0%, 94%);
 }
@@ -204,12 +211,12 @@ small {
   color: hsl(0, 0%, 100%);
 }
 
-i.fas.fa-file-pdf {
+i.solid.fa-file-pdf {
   color: #ba0808;
 }
 
-.red, i.fas.red, .error-message {
-  color: #cc0000 !important;
+.red, i.solid.red, .error-message {
+  color: var(--alert-color) !important;
 }
 
 .whitebg {
@@ -218,6 +225,13 @@ i.fas.fa-file-pdf {
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+a:hover.suppress-underline {
+  text-decoration: none;
 }
 
 .lowercase {
@@ -257,6 +271,10 @@ i.fas.fa-file-pdf {
 }
 
 .small-margin-bottom {
+  margin-bottom: 0.5rem !important;
+}
+
+.vsmall-margin-bottom {
   margin-bottom: 0.25rem !important;
 }
 
@@ -580,7 +598,7 @@ img.responsive {
   content: "\f002";
   cursor: pointer;
   display: inline-block;
-  font-family: "Font Awesome 6 Free", serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-size: 20px;
   font-weight: 900;
   margin-left: 0.7rem;
@@ -708,12 +726,12 @@ img.responsive {
   color: hsl(0, 0%, 94%);
 }
 .off-canvas-wrapper .close-button {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 4%);
   z-index: 999;
   outline: none;
   right: 0.6rem;
-  top: 1rem;
-  font-size: 1rem;
+  top: 0.6rem;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
@@ -740,10 +758,6 @@ img.responsive {
   #kr-hero.slider .kr-slideshow {
     display: block;
     height: auto;
-    visibility: hidden;
-  }
-  #kr-hero.slider .kr-slideshow.slick-initialized {
-    visibility: visible;
   }
   #kr-hero.slider .kr-slideshow .slick-slide img {
     display: block;
@@ -815,7 +829,7 @@ img.responsive {
     width: 80%;
   }
 }
-#kr-hero .kr-search {
+#kr-hero .kr-search .hero-search {
   background: var(--primary-color);
   margin-top: 4px;
   max-width: 300px;
@@ -826,12 +840,12 @@ img.responsive {
   left: 0;
   right: 0;
 }
-#kr-hero .kr-search .button {
+#kr-hero .kr-search .hero-search .button {
   border: 1px solid hsl(0, 0%, 100%);
   margin-bottom: 0;
 }
 @media print, screen and (min-width: 64em) {
-  #kr-hero .kr-search {
+  #kr-hero .kr-search .hero-search {
     background: hsl(0, 0%, 98%);
     box-shadow: none;
     height: 75px;
@@ -844,7 +858,7 @@ img.responsive {
     left: 0;
     right: 0;
   }
-  #kr-hero .kr-search .button {
+  #kr-hero .kr-search .hero-search .button {
     border: none;
   }
 }
@@ -853,10 +867,18 @@ img.responsive {
   height: 80%;
   top: 3.2rem;
 }
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width: 40em) {
   #kr-hero.top #kr-offcanvas-top-search {
     height: 70px;
     top: 0;
+  }
+}
+#kr-hero.top form {
+  padding: 1rem;
+}
+@media print, screen and (min-width: 40em) {
+  #kr-hero.top form {
+    padding: 0;
   }
 }
 #kr-hero.top .sticky {
@@ -950,8 +972,18 @@ p.readmore a, a.readmore {
   border: 0 !important;
 }
 
+.kr-flex-center-small {
+  display: flex;
+  justify-content: center;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-flex-center-small {
+    justify-content: left;
+  }
+}
+
 #main {
-  margin-top: var(--global-margin);
+  margin-top: 1rem;
 }
 #main .main-content .modules-above {
   display: block;
@@ -1009,7 +1041,7 @@ p.readmore a, a.readmore {
 }
 
 .off-canvas {
-  background: var(--primary-color);
+  background: var(--topbar-background-top);
 }
 
 #footer {
@@ -1163,7 +1195,7 @@ p.readmore a, a.readmore {
   color: green;
   content: "\f030";
   display: inline-block;
-  font-family: "Font Awesome 6 Free", serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   width: 1.3rem;
 }
@@ -1171,7 +1203,7 @@ p.readmore a, a.readmore {
   color: blue;
   content: "\f13d";
   display: inline-block;
-  font-family: "Font Awesome 6 Free", serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   width: 1.3rem;
 }
@@ -1179,7 +1211,7 @@ p.readmore a, a.readmore {
   color: red;
   content: "\f2e7";
   display: inline-block;
-  font-family: "Font Awesome 6 Free", serif;
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   width: 1.3rem;
 }

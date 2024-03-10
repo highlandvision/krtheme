@@ -24,9 +24,9 @@ table.legend {
 		border-width: 16px;
 		border-style: solid;
 		margin-right: 3px;
-	}
-	tr td div.duo {
-		border-width: 8px;
+		&.duo {
+			border-width: 8px;
+		}
 	}
 }
 /* Calendar */
@@ -56,83 +56,80 @@ table.amonth {
 		padding: 0;
 		margin: 0;
 		background: res.$white;
-	}
-	tr.monthrow th,
-	tr.daysrow th {
-		font-weight: 400;
-		background: #8a8a8a;
-		color: res.$white;
-		padding: 0;
-		height: 16px;
-	}
-	tr.daysrow th {
-		background: #b0b0b0;
-		color: res.$white;
-	}
-	tr td {
-		text-align: center;
-		padding: 0;
-	}
-	tr td div {
-		width: 20px;
-		height: 20px;
-		border-width: 20px;
-		border-style: solid;
-	}
-	tr td div.duo {
-		border-width: 10px;
-	}
-	tr td div.bgblank {
-		border-top-color: res.$white;
-		border-left-color: res.$white;
-		border-bottom-color: res.$white;
-		border-right-width: 0;
-		border-bottom-width: 0;
-	}
-	tr td div.bgblank p.day {
-		color: res.$white;
-	}
-	tr td div.bgtoday {
-		border-top-color: #cacaca;
-		border-left-color: #cacaca;
-		p.day {
-			color: #cc0000;
+		&.monthrow th,
+		&.daysrow th {
+			font-weight: 400;
+			background: #8a8a8a;
+			color: res.$white;
+			padding: 0;
+			height: 16px;
 		}
-	}
-	tr td div.bgpast {
-		border-top-color: #cacaca;;
-		border-left-color: #cacaca;;
-		border-right-width: 0;
-		border-bottom-width: 0;
-	}
-	tr td div.bookme p.day,
-	tr td div.bgtoavail p.day {
-		color: #333;
-	}
-	tr td div.nostart {
-		p.day {
-			opacity: 0.4;
-			font-weight: normal;
+		&daysrow th {
+			background: #b0b0b0;
+			color: res.$white;
 		}
-	}
-	tr td div {
-		position: relative;
-		height: 0;
-		width: 0;
-	}
-	tr td div p {
-		position: absolute;
-		width: 20px;
-		margin: 0;
-		padding: 0;
-		line-height: 0;
-	}
-	tr td div.solo p.day {
-		top: -10px;
-		left: -20px;
-	}
-	tr td div.duo p.day {
-		left: -10px;
+		td {
+			text-align: center;
+			padding: 0;
+			div {
+				border-width: 20px;
+				border-style: solid;
+				position: relative;
+				height: 0;
+				width: 0;
+				&.duo {
+					border-width: 10px;
+				}
+				&.bgblank {
+					border-top-color: res.$white;
+					border-left-color: res.$white;
+					border-bottom-color: res.$white;
+					border-right-width: 0;
+					border-bottom-width: 0;
+					p.day {
+						color: res.$white;
+					}
+				}
+				&.bgtoday {
+					border-top-color: #cacaca;
+					border-left-color: #cacaca;
+					p.day {
+						color: #cc0000;
+					}
+				}
+				&.bgpast {
+					border-top-color: #cacaca;
+					border-left-color: #cacaca;
+					border-right-width: 0;
+					border-bottom-width: 0;
+				}
+				&.bookme p.day,
+				&.bgtoavail p.day {
+					color: #333;
+				}
+				&.nostart {
+					p.day {
+						opacity: 0.4;
+						font-weight: normal;
+					}
+				}
+				p {
+					font-size: 10px;
+					line-height: 0;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+					width: 20px;
+				}
+				&.solo p.day {
+					top: -10px;
+					left: -20px;
+				}
+				&.duo p.day {
+					left: -10px;
+				}
+			}
+		}
 	}
 }
 .dw-calendar table {

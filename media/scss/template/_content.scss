@@ -53,3 +53,10 @@ p.readmore a, a.readmore {
 	white-space: nowrap !important;
 	border: 0 !important;
 }
+.kr-flex-center-small {
+	display: flex;
+	justify-content: center;
+	@include mixin.breakpoint(medium) {
+		justify-content: left;
+	}
+}

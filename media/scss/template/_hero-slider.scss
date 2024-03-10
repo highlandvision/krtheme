@@ -21,10 +21,6 @@
                 @include mixin.breakpoint(large) {
                     display: block;
                     height: auto;
-                    visibility: hidden;
-                    &.slick-initialized {
-                        visibility: visible;
-                    }
                     .slick-slide img {
                         display: block;
                         height: 100%;
@@ -86,7 +82,7 @@
             }
         }
     }
-    .kr-search {
+    .kr-search .hero-search {
         @include mixin.breakpoint(small) {
             background: var(--primary-color);
             margin-top: 4px;

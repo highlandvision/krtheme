@@ -2,122 +2,136 @@
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 #kr-properties-filter-heading {
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.kr-searchbar {
+    margin-bottom: 1rem;
+    .button {
+        &.is-active {
+            background: var(--primary-color-hover) !important;
+            cursor: default;
+        }
+        i {
+            color: res.$white;
+        }
+    }
+    .button-group {
+        margin-bottom: 0;
+    }
+}
+.kr-mobilebar {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    li {
+        background: var(--primary-color);
+    }
+    button {
+        padding: 1rem 0.5rem;
+    }
+}
+.kr-properties-header {
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        margin-top: 1.25rem;
+    }
 }
 .kr-properties {
-	.kr-searchbar {
-		margin-bottom: 1rem;
-		a.button {
-			&.is-active {
-				background: var(--primary-color-hover) !important;
-				cursor: default;
-			}
-			i {
-				color: res.$white;
-			}
-		}
-		.button-group {
-			margin-bottom: 0;
-		}
-	}
-	.kr-mobilebar {
-		margin-top: 0.5rem;
-		margin-bottom: 1rem;
-		li {
-			background: var(--primary-color);
-		}
-		button {
-			padding: 1rem 0.5rem;
-		}
-	}
-	.kr-properties-header {
-		h3 {
-			text-transform: uppercase;
-			margin-bottom: 0;
-			margin-top: 1.25rem;
-		}
-	}
-	#kr-properties-data,
-	#kr-properties-data-off-canvas {
-		min-height: 387px;
-		position: relative;
-	}
-	.kr-list-property {
-		position: relative;
-	}
+    #kr-properties-data,
+    #kr-properties-data-off-canvas {
+        margin-bottom: res.$global-margin;
+        min-height: 387px;
+        position: relative;
+    }
+    .kr-list-property {
+        position: relative;
+    }
 }
 #kr-offcanvas-properties-filter,
 #kr-offcanvas-properties-sortby {
-	background: var(--primary-color);
-	.actions {
-		border-bottom: 1px solid res.$black;
-		color: res.$white;
-		margin-bottom: 0;
-		.button-group {
-			margin-bottom: 0;
-		}
-		.button, i {
-			color: res.$white;
-			font-size: 0.8rem;
-		}
-	}
-	ul.filter-sort-list {
-		margin-bottom: 0;
-		li {
-			display: block;
-			float: none;
-			color: res.$white;
-			margin: 0;
-			padding: 0.2rem 0.7rem;
-			line-height: 1.8rem;
-			border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
-			font-size: 0.8rem;
-			&.disabled {
-				cursor: default;
-				opacity: .5;
-			}
-			&:hover {
-				background: var(--accent-color-hover);
-			}
-			&.head {
-				background: var(--accent-color);
-				color: res.$white;
-				font-size: 0.8rem;
-				padding-left: 1rem;
-				text-align: left;
-			}
-			&.head:after {
-				content: "\f078";
-				float: right;
-				font-family: 'Font Awesome 6 Free', sans-serif;
-				font-weight: 900;
-				margin-right: 0.5rem;
-			}
-			&.head.active:after {
-				content: "\f077";
-				font-family: 'Font Awesome 6 Free', sans-serif;
-				float: right;
-				font-weight: 900;
-				margin-right: 0.5rem;
-			}
-			label.radiolabel,
-			label.checklabel {
-				align-items: center;
-				color: res.$white;
-				display: flex;
-				font-size: 0.8rem;
-				font-weight: 400;
-				padding-left: 0.5rem;
-				padding-right: 0.5rem;
-				&:before {
-					color: res.$white;
-					margin-right: 0.3rem;
-				}
-				&.disabled {
-					cursor: default;
-					opacity: .5;
-				}
-			}
-		}
-	}
+    background: var(--primary-color);
+    .actions {
+        border-bottom: 1px solid res.$black;
+        color: res.$white;
+        margin-bottom: 0;
+        .button-group {
+            margin-bottom: 0;
+        }
+        .button, i {
+            color: res.$white;
+            font-size: 0.8rem;
+        }
+    }
+    ul.filter-sort-list {
+        margin-bottom: 0;
+        #kr-offcanvas-properties-filter ul.filter-sort-list li.head, #kr-offcanvas-properties-sortby ul.filter-sort-list li.head {
+            background: var(--accent-color);
+            color: hsl(0, 0%, 100%);
+            font-size: 0.8rem;
+            padding: 0.3rem 0 0.3rem 1rem;
+            text-align: left;
+            /* height: 1rem; */
+            margin-top: 0;
+        }
+        #kr-offcanvas-properties-filter ul.filter-sort-list li, #kr-offcanvas-properties-sortby ul.filter-sort-list li {
+            margin: 0.3rem 0 0 0;
+            padding: 0 0 0 1rem;
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+            font-size: 0.8rem;
+        }
+        li {
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+            height: 2.2rem;
+            line-height: 2.2rem;
+            padding-left: 1rem;
+            &.disabled {
+                cursor: default;
+                opacity: .5;
+            }
+            &:hover {
+                background: var(--accent-color-hover);
+            }
+            &.head {
+                background: var(--accent-color);
+                color: res.$white;
+                font-size: 0.8rem;
+                height: 2rem;
+                line-height: 2rem;
+                margin-bottom: 0;
+                padding: 0 0 0 1rem;
+                text-align: left;
+                width: 100%;
+            }
+            &.head:after {
+                content: "\f078";
+                float: right;
+                font-family: 'Font Awesome 6 Free', sans-serif;
+                font-weight: 900;
+                margin-right: 0.5rem;
+            }
+            &.head.active:after {
+                content: "\f077";
+                font-family: 'Font Awesome 6 Free', sans-serif;
+                float: right;
+                font-weight: 900;
+                margin-right: 0.5rem;
+            }
+            label.radiolabel,
+            label.checklabel {
+                align-items: center;
+                color: res.$white;
+                font-size: 0.8rem;
+                font-weight: normal;
+                padding-right: 0.5rem;
+                &:before {
+                    color: res.$white;
+                    margin-right: 0.3rem;
+                }
+                &.disabled {
+                    cursor: default;
+                    opacity: .5;
+                }
+            }
+        }
+    }
 }

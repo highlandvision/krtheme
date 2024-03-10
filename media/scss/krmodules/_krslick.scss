@@ -3,10 +3,14 @@
 
 .kr-slick {
     position: relative;
+    opacity: 0;
     visibility: hidden;
-}
-.slick-initialized.kr-slick {
-    visibility: visible;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    &.slick-initialized {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 .slideshow-wrapper {
     margin-bottom: var(--global-margin);
@@ -14,23 +18,22 @@
 .slickarrow {
     color: var(--primary-color);
 }
-
 i.slick-nav {
-    cursor: pointer;
-    opacity: 0.6;
-    top: 47%;
-    position: absolute;
-    display: block;
-    line-height: 0;
     border: 0;
-    outline: 0;
-    z-index: 1;
+    cursor: pointer;
+    display: block;
     font-size: 2rem;
-    padding: 1.6rem 0.8rem;
+    line-height: 0;
+    opacity: 0.6;
+    outline: 0;
+    //padding: 1.6rem 0.8rem;
+    position: absolute;
+    top: 47%;
+    z-index: 1;
     @include mixin.breakpoint(large) {
         font-size: 2.2rem;
     }
-    &.fas {
+    &.fa-solid {
         color: res.$white;
     }
     &.prev {
@@ -45,8 +48,8 @@ i.slick-nav {
         opacity: 0.9;
     }
 }
-
 .kr-double-arrows {
+    cursor: pointer;
     float: right;
     position: relative;
     margin-top: 1.5rem;
@@ -63,16 +66,14 @@ i.slick-nav {
         &.next {
             right: 0;
         }
-        &.fas {
+        &.fa-solid {
             color: var(--primary-color);
         }
     }
 }
-
 .slick-disabled {
     opacity: 0.3 !important;
 }
-
 .slick-btn {
     color: res.$white;
     cursor: pointer;
@@ -87,5 +88,21 @@ i.slick-nav {
     }
     &.next {
         right: 0;
+    }
+}
+.slick-slide {
+    opacity: 0.5;
+    &.slick-current {
+        opacity: 1;
+    }
+}
+#kr-property-thumbs {
+    margin: 0 auto;
+    text-align: center;
+    .slick-slide {
+        opacity: 1;
+        &.slick-current {
+            opacity: 0.3;
+        }
     }
 }
