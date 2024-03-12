@@ -112,7 +112,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		</nav>
 
 		<?php if ($this->countModules('hero-sticky', true)): ?>
-			<div id="kr-hero" class="top" style="height:70px">
+			<div id="kr-hero" class="top">
 				<div class="off-canvas position-top" id="kr-offcanvas-top-search" data-off-canvas
 				     data-options="inCanvasOn:large;" data-transition="overlap" data-content-scroll="false">
 					<div data-sticky-container>

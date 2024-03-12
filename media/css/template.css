@@ -726,12 +726,12 @@ img.responsive {
   color: hsl(0, 0%, 94%);
 }
 .off-canvas-wrapper .close-button {
-  color: hsl(0, 0%, 4%);
+  color: hsl(0, 0%, 100%);
   z-index: 999;
   outline: none;
   right: 0.6rem;
   top: 0.6rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1;
 }
 
@@ -866,12 +866,6 @@ img.responsive {
 #kr-hero.top #kr-offcanvas-top-search {
   height: 80%;
   top: 3.2rem;
-}
-@media print, screen and (min-width: 40em) {
-  #kr-hero.top #kr-offcanvas-top-search {
-    height: 70px;
-    top: 0;
-  }
 }
 #kr-hero.top form {
   padding: 1rem;
