@@ -2,8 +2,21 @@
 @use '../../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-search {
+    .hero-search-text {
+        margin-top: -6px;
+        text-align: right;
+        line-height: 1.2;
+    }
     input, select {
         cursor: pointer;
+    }
+    .sidebar {
+        form {
+            padding: 1rem 1.5rem;
+        }
+        input, select {
+            margin-bottom: 0.75rem;
+        }
     }
     .datepicker-wrapper {
         position: relative;
@@ -84,18 +97,6 @@
                 padding-left: 0.5rem !important;
                 padding-right: 0.2rem !important;
             }
-        }
-    }
-    .sidebar {
-        input, select {
-            margin-bottom: 0.75rem;
-        }
-    }
-    .hero-search, .hero-sticky {
-        .hero-search-text {
-            margin-top: -6px;
-            text-align: right;
-            line-height: 1.2;
         }
     }
 }

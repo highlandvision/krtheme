@@ -116,7 +116,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				<div class="off-canvas position-top" id="kr-offcanvas-top-search" data-off-canvas
 				     data-options="inCanvasOn:large;" data-transition="overlap" data-content-scroll="false">
 					<div data-sticky-container>
-						<div data-sticky data-sticky-on="large" data-margin-top="0" data-top-anchor="topbar:bottom"
+						<div data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="topbar:bottom"
 						     data-check-every="-1">
 							<jdoc:include type="modules" name="hero-sticky" style="html5"/>
 						</div>
@@ -171,7 +171,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php elseif ($this->countModules('sidebar-left', true)): ?>
-					<div id="sidebar-left" class="small-12 medium-4 large-3 cell">
+					<div id="sidebar-left" class="small-12 medium-4 large-3 collapse cell">
 						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
 					</div>
 					<div class="article small-12 medium-8 cell">
