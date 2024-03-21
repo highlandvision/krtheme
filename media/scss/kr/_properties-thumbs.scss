@@ -5,12 +5,12 @@
     .pinfo {
         background-color: res.$light-gray;
         border: 1px solid res.$medium-gray;
+        font-size: 85%;
         max-height: 388px;
         min-height: 388px;
         margin-right: 0;
         padding: 1rem 0.5rem 0;
-        h2 {
-            color: res.$black-light;
+        h3 {
             margin-bottom: 0.5rem;
         }
     }
