@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" client="site" method="upgrade">
     <name>krtheme</name>
-    <version>4.3.0-beta</version>
+    <version>5.0.0-beta</version>
     <creationDate>March 2023</creationDate>
     <author>Hazel Wilson</author>
     <authorEmail>hazel@highlandvision.com</authorEmail>
