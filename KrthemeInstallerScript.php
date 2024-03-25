@@ -14,7 +14,7 @@ use Joomla\CMS\Installer\InstallerScript;
 /**
  * Krtheme installer script
  *
- * @since 4.3.0
+ * @since 5.0.0
  */
 class KrthemeInstallerScript extends InstallerScript
 {
@@ -29,7 +29,7 @@ class KrthemeInstallerScript extends InstallerScript
 	 *
 	 * @param $adapter
 	 *
-	 * @since  4.3.0
+	 * @since  5.0.0
 	 * @return bool
 	 */
 	public function update($adapter): bool
