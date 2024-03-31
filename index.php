@@ -118,7 +118,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 					<div data-sticky-container>
 						<div data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="topbar:bottom"
 						     data-check-every="-1">
-							<jdoc:include type="modules" name="hero-sticky" style="html5"/>
+								<jdoc:include type="modules" name="hero-sticky" style="html5"/>
 						</div>
 					</div>
 				</div>
