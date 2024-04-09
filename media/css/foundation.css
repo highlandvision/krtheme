@@ -601,7 +601,7 @@ b {
 }
 
 small {
-  font-size: 75%;
+  font-size: 85%;
   line-height: inherit;
 }
 
@@ -4627,7 +4627,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   padding: 0.5rem;
   border-radius: 0;
   background-color: hsl(0, 0%, 54%);
-  font-size: 75%;
+  font-size: 85%;
   color: hsl(0, 0%, 100%);
 }
 .tooltip::before {

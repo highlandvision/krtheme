@@ -6930,7 +6930,7 @@ i.slick-nav {
   opacity: 0.6;
   outline: 0;
   position: absolute;
-  top: 47%;
+  top: 48%;
   z-index: 1;
 }
 @media print, screen and (min-width: 64em) {
@@ -6942,11 +6942,11 @@ i.slick-nav.fa-solid {
   color: hsl(0, 0%, 100%);
 }
 i.slick-nav.prev {
-  left: 0;
+  left: 0.2rem;
   background: var(--primary-color);
 }
 i.slick-nav.next {
-  right: 0;
+  right: 0.2rem;
   background: var(--primary-color);
 }
 i.slick-nav:hover {
@@ -6996,13 +6996,6 @@ i.slick-nav:hover {
 }
 .slick-btn.next {
   right: 0;
-}
-
-.slick-slide {
-  opacity: 0.5;
-}
-.slick-slide.slick-current {
-  opacity: 1;
 }
 
 #kr-property-thumbs {
