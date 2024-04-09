@@ -24,9 +24,8 @@ i.slick-nav {
     line-height: 0;
     opacity: 0.6;
     outline: 0;
-    //padding: 1.6rem 0.8rem;
     position: absolute;
-    top: 47%;
+    top: 48%;
     z-index: 1;
     @include mixin.breakpoint(large) {
         font-size: 2.2rem;
@@ -35,11 +34,11 @@ i.slick-nav {
         color: res.$white;
     }
     &.prev {
-        left: 0;
+        left: 0.2rem;
         background: var(--primary-color);
     }
     &.next {
-        right: 0;
+        right: 0.2rem;
         background: var(--primary-color);
     }
     &:hover {
@@ -86,12 +85,6 @@ i.slick-nav {
     }
     &.next {
         right: 0;
-    }
-}
-.slick-slide {
-    opacity: 0.5;
-    &.slick-current {
-        opacity: 1;
     }
 }
 #kr-property-thumbs {

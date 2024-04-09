@@ -29,7 +29,7 @@
         }
         img {
             @include mixin.breakpoint(medium) {
-                opacity: 0.5;
+                opacity: 0.6;
             }
         }
     }
