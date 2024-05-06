@@ -257,13 +257,14 @@ $input-number-size: 80px;
 		line-height: calc(#{$input-number-size} / 2 - 5px);
 	}
 	.input-number {
-		width: $input-number-size;
-		padding: 0 12px;
-		vertical-align: top;
-		text-align: center;
-		outline: none;
+		border-color: var(--primary-color);
 		display: block;
 		margin: 0;
+		outline: none;
+		padding: 0 12px;
+		text-align: center;
+		vertical-align: top;
+		width: $input-number-size;
 	}
 	.input-number,
 	.input-number-decrement,

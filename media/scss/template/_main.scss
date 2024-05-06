@@ -42,19 +42,15 @@
 	}
 }
 #kr-overlay {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.8);
 	bottom: 0;
-	cursor: pointer;
 	display: none;
 	height: 100%;
-	opacity: 0.8;
+	overflow: hidden;
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
+	user-select: none;
 	width: 100%;
-	z-index: 0;
-}
-.off-canvas {
-	background: var(--topbar-background-top);
 }
