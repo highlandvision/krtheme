@@ -34,6 +34,7 @@ i.solid, i.fab {
 
 .formbg {
   background-color: var(--form-background-color);
+  padding: 1rem;
 }
 
 .button {
@@ -415,7 +416,7 @@ hr {
 
 input[type=number], .input-tiny {
   min-width: 2rem !important;
-  max-width: 3rem !important;
+  max-width: 3.5rem !important;
   width: 100% !important;
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;

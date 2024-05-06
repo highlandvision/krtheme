@@ -30,6 +30,7 @@ i.solid, i.fab {
 }
 .formbg {
 	background-color: var(--form-background-color);
+	padding: 1rem;
 }
 
 @mixin kr-button-color($color, $hover) {
