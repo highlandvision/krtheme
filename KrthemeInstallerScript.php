@@ -19,8 +19,10 @@ use Joomla\CMS\Installer\InstallerScript;
 class KrthemeInstallerScript extends InstallerScript
 {
 	protected $deleteFiles = [
-		'/media/templates/krtheme/scss/_properties-grid.scss',
-		'/media/templates/krtheme/scss/_properties-property.scss',
+//		Add deleted files here
+	];
+	protected $deleteFolders = [
+//		Add deleted folders here
 	];
 	protected $extension = 'krtheme';
 
