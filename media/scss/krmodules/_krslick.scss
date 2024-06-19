@@ -4,8 +4,8 @@
 .kr-slick {
     position: relative;
     opacity: 0;
-    transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
     &.slick-initialized {
         opacity: 1;
     }

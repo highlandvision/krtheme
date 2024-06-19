@@ -106,6 +106,9 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 						<div class="large-8 cell topbar-right">
 							<jdoc:include type="modules" name="topbar-right" style="html5"/>
 						</div>
+						<div class="large-1 cell topbar-autosearch">
+							<jdoc:include type="modules" name="autosearch"/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -226,8 +229,8 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<!--//footer-->
 		<section id="footer">
 			<div class="top">
-				<?php if ($this->countModules('above-bottom', true)): ?>
-					<jdoc:include type="modules" name="above-bottom" style="none"/>
+				<?php if ($this->countModules('above-bottom')): ?>
+					<jdoc:include type="modules" name="above-bottom" style="html5"/>
 				<?php endif; ?>
 			</div>
 			<div class="middle" data-equalizer data-equalize-on="large">

@@ -6906,8 +6906,8 @@
 .kr-slick {
   position: relative;
   opacity: 0;
-  transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 .kr-slick.slick-initialized {
   opacity: 1;
@@ -7050,31 +7050,23 @@ i.slick-nav:hover {
 }
 
 #kr-autosearch-wrapper {
-  padding-top: 0.3rem;
+  height: 26px;
   position: relative;
-  width: 100%;
 }
-#kr-autosearch-wrapper input.kr-autosearch {
-  height: 36px;
-  width: 100%;
-  background: hsl(0, 0%, 100%);
-}
-#kr-autosearch-wrapper input.kr-autosearch::-webkit-input-placeholder {
-  font-size: 0.9rem;
-  font-family: var(--body-font-family);
-}
-#kr-autosearch-wrapper input.kr-autosearch::-ms-input-placeholder {
-  font-size: 0.9rem;
-  font-family: var(--body-font-family);
-}
-#kr-autosearch-wrapper input.kr-autosearch::placeholder {
-  font-size: 0.9rem;
-  font-family: var(--body-font-family);
+#kr-autosearch-wrapper .input-group-label {
+  padding: 0 0.5rem;
 }
 #kr-autosearch-wrapper span i {
-  color: hsl(0, 0%, 100%);
-  border: none;
-  padding: 0.5rem;
+  color: var(--primary-color);
+}
+#kr-autosearch-wrapper .kr-autosearch.tt-input input {
+  background: hsl(0, 0%, 100%);
+  font-family: "Font Awesome 6 Free", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  padding: 10px;
+  text-decoration: inherit;
+  width: 100%;
 }
 #kr-autosearch-wrapper .twitter-typeahead {
   width: 100%;
@@ -7082,7 +7074,7 @@ i.slick-nav:hover {
 #kr-autosearch-wrapper .tt-menu {
   min-width: 100%;
   padding: 0.2rem;
-  margin-top: -0.5rem;
+  margin-top: 1px;
   background-color: hsl(0, 0%, 100%);
   text-align: left;
   border: 1px solid hsl(0, 0%, 79%);
@@ -7128,16 +7120,43 @@ i.slick-nav:hover {
   position: relative;
 }
 .kr-imagegrid .gitem a {
+  cursor: pointer;
   margin-bottom: 0;
-}
-.kr-imagegrid .gitem a :hover {
-  text-decoration: none;
 }
 .kr-imagegrid .gitem a img {
   object-fit: cover;
   width: 100%;
   height: auto;
   vertical-align: middle;
+}
+.kr-imagegrid.list ul {
+  margin: 0 0 0 -5px;
+  padding: 0;
+  width: 100%;
+}
+.kr-imagegrid.list ul li {
+  background: hsl(0, 0%, 94%);
+  font-size: 12px;
+  padding: 0 0 0 24px;
+  margin: 0 0 3px 0;
+  border: 1px solid hsl(0, 0%, 79%);
+  height: 30px;
+  line-height: 28px;
+  position: relative;
+}
+.kr-imagegrid.list ul li ::before {
+  content: "\f111";
+  font-family: "Font Awesome 6 Free", sans-serif;
+  font-weight: 900;
+  color: var(--accent-color);
+  font-size: 8px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  padding-right: 6px;
+}
+.kr-imagegrid.list ul li a {
+  color: #333;
 }
 
 .kr-spotlight a,
@@ -7163,6 +7182,12 @@ i.slick-nav:hover {
   position: relative;
   width: 100%;
   z-index: 1;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-spotlight a p,
+  .kr-imagegrid .gitem a p {
+    padding: 0 0.5rem;
+  }
 }
 .kr-spotlight a p.strong,
 .kr-imagegrid .gitem a p.strong {
@@ -7198,52 +7223,64 @@ i.slick-nav:hover {
 }
 .kr-spotlight a p.bottom,
 .kr-imagegrid .gitem a p.bottom {
-  bottom: 23%;
+  bottom: 50%;
   height: 0;
 }
-
-.kr-imagegrid ul {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 25px;
-  list-style: none;
+@media print, screen and (min-width: 40em) {
+  .kr-spotlight a p.bottom,
+  .kr-imagegrid .gitem a p.bottom {
+    bottom: 30%;
+  }
 }
-.kr-imagegrid ul li {
-  background-color: hsl(0, 0%, 94%);
+
+.kr-imagegrid.list {
+  margin-left: 0;
+}
+.kr-imagegrid.list ul {
+  margin: 0;
+  padding: 0;
+}
+.kr-imagegrid.list ul li {
+  background: hsl(0, 0%, 94%);
+  padding: 0 0 0 24px;
+  margin: 0 0 3px 0;
   border: 1px solid hsl(0, 0%, 79%);
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-}
-.kr-imagegrid ul li::before {
-  content: "\f111";
-  color: var(--primary-color);
-  display: inline-block;
-  font-family: "Font Awesome 6 Free", sans-serif;
-  font-size: 7px;
-  font-weight: 900;
-  opacity: 0.5;
+  height: 30px;
+  line-height: 28px;
   position: relative;
-  vertical-align: middle;
+}
+.kr-imagegrid.list ul li ::before {
+  content: "\f111";
+  font-family: "Font Awesome 6 Free", sans-serif;
+  color: var(--accent-color);
+  font-size: 8px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  padding-right: 6px;
+}
+.kr-imagegrid.list ul li a {
+  color: #333;
 }
 
-.kr-spotlight a p {
+.kr-equalize a p {
   height: 30px;
   line-height: 30px;
 }
-.kr-spotlight a p.nobg {
+.kr-equalize a p.nobg {
   margin-top: -35px;
 }
-.kr-spotlight a img {
+.kr-equalize a img {
   width: 100%;
   height: calc(25vh - 30px);
 }
 @media print, screen and (min-width: 40em) {
-  .kr-spotlight a img {
+  .kr-equalize a img {
     height: calc(33vh - 48px);
   }
 }
 @media print, screen and (min-width: 64em) {
-  .kr-spotlight a img {
+  .kr-equalize a img {
     height: calc(33vh - 64px);
   }
 }
@@ -7282,8 +7319,7 @@ i.slick-nav:hover {
   font-weight: 300;
 }
 .kr-alternatives a.property .content, .kr-featured a.property .content {
-  background: hsl(0, 0%, 100%);
-  border: 1px solid hsl(0, 0%, 94%);
+  background: hsl(0, 0%, 94%);
   color: var(--body-font-color);
   grid-template-rows: repeat(1, 3fr);
   margin-top: 0;
@@ -7292,7 +7328,7 @@ i.slick-nav:hover {
   position: relative;
 }
 .kr-alternatives a.property .content:hover, .kr-featured a.property .content:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: brightness(97%);
 }
 .kr-alternatives a.property .content h4, .kr-featured a.property .content h4 {
   font-size: 1.2rem;
