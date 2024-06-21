@@ -41,7 +41,9 @@
     height: 26px;
     position: relative;
     .input-group-label {
+        background: res.$light-gray;
         padding: 0 0.5rem;
+        width: 32px;
     }
     span i {
         color: var(--primary-color);
@@ -55,8 +57,12 @@
         text-decoration: inherit;
         width: 100%;
     }
-    .twitter-typeahead {
+    .twitter-typeahead, .tt-query, .tt-hint, .tt-input {
+        font-size: 14px;
         width: 100%;
+    }
+    .tt-hint {
+        font-size: 14px;
     }
     .tt-menu {
         min-width: 100%;

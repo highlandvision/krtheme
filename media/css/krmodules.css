@@ -7054,7 +7054,9 @@ i.slick-nav:hover {
   position: relative;
 }
 #kr-autosearch-wrapper .input-group-label {
+  background: hsl(0, 0%, 94%);
   padding: 0 0.5rem;
+  width: 32px;
 }
 #kr-autosearch-wrapper span i {
   color: var(--primary-color);
@@ -7068,8 +7070,12 @@ i.slick-nav:hover {
   text-decoration: inherit;
   width: 100%;
 }
-#kr-autosearch-wrapper .twitter-typeahead {
+#kr-autosearch-wrapper .twitter-typeahead, #kr-autosearch-wrapper .tt-query, #kr-autosearch-wrapper .tt-hint, #kr-autosearch-wrapper .tt-input {
+  font-size: 14px;
   width: 100%;
+}
+#kr-autosearch-wrapper .tt-hint {
+  font-size: 14px;
 }
 #kr-autosearch-wrapper .tt-menu {
   min-width: 100%;
@@ -7178,8 +7184,8 @@ i.slick-nav:hover {
 .kr-spotlight a p,
 .kr-imagegrid .gitem a p {
   line-height: 1.2;
-  padding: 0 0.5rem;
-  position: relative;
+  padding: 0 0.2rem;
+  position: absolute;
   width: 100%;
   z-index: 1;
 }
@@ -7201,17 +7207,7 @@ i.slick-nav:hover {
 .kr-spotlight a p.center,
 .kr-imagegrid .gitem a p.center {
   text-align: center;
-  margin-bottom: var(--global-margin);
-}
-.kr-spotlight a p.center.last,
-.kr-imagegrid .gitem a p.center.last {
   margin-bottom: 0;
-}
-@media print, screen and (min-width: 40em) {
-  .kr-spotlight a p.center,
-  .kr-imagegrid .gitem a p.center {
-    margin-bottom: 0;
-  }
 }
 .kr-spotlight a p.top,
 .kr-imagegrid .gitem a p.top {
@@ -7223,14 +7219,7 @@ i.slick-nav:hover {
 }
 .kr-spotlight a p.bottom,
 .kr-imagegrid .gitem a p.bottom {
-  bottom: 50%;
-  height: 0;
-}
-@media print, screen and (min-width: 40em) {
-  .kr-spotlight a p.bottom,
-  .kr-imagegrid .gitem a p.bottom {
-    bottom: 30%;
-  }
+  top: 70%;
 }
 
 .kr-imagegrid.list {
