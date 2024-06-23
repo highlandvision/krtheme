@@ -168,8 +168,8 @@
         }
         p {
             line-height: 1.2;
-            padding: 0 0.5rem;
-            position: relative;
+            padding: 0 0.2rem;
+            position: absolute;
             width: 100%;
             z-index: 1;
             @include mixin.breakpoint(medium) {
@@ -184,14 +184,8 @@
             }
             &.center {
                 text-align: center;
-                margin-bottom: var(--global-margin);
-                &.last {
                     margin-bottom: 0;
                 }
-                @include mixin.breakpoint(medium) {
-                    margin-bottom: 0;
-                }
-            }
             &.top {
                 top: 5%;
             }
@@ -199,13 +193,7 @@
                 top: 40%;
             }
             &.bottom {
-                @include mixin.breakpoint(small) {
-                    bottom: 50%;
-                }
-                @include mixin.breakpoint(medium) {
-                    bottom: 30%;
-                }
-                height: 0;
+                top: 70%;
             }
         }
     }
