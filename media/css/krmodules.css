@@ -7184,15 +7184,14 @@ i.slick-nav:hover {
 .kr-spotlight a p,
 .kr-imagegrid .gitem a p {
   line-height: 1.2;
-  padding: 0 0.2rem;
-  position: absolute;
+  padding: 0.2rem;
   width: 100%;
   z-index: 1;
 }
 @media print, screen and (min-width: 40em) {
   .kr-spotlight a p,
   .kr-imagegrid .gitem a p {
-    padding: 0 0.5rem;
+    padding: 0.5rem;
   }
 }
 .kr-spotlight a p.strong,
@@ -7219,7 +7218,11 @@ i.slick-nav:hover {
 }
 .kr-spotlight a p.bottom,
 .kr-imagegrid .gitem a p.bottom {
-  top: 70%;
+  top: 75%;
+}
+
+.kr-imagegrid .gitem a p {
+  position: absolute;
 }
 
 .kr-imagegrid.list {
@@ -7253,11 +7256,10 @@ i.slick-nav:hover {
 }
 
 .kr-equalize a p {
-  height: 30px;
-  line-height: 30px;
+  padding: 0.5rem;
 }
 .kr-equalize a p.nobg {
-  margin-top: -35px;
+  margin-top: -45px;
 }
 .kr-equalize a img {
   width: 100%;

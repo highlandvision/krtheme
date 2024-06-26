@@ -28,11 +28,6 @@ body {
 i.solid, i.fab {
 	color: var(--primary-color);
 }
-.formbg {
-	background-color: var(--form-background-color);
-	padding: 1rem;
-}
-
 @mixin kr-button-color($color, $hover) {
 	background-color: $color;
 	&:hover {

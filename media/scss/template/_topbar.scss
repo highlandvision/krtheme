@@ -27,7 +27,7 @@
 }
 @include mixin.breakpoint(large) {
     #userbar {
-        background: var(--accent-color);
+        background: var(--topbar-background-top);
         height: 34px;
         width: 100%;
         ul {

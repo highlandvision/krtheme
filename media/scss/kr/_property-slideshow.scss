@@ -60,12 +60,18 @@
 #kr-property-thumbs {
     text-align: center;
     padding: 0;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    .slick-slide {
+        opacity: 1;
+        &.slick-current {
+            opacity: 0.3;
+        }
+    }
     img {
+        border: 1px solid res.$medium-gray;
         margin: 0;
-        :not(:first-child) {
-            margin-left: 0.3rem;
+        &:hover {
+            cursor: pointer;
         }
     }
 }

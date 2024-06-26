@@ -32,11 +32,6 @@ i.solid, i.fab {
   color: var(--primary-color);
 }
 
-.formbg {
-  background-color: var(--form-background-color);
-  padding: 1rem;
-}
-
 .button {
   background-color: var(--primary-color);
 }
@@ -621,7 +616,7 @@ img.responsive {
 
 @media print, screen and (min-width: 64em) {
   #userbar {
-    background: var(--accent-color);
+    background: var(--topbar-background-top);
     height: 34px;
     width: 100%;
   }

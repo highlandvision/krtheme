@@ -168,12 +168,11 @@
         }
         p {
             line-height: 1.2;
-            padding: 0 0.2rem;
-            position: absolute;
+            padding: 0.2rem;
             width: 100%;
             z-index: 1;
             @include mixin.breakpoint(medium) {
-                padding: 0 0.5rem;
+                padding: 0.5rem;
             }
             &.strong {
                 font-weight: bold;
@@ -193,8 +192,15 @@
                 top: 40%;
             }
             &.bottom {
-                top: 70%;
+                top: 75%;
             }
+        }
+    }
+}
+.kr-imagegrid .gitem {
+    a {
+        p {
+            position: absolute;
         }
     }
 }
@@ -230,10 +236,9 @@
 .kr-equalize {
     a {
         p {
-            height: 30px;
-            line-height: 30px;
+            padding: 0.5rem;
             &.nobg {
-                margin-top: -35px;
+                margin-top: -45px;
             }
         }
         img {

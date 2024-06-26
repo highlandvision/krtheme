@@ -269,7 +269,7 @@ $input-number-size: 80px;
 	.input-number,
 	.input-number-decrement,
 	.input-number-increment {
-		height: $input-number-size/2;
+		height: calc($input-number-size / 2);
 		user-select: none;
 	}
 	.input-number-decrement,
@@ -283,7 +283,7 @@ $input-number-size: 80px;
 		font-weight: bold;
 		padding-top: 0.15rem;
 		text-align: center;
-		width: $input-number-size/2;
+		width: calc($input-number-size / 2);
 		&:disabled {
 			opacity: 0.3;
 			cursor: default;
