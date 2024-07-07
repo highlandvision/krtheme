@@ -902,14 +902,19 @@ ul.pagination li.active a {
   grid-column-gap: 4px;
   grid-template-columns: repeat(3, 1fr);
 }
+@media print, screen and (min-width: 64em) {
+  #kr-thumb .thumbs.cell {
+    margin-left: 0;
+  }
+}
 @media print, screen and (min-width: 40em) {
   #kr-thumb .thumbs {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media print, screen and (min-width: 64em) {
   #kr-thumb .thumbs {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
 }
