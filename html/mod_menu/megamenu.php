@@ -23,6 +23,7 @@ if ($tagId) {
 
 <ul<?php echo $id; ?> class="nav dropdown menu" data-dropdown-menu data-disable-hover="true" data-click-open="true">
 	<?php foreach ($list as $i => $item) {
+		$itemParams = $item->getParams();
 		$class   = [];
 		$class[] = 'item-' . $item->id;
 
@@ -30,14 +31,14 @@ if ($tagId) {
 			$class[] = 'default';
 		}
 
-		if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id)) {
+		if (($item->id == $active_id) || ($item->type == 'alias' && $itemParams->get('aliasoptions') == $active_id)) {
 			$class[] = 'current';
 		}
 
 		if (in_array($item->id, $path)) {
 			$class[] = 'active';
 		} elseif ($item->type == 'alias') {
-			$aliasToId = $item->params->get('aliasoptions');
+			$aliasToId = $itemParams->get('aliasoptions');
 
 			if (count($path) > 0 && $aliasToId == $path[count($path) - 1]) {
 				$class[] = 'active';

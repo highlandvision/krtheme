@@ -38,7 +38,7 @@ if (!empty($params->get('tag_id')))
 			}
 			else if ($item->type == 'alias')
 			{
-				$aliasToId = $itemparams->get('aliasoptions');
+				$aliasToId = $itemParams->get('aliasoptions');
 				if (count($path) > 0 && $aliasToId == $path[count($path) - 1])
 				{
 					$class .= ' active';

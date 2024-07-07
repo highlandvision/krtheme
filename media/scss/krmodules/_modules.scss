@@ -158,13 +158,11 @@
     a {
         cursor: pointer;
         &:hover {
+            opacity: 0.8;
             text-decoration: none;
         }
         img {
             object-fit: cover;
-            &:hover {
-                opacity: 0.8;
-            }
         }
         p {
             line-height: 1.2;
@@ -172,7 +170,7 @@
             width: 100%;
             z-index: 1;
             @include mixin.breakpoint(medium) {
-                padding: 0.5rem;
+                padding: 0 0.5rem;
             }
             &.strong {
                 font-weight: bold;
@@ -233,14 +231,37 @@
         }
     }
 }
-.kr-equalize {
+.kr-spotlight {
     a {
         p {
-            padding: 0.5rem;
+            height: 30px;
+            line-height: 30px;
             &.nobg {
-                margin-top: -45px;
+                margin-top: -35px;
             }
         }
+        img {
+            width: 100%;
+            @include mixin.breakpoint(small) {
+                height: calc(25vh - 30px);
+            }
+            @include mixin.breakpoint(medium) {
+                height: calc(33vh - (4 * 12px));
+            }
+            @include mixin.breakpoint(large) {
+                height: calc(33vh - (4 * 16px));
+            }
+        }
+    }
+}
+.kr-equalize {
+    a {
+        //p {
+        //    padding: 0 0.5rem;
+        //    &.nobg {
+        //        margin-top: -45px;
+        //    }
+        //}
         img {
             width: 100%;
             @include mixin.breakpoint(small) {

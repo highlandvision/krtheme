@@ -11,7 +11,6 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Helper\ModuleHelper;
 
 $wa = $app->getDocument()->getWebAssetManager();
-//$wa->registerAndUseScript('mod_menu', 'mod_menu/menu.min.js', [], ['type' => 'module']);
 $wa->getRegistry()->addExtensionRegistryFile('com_knowres');
 $wa->useScript('com_knowres.site-modules');
 
