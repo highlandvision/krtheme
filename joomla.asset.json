@@ -49,8 +49,7 @@
         "template.krtheme.foundation#style",
         "template.krtheme.template#style",
         "template.krtheme.krmodules#style",
-        "template.krtheme.kr#style",
-        "template.user#style"
+        "template.krtheme.kr#style"
       ]
     }
   ]

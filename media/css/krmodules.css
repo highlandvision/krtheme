@@ -7171,15 +7171,12 @@ i.slick-nav:hover {
 }
 .kr-spotlight a:hover,
 .kr-imagegrid .gitem a:hover {
+  opacity: 0.8;
   text-decoration: none;
 }
 .kr-spotlight a img,
 .kr-imagegrid .gitem a img {
   object-fit: cover;
-}
-.kr-spotlight a img:hover,
-.kr-imagegrid .gitem a img:hover {
-  opacity: 0.8;
 }
 .kr-spotlight a p,
 .kr-imagegrid .gitem a p {
@@ -7191,7 +7188,7 @@ i.slick-nav:hover {
 @media print, screen and (min-width: 40em) {
   .kr-spotlight a p,
   .kr-imagegrid .gitem a p {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 .kr-spotlight a p.strong,
@@ -7255,12 +7252,28 @@ i.slick-nav:hover {
   color: #333;
 }
 
-.kr-equalize a p {
-  padding: 0.5rem;
+.kr-spotlight a p {
+  height: 30px;
+  line-height: 30px;
 }
-.kr-equalize a p.nobg {
-  margin-top: -45px;
+.kr-spotlight a p.nobg {
+  margin-top: -35px;
 }
+.kr-spotlight a img {
+  width: 100%;
+  height: calc(25vh - 30px);
+}
+@media print, screen and (min-width: 40em) {
+  .kr-spotlight a img {
+    height: calc(33vh - 48px);
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .kr-spotlight a img {
+    height: calc(33vh - 64px);
+  }
+}
+
 .kr-equalize a img {
   width: 100%;
   height: calc(25vh - 30px);
@@ -7414,7 +7427,8 @@ ul#categories li a:hover {
   cursor: pointer;
 }
 .kr-search .sidebar form {
-  padding: 1rem 1.5rem;
+  background: hsl(0, 0%, 94%);
+  padding: 0.75rem;
 }
 .kr-search .sidebar input, .kr-search .sidebar select {
   margin-bottom: 0.75rem;

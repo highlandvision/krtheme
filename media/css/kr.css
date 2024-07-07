@@ -160,7 +160,7 @@ address {
 }
 
 .guestformlink.button {
-  margin-top: -0.5rem;
+  margin-top: -0.3rem;
   margin-bottom: 0;
 }
 
@@ -656,6 +656,7 @@ form .form-control-feedback {
 .kr-search-pricing .discounts .button i {
   color: hsl(0, 0%, 100%);
   text-align: center;
+  vertical-align: middle;
 }
 .kr-search-pricing .discounts .dropdown-pane {
   background: var(--primary-color);

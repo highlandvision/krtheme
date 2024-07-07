@@ -42,6 +42,7 @@
         <position>dashboard-bottom3</position>
         <position>dashboard-bottom4</position>
         <position>debug</position>
+        <position>destination</position>
         <position>footer-left</position>
         <position>footer-right</position>
         <position>hero-slider</position>

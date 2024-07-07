@@ -630,7 +630,7 @@ img.responsive {
   }
   #userbar ul li a {
     background: none;
-    color: hsl(0, 0%, 100%);
+    color: var(--primary-color);
     font-size: 0.8rem;
     margin-top: 5px;
     padding: 0.5rem;

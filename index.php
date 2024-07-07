@@ -30,12 +30,11 @@ if (str_contains($_SERVER['SERVER_NAME'], '.test')) {
 }
 
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
-
-$wa = $this->getWebAssetManager();
-$wa->usePreset('template.krtheme.site');
 $color = $this->params->get('colors', 'colors_default');
 $asset = 'theme.' . $color;
-$wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
+$wa = $this->getWebAssetManager();
+$wa->usePreset('template.krtheme.site');
+$wa->registerAndUseStyle($asset, 'global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 ?>
 

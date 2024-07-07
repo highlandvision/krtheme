@@ -8,7 +8,7 @@
     --global-padding: #{$default-global-padding};
     --body-background: #{$default-body-background};
     --body-font-family: #{$default-body-font-family};
-    --body-color: #{$default-body-color};
+    --body-color: #{$default-body-font-color};
     --primary-color: #{$default-primary-color};
     --primary-color-hover: #{$default-primary-color-hover};
     --secondary-color: #{$default-secondary-color};
@@ -21,6 +21,8 @@
     --success-color-hover: #{$default-success-color-hover};
     --warning-color: #{$default-warning-color};
     --warning-color-hover: #{$default-warning-color-hover};
+    --custom-color: #{$default-custom-color};
+    --custom-color-hover: #{$default-custom-color-hover};
     --favorite: #{$default-favorite};
     --header-font-family: #{$default-header-font-family};
     --header-color: #{$default-header-color};
@@ -35,8 +37,9 @@
     --large-h3-font-size: #{$default-large-h3-font-size};
     --large-h4-font-size: #{$default-large-h4-font-size};
     --large-h5-font-size: #{$default-large-h5-font-size};
+    --paragraph-font-size: #{$default-paragraph-font-size};
     --small-font-size: #{$default-small-font-size};
-    --topbar-background-top: #{$default-topbar-background};
+    --topbar-background-top: #{$default-topbar-background-top};
     --topbar-background: #{$default-topbar-background};
     --topbar-submenu-background: #{$default-topbar-submenu-background};
     --topbar-link: #{$default-topbar-link};
@@ -48,4 +51,5 @@
     --footer-link: #{$default-footer-link};
     --footer-link-hover: #{$default-footer-link-hover};
     --form-background-color: #{$default-form-background-color};
+    --border-color: #{$default-border-color};
 }
