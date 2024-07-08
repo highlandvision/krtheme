@@ -7426,9 +7426,6 @@ ul#categories li a:hover {
 .kr-search input, .kr-search select {
   cursor: pointer;
 }
-.kr-search .sidebar form {
-  padding: 1rem 1.5rem;
-}
 .kr-search .sidebar input, .kr-search .sidebar select {
   margin-bottom: 0.75rem;
 }
