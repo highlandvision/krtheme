@@ -60,3 +60,10 @@ p.readmore a, a.readmore {
 		justify-content: left;
 	}
 }
+.kr-flex-center-small-column {
+	display: flex;
+	align-items: center;
+	@include mixin.breakpoint(medium) {
+		align-items: flex-start;
+	}
+}

@@ -804,6 +804,16 @@ p.readmore a, a.readmore {
   }
 }
 
+.kr-flex-center-small-column {
+  display: flex;
+  align-items: center;
+}
+@media print, screen and (min-width: 40em) {
+  .kr-flex-center-small-column {
+    align-items: flex-start;
+  }
+}
+
 #main {
   margin-top: 1rem;
 }
