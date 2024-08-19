@@ -26,6 +26,9 @@ i.solid.fa-file-pdf {
 .red, i.solid.red, .error-message {
 	color: var(--alert-color) !important;
 }
+.green, i.solid.green {
+	color: var(--success-color) !important;
+}
 .whitebg {
 	background-color: res.$white;
 }

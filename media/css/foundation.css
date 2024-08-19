@@ -5512,7 +5512,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   position: relative;
   margin: 0 0 1.5rem 0;
   padding: 1rem;
-  border: 1px solid #b3b3b3;
+  border: 1px solid #e0e0e0;
   border-radius: 0;
   background-color: white;
   color: hsl(0, 0%, 27%);
@@ -5524,31 +5524,31 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   margin-bottom: 0;
 }
 .callout.primary {
-  background-color: #ddefff;
+  background-color: #f6fbff;
   color: hsl(0, 0%, 27%);
 }
 .callout.secondary {
-  background-color: #f8f4f8;
+  background-color: #fdfcfd;
   color: hsl(0, 0%, 27%);
 }
 .callout.accent {
-  background-color: #e5f3ff;
+  background-color: #f9fcff;
   color: hsl(0, 0%, 27%);
 }
 .callout.alert {
-  background-color: #ffe4e4;
+  background-color: #fff8f8;
   color: hsl(0, 0%, 27%);
 }
 .callout.success {
-  background-color: #f7fbf8;
+  background-color: #fdfefd;
   color: hsl(0, 0%, 27%);
 }
 .callout.warning {
-  background-color: #fff4ed;
+  background-color: #fffcfb;
   color: hsl(0, 0%, 27%);
 }
 .callout.custom {
-  background-color: #ebf1f9;
+  background-color: #fafbfd;
   color: hsl(0, 0%, 27%);
 }
 .callout.small {

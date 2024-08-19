@@ -447,9 +447,9 @@ $buttongroup-radius-on-each: true;
 // -----------
 
 $callout-background: $white;
-//$callout-background-fade: 85%;
-$callout-background-fade: 92%;
-$callout-border: 1px solid darken($callout-background, 30%);
+$callout-background-fade: 98%;
+//$callout-background-fade: 92%;
+$callout-border: 1px solid darken($callout-background, 12%);
 $callout-margin: 0 0 1.5rem 0;
 $callout-sizes: (
 		small: 0.5rem,
