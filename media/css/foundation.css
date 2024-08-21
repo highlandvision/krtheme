@@ -5512,9 +5512,9 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   position: relative;
   margin: 0 0 1.5rem 0;
   padding: 1rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid hsl(0, 0%, 79%);
   border-radius: 0;
-  background-color: white;
+  background-color: #f2f2f2;
   color: hsl(0, 0%, 27%);
 }
 .callout > :first-child {
@@ -5524,31 +5524,31 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   margin-bottom: 0;
 }
 .callout.primary {
-  background-color: #f6fbff;
+  background-color: #d4ebff;
   color: hsl(0, 0%, 27%);
 }
 .callout.secondary {
-  background-color: #fdfcfd;
+  background-color: #f6f2f7;
   color: hsl(0, 0%, 27%);
 }
 .callout.accent {
-  background-color: #f9fcff;
+  background-color: #dff0ff;
   color: hsl(0, 0%, 27%);
 }
 .callout.alert {
-  background-color: #fff8f8;
+  background-color: #ffdddd;
   color: hsl(0, 0%, 27%);
 }
 .callout.success {
-  background-color: #fdfefd;
+  background-color: #f5faf6;
   color: hsl(0, 0%, 27%);
 }
 .callout.warning {
-  background-color: #fffcfb;
+  background-color: #fff2e9;
   color: hsl(0, 0%, 27%);
 }
 .callout.custom {
-  background-color: #fafbfd;
+  background-color: #e6edf7;
   color: hsl(0, 0%, 27%);
 }
 .callout.small {

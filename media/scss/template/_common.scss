@@ -199,12 +199,12 @@ ul.tabs {
 	}
 }
 .callout {
-	padding: 0.5rem;
-	@include mixin.breakpoint(medium) {
-		padding: 1rem;
-	}
+	background: var(--callout-background-color);
 	&.standout {
 		border: 1px solid var(--primary-color);
+	}
+	.callout, &.white {
+		background: res.$white;
 	}
 }
 ul.download {

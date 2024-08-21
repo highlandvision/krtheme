@@ -466,15 +466,13 @@ ul.tabs li:last-child {
 }
 
 .callout {
-  padding: 0.5rem;
-}
-@media print, screen and (min-width: 40em) {
-  .callout {
-    padding: 1rem;
-  }
+  background: var(--callout-background-color);
 }
 .callout.standout {
   border: 1px solid var(--primary-color);
+}
+.callout .callout, .callout.white {
+  background: hsl(0, 0%, 100%);
 }
 
 ul.download {

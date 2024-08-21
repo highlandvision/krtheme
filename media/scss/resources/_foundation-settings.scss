@@ -100,6 +100,7 @@ $default-large-h2-font-size: 30px;
 $default-large-h3-font-size: 22px;
 $default-large-h4-font-size: 18px;
 $default-large-h5-font-size: 17px;
+$default-paragraph-font-size: 16px !default;
 $default-small-font-size: 75%;
 $default-topbar-background-top: hsl(202, 85%, 92%);
 $default-topbar-background: hsl(208, 100%, 16%);
@@ -112,9 +113,7 @@ $default-footer-background: hsl(208, 100%, 16%);
 $default-footer-icon: hsl(202, 85%, 92%);
 $default-footer-link: hsl(0, 0%, 96%);
 $default-footer-link-hover: hsl(0, 0%, 48%);
-$default-form-background-color: hsl(0, 0%, 97%);
-$default-border-color: hsl(215, 54%, 36%) !default;
-$default-paragraph-font-size: 16px !default;
+$default-callout-background-color: hsl(0, 0%, 50%);
 
 // Custom colors  (alternative)
 $custom-global-width: 70rem !default;
@@ -152,6 +151,7 @@ $custom-large-h2-font-size: 28px !default;
 $custom-large-h3-font-size: 22px !default;
 $custom-large-h4-font-size: 18px !default;
 $custom-large-h5-font-size: 17px !default;
+$custom-paragraph-font-size: 16px !default;
 $custom-small-font-size: 85% !default;
 $custom-topbar-background-top: hsl(208, 100%, 22%) !default;
 $custom-topbar-background: hsl(208, 100%, 22%) !default;
@@ -164,9 +164,7 @@ $custom-footer-background: hsl(208, 100%, 22%) !default;
 $custom-footer-icon: hsl(46, 100%, 34%) !default;
 $custom-footer-link: hsl(0, 0%, 96%) !default;
 $custom-footer-link-hover: hsl(0, 0%, 48%) !default;
-$custom-form-background-color: hsl(202, 45%, 96%) !default;
-$custom-border-color: hsl(215, 54%, 36%) !default;
-$custom-paragraph-font-size: 16px !default;
+$custom-callout-background-color: hsl(0, 0%, 50%);
 
 // 1. Global
 // ---------
@@ -446,10 +444,11 @@ $buttongroup-radius-on-each: true;
 // 13. Callout
 // -----------
 
-$callout-background: $white;
-$callout-background-fade: 98%;
-//$callout-background-fade: 92%;
-$callout-border: 1px solid darken($callout-background, 12%);
+$callout-background: $default-callout-background-color;
+//$callout-background-fade: 50%;
+$callout-background-fade: 90%;
+//$callout-border: 1px solid darken($callout-background, 90%);
+$callout-border: 1px solid $medium-gray;
 $callout-margin: 0 0 1.5rem 0;
 $callout-sizes: (
 		small: 0.5rem,

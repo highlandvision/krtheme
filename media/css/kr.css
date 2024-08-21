@@ -104,7 +104,6 @@
   padding: 1rem 0;
   border: none;
   outline: none;
-  background: var(--form-background-color);
 }
 #kr-gateway-modal.reveal i.solid {
   color: hsl(0, 0%, 54%);
@@ -334,10 +333,6 @@ form .fieldset legend {
   font-size: 1.2rem;
   padding: 0 0.3rem 0.3rem;
   color: var(--primary-color);
-}
-form .callout {
-  padding: 1rem;
-  background: var(--form-background-color);
 }
 form label {
   margin-left: 0.2rem;

@@ -21,6 +21,8 @@
     --success-color-hover: #{$custom-success-color-hover};
     --warning-color: #{$custom-warning-color};
     --warning-color-hover: #{$custom-warning-color-hover};
+    --custom-color: #{$custom-custom-color};
+    --custom-color-hover: #{$custom-custom-color-hover};
     --favorite: #{$custom-favorite};
     --header-font-family: #{$custom-header-font-family};
     --header-color: #{$custom-header-color};
@@ -35,6 +37,7 @@
     --large-h3-font-size: #{$custom-large-h3-font-size};
     --large-h4-font-size: #{$custom-large-h4-font-size};
     --large-h5-font-size: #{$custom-large-h5-font-size};
+    --paragraph-font-size: #{$custom-paragraph-font-size};
     --small-font-size: #{$custom-small-font-size};
     --topbar-background-top: #{$custom-topbar-background};
     --topbar-background: #{$custom-topbar-background};
@@ -47,5 +50,5 @@
     --footer-icon: #{$custom-footer-icon};
     --footer-link: #{$custom-footer-link};
     --footer-link-hover: #{$custom-footer-link-hover};
-    --form-background-color: #{$custom-form-background-color};
+    --callout-background-color: #{$custom-callout-background-color};
 }
