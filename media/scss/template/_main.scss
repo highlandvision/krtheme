@@ -1,9 +1,8 @@
+@use '../resources/resources' as res;
+
 #main {
-	margin-top: 1rem;
-	.main-content {
-		.modules-above {
-			display: block;
-		}
+	.modules-above {
+		display: block;
 	}
 	#sidebar-left {
 		text-align: left;
@@ -20,13 +19,13 @@
 	}
 }
 .breadcrumb {
-	background-color: rgba(0, 0, 0, .03);
+	background-color: res.$light-gray;
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 13px;
 	list-style: none;
-	margin-top: 0;
 	margin-bottom: 1rem;
+	margin-top: 1rem;
 	padding: 0.5rem;
 	li::after {
 		content: "/";
@@ -43,14 +42,12 @@
 }
 #kr-overlay {
 	background-color: rgba(0, 0, 0, 0.6);
-	bottom: 0;
 	display: none;
 	height: 100%;
-	overflow: hidden;
-	position: absolute;
 	left: 0;
-	right: 0;
+	position: fixed;
 	top: 0;
 	user-select: none;
 	width: 100%;
+	z-index: 98;
 }

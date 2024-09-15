@@ -34,7 +34,7 @@ $color = $this->params->get('colors', 'colors_default');
 $asset = 'theme.' . $color;
 $wa = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
-$wa->registerAndUseStyle($asset, 'global/' . $color . '.css');
+$wa->registerAndUseStyle($asset, $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 ?>
 
@@ -65,7 +65,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 	<!--	Main content -->
 	<div class="off-canvas-content" data-off-canvas-content>
-		<div id="kr-overlay"></div>
+<!--		<div id="kr-overlay"></div>-->
 		<nav class="nav-section">
 			<!-- hamburger and logo for small / medium -->
 			<div class="title-bar hide-for-large">
@@ -128,7 +128,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		<?php elseif ($this->countModules('hero-slider', true)): ?>
 			<div id="kr-hero" class="slider">
-				<jdoc:include type="modules" name="hero-slider" style="html5"/>
+				<jdoc:include type="modules" name="hero-slider" style="xhtml"/>
 				<?php if ($this->countModules('hero-search', true)): ?>
 					<jdoc:include type="modules" name="hero-search" style="html5"/>
 				<?php endif; ?>
@@ -273,6 +273,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		</section>
 		<!--//end footer-->
+		<div id="kr-overlay"></div>
 	</div>
 
 	<jdoc:include type="modules" name="debug" style="none"/>

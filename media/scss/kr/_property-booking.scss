@@ -1,7 +1,7 @@
 @use '../resources/resources' as res;
 
 .kr-property-quote {
-	background: res.$light-gray;
+	background: res.$medium-gray;
 	margin-top: -3.5rem;
 	padding: 0.5rem 1rem 0;
 	.heading {
@@ -12,6 +12,12 @@
 	.help {
 		font-size: 90%;
 		text-align: center;
+	}
+	#kr-quote-form {
+		padding-bottom: 0.75rem;
+		.cell {
+			padding-bottom: 0.75rem;
+		}
 	}
 	.property-book {
 		padding: 0;

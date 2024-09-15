@@ -6913,10 +6913,6 @@
   opacity: 1;
 }
 
-.slideshow-wrapper {
-  margin-bottom: var(--global-margin);
-}
-
 .slickarrow {
   color: var(--primary-color);
 }
@@ -7255,9 +7251,23 @@ i.slick-nav:hover {
 .kr-spotlight a p {
   height: 30px;
   line-height: 30px;
+  position: relative;
 }
 .kr-spotlight a p.nobg {
   margin-top: -35px;
+}
+.kr-spotlight a p.withbg {
+  bottom: 0;
+  font-weight: 300;
+  opacity: 0.85;
+}
+.kr-spotlight a p.withbg.center {
+  width: 76%;
+  left: 12%;
+  bottom: 10%;
+}
+.kr-spotlight a p.center {
+  text-align: center;
 }
 .kr-spotlight a img {
   width: 100%;
@@ -7317,13 +7327,13 @@ i.slick-nav:hover {
   opacity: 0.8;
   background: hsl(0, 0%, 100%);
   width: 75%;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
   color: var(--body-font-color);
   font-style: italic;
   font-weight: 300;
 }
 .kr-alternatives a.property .content, .kr-featured a.property .content {
-  background: hsl(0, 0%, 94%);
+  background: hsl(0, 0%, 100%);
   color: var(--body-font-color);
   grid-template-rows: repeat(1, 3fr);
   margin-top: 0;
@@ -7425,6 +7435,7 @@ ul#categories li a:hover {
 }
 .kr-search input, .kr-search select {
   cursor: pointer;
+  margin-bottom: 0;
 }
 .kr-search .sidebar input, .kr-search .sidebar select {
   margin-bottom: 0.75rem;
@@ -7496,7 +7507,6 @@ ul#categories li a:hover {
 .kr-search #kr-searchguest-drop #age-help {
   color: var(--body-font-color);
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
 }
 .kr-search #kr-searchguest-drop #child-ages-container {
   margin-left: 3px;
@@ -7529,7 +7539,6 @@ ul#categories li a:hover {
 @media print, screen and (min-width: 64em) {
   #kr-hero.slider {
     height: 100%;
-    margin-bottom: var(--global-margin);
   }
 }
 @media print, screen and (min-width: 64em) and (min-width: 64em) {

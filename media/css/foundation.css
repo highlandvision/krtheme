@@ -601,7 +601,7 @@ b {
 }
 
 small {
-  font-size: 75%;
+  font-size: 14px;
   line-height: inherit;
 }
 
@@ -5514,7 +5514,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   padding: 1rem;
   border: 1px solid hsl(0, 0%, 79%);
   border-radius: 0;
-  background-color: #f2f2f2;
+  background-color: #fdfdfd;
   color: hsl(0, 0%, 27%);
 }
 .callout > :first-child {
@@ -5524,31 +5524,31 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   margin-bottom: 0;
 }
 .callout.primary {
-  background-color: #d4ebff;
+  background-color: #eaf5ff;
   color: hsl(0, 0%, 27%);
 }
 .callout.secondary {
-  background-color: #f6f2f7;
+  background-color: #faf8fb;
   color: hsl(0, 0%, 27%);
 }
 .callout.accent {
-  background-color: #dff0ff;
+  background-color: #eff8ff;
   color: hsl(0, 0%, 27%);
 }
 .callout.alert {
-  background-color: #ffdddd;
+  background-color: #ffeeee;
   color: hsl(0, 0%, 27%);
 }
 .callout.success {
-  background-color: #f5faf6;
+  background-color: #fafcfa;
   color: hsl(0, 0%, 27%);
 }
 .callout.warning {
-  background-color: #fff2e9;
+  background-color: #fff8f4;
   color: hsl(0, 0%, 27%);
 }
 .callout.custom {
-  background-color: #e6edf7;
+  background-color: #f2f6fb;
   color: hsl(0, 0%, 27%);
 }
 .callout.small {
@@ -5650,7 +5650,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   padding: 0.5rem;
   border-radius: 0;
   background-color: hsl(0, 0%, 54%);
-  font-size: 75%;
+  font-size: 14px;
   color: hsl(0, 0%, 100%);
 }
 .tooltip::before {

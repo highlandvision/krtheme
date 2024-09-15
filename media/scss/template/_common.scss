@@ -199,11 +199,10 @@ ul.tabs {
 	}
 }
 .callout {
-	background: var(--callout-background-color);
 	&.standout {
 		border: 1px solid var(--primary-color);
 	}
-	.callout, &.white {
+	&.white {
 		background: res.$white;
 	}
 }

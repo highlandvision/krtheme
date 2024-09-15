@@ -1,11 +1,17 @@
 body {
   background: var(--body-background);
+  color: var(--body-font-color);
   font-family: var(--body-font-family);
   line-height: var(--global-lineheight);
-  color: var(--body-font-color);
   min-width: 380px;
-  width: 100%;
   position: relative;
+  width: 100%;
+}
+
+.staticpane {
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
 }
 
 .grid-x {
@@ -26,6 +32,10 @@ body {
 
 .color-body {
   color: var(--body-color);
+}
+
+.color-custom {
+  color: var(--custom-color);
 }
 
 i.solid, i.fab {
@@ -149,6 +159,11 @@ small {
   font-size: var(--small-font-size);
 }
 
+p.small {
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+}
+
 @media print, screen and (min-width: 40.0625em) {
   h1, .h1 {
     font-size: var(--medium-h1-font-size);
@@ -221,6 +236,10 @@ i.solid.fa-file-pdf {
 
 .whitebg {
   background-color: hsl(0, 0%, 100%);
+}
+
+.custom-color {
+  color: var(--custom-color);
 }
 
 *, *:before, *:after {
@@ -465,13 +484,10 @@ ul.tabs li:last-child {
   border-right: none;
 }
 
-.callout {
-  background: var(--callout-background-color);
-}
 .callout.standout {
   border: 1px solid var(--primary-color);
 }
-.callout .callout, .callout.white {
+.callout.white {
   background: hsl(0, 0%, 100%);
 }
 
@@ -811,10 +827,7 @@ p.readmore a, a.readmore {
   }
 }
 
-#main {
-  margin-top: 1rem;
-}
-#main .main-content .modules-above {
+#main .modules-above {
   display: block;
 }
 #main #sidebar-left {
@@ -832,13 +845,13 @@ p.readmore a, a.readmore {
 }
 
 .breadcrumb {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: hsl(0, 0%, 94%);
   display: flex;
   flex-wrap: wrap;
   font-size: 13px;
   list-style: none;
-  margin-top: 0;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   padding: 0.5rem;
 }
 .breadcrumb li::after {
@@ -856,16 +869,14 @@ p.readmore a, a.readmore {
 
 #kr-overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
   display: none;
   height: 100%;
-  overflow: hidden;
-  position: absolute;
   left: 0;
-  right: 0;
+  position: fixed;
   top: 0;
   user-select: none;
   width: 100%;
+  z-index: 98;
 }
 
 #footer {

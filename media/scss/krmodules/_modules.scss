@@ -236,8 +236,22 @@
         p {
             height: 30px;
             line-height: 30px;
+            position: relative;
             &.nobg {
                 margin-top: -35px;
+            }
+            &.withbg {
+                bottom: 0;
+                font-weight: 300;
+                opacity: 0.85;
+                &.center {
+                    width: 76%;
+                    left: 12%;
+                    bottom: 10%;
+                }
+            }
+            &.center {
+                text-align: center;
             }
         }
         img {
@@ -256,12 +270,6 @@
 }
 .kr-equalize {
     a {
-        //p {
-        //    padding: 0 0.5rem;
-        //    &.nobg {
-        //        margin-top: -45px;
-        //    }
-        //}
         img {
             width: 100%;
             @include mixin.breakpoint(small) {
@@ -307,13 +315,13 @@
             opacity: 0.8;
             background: res.$white;
             width: 75%;
-            padding: 0.5rem;
+            padding: 0.2rem 0.5rem;
             color: var(--body-font-color);
             font-style: italic;
             font-weight: 300;
         }
         .content {
-            background: res.$light-gray;
+            background: res.$white;
             color: var(--body-font-color);
             grid-template-rows: repeat(1, 3fr);
             margin-top: 0;

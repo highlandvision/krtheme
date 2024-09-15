@@ -9,6 +9,9 @@
 		line-height: 2rem;
 		font-weight: 400;
 	}
+	.kr-property-header {
+		margin-bottom: var(--global-margin);
+	}
 	a.backlink {
 		position: absolute;
 		right: 25%;
@@ -38,7 +41,7 @@
 			width: 25%;
 			color: res.$dark-gray;
 			font-weight: 700;
-			font-family: 'proxima-nova', sans-serif;
+			font-family: Arial, sans-serif;
 		}
 	}
 	.page {
@@ -53,47 +56,43 @@
 			padding: .75rem 0.3rem;
 			margin: 1rem -0.25rem 0.5rem;
 		}
+		h4 {
+			font-size: 1.1rem;
+			margin-bottom: 0.2rem;
+			margin-top: 0.5rem;
+		}
 		p {
 			font-size: 0.9rem;
 		}
 		.rooms {
+			font-size: 0.8rem;
 			h6 {
-				color: var(--primary-color);
-				font-size: 0.8rem;
+				font-size: 0.9rem;
+				margin-bottom: 0.2rem;
 				margin-top: 0.3rem;
-				margin-bottom: 0;
 			}
-			p {
-				margin-bottom: 0;
-			}
-			.amenities {
-				font-size: 0.8rem;
-				margin-bottom: 0.75rem;
+			i {
+				color: var(--primary-color);
+				font-size: 80%;
+				opacity: 0.6;
 			}
 		}
 	}
 	.tabs-panel {
 		.header {
 			color: var(--primary-color);
-			font-weight: 200;
+			font-weight: 400;
 			font-size: 1.1rem;
 			margin-bottom: 0.2rem;
 		}
-		.rooms {
-			h6 {
-				color: res.$light-gray;
-				font-size: 1.1rem;
-				margin-top: 0.2rem;
-				margin-bottom: 0;
-			}
-			p {
-				color: var(--accent-color);
-				font-size: 1rem;
-				margin-bottom: 0;
-			}
-			.amenities {
-				font-size: 15px;
+		.facilities {
+			.amenity {
+				font-size: 14px;
 				margin-bottom: 1rem;
+				.cell i {
+					color: var(--secondary-color);
+					opacity: .5;
+				}
 			}
 		}
 	}

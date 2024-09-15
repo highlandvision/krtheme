@@ -16,7 +16,6 @@
         }
         @include mixin.breakpoint(large) {
             height: 100%;
-            margin-bottom: var(--global-margin);
             .kr-slideshow {
                 @include mixin.breakpoint(large) {
                     display: block;

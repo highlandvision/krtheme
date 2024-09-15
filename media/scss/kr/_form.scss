@@ -84,15 +84,7 @@ form {
 	}
 	input[type="checkbox"].checkover:checked + label.checklabel:before,
 	input[type="radio"].radioover:checked + label.radiolabel:before {
-		content: "\f058";
-		font-family: 'Font Awesome 6 Free', sans-serif;
-		font-weight: 900;
-		&.open {
-			font-weight: 400;
-		}
-	}
-	input[type="checkbox"].checkover:checked + label.checklabel:before {
-		content: "\f14a";
+		content: "\f00c";
 		font-family: 'Font Awesome 6 Free', sans-serif;
 		font-weight: 900;
 		&.open {

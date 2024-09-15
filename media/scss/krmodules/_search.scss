@@ -9,6 +9,7 @@
     }
     input, select {
         cursor: pointer;
+        margin-bottom: 0;
     }
     .sidebar {
         input, select {
@@ -79,7 +80,6 @@
         #age-help {
             color: var(--body-font-color);
             font-size: 0.8rem;
-            margin-bottom: 0.5rem;
         }
         #child-ages-container {
             margin-left: 3px;
