@@ -1,3 +1,6 @@
+#kr-confirm .extras {
+  margin-bottom: 0.75rem;
+}
 #kr-confirm .extras .price {
   font-size: 93%;
   line-height: 1.3;
@@ -247,129 +250,6 @@
     width: 80vw;
     min-width: initial;
   }
-}
-
-#kr-confirm .extras .price {
-  font-size: 93%;
-  line-height: 1.3;
-  margin-top: 1px;
-}
-#kr-confirm .extras .kr-extra-select {
-  max-width: 100px;
-}
-#kr-confirm .summary {
-  padding-left: 2.5rem;
-  margin-bottom: 1rem;
-}
-#kr-confirm .summary h2, #kr-confirm .summary p {
-  margin-bottom: 0;
-}
-#kr-confirm #kr-form-confirm .callout.noborder {
-  border: none;
-}
-
-#kr-totals {
-  margin: 0 0 2rem;
-  padding: 1rem 0.5rem;
-  background: var(--primary-color);
-  text-align: center;
-  color: hsl(0, 0%, 100%);
-}
-@media print, screen and (min-width: 64em) {
-  #kr-totals {
-    padding: 1rem;
-  }
-}
-#kr-totals .total-text {
-  font-size: 1.4rem;
-}
-#kr-totals .hilite-total {
-  font-size: 2rem;
-  color: var(--secondary-color);
-}
-#kr-totals .total-summary {
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-}
-#kr-totals .total-summary button {
-  margin-bottom: 0;
-}
-#kr-totals .payment-info {
-  min-height: 150px;
-  padding-top: 0.5rem;
-}
-#kr-totals .payment-info #deposit-date,
-#kr-totals .payment-info #balance-date {
-  margin-top: 0.5rem;
-}
-#kr-totals .payment-info #deposit {
-  color: var(--secondary-color);
-  font-size: 1.8rem;
-}
-#kr-totals .payment-info #balance {
-  color: var(--secondary-color);
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-#kr-totals .payment-info .security {
-  padding-bottom: 0.3rem;
-  color: var(--secondary-color);
-}
-
-#kr-guest-totals {
-  padding: 1rem 0.5rem;
-  font-size: 0.9rem;
-  background: var(--body-background);
-  color: var(--body-color);
-  line-height: 1.7;
-  margin-bottom: 0.5rem;
-}
-
-#kr-payment #kr-gateways {
-  margin-top: 1rem;
-}
-#kr-payment .gateway-surcharge {
-  margin-left: 30px;
-  margin-top: 0;
-  font-style: italic;
-}
-#kr-payment .gateway-surcharge p {
-  margin-bottom: 0;
-}
-#kr-payment #sidebar-right {
-  background: hsl(0, 0%, 100%);
-  margin-bottom: 1rem;
-}
-#kr-payment #sidebar-right .summary h3 {
-  margin: 1rem 0 0.5rem;
-}
-#kr-payment #sidebar-right .summary span.paynow {
-  font-size: 1.8rem;
-  color: var(--accent-color);
-}
-#kr-payment #sidebar-right .summary span.accent {
-  color: hsl(0, 0%, 4%);
-}
-
-#kr-gateway-modal.reveal {
-  padding: 1rem 0;
-  border: none;
-  outline: none;
-}
-#kr-gateway-modal.reveal i.solid {
-  color: hsl(0, 0%, 54%);
-}
-
-#disabled-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  align-items: center;
-  background-color: hsl(0, 0%, 4%);
-  z-index: 999;
-  opacity: 0.5;
 }
 
 #kr-dashboard-reservations {
@@ -1225,7 +1105,7 @@ ul.pagination li.active a {
   margin-bottom: 1rem;
 }
 .kr-property .tabs-panel .facilities .amenity .cell i {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   opacity: 0.5;
 }
 .kr-property #phototour p {
