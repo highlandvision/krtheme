@@ -134,6 +134,7 @@ form {
 		font-size: 0.9rem;
 	}
 	::placeholder {
+		color: res.$medium-gray;
 		font-size: 0.9rem;
 	}
 	.form-control-feedback {

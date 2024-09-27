@@ -630,21 +630,22 @@ img.responsive {
 @media print, screen and (min-width: 64em) {
   #userbar {
     background: var(--topbar-background-top);
-    height: 34px;
+    height: 36px;
+    padding: 6px 0 0;
     width: 100%;
   }
   #userbar ul {
-    float: right;
     margin-bottom: 0;
+    margin-right: 1rem;
   }
   #userbar ul li {
-    height: 34px;
-    padding-left: 1rem;
+    float: right;
+    padding-left: 1.5rem;
   }
   #userbar ul li a {
     background: none;
     color: var(--primary-color);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 5px;
     padding: 0.5rem;
   }
@@ -653,42 +654,50 @@ img.responsive {
   }
   #topbar {
     background: var(--topbar-background);
-    height: 64px;
+    height: 50px;
     margin-bottom: 0;
     width: 100%;
   }
   #topbar .logo {
+    left: 1rem;
     max-height: 40px;
-    margin-top: 11px;
+    margin-top: 0;
+    position: absolute;
+    top: 32px;
   }
-  #topbar .moduletable {
-    margin-bottom: 0;
+  #topbar .logo img {
+    position: absolute;
+    left: 16px;
   }
-  #topbar .topbar-right ul li {
-    padding-right: 1rem;
+  #topbar .topbar-right ul {
+    align-items: center;
+    justify-content: center;
   }
   #topbar .topbar-right ul li a {
-    margin-top: 16px;
+    background-color: var(--topbar-background);
     color: var(--topbar-link);
-    font-size: 1rem;
   }
   #topbar .topbar-right ul li a:hover {
+    background-color: var(--topbar-background-active);
     color: var(--topbar-link-active);
   }
   #topbar .topbar-right ul ul.submenu {
+    background-color: var(--topbar-background);
     height: auto;
     margin-top: 0;
     z-index: 99;
   }
   #topbar .topbar-right ul ul.submenu li a {
     font-size: 0.9rem;
+    height: 24px;
     line-height: 1px;
     margin-top: 0;
     padding: 0.9rem 1rem;
     width: 190px;
   }
   #topbar .topbar-right ul ul.submenu li a:hover {
-    background: var(--topbar-background);
+    background: var(--topbar-background-active);
+    color: var(--topbar-link-active);
     margin-left: 8px;
     padding-left: 8px;
     width: 182px;
@@ -703,7 +712,6 @@ img.responsive {
     width: 190px;
   }
   #topbar .topbar-right ul ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item:hover {
-    background: var(--topbar-background);
     padding-left: 8px;
     margin-left: 8px;
     width: 182px;
@@ -713,7 +721,8 @@ img.responsive {
     padding-right: 0;
   }
   #topbar .topbar-right ul ul.submenu.megamenu.is-dropdown-submenu li.is-dropdown-submenu-item a:hover {
-    background: var(--topbar-background);
+    background: var(--topbar-background-active);
+    color: var(--topbar-link-active);
     margin-left: -8px;
     padding-left: 8px;
   }

@@ -21,7 +21,7 @@ if ($tagId) {
 }
 ?>
 
-<ul<?php echo $id; ?> class="nav dropdown menu" data-dropdown-menu data-disable-hover="true" data-click-open="true">
+<ul<?php echo $id; ?> class="nav dropdown menu align-center" data-dropdown-menu data-click-open="true">
 	<?php foreach ($list as $i => $item) {
 		$itemParams = $item->getParams();
 		$class   = [];

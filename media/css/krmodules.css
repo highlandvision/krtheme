@@ -6912,16 +6912,15 @@
 .kr-slick.slick-initialized {
   opacity: 1;
 }
-
-.slickarrow {
-  color: var(--primary-color);
+.kr-slick:hover i.slick-nav {
+  opacity: 1;
 }
 
 i.slick-nav {
   border: 0;
   cursor: pointer;
   display: block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 0;
   opacity: 0.6;
   outline: 0;
@@ -6938,15 +6937,10 @@ i.slick-nav.fa-solid {
   color: hsl(0, 0%, 100%);
 }
 i.slick-nav.prev {
-  left: 0.2rem;
-  background: var(--primary-color);
+  left: 0.5rem;
 }
 i.slick-nav.next {
-  right: 0.2rem;
-  background: var(--primary-color);
-}
-i.slick-nav:hover {
-  opacity: 0.9;
+  right: 0.5rem;
 }
 
 .kr-double-arrows {
@@ -7048,6 +7042,7 @@ i.slick-nav:hover {
 #kr-autosearch-wrapper {
   height: 26px;
   position: relative;
+  width: 270px;
 }
 #kr-autosearch-wrapper .input-group-label {
   background: hsl(0, 0%, 94%);
@@ -7584,7 +7579,7 @@ ul#categories li a:hover {
 @media print, screen and (min-width: 64em) and (min-width: 64em) {
   #kr-hero.slider .kr-slideshow i.slick-nav {
     padding: 2.5rem 0.1rem;
-    top: 42%;
+    top: 40%;
   }
 }
 @media print, screen and (min-width: 64em) {
@@ -7635,9 +7630,8 @@ ul#categories li a:hover {
   #kr-hero .kr-search .hero-search {
     background: hsl(0, 0%, 98%);
     box-shadow: none;
-    height: 75px;
     margin: 0 auto;
-    max-width: calc(var(--global-width) - 30px);
+    max-width: calc(var(--global-width) - 32px);
     opacity: 0.9;
     padding: 1rem;
     position: absolute;

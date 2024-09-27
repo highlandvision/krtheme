@@ -54,7 +54,7 @@
                     height: auto;
                     @include mixin.breakpoint(large) {
                         padding: 2.5rem 0.1rem;
-                        top: 42%;
+                        top: 40%;
                     }
                 }
                 .spot {
@@ -100,9 +100,8 @@
         @include mixin.breakpoint(large) {
             background: hsl(0, 0%, 98%);
             box-shadow: none;
-            height: 75px;
             margin: 0 auto;
-            max-width: calc(var(--global-width) - 30px);
+            max-width: calc(var(--global-width) - 2 * 16px);
             opacity: 0.9;
             padding: 1rem;
             position: absolute;

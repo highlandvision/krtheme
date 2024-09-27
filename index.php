@@ -96,20 +96,16 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			</div>
 			<div id="topbar" class="show-for-large">
-				<div class="grid-container">
-					<div class="grid-x">
-						<div class="large-3 cell topbar-left">
-							<a href="/" title="<?php echo $sitename; ?>">
-								<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
-							</a>
-						</div>
-						<div class="large-8 cell topbar-right">
-							<jdoc:include type="modules" name="topbar-right" style="html5"/>
-						</div>
-						<div class="large-1 cell topbar-autosearch">
-							<jdoc:include type="modules" name="autosearch"/>
-						</div>
-					</div>
+				<div class="large-3 cell topbar-left">
+					<a href="/" title="<?php echo $sitename; ?>">
+						<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
+					</a>
+				</div>
+				<div class="large-8 cell topbar-right">
+					<jdoc:include type="modules" name="topbar-right" style="html5"/>
+				</div>
+				<div class="large-1 cell topbar-autosearch">
+					<jdoc:include type="modules" name="autosearch"/>
 				</div>
 			</div>
 		</nav>
