@@ -5609,9 +5609,9 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   width: 300px;
   padding: 0.5rem;
   visibility: hidden;
-  border: 0;
+  border: 1px solid hsl(0, 0%, 100%);
   border-radius: 0;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(208, 100%, 16%);
   font-size: 1rem;
 }
 .dropdown-pane.is-opening {

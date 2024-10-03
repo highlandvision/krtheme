@@ -516,8 +516,8 @@ $drilldown-arrow-size: 6px;
 // ------------
 
 $dropdown-padding: 0.5rem;
-$dropdown-background: $default-body-background;
-$dropdown-border: 0;
+$dropdown-background: $default-primary-color;
+$dropdown-border: 1px solid $white;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: 0;
