@@ -36,7 +36,7 @@
   --large-h5-font-size: 17px;
   --paragraph-font-size: 16px;
   --small-font-size: 14px;
-  --topbar-background-top: var(--primary-color);
+  --topbar-background-top: var(--secondary-color);
   --topbar-background: var(--primary-color);
   --topbar-submenu-background: var(--accent-color);
   --topbar-link: hsl(0, 0%, 100%);

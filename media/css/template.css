@@ -636,18 +636,20 @@ img.responsive {
   }
   #userbar ul {
     margin-bottom: 0;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
   #userbar ul li {
-    float: right;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
   }
   #userbar ul li a {
     background: none;
     color: var(--primary-color);
     font-size: 0.9rem;
-    margin-top: 5px;
+    margin-top: -2px;
     padding: 0.5rem;
+  }
+  #userbar ul li a :not(:first-child) {
+    line-height: 1.9;
   }
   #userbar ul li a:hover {
     text-decoration: underline;
@@ -660,10 +662,10 @@ img.responsive {
   }
   #topbar .logo {
     left: 1rem;
-    max-height: 40px;
+    max-height: 50px;
     margin-top: 0;
     position: absolute;
-    top: 32px;
+    top: 22px;
   }
   #topbar .logo img {
     position: absolute;

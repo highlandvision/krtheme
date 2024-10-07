@@ -87,13 +87,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 				</div>
 			</div>
 			<div id="userbar" class="show-for-large">
-				<div class="grid-container">
-					<div class="grid-x">
-						<div class="large-12 cell align-right">
-							<jdoc:include type="modules" name="userbar" style="html5"/>
-						</div>
-					</div>
-				</div>
+				<jdoc:include type="modules" name="userbar" style="html5"/>
 			</div>
 			<div id="topbar" class="show-for-large">
 				<div class="large-3 cell topbar-left">

@@ -1316,7 +1316,11 @@ ul.pagination li.active a {
 }
 
 /* Geriatric calendar */
-/* Legend */
+#geriatric-key {
+  margin: 0 auto;
+  text-align: center;
+}
+
 table.legend {
   border: none;
   border-collapse: separate;
@@ -1324,7 +1328,8 @@ table.legend {
   table-layout: fixed;
   padding: 0;
   display: inline-table;
-  margin: 0 0 5px 10px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
   font-size: 11px;
   width: auto;
 }
@@ -1345,13 +1350,12 @@ table.legend tr td div.duo {
   border-width: 8px;
 }
 
-/* Calendar */
-#calendardata {
+/* Calendar month */
+.calendar-month {
   margin: 0 auto;
+  text-align: center;
 }
-
-/* Monthly calendar */
-table.amonth {
+.calendar-month table.amonth {
   border: none;
   border-collapse: separate;
   border-spacing: 1px;
@@ -1361,76 +1365,76 @@ table.amonth {
   display: inline-table;
   margin: 0 0 10px;
 }
-table.amonth tr th,
-table.amonth tr td,
-table.amonth p {
+.calendar-month table.amonth tr th,
+.calendar-month table.amonth tr td,
+.calendar-month table.amonth p {
   text-align: center;
   font-family: Verdana, Arial, sans-serif;
   color: #444;
   font-weight: normal;
   font-size: 10px;
 }
-table.amonth tr {
+.calendar-month table.amonth tr {
   padding: 0;
   margin: 0;
   background: hsl(0, 0%, 100%);
 }
-table.amonth tr.monthrow th, table.amonth tr.daysrow th {
+.calendar-month table.amonth tr.monthrow th, .calendar-month table.amonth tr.daysrow th {
   font-weight: 400;
   background: #8a8a8a;
   color: hsl(0, 0%, 100%);
   padding: 0;
   height: 16px;
 }
-table.amonth tr.daysrow th {
+.calendar-month table.amonth tr.daysrow th {
   background: #b0b0b0;
   color: hsl(0, 0%, 100%);
 }
-table.amonth tr td {
+.calendar-month table.amonth tr td {
   text-align: center;
   padding: 0;
 }
-table.amonth tr td div {
+.calendar-month table.amonth tr td div {
   border-width: 20px;
   border-style: solid;
   position: relative;
   height: 0;
   width: 0;
 }
-table.amonth tr td div.duo {
+.calendar-month table.amonth tr td div.duo {
   border-width: 10px;
 }
-table.amonth tr td div.bgblank {
+.calendar-month table.amonth tr td div.bgblank {
   border-top-color: hsl(0, 0%, 100%);
   border-left-color: hsl(0, 0%, 100%);
   border-bottom-color: hsl(0, 0%, 100%);
   border-right-width: 0;
   border-bottom-width: 0;
 }
-table.amonth tr td div.bgblank p.day {
+.calendar-month table.amonth tr td div.bgblank p.day {
   color: hsl(0, 0%, 100%);
 }
-table.amonth tr td div.bgtoday {
+.calendar-month table.amonth tr td div.bgtoday {
   border-top-color: #cacaca;
   border-left-color: #cacaca;
 }
-table.amonth tr td div.bgtoday p.day {
+.calendar-month table.amonth tr td div.bgtoday p.day {
   color: #cc0000;
 }
-table.amonth tr td div.bgpast {
+.calendar-month table.amonth tr td div.bgpast {
   border-top-color: #cacaca;
   border-left-color: #cacaca;
   border-right-width: 0;
   border-bottom-width: 0;
 }
-table.amonth tr td div.bookme p.day, table.amonth tr td div.bgtoavail p.day {
+.calendar-month table.amonth tr td div.bookme p.day, .calendar-month table.amonth tr td div.bgtoavail p.day {
   color: #333;
 }
-table.amonth tr td div.nostart p.day {
+.calendar-month table.amonth tr td div.nostart p.day {
   opacity: 0.4;
   font-weight: normal;
 }
-table.amonth tr td div p {
+.calendar-month table.amonth tr td div p {
   font-size: 10px !important;
   line-height: 0;
   margin: 0;
@@ -1438,11 +1442,11 @@ table.amonth tr td div p {
   position: absolute;
   width: 20px;
 }
-table.amonth tr td div.solo p.day {
+.calendar-month table.amonth tr td div.solo p.day {
   top: -10px;
   left: -20px;
 }
-table.amonth tr td div.duo p.day {
+.calendar-month table.amonth tr td div.duo p.day {
   left: -10px;
 }
 
