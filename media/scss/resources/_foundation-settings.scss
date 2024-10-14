@@ -65,6 +65,7 @@
 
 // Default colors (demo)
 // For hover values increase or decrease the percentage values (saturation and lightness) as required
+
 $default-global-width: 73.125rem;
 $default-global-lineheight: 1.4;
 $default-global-margin: 2rem;
@@ -567,7 +568,7 @@ $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: $default-body-font-color;
-$form-label-font-size: mixin.rem-calc(15);
+$form-label-font-size: mixin.rem-calc(12);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
@@ -584,7 +585,8 @@ $input-background-focus: $white;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
 $input-border-focus: 2px solid $dark-gray;
-$input-padding: $form-spacing * 0.5;
+//$input-padding: $form-spacing * 0.5;
+$input-padding: $form-spacing * 0.3;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 5px $light-gray;
 $input-cursor-disabled: not-allowed;

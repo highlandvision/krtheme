@@ -2,7 +2,7 @@
   margin-bottom: 0.75rem;
 }
 #kr-confirm .extras .price {
-  font-size: 93%;
+  font-size: 0.8rem;
   line-height: 1.3;
   margin-top: 1px;
 }
@@ -19,62 +19,75 @@
 #kr-confirm #kr-form-confirm .callout.noborder {
   border: none;
 }
-
-#kr-totals {
-  margin: 0 0 2rem;
-  padding: 1rem 0.5rem;
-  background: var(--primary-color);
-  text-align: center;
-  color: hsl(0, 0%, 100%);
-}
-@media print, screen and (min-width: 64em) {
-  #kr-totals {
-    padding: 1rem;
-  }
-}
-#kr-totals .total-text {
-  font-size: 1.4rem;
-}
-#kr-totals .hilite-total {
-  font-size: 2rem;
-  color: var(--secondary-color);
-}
-#kr-totals .total-summary {
-  font-size: 0.8rem;
+#kr-confirm .button {
   margin-bottom: 1rem;
 }
+
+#kr-totals {
+  color: var(--primary-color);
+  margin: 0 auto 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+#kr-totals p {
+  color: var(--body-color);
+}
+#kr-totals .total-text {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+#kr-totals .hilite-total {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+#kr-totals .total-summary {
+  margin: 0.5rem 0;
+}
 #kr-totals .total-summary button {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+#kr-totals .total-summary p {
+  font-size: 0.8rem;
 }
 #kr-totals .payment-info {
-  min-height: 150px;
-  padding-top: 0.5rem;
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: 0;
 }
 #kr-totals .payment-info #deposit-date,
 #kr-totals .payment-info #balance-date {
+  font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 #kr-totals .payment-info #deposit {
-  color: var(--secondary-color);
   font-size: 1.8rem;
 }
 #kr-totals .payment-info #balance {
-  color: var(--secondary-color);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
 #kr-totals .payment-info .security {
-  padding-bottom: 0.3rem;
-  color: var(--secondary-color);
+  padding: 0.5rem 0.3rem 0.3rem;
+}
+#kr-totals .payment-info .security h6 {
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+#kr-totals .payment-info .security p {
+  color: var(--body-color);
+  font-size: 13px;
+  padding: 0 0.5rem;
 }
 
 #kr-guest-totals {
-  padding: 1rem 0.5rem;
-  font-size: 0.9rem;
-  background: var(--body-background);
+  background: hsl(0, 0%, 100%);
   color: var(--body-color);
+  font-size: 0.8rem;
   line-height: 1.7;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem;
+  max-width: 380px;
+  padding: 1rem 0.5rem 0;
+  text-align: center;
 }
 
 #kr-payment #kr-gateways {
@@ -328,7 +341,7 @@ span.jq-dte span.jq-dte-errorbox {
 }
 
 form .fieldset legend {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0 0.3rem 0.3rem;
   color: var(--primary-color);
 }
