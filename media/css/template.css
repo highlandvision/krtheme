@@ -580,13 +580,12 @@ img.responsive {
   border-left: none;
 }
 
-.osmap-items {
-  font-size: 94%;
-}
 .osmap-items h2 {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   margin-bottom: 0.3rem;
-  color: var(--secondary-color);
+}
+.osmap-items ul {
+  font-size: 13px;
 }
 .osmap-items ul.level_1 {
   flex-wrap: wrap;

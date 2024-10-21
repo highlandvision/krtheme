@@ -292,23 +292,24 @@ $input-number-size: 80px;
 	}
 }
 .osmap-items {
-	font-size: 94%;
 	h2 {
-		font-size: 1.1rem !important;
+		font-size: 1rem !important;
 		margin-bottom: 0.3rem;
-		color: var(--secondary-color);
 	}
-	ul.level_1 {
-		flex-wrap: wrap;
-		display: flex;
-		@include mixin.breakpoint(medium) {
-			li {
-				flex: 1 0 50%;
+	ul {
+		font-size: 13px;
+		&.level_1 {
+			flex-wrap: wrap;
+			display: flex;
+			@include mixin.breakpoint(medium) {
+				li {
+					flex: 1 0 50%;
+				}
 			}
-		}
-		@include mixin.breakpoint(large) {
-			li {
-				flex: 0 0 33.3%;
+			@include mixin.breakpoint(large) {
+				li {
+					flex: 0 0 33.3%;
+				}
 			}
 		}
 	}
