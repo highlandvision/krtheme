@@ -41,7 +41,14 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 <!DOCTYPE html>
 <html class="no-js" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-	<script src='https://js.stripe.com/v3/' defer></script>
+	<script>
+        document.documentElement.style.visibility = 'hidden';
+        document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.style.visibility = 'visible';
+        });
+	</script>
+	<script src="https://js.stripe.com/v3/"></script>
+
 	<jdoc:include type="metas"/>
 	<jdoc:include type="styles"/>
 	<jdoc:include type="scripts"/>
