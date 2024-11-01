@@ -1329,7 +1329,7 @@ ul.pagination li.active a {
 }
 
 /* Geriatric calendar */
-#geriatric-key {
+.tabs-content #geriatric-key, .tabs-content .calendar-month {
   margin: 0 auto;
   text-align: center;
 }
@@ -1364,10 +1364,6 @@ table.legend tr td div.duo {
 }
 
 /* Calendar month */
-.calendar-month {
-  margin: 0 auto;
-  text-align: center;
-}
 .calendar-month table.amonth {
   border: none;
   border-collapse: separate;

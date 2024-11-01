@@ -1,9 +1,11 @@
 @use '../resources/resources' as res;
 
 /* Geriatric calendar */
-#geriatric-key {
-    margin: 0 auto;
-    text-align: center;
+.tabs-content {
+    #geriatric-key, .calendar-month {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 table.legend {
     border: none;
@@ -35,8 +37,6 @@ table.legend {
 }
 /* Calendar month */
 .calendar-month {
-    margin: 0 auto;
-    text-align: center;
     table.amonth {
         border: none;
         border-collapse: separate;

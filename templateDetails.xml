@@ -45,6 +45,7 @@
         <position>destination</position>
         <position>footer-left</position>
         <position>footer-right</position>
+        <position>help</position>
         <position>hero-slider</position>
         <position>hero-search</position>
         <position>hero-sticky</position>

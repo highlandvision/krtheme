@@ -5,6 +5,9 @@
     width: 100%;
     margin-bottom: var(--global-margin);
 }
+.callout .moduletable {
+    margin-bottom: 0;
+}
 #kr-form-mailchimp {
     input[type="text"],
     input[type="email"] {
