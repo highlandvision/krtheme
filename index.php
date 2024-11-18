@@ -30,12 +30,15 @@ if (str_contains($_SERVER['SERVER_NAME'], '.test')) {
 }
 
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+
 $color = $this->params->get('colors', 'colors_default');
 $asset = 'theme.' . $color;
 $wa = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
-$wa->registerAndUseStyle($asset, $color . '.css');
+$wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
+$wa->useStyle('template.user');
+$wa->useScript('template.user');
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +75,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 	<!--	Main content -->
 	<div class="off-canvas-content" data-off-canvas-content>
-<!--		<div id="kr-overlay"></div>-->
+		<div id="kr-overlay"></div>
 		<nav class="nav-section">
 			<!-- hamburger and logo for small / medium -->
 			<div class="title-bar hide-for-large">
@@ -157,17 +160,17 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 
 				<!--main content-->
 				<?php if ($this->countModules('sidebar-left', true) && $this->countModules('sidebar-right', true)): ?>
-					<div id="sidebar-left" class="small-12 medium-4 cell">
+					<div id="sidebar-left" class="small-12 medium-3 cell">
 						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
 					</div>
-					<div class="article small-12 medium-8 large-9 cell">
+					<div class="article small-12 medium-6 cell">
 						<jdoc:include type="component"/>
 						<div style="clear:both;"></div>
 						<?php if ($this->countModules('under-content', true)): ?>
 							<jdoc:include type="modules" name="under-content" style="html5"/>
 						<?php endif; ?>
-					</div
-					<div id="sidebar-right" class="small-12 medium-4 large-3 cell">
+					</div>
+					<div id="sidebar-right" class="small-12 medium-3 cell">
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php elseif ($this->countModules('sidebar-left', true)): ?>

@@ -36,10 +36,16 @@
     },
     {
       "name": "template.user",
-      "description": "Custom user css file.",
+      "description": "Custom user css file",
       "type": "style",
       "uri": "user.css",
       "weight": 500
+    },
+    {
+      "name": "template.user",
+      "description": "Custom user js file",
+      "type": "script",
+      "uri":  "user.js"
     },
     {
       "name": "template.krtheme.site",

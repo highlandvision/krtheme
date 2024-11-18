@@ -10,7 +10,6 @@
     <inheritable>1</inheritable>
     <files>
         <filename>component.php</filename>
-        <filename>error.jpg</filename>
         <filename>error.php</filename>
         <filename>favicon.ico</filename>
         <filename>index.php</filename>

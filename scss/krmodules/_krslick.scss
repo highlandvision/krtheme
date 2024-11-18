@@ -1,0 +1,93 @@
+@use '../resources/resources' as res;
+@use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
+.kr-slick {
+    position: relative;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    &.slick-initialized {
+        opacity: 1;
+    }
+    &:hover {
+        i.slick-nav {
+            opacity: 1;
+        }
+    }
+}
+i.slick-nav {
+    border: 0;
+    cursor: pointer;
+    display: block;
+    font-size: 2.5rem;
+    line-height: 0;
+    opacity: 0.6;
+    outline: 0;
+    position: absolute;
+    top: 48%;
+    z-index: 1;
+    @include mixin.breakpoint(large) {
+        font-size: 2.2rem;
+    }
+    &.fa-solid {
+        color: res.$white;
+    }
+    &.prev {
+        left: 0.5rem;
+    }
+    &.next {
+        right: 0.5rem;
+    }
+}
+.kr-double-arrows {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    margin-top: 1.5rem;
+    width: 4rem;
+    i.slick-nav {
+        font-size: 1.8rem;
+        top: -0.6rem;
+        background: none;
+        padding: 0;
+        opacity: 1;
+        &.prev {
+            left: 0;
+        }
+        &.next {
+            right: 0;
+        }
+        &.fa-solid {
+            color: var(--primary-color);
+        }
+    }
+}
+.slick-disabled {
+    opacity: 0.3 !important;
+}
+.slick-btn {
+    color: res.$white;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 20px 10px;
+    position: absolute;
+    opacity: 0;
+    top: 40%;
+    z-index: 20;
+    &.prev {
+        left: 0;
+    }
+    &.next {
+        right: 0;
+    }
+}
+#kr-property-thumbs {
+    margin: 0 auto;
+    text-align: center;
+    .slick-slide {
+        opacity: 1;
+        &.slick-current {
+            opacity: 0.3;
+        }
+    }
+}
