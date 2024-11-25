@@ -846,7 +846,7 @@ p.readmore a, a.readmore {
 #main #sidebar-left, #main #sidebar-right {
   background: hsl(0, 0%, 94%);
   margin-top: 0;
-  padding: 1rem;
+  padding: 0.8rem;
   text-align: left;
 }
 #main #sidebar-right > div, #main #sidebar-left > div {
@@ -860,7 +860,7 @@ p.readmore a, a.readmore {
   background-color: hsl(0, 0%, 94%);
   display: flex;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 13px;
   list-style: none;
   margin-bottom: 2rem;
   margin-top: 0.5rem;
