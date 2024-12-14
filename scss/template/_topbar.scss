@@ -86,49 +86,47 @@
                             color: var(--topbar-link-active);
                         }
                     }
-                }
-                ul.submenu {
-                    background-color: var(--topbar-background);
-                    height: auto;
-                    margin-top: 0;
-                    z-index: 99;
-                    li {
-                        a {
-                            font-size: 0.9rem;
-                            height: 24px;
-                            line-height: 1px;
-                            margin-top: 0;
-                            padding: 0.9rem 1rem;
-                            width: 190px;
-                            &:hover {
-                                background: var(--topbar-background-active);
-                                color: var(--topbar-link-active);
-                                margin-left: 8px;
-                                padding-left: 8px;
-                                width: 182px;
-                            }
-                        }
-                    }
-                    &.megamenu.is-dropdown-submenu {
-                        padding: .3rem 0;
-                        width: 390px;
-                        li.is-dropdown-submenu-item {
-                            float: left;
-                            padding-right: 0;
-                            width: 190px;
-                            &:hover {
-                                padding-left: 8px;
-                                margin-left: 8px;
-                                width: 182px;
-                            }
+                    ul.submenu {
+                        background-color: var(--topbar-background);
+                        height: auto;
+                        margin-top: 0;
+                        padding: 0.5rem 0;
+                        z-index: 99;
+                        li {
                             a {
+                                font-size: 0.9rem;
+                                height: 24px;
                                 line-height: 1px;
-                                padding-right: 0;
+                                margin-top: 0;
+                                padding: 0.9rem 1rem;
+                                text-align: left;
+                                width: 190px;
                                 &:hover {
                                     background: var(--topbar-background-active);
                                     color: var(--topbar-link-active);
-                                    margin-left: -8px;
+                                }
+                            }
+                        }
+                        &.megamenu.is-dropdown-submenu {
+                            padding: 0.5rem 0;
+                            width: 390px;
+                            li.is-dropdown-submenu-item {
+                                float: left;
+                                padding-right: 0;
+                                width: 190px;
+                                &:hover {
                                     padding-left: 8px;
+                                    margin-left: 8px;
+                                    width: 182px;
+                                }
+                                a {
+                                    line-height: 1px;
+                                    padding-right: 0;
+                                    text-align: left;
+                                    &:hover {
+                                        margin-left: -8px;
+                                        padding-left: 8px;
+                                    }
                                 }
                             }
                         }
