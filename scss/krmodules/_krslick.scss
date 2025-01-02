@@ -19,6 +19,9 @@
             margin: 0 5px;
         }
     }
+    div {
+        transition: none;
+    }
 }
 i.slick-nav {
     border: 0;
@@ -52,7 +55,7 @@ i.slick-nav {
     width: 4rem;
     i.slick-nav {
         font-size: 1.8rem;
-        top: -0.6rem;
+        top: -0.4rem;
         background: none;
         padding: 0;
         opacity: 1;
@@ -74,9 +77,9 @@ i.slick-nav {
     color: res.$white;
     cursor: pointer;
     font-size: 2rem;
-    padding: 20px 10px;
+    padding: 0.25rem 0.625rem;
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     top: 40%;
     z-index: 20;
     &.prev {
@@ -84,15 +87,5 @@ i.slick-nav {
     }
     &.next {
         right: 0;
-    }
-}
-#kr-property-thumbs {
-    margin: 0 auto;
-    text-align: center;
-    .slick-slide {
-        opacity: 1;
-        &.slick-current {
-            opacity: 0.3;
-        }
     }
 }
