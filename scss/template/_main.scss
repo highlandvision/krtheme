@@ -6,9 +6,7 @@
 		display: block;
 	}
 	#sidebar-left, #sidebar-right  {
-		background: res.$light-gray;
 		margin-top: 0;
-		padding: 0.8rem;
 		text-align: left;
 	}
 	#sidebar-right > div, #sidebar-left > div {
@@ -22,7 +20,7 @@
 	background-color: res.$light-gray;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 13px;
+	font-size: 0.85rem;
 	list-style: none;
 	margin-bottom: 2rem;
 	margin-top: 0.5rem;

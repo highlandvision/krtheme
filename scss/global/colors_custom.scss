@@ -2,6 +2,7 @@
 @import '../resources/resources';
 
 :root {
+    --global-font-size: #{$custom-global-font-size};
     --global-width: #{$custom-global-width};
     --global-lineheight: #{$custom-global-lineheight};
     --global-margin: #{$custom-global-margin};
@@ -37,7 +38,6 @@
     --large-h3-font-size: #{$custom-large-h3-font-size};
     --large-h4-font-size: #{$custom-large-h4-font-size};
     --large-h5-font-size: #{$custom-large-h5-font-size};
-    --paragraph-font-size: #{$custom-paragraph-font-size};
     --small-font-size: #{$custom-small-font-size};
     --topbar-background-top: #{$custom-topbar-background};
     --topbar-background: #{$custom-topbar-background};

@@ -1,60 +1,152 @@
 @use '../resources/resources' as res;
 @use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
-.card {
-    &:hover {
-        .slick-btn {
-            opacity: 0.9;
+#kr-grid {
+    .card {
+        &:hover {
+            .slick-btn {
+                opacity: 0.9;
+            }
         }
-        box-shadow: inset 1px 0 1px 0 rgba(0, 0, 0, 0.1), 2px 0 2px -2px rgba(0, 0, 0, 0.3), 0 5px 3px -3px rgba(119, 119, 119, 0.6);
+        .card-section {
+            padding: 1rem 0.5rem;
+            h3 {
+                color: var(--primary-color);
+                font-size: 21px;
+                margin-bottom: 0.5rem;
+            }
+            .geo {
+                color: var(--body-font-color) !important;
+                margin-bottom: 0.2rem;
+            }
+            .info {
+                color: var(--body-font-color) !important;
+                margin-bottom: 1rem;
+            }
+            .amenities {
+                flex: 1 1 auto;
+                margin-top: 1rem;
+            }
+        }
     }
-    .card-section {
-        h2, h3 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-            padding-top: 1rem;
-            @include mixin.breakpoint(medium) {
-                padding-top: 0.2rem;
+}
+#kr-list {
+    .card {
+        position: relative;
+        .card-section {
+            border: none;
+            padding: 0.5rem;
+            @include mixin.breakpoint(large) {
+                padding: 0.5rem 1rem;
+            }
+            h3 {
+                margin-bottom: 0.2rem;
+            }
+            .geo {
+                color: var(--body-font-color);
+                font-size: 1rem;
+                margin-bottom: 0.75rem;
+            }
+            .info {
+                .ptype {
+                    color: res.$black;
+                    font-size: 0.9375rem;
+                    margin-bottom: 0.2rem;
+                    @include mixin.breakpoint(medium) {
+                        font-size: 1rem;
+                    }
+                }
+                .bullets {
+                    color: var(--body-font-color);
+                    font-size: 0.9375rem;
+                    line-height: 1.4rem;
+                    margin-bottom: 1rem;
+                    @include mixin.breakpoint(medium) {
+                        font-size: 1rem;
+                    }
+                    i {
+                        color: var(--primary-color);
+                        font-size: 0.25rem;
+                        height: 0.1rem;
+                        margin: 0 0.2rem;
+                        vertical-align: middle;
+                    }
+                    span {
+                        margin-right: 1.5rem;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .discount {
+                color: res.$black;
+                font-size: 14px;
+                margin-bottom: 0.5rem;
+                margin-top: 1rem;
+                padding: 0.2rem 0.5rem;
             }
         }
-        h3.tagline {
-            color: var(--accent-color);
-        }
-        .info {
-            font-size: 0.8rem;
-            color: var(--body-color);
-        }
-        .amenities {
-            margin: 0.5rem 0;
-            .badge {
-                border-radius: 40px;
-                background: res.$white;
-                color: var(--body-color);
-                font-size: 11px;
-                height: 18px;
-                margin-right: 5px;
-                padding: .1rem .3rem;
-                white-space: nowrap;
-                width: auto;
+        a.rates-section {
+            background: #e5e5e5;
+            border-left: 1px solid res.$white;
+            display: block;
+            height: 100%;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            transition: background-color 1000ms linear;
+            width: 100%;
+            .pricing {
+                color: var(--body-font-color);
+                display: block;
+                font-size: 1rem;
+                padding: 0.5rem 0.5rem 0;
+                text-align: center;
+                @include mixin.breakpoint(medium) {
+                    font-size: 1.1rem;
+                }
+                @include mixin.breakpoint(medium) {
+                    padding: 2rem 0.5rem 0;
+                }
+                .heading {
+                    color: var(--primary-color);
+                    font-size: 1rem;
+                    margin-bottom: 0.75rem;
+                }
+                .rate {
+                    color: var(--primary-color);
+                    font-size: 1.3rem;
+                    margin-bottom: 0.5rem;
+                }
+                .discount {
+                    color: var(--alert-color);
+                    font-size: 1.1rem;
+                }
+                .summary {
+                    font-size: 1rem;
+                    margin-top: 0.5rem;
+                    padding: 0 0.5rem;
+                }
             }
-        }
-        .rating {
-            div {
-                background-color: var(--accent-color);
-                width: 60px;
-                height: 30px;
-                border-radius: 40px;
-                color: white;
-                font-size: 1.6rem;
-                p {
-                    text-align: center;
-                    padding: 3px;
+            .view {
+                background: var(--primary-color);
+                bottom: 0;
+                color: res.$white;
+                display: block;
+                font-size: 1rem;
+                height: 3rem;
+                margin: 0 auto;
+                padding-top: 0.6rem;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                @include mixin.breakpoint(medium) {
                     font-size: 1rem;
                 }
-                .fa-star {
-                    color: #f0c230;
-                }
             }
+        }
+        :hover {
+            filter: brightness(98%);
+            cursor: pointer;
         }
     }
 }

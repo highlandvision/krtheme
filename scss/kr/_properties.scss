@@ -5,18 +5,27 @@
     margin-bottom: 1rem;
 }
 .kr-searchbar {
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    .button-group {
+        margin-bottom: 0;
+    }
     .button {
         &.is-active {
-            background: var(--primary-color-hover) !important;
+            background: var(--secondary-color-hover) !important;
             cursor: default;
         }
         i {
             color: res.$white;
         }
+        span {
+            font-size: 1rem;
+        }
     }
-    .button-group {
-        margin-bottom: 0;
+    a.button {
+        cursor: pointer;
+        padding-top: 0;
+        opacity: 1;
     }
 }
 .kr-mobilebar {
@@ -37,14 +46,16 @@
     }
 }
 .kr-properties {
-    min-height: 400px;
-    #kr-properties-data,
-    #kr-properties-data-off-canvas {
-        margin-bottom: res.$global-margin;
-        min-height: 387px;
-        position: relative;
+    .kr-grid {
+        min-height: 400px;
+        #kr-properties-data,
+        #kr-properties-data-off-canvas {
+            margin-bottom: res.$global-margin;
+            min-height: 387px;
+            position: relative;
+        }
     }
-    .kr-list-property {
+    .kr-list {
         position: relative;
     }
 }
@@ -81,8 +92,8 @@
         }
         li {
             border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
-            height: 2.2rem;
-            line-height: 1.9rem;
+            height: 2.3rem;
+            line-height: 2rem;
             padding-left: 1rem;
             &.disabled {
                 cursor: default;
@@ -94,9 +105,7 @@
             &.head {
                 background: var(--accent-color);
                 color: res.$white;
-                font-size: 0.8rem;
-                height: 2rem;
-                line-height: 2rem;
+                font-size: 0.9rem;
                 margin-bottom: 0;
                 padding: 0 0 0 1rem;
                 text-align: left;
@@ -119,8 +128,8 @@
             label.radiolabel,
             label.checklabel {
                 color: res.$white;
-                font-size: 0.8rem;
-                font-weight: normal;
+                font-size: 0.9rem;
+                font-weight: 400;
                 margin-left: 0;
                 padding-top: 0.1rem;
                 vertical-align: middle;

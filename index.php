@@ -29,11 +29,14 @@ if (str_contains($_SERVER['SERVER_NAME'], '.test')) {
 	$live = false;
 }
 
+$view     = Factory::getApplication()->getInput()->get('view', '');
+$property = $view == 'property';
+
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 
 $color = $this->params->get('colors', 'colors_default');
 $asset = 'theme.' . $color;
-$wa = $this->getWebAssetManager();
+$wa    = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
 $wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
@@ -46,11 +49,15 @@ $wa->useScript('template.user');
 <head>
 	<script>
         document.documentElement.style.visibility = 'hidden';
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             document.documentElement.style.visibility = 'visible';
         });
 	</script>
 	<script src="https://js.stripe.com/v3/"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 	<jdoc:include type="metas"/>
 	<jdoc:include type="styles"/>
@@ -60,17 +67,17 @@ $wa->useScript('template.user');
 <body>
 <div class="off-canvas-wrapper">
 	<div class="off-canvas position-left kr-offcanvas" id="kr-offcanvas-left-menu" data-off-canvas
-	     data-transition="overlap">
+	     data-transition="overlap" data-content-scroll="false" data-force-to="true">
 		<button class="close-button" aria-label="Close menu" type="button" data-close>
 			<i class='fa-solid fa-close' aria-hidden="true"></i>
 		</button>
 		<jdoc:include type="modules" name="menu-mobile"/>
 	</div>
 	<div class="off-canvas position-left kr-offcanvas kr-sortby" id="kr-offcanvas-properties-sortby"
-	     data-off-canvas data-transition="overlap">
+	     data-off-canvas data-transition="overlap" data-content-scroll="false">
 	</div>
 	<div class="off-canvas position-right kr-offcanvas kr-filters" id="kr-offcanvas-properties-filter"
-	     data-off-canvas data-transition="overlap">
+	     data-off-canvas data-transition="overlap" data-content-scroll="false">
 	</div>
 
 	<!--	Main content -->
@@ -78,15 +85,17 @@ $wa->useScript('template.user');
 		<div id="kr-overlay"></div>
 		<nav class="nav-section">
 			<!-- hamburger and logo for small / medium -->
-			<div class="title-bar hide-for-large">
+			<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="xlarge">
 				<!-- top bar hamburger for off canvas left menu link and logo-->
 				<div class="title-bar-left">
 					<button type="button" class="menu-icon" aria-label="Toggle menu"
 					        data-toggle="kr-offcanvas-left-menu">
 					</button>
-					<button type="button" class="search-icon hide-for-large" aria-label="Toggle search"
-					        data-toggle="kr-offcanvas-top-search">
-					</button>
+					<?php if (!$homepage && !$property): ?>
+						<button type="button" class="search-icon" aria-label="Toggle search"
+						        data-toggle="kr-offcanvas-top-search">
+						</button>
+					<?php endif; ?>
 				</div>
 				<div class="title-bar-title text-right">
 					<div class="logo-image">
@@ -96,19 +105,19 @@ $wa->useScript('template.user');
 					</div>
 				</div>
 			</div>
-			<div id="userbar" class="show-for-large">
+
+			<div id="userbar" class="show-for-xlarge">
 				<jdoc:include type="modules" name="userbar" style="html5"/>
 			</div>
-			<div id="topbar" class="show-for-large">
-				<div class="large-3 cell topbar-left">
-					<a href="/" title="<?php echo $sitename; ?>">
-						<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
-					</a>
-				</div>
-				<div class="large-8 cell topbar-right">
-					<jdoc:include type="modules" name="topbar-right" style="html5"/>
-				</div>
-				<div class="large-1 cell topbar-autosearch">
+
+			<div class="top-bar stacked-for-medium" id="responsive-menu">
+				<div class="top-bar-left">
+					<div class="logo">
+						<a href="/" title="<?php echo $sitename; ?>">
+							<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename; ?>">
+						</a>
+					</div>
+					<jdoc:include type="modules" name="menu" style="none"/>
 					<jdoc:include type="modules" name="autosearch"/>
 				</div>
 			</div>
@@ -116,12 +125,12 @@ $wa->useScript('template.user');
 
 		<?php if ($this->countModules('hero-sticky', true)): ?>
 			<div id="kr-hero" class="top">
-				<div class="off-canvas position-top" id="kr-offcanvas-top-search" data-off-canvas
-				     data-options="inCanvasOn:large;" data-transition="overlap" data-content-scroll="false">
+				<div class="off-canvas position-top kr-offcanvas kr-search" id="kr-offcanvas-top-search"
+				     data-off-canvas data-options="inCanvasOn:large;" data-transition="overlap">
 					<div data-sticky-container>
 						<div data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="topbar:bottom"
 						     data-check-every="-1">
-								<jdoc:include type="modules" name="hero-sticky" style="html5"/>
+							<jdoc:include type="modules" name="hero-sticky" style="html5"/>
 						</div>
 					</div>
 				</div>
@@ -174,9 +183,17 @@ $wa->useScript('template.user');
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php elseif ($this->countModules('sidebar-left', true)): ?>
-					<div id="sidebar-left" class="small-12 medium-4 large-3 collapse cell">
+					<div id="sidebar-left" class="small-12 medium-3 cell">
 						<jdoc:include type="modules" name="sidebar-left" style="html5"/>
 					</div>
+					<div class="article small-12 medium-9 cell">
+						<jdoc:include type="component"/>
+						<div style="clear:both;"></div>
+						<!--						--><?php //if ($this->countModules('under-content', true)): ?>
+						<!--							<jdoc:include type="modules" name="under-content" style="html5"/>-->
+						<!--						--><?php //endif; ?>
+					</div>
+				<?php elseif ($this->countModules('sidebar-right')): ?>
 					<div class="article small-12 medium-8 cell">
 						<jdoc:include type="component"/>
 						<div style="clear:both;"></div>
@@ -184,15 +201,7 @@ $wa->useScript('template.user');
 							<jdoc:include type="modules" name="under-content" style="html5"/>
 						<?php endif; ?>
 					</div>
-				<?php elseif ($this->countModules('sidebar-right')): ?>
-					<div class="article small-12 medium-8 large-9 cell">
-						<jdoc:include type="component"/>
-						<div style="clear:both;"></div>
-						<?php if ($this->countModules('under-content', true)): ?>
-							<jdoc:include type="modules" name="under-content" style="html5"/>
-						<?php endif; ?>
-					</div>
-					<div id="sidebar-right" class="small-12 medium-4 large-3 cell text-center">
+					<div id="sidebar-right" class="small-12 medium-4 collapse cell">
 						<jdoc:include type="modules" name="sidebar-right" style="html5"/>
 					</div>
 				<?php else: ?>
@@ -236,17 +245,24 @@ $wa->useScript('template.user');
 			<div class="middle" data-equalizer data-equalize-on="large">
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x text-center large-text-left">
-						<div class="small-12 large-4 cell border" data-equalizer-watch>
+						<div class="show-for-large large-3 cell border" data-equalizer-watch>
 							<?php if ($this->countModules('bottom-left', true)): ?>
 								<jdoc:include type="modules" name="bottom-left" style="html5"/>
 							<?php endif; ?>
 						</div>
-						<div class="small-12 large-4 cell border" data-equalizer-watch>
-							<?php if ($this->countModules('bottom-mid', true)): ?>
-								<jdoc:include type="modules" name="bottom-mid" style="html5"/>
+						<div class="show-for-large large-3 cell border" data-equalizer-watch>
+							<?php if ($this->countModules('bottom-mid-left', true)): ?>
+								<jdoc:include type="modules" name="bottom-mid-left" style="html5"/>
 							<?php endif; ?>
 						</div>
-						<div class="small-12 text-center large-4 large-text-left cell border" data-equalizer-watch>
+						<div class="small-12 medium-6 large-3 large-text-left large-offset-0 cell
+						border" data-equalizer-watch>
+							<?php if ($this->countModules('bottom-mid-right', true)): ?>
+								<jdoc:include type="modules" name="bottom-mid-right" style="html5"/>
+							<?php endif; ?>
+						</div>
+						<div class="show-for-medium medium-4 large-3 large-text-left cell border end"
+						     data-equalizer-watch>
 							<?php if ($this->countModules('bottom-right', true)): ?>
 								<jdoc:include type="modules" name="bottom-right" style="html5"/>
 							<?php endif; ?>
@@ -273,7 +289,6 @@ $wa->useScript('template.user');
 			</div>
 		</section>
 		<!--//end footer-->
-		<div id="kr-overlay"></div>
 	</div>
 
 	<jdoc:include type="modules" name="debug" style="none"/>

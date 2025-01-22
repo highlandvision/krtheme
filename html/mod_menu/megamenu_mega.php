@@ -35,7 +35,6 @@ else {
 }
 ?>
 
-</ul></div>
 <div class="show-for-large large-6 cell clearfix">
 	<a href="<?php echo $plink; ?>" title="<?php echo strip_tags($headline); ?>">
 		<?php echo $linktype; ?><br>

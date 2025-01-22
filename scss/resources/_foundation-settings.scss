@@ -66,131 +66,129 @@
 // Default colors (demo)
 // For hover values increase or decrease the percentage values (saturation and lightness) as required
 
-$default-global-font-size: 90%;
-$default-global-width: 73.125rem;
-$default-global-lineheight: 1.4;
-$default-global-margin: 2rem;
-$default-global-padding: 2rem;
-$default-body-background: hsl(0, 0%, 100%);
-$default-body-font-family: Arial, sans-serif;
-$default-body-font-color: hsl(0, 0%, 27%);
-$default-primary-color: hsl(208, 100%, 16%);
-$default-primary-color-hover: hsl(208, 100%, 32%);
-$default-secondary-color: hsl(286, 24%, 58%);
-$default-secondary-color-hover: hsl(286, 24%, 44%);
-$default-accent-color: hsl(208, 100%, 37%);
-$default-accent-color-hover: hsl(208, 100%, 47%);
-$default-alert-color: hsl(0, 100%, 33%);
-$default-alert-color-hover: hsl(0, 100%, 45%);
-$default-success-color: hsl(128, 29%, 70%);
-$default-success-color-hover: hsl(128, 29%, 60%);
-$default-warning-color: hsl(24, 100%, 56%);
-$default-warning-color-hover: hsl(24, 100%, 66%);
-$default-custom-color: hsl(215, 54%, 36%);
-$default-custom-color-hover: hsl(215, 54%, 48%);
-$default-favorite: hsl(338, 87%, 55%);
-$default-header-font-family: Tahoma, Arial, sans-serif;
-$default-header-color: hsl(208, 100%, 16%);
-$default-header-lineheight: 1.3;
-$default-medium-h1-font-size: 28px;
-$default-medium-h2-font-size: 22px;
-$default-medium-h3-font-size: 20px;
-$default-medium-h4-font-size: 18px;
-$default-medium-h5-font-size: 16px;
-$default-large-h1-font-size: 34px;
-$default-large-h2-font-size: 24px;
-$default-large-h3-font-size: 22px;
-$default-large-h4-font-size: 18px;
-$default-large-h5-font-size: 17px;
-$default-paragraph-font-size: 16px;
-$default-small-font-size: 14px;
-$default-topbar-background-top: hsl(202, 85%, 92%);
-$default-topbar-background: hsl(208, 100%, 16%);
-$default-topbar-submenu-background: hsl(207, 74%, 42%);
-$default-topbar-link: hsl(0, 0%, 100%);
-$default-topbar-link-active: hsl(0, 0%, 100%);
-$default-topbar-background-active: hsl(207, 100%, 37%);
-$default-footer-background-top: hsl(202, 85%, 92%);
-$default-footer-background: hsl(208, 100%, 16%);
-$default-footer-icon: hsl(202, 85%, 92%);
-$default-footer-link: hsl(0, 0%, 96%);
-$default-footer-link-hover: hsl(0, 0%, 48%);
+$default-global-font-size: 16px !default;
+$default-global-width: 73.125rem !default;
+$default-global-lineheight: 1.5 !default;
+$default-global-margin: 2rem !default;
+$default-global-padding: 1rem !default;
+$default-body-background: hsl(0, 0%, 100%) !default;
+$default-body-font-family: "Open Sans", Arial, sans-serif !default;
+$default-body-font-color: hsl(0, 0%, 27%) !default;
+$default-primary-color: hsl(208.39, 100%, 21.96%) !default;
+$default-primary-color-hover: hsl(208, 100%, 32%) !default;
+$default-secondary-color: hsl(286, 24%, 58%) !default;
+$default-secondary-color-hover: hsl(286, 24%, 44%) !default;
+$default-accent-color: hsl(208, 100%, 37%) !default;
+$default-accent-color-hover: hsl(208, 100%, 47%) !default;
+$default-alert-color: hsl(0, 100%, 33%) !default;
+$default-alert-color-hover: hsl(0, 100%, 45%) !default;
+$default-success-color: hsl(128, 29%, 70%) !default;
+$default-success-color-hover: hsl(128, 29%, 60%) !default;
+$default-warning-color: hsl(24, 100%, 56%) !default;
+$default-warning-color-hover: hsl(24, 100%, 66%) !default;
+$default-custom-color: hsl(215, 54%, 36%) !default;
+$default-custom-color-hover: hsl(215, 54%, 48%) !default;
+$default-favorite: hsl(338, 87%, 55%) !default;
+$default-header-font-family: "Open Sans", Arial, sans-serif !default;
+$default-header-color: hsl(208.39, 100%, 21.96%) !default;
+$default-header-lineheight: 1.5 !default;
+$default-medium-h1-font-size: 30px !default;
+$default-medium-h2-font-size: 25px !default;
+$default-medium-h3-font-size: 22px !default;
+$default-medium-h4-font-size: 18px !default;
+$default-medium-h5-font-size: 16px !default;
+$default-large-h1-font-size: 32px !default;
+$default-large-h2-font-size: 27px !default;
+$default-large-h3-font-size: 25px !default;
+$default-large-h4-font-size: 20px !default;
+$default-large-h5-font-size: 18px !default;
+$default-small-font-size: 14px !default;
+$default-topbar-background-top: hsl(202, 85%, 92%) !default;
+$default-topbar-background: hsl(208.39, 100%, 21.96%) !default;
+$default-topbar-submenu-background: hsl(207, 74%, 42%) !default;
+$default-topbar-link: hsl(0, 0%, 100%) !default;
+$default-topbar-link-active: hsl(0, 0%, 100%) !default;
+$default-topbar-background-active: hsl(207, 100%, 37%) !default;
+$default-footer-background-top: hsl(202, 85%, 92%) !default;
+$default-footer-background: hsl(208.39, 100%, 21.96%) !default;
+$default-footer-icon: hsl(202, 85%, 92%) !default;
+$default-footer-link: hsl(0, 0%, 96%) !default;
+$default-footer-link-hover: hsl(0, 0%, 48%) !default;
 // Use hex do not include fade
-$default-callout-background-color: #dfdfdf;
+$default-callout-background-color: #dfdfdf !default;
 
 // Custom colors  (alternative)
-$custom-global-font-size: 100%;
-$custom-global-width: 73.125rem;
-$custom-global-lineheight: 1.5;
-$custom-global-margin: 2rem;
-$custom-global-padding: 2rem;
-$custom-body-background: hsl(0, 0%, 100%);
-$custom-body-font-family: Arial, sans-serif;
-$custom-body-font-color: hsl(0, 0%, 27%);
-$custom-primary-color: hsl(208, 100%, 22%);
-$custom-primary-color-hover: hsl(208, 100%, 32%);
-$custom-secondary-color: hsl(46, 100%, 34%);
-$custom-secondary-color-hover: hsl(46, 100%, 44%);
-$custom-accent-color: hsl(208, 50%, 42%);
-$custom-accent-color-hover: hsl(208, 50%, 42%);
-$custom-alert-color: hsl(0, 100%, 33%);
-$custom-alert-color-hover: hsl(0, 100%, 43%);
-$custom-success-color: hsl(128, 29%, 70%);
-$custom-success-color-hover: hsl(128, 19%, 60%);
-$custom-warning-color: hsl(24, 100%, 56%);
-$custom-warning-color-hover: hsl(24, 90%, 46%);
-$custom-custom-color: hsl(215, 54%, 36%);
-$custom-custom-color-hover: hsl(215, 54%, 48%);
-$custom-favorite: hsl(338, 87%, 55%);
-$custom-header-font-family: Tahoma, Arial, sans-serif;
-$custom-header-color: hsl(208, 100%, 22%);
-$custom-header-lineheight: 1.3;
-$custom-medium-h1-font-size: 28px;
-$custom-medium-h2-font-size: 22px;
-$custom-medium-h3-font-size: 20px;
-$custom-medium-h4-font-size: 18px;
-$custom-medium-h5-font-size: 16px;
-$custom-large-h1-font-size: 34px;
-$custom-large-h2-font-size: 24px;
-$custom-large-h3-font-size: 22px;
-$custom-large-h4-font-size: 18px;
-$custom-large-h5-font-size: 17px;
-$custom-paragraph-font-size: 16px;
-$custom-small-font-size: 14px;
-$custom-topbar-background-top: hsl(208, 100%, 22%);
-$custom-topbar-background: hsl(208, 100%, 22%);
-$custom-topbar-submenu-background: hsl(207, 74%, 42%);
-$custom-topbar-link: hsl(0, 0%, 100%);
-$custom-topbar-link-active: hsl(0, 0%, 86%);
-$custom-topbar-background-active: hsl(207, 74%, 42%);
-$custom-footer-background-top: hsl(46, 100%, 34%);
-$custom-footer-background: hsl(208, 100%, 22%);
-$custom-footer-icon: hsl(46, 100%, 34%);
-$custom-footer-link: hsl(0, 0%, 96%);
-$custom-footer-link-hover: hsl(0, 0%, 48%);
+$custom-global-font-size: 16px !default;
+$custom-global-width: 73.125rem !default;
+$custom-global-lineheight: 1.5 !default;
+$custom-global-margin: 1rem !default;
+$custom-global-padding: rem !default;
+$custom-body-background: hsl(0, 0%, 100%) !default;
+$custom-body-font-family: Arial, sans-serif !default;
+$custom-body-font-color: hsl(0, 0%, 27%) !default;
+$custom-primary-color: hsl(208, 100%, 22%) !default;
+$custom-primary-color-hover: hsl(208, 100%, 32%) !default;
+$custom-secondary-color: hsl(46, 100%, 34%) !default;
+$custom-secondary-color-hover: hsl(46, 100%, 44%) !default;
+$custom-accent-color: hsl(208, 50%, 42%) !default;
+$custom-accent-color-hover: hsl(208, 50%, 42%) !default;
+$custom-alert-color: hsl(0, 100%, 33%) !default;
+$custom-alert-color-hover: hsl(0, 100%, 43%) !default;
+$custom-success-color: hsl(128, 29%, 70%) !default;
+$custom-success-color-hover: hsl(128, 19%, 60%) !default;
+$custom-warning-color: hsl(24, 100%, 56%) !default;
+$custom-warning-color-hover: hsl(24, 90%, 46%) !default;
+$custom-custom-color: hsl(215, 54%, 36%) !default;
+$custom-custom-color-hover: hsl(215, 54%, 48%) !default;
+$custom-favorite: hsl(338, 87%, 55%) !default;
+$custom-header-font-family: Tahoma, Arial, sans-serif !default;
+$custom-header-color: hsl(208, 100%, 22%) !default;
+$custom-header-lineheight: 1.3 !default;
+$custom-medium-h1-font-size: 28px !default;
+$custom-medium-h2-font-size: 24px !default;
+$custom-medium-h3-font-size: 22px !default;
+$custom-medium-h4-font-size: 20px !default;
+$custom-medium-h5-font-size: 18px !default;
+$custom-large-h1-font-size: 34px !default;
+$custom-large-h2-font-size: 28px !default;
+$custom-large-h3-font-size: 25px !default;
+$custom-large-h4-font-size: 22px !default;
+$custom-large-h5-font-size: 19px !default;
+$custom-small-font-size: 90% !default;
+$custom-topbar-background-top: hsl(208, 100%, 22%) !default;
+$custom-topbar-background: hsl(208, 100%, 22%) !default;
+$custom-topbar-submenu-background: hsl(207, 74%, 42%) !default;
+$custom-topbar-link: hsl(0, 0%, 100%) !default;
+$custom-topbar-link-active: hsl(0, 0%, 86%) !default;
+$custom-topbar-background-active: hsl(207, 74%, 42%) !default;
+$custom-footer-background-top: hsl(46, 100%, 34%) !default;
+$custom-footer-background: hsl(208, 100%, 22%) !default;
+$custom-footer-icon: hsl(46, 100%, 34%) !default;
+$custom-footer-link: hsl(0, 0%, 96%) !default;
+$custom-footer-link-hover: hsl(0, 0%, 48%) !default;
 // Use full value colour in hex
-$custom-callout-background-color: #003c70;
+$custom-callout-background-color: #003c70 !default;
 
 // 1. Global
 // ---------
-$global-font-size: 100%;
+$global-font-size: $default-global-font-size;
 $global-width: $default-global-width;
 $global-lineheight: $default-global-lineheight;
 $foundation-palette: (
         primary: $default-primary-color,
         secondary: $default-secondary-color,
-		accent: $default-accent-color,
-		alert: $default-alert-color,
-		success: $default-success-color,
-		warning: $default-warning-color,
-		custom: $default-custom-color
+        accent: $default-accent-color,
+        alert: $default-alert-color,
+        success: $default-success-color,
+        warning: $default-warning-color,
+        custom: $default-custom-color
 );
 $black: hsl(0, 0%, 4%);
 $black-light: hsl(0, 0%, 42%);
 $white: hsl(0, 0%, 100%);
 $light-gray: hsl(0, 0%, 94%);
 $medium-gray: hsl(0, 0%, 79%);
-$dark-gray: hsl(0, 0%, 54%);
+$dark-gray: hsl(0, 0%, 44%);
 $body-background: $default-body-background;
 $body-font-color: $default-body-font-color;
 $body-font-family: $default-body-font-family;
@@ -217,18 +215,18 @@ $print-hrefs: false;
 // 2. Breakpoints
 // --------------
 $breakpoints: (
-		small: 0,
-		medium: 641px,
-		large: 1024px,
-		xlarge: 1200px,
-		xxlarge: 1440px,
+        small: 0,
+        medium: 641px,
+        large: 1024px,
+        xlarge: 1200px,
+        xxlarge: 1440px,
 );
 $breakpoints-hidpi: (
-  hidpi-1: 1,
-  hidpi-1-5: 1.5,
-  hidpi-2: 2,
-  retina: 2,
-  hidpi-3: 3
+        hidpi-1: 1,
+        hidpi-1-5: 1.5,
+        hidpi-2: 2,
+        retina: 2,
+        hidpi-3: 3
 );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large xlarge);
@@ -239,8 +237,8 @@ $breakpoint-classes: (small medium large xlarge);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-		small: 20px,
-		medium: 30px,
+        small: 20px,
+        medium: 30px,
 );
 //$grid-column-align-edge: true;
 $grid-column-align-edge: true;
@@ -249,7 +247,6 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-
 $header-font-family: $default-header-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
@@ -258,35 +255,35 @@ $header-color: $default-header-color;
 $header-lineheight: $default-header-lineheight;
 $header-margin-bottom: 1rem;
 $header-styles: (
-		small: (
-				'h1': ('fs': 24),
-				'h2': ('fs': 20),
-				'h3': ('fs': 19),
-				'h4': ('fs': 18),
-				'h5': ('fs': 17),
-				'h6': ('fs': 16),
-		),
-		medium: (
-                'h1': ('fs': $default-medium-h1-font-size),
-                'h2': ('fs': $default-medium-h2-font-size),
-                'h3': ('fs': $default-medium-h3-font-size),
-                'h4': ('fs': $default-medium-h4-font-size),
-                'h5': ('fs': $default-medium-h5-font-size),
-				'h6': ('fs': 16),
-		),
-		large: (
-                'h1': ('fs': $default-large-h1-font-size),
-                'h2': ('fs': $default-large-h2-font-size),
-                'h3': ('fs': $default-large-h3-font-size),
-                'h4': ('fs': $default-large-h4-font-size),
-                'h5': ('fs': $default-large-h5-font-size),
-				'h6': ('fs': 16),
-				)
+        'small': (
+                'h1': ('fs': 28, 'lh': 1.4, 'mt': 0, 'mb': 16),
+                'h2': ('fs': 24, 'lh': 1.4, 'mt': 0, 'mb': 16),
+                'h3': ('fs': 22, 'lh': 1.4, 'mt': 0, 'mb': 8),
+                'h4': ('fs': 20, 'lh': 1.4, 'mt': 0, 'mb': 8),
+                'h5': ('fs': 19, 'lh': 1.3, 'mt': 0, 'mb': 8),
+                'h6': ('fs': 17, 'lh': 1.3, 'mt': 0, 'mb': 8)
+        ),
+        'medium': (
+                'h1': ('fs': $default-medium-h1-font-size, 'lh': 1.4, 'mt': 0, 'mb': $header-margin-bottom),
+                'h2': ('fs': $default-medium-h2-font-size, 'lh': 1.4, 'mt': 0, 'mb': $header-margin-bottom),
+                'h3': ('fs': $default-medium-h3-font-size, 'lh': 1.4, 'mt': 0, 'mb': 0.5rem),
+                'h4': ('fs': $default-medium-h4-font-size, 'lh': 1.4, 'mt': 0, 'mb': $header-margin-bottom),
+                'h5': ('fs': $default-medium-h5-font-size, 'lh': 1.3, 'mt': 0, 'mb': $header-margin-bottom),
+                'h6': ('fs': 16, 'lh': $header-lineheight, 'mt': 1.3, 'mb': $header-margin-bottom)
+        ),
+        'large': (
+                'h1': ('fs': $default-large-h1-font-size, 'lh': 1.5, 'mt': 0, 'mb': $header-margin-bottom),
+                'h2': ('fs': $default-large-h2-font-size, 'lh': 1.5, 'mt': 0, 'mb': $header-margin-bottom),
+                'h3': ('fs': $default-large-h3-font-size, 'lh': 1.4, 'mt': 0, 'mb': 0.5rem),
+                'h4': ('fs': $default-large-h4-font-size, 'lh': 1.4, 'mt': 0, 'mb': 0.5rem),
+                'h5': ('fs': $default-large-h5-font-size, 'lh': 1.4, 'mt': 0, 'mb': 0.5rem),
+                'h6': ('fs': 16, 'lh': 1.3, 'mt': 0, 'mb': 0.5rem)
+        )
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: $default-small-font-size;
 $header-small-font-color: $dark-gray;
-$paragraph-lineheight: $default-global-lineheight;
+$paragraph-lineheight: 1.4;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
@@ -386,13 +383,13 @@ $accordionmenu-arrow-size: 6px;
 // 9. Badge
 // --------
 
-$badge-background: $default-primary-color;
+$badge-background: $default-accent-color;
 $badge-color: $white;
 $badge-color-alt: $black;
 $badge-palette: $foundation-palette;
-$badge-padding: 0.3em;
+$badge-padding: 0.2em 0.5em;
 $badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+$badge-font-size: 0.85rem;
 
 // 10. Breadcrumbs
 // ---------------
@@ -414,7 +411,7 @@ $badge-font-size: 0.6rem;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 0.6em 1em;
+$button-padding: 0.8em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $default-primary-color;
@@ -425,10 +422,10 @@ $button-radius: $global-radius;
 $button-border: 1px solid transparent;
 $button-hollow-border-width: 1px;
 $button-sizes: (
-		tiny: 0.6rem,
-		small: 0.9rem,
-		default: 0.9rem,
-		large: 1.25rem,
+        tiny: 0.7rem,
+        small: 0.85rem,
+        default: 0.9rem,
+        large: 1.2rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
@@ -454,11 +451,11 @@ $callout-background: $default-callout-background-color;
 $callout-background-fade: 95%;
 //$callout-border: 1px solid darken($callout-background, 90%);
 $callout-border: 1px solid $medium-gray;
-$callout-margin: 0 0 1.5rem 0;
+$callout-margin: 0 0 2rem 0;
 $callout-sizes: (
-		small: 0.5rem,
-		default: 1rem,
-		large: 3rem,
+        small: 0.5rem,
+        default: 1rem,
+        large: 3rem,
 );
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
@@ -485,18 +482,18 @@ $closebutton-position: right top;
 $closebutton-z-index: 10;
 $closebutton-default-size: medium;
 $closebutton-offset-horizontal: (
-		small: 0.66rem,
-		medium: 0.5rem,
-		large: 8px,
+        small: 0.66rem,
+        medium: 0.5rem,
+        large: 8px,
 );
 $closebutton-offset-vertical: (
-		small: 0.33em,
-		medium: 0,
-		large: 0,
+        small: 0.33em,
+        medium: 0,
+        large: 0,
 );
 $closebutton-size: (
-		small: 1.5em,
-		medium: 2em,
+        small: 1.5em,
+        medium: 2em,
 );
 $closebutton-lineheight: 1;
 $closebutton-color: $dark-gray;
@@ -525,9 +522,9 @@ $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: 0;
 $dropdown-sizes: (
-		tiny: 100px,
-		small: 200px,
-		large: 400px,
+        tiny: 100px,
+        small: 200px,
+        large: 400px,
 );
 
 // 18. Dropdown Menu
@@ -537,9 +534,10 @@ $dropdownmenu-arrows: true;
 $dropdownmenu-arrow-color: $white;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
-$dropdownmenu-min-width: 200px;
+//$dropdownmenu-min-width: 200px;
+$dropdownmenu-min-width: 300px;
 $dropdownmenu-background: $default-topbar-background;
-$dropdownmenu-submenu-background: $default-topbar-submenu-background;
+$dropdownmenu-submenu-background: $default-topbar-background;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $default-global-padding;
@@ -558,7 +556,7 @@ $flexbox-responsive-breakpoints: true;
 // ---------
 
 $fieldset-border: none;
-$fieldset-padding: mixin.rem-calc(0);
+$fieldset-padding: mixin.rem-calc(0 6);
 $fieldset-margin: mixin.rem-calc(0);
 $legend-padding: mixin.rem-calc(0 8);
 $form-spacing: mixin.rem-calc(16);
@@ -570,7 +568,7 @@ $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: $default-body-font-color;
-$form-label-font-size: mixin.rem-calc(12);
+$form-label-font-size: mixin.rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
@@ -643,11 +641,11 @@ $menu-icons-back-compat: true;
 // --------------
 
 $offcanvas-sizes: (
-		small: 250px,
-		large: 300px
+        small: 370px,
+        large: 370px
 );
 $offcanvas-vertical-sizes: (
-		small: 250px,
+        small: 310px,
 );
 $offcanvas-background: $white;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
@@ -711,10 +709,10 @@ $progress-radius: $global-radius;
 // -------------------
 
 $prototype-arrow-directions: (
-		down,
-		up,
-		right,
-		left
+        down,
+        up,
+        right,
+        left
 );
 $prototype-arrow-size: 0.4375rem;
 $prototype-arrow-color: $black;
@@ -742,11 +740,11 @@ $prototype-border-color: $medium-gray;
 
 $prototype-display-breakpoints: $global-prototype-breakpoints;
 $prototype-display: (
-		inline,
-		inline-block,
-		block,
-		table,
-		table-cell
+        inline,
+        inline-block,
+        block,
+        table,
+        table-cell
 );
 
 // 34. Prototype Font-Styling
@@ -762,18 +760,18 @@ $prototype-font-bold: $global-weight-bold;
 
 $prototype-list-breakpoints: $global-prototype-breakpoints;
 $prototype-style-type-unordered: (
-		disc,
-		circle,
-		square
+        disc,
+        circle,
+        square
 );
 $prototype-style-type-ordered: (
-		decimal,
-		lower-alpha,
-		lower-latin,
-		lower-roman,
-		upper-alpha,
-		upper-latin,
-		upper-roman
+        decimal,
+        lower-alpha,
+        lower-latin,
+        lower-roman,
+        upper-alpha,
+        upper-latin,
+        upper-roman
 );
 
 // 36. Prototype Overflow
@@ -781,9 +779,9 @@ $prototype-style-type-ordered: (
 
 $prototype-overflow-breakpoints: $global-prototype-breakpoints;
 $prototype-overflow: (
-		visible,
-		hidden,
-		scroll
+        visible,
+        hidden,
+        scroll
 );
 
 // 37. Prototype Position
@@ -791,10 +789,10 @@ $prototype-overflow: (
 
 $prototype-position-breakpoints: $global-prototype-breakpoints;
 $prototype-position: (
-		static,
-		relative,
-		absolute,
-		fixed
+        static,
+        relative,
+        absolute,
+        fixed
 );
 $prototype-position-z-index: 975;
 
@@ -825,14 +823,14 @@ $prototype-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 
 
 $prototype-sizing-breakpoints: $global-prototype-breakpoints;
 $prototype-sizing: (
-		width,
-		height
+        width,
+        height
 );
 $prototype-sizes: (
-		25: 25%,
-		50: 50%,
-		75: 75%,
-		100: 100%
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%
 );
 
 // 42. Prototype Spacing
@@ -846,9 +844,9 @@ $prototype-spacers-count: 3;
 
 $prototype-decoration-breakpoints: $global-prototype-breakpoints;
 $prototype-text-decoration: (
-		overline,
-		underline,
-		line-through,
+        overline,
+        underline,
+        line-through,
 );
 
 // 44. Prototype Text-Transformation
@@ -856,9 +854,9 @@ $prototype-text-decoration: (
 
 $prototype-transformation-breakpoints: $global-prototype-breakpoints;
 $prototype-text-transformation: (
-		lowercase,
-		uppercase,
-		capitalize
+        lowercase,
+        uppercase,
+        capitalize
 );
 
 // 45. Prototype Text-Utilities
@@ -872,8 +870,8 @@ $prototype-text-overflow: ellipsis;
 
 $responsive-embed-margin-bottom: mixin.rem-calc(16);
 $responsive-embed-ratios: (
-		default: 4 by 3,
-		widescreen: 16 by 9,
+        default: 4 by 3,
+        widescreen: 16 by 9,
 );
 
 // 47. Reveal
@@ -952,11 +950,11 @@ $tab-background-active: $medium-gray;
 $tab-active-color: $default-primary-color;
 $tab-item-font-size: mixin.rem-calc(16);
 $tab-item-background-hover: $medium-gray;
-$tab-item-padding: 1rem 0;
+$tab-item-padding: 0.7rem 0;
 $tab-content-background: $white;
 $tab-content-border: $white;
 $tab-content-color: $body-font-color;
-$tab-content-padding: 1.5rem 1rem;
+$tab-content-padding: 1.5rem 0;
 
 // 52. Thumbnail
 // -------------
@@ -1001,8 +999,8 @@ $topbar-padding: 0.5rem 1rem;
 $topbar-background: $default-topbar-background;
 $topbar-submenu-background: $default-topbar-submenu-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
-$topbar-input-width: 300px;
-$topbar-unstack-breakpoint: medium;
+$topbar-input-width: 200px;
+$topbar-unstack-breakpoint: xlarge;
 
 // 56. Xy Grid
 // -----------
@@ -1011,11 +1009,11 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-		small: 20px,
-		medium: 30px,
-		large: 30px,
-		xlarge: 30px,
-		xxlarge: 30px
+        small: 20px,
+        medium: 30px,
+        large: 30px,
+        xlarge: 30px,
+        xxlarge: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;

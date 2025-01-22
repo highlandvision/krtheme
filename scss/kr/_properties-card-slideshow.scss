@@ -31,37 +31,20 @@
     }
     .favspan {
         position: absolute;
-        top: 3%;
-        right: 3%;
+        top: 6px;
+        right: 16px;
         margin: 0;
         width: 2rem;
         height: 2rem;
-        @include mixin.breakpoint(large) {
-            width: 3rem;
-            height: 3rem;
-        }
         .fa-stack {
-            height: 2rem;
-            line-height: 2rem;
-            width: 2rem;
+            line-height: 2.2rem;
             .favicon-base {
                 color: res.$white;
                 font-size: 2rem;
             }
             .favicon-top {
                 color: res.$dark-gray;
-                font-size: 1.3rem;
-            }
-            @include mixin.breakpoint(large) {
-                height: 2.5rem;
-                line-height: 2.5rem;
-                width: 2.5rem;
-                .favicon-base {
-                    font-size: 2.5rem;
-                }
-                .favicon-top {
-                    font-size: 1.8rem;
-                }
+                font-size: 1.6rem;
             }
         }
         .favicon-top.in {
@@ -81,27 +64,28 @@
         }
     }
 }
-.kr-search-pricing {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    .button {
-        font-size: 14px;
-        margin-top: auto;
-        margin-bottom: 0;
-        padding: 0.5rem;
-        text-align: left;
+#kr-grid {
+    .kr-search-pricing {
+        display: flex;
+        flex-direction: row;
         width: 100%;
-        @include mixin.breakpoint(medium) {
-            font-size: 0.8rem;
-        }
-        @include mixin.breakpoint(large) {
-            font-size: 14px;
-        }
-    }
-    .discounts {
-        flex: 0 0 36px;
-        .button {
+        //.button {
+        //    font-size: 0.875rem;
+        //    height: 40px;
+        //    margin-bottom: 0;
+        //    margin-top: auto;
+        //    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        //    text-align: center;
+        //    width: 100%;
+        //    @include mixin.breakpoint(medium) {
+        //        font-size: 0.8rem;
+        //    }
+        //    @include mixin.breakpoint(large) {
+        //        font-size: 0.9rem;
+        //    }
+        //}
+        .discounts {
+            flex: 0 0 36px;
             &.discounts-none {
                 pointer-events: none;
                 width: 100%;
@@ -114,6 +98,21 @@
                 text-align: center;
                 vertical-align: middle;
             }
+            .button {
+                font-size: 0.875rem;
+                height: 40px;
+                margin-bottom: 0;
+                margin-top: auto;
+                padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+                text-align: center;
+                width: 100%;
+                @include mixin.breakpoint(medium) {
+                    font-size: 0.8rem;
+                }
+                @include mixin.breakpoint(large) {
+                    font-size: 0.9rem;
+                }
+            }
         }
         .dropdown-pane {
             background: var(--primary-color);
@@ -122,35 +121,55 @@
             width: auto;
             min-width: 300px;
             max-width: 350px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             padding: 0.5rem 1rem;
             text-align: left;
             line-height: 1.2;
             -webkit-box-shadow: 7px -5px 15px 0px rgba(102, 102, 102, 0.5);
             box-shadow: 7px -5px 15px 0px rgba(102, 102, 102, 0.5);
         }
-    }
-    .price {
-        flex-grow: 1;
-        .button {
-            &.rate {
-                border-right: 1px solid res.$white;
+        .price {
+            flex-grow: 1;
+            a.button.rate {
                 color: res.$white;
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
+                font-size: 1rem;
+                height: 40px;
+                line-height: 40px;
+                margin: 0;
+                padding: 0 0.3rem 1rem 0.5rem;
                 text-align: left;
+                width: 100%;
+                @include mixin.breakpoint(medium) {
+                    font-size: 0.9rem;
+                }
+                @include mixin.breakpoint(large) {
+                    font-size: 1rem;
+                }
             }
         }
     }
     .bookingtype {
         flex: 0 0 120px;
-        &.viewproperty {
+        .button.viewproperty {
+            font-size: 1.1rem;
+            height: 40px;
+            line-height: 22px;
             padding: 0.5rem 0.5rem 0.5rem 1rem;
             text-align: left;
             width: 100%;
-            @include mixin.breakpoint(medium) {
-                display: inline;
+            i {
+                color: res.$white;
+                float: right;
+                font-size: 1.5rem;
+                line-height: 22px;
             }
         }
+    }
+}
+.kr-search-section {
+    .card-section {
+        flex: 1 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }

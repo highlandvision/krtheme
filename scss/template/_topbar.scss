@@ -7,7 +7,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: 'Font Awesome 6 Free', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 900;
     margin-left: .7rem;
     margin-right: .5rem;
@@ -16,20 +16,26 @@
 }
 @include mixin.breakpoint(small) {
     .title-bar {
-        height: 51px;
+        border-bottom: 2px solid res.$white;
+        height: 3.1875rem;
         .logo {
             margin-bottom: 0;
-            max-width: 160px;
-            width: 160px;
+            max-width: 10rem;
+            width: 10rem;
             overflow: visible;
         }
     }
 }
-@include mixin.breakpoint(large) {
+@include mixin.breakpoint(medium) {
+    .title-bar {
+        border-bottom: none;
+    }
+}
+@include mixin.breakpoint(xlarge) {
     #userbar {
         background: var(--topbar-background-top);
-        height: 36px;
-        padding: 6px 0 0;
+        height: 2.25rem;
+        padding-top: 0.375rem;
         width: 100%;
         ul {
             margin-bottom: 0;
@@ -39,8 +45,8 @@
                 a {
                     background: none;
                     color: var(--primary-color);
-                    font-size: 0.9rem;
-                    margin-top: -2px;
+                    font-size: 0.85rem;
+                    margin-top: -0.125rem;
                     padding: 0.5rem;
                     :not(:first-child) {
                         line-height: 1.9;
@@ -52,55 +58,59 @@
             }
         }
     }
-    #topbar {
+    .top-bar {
         background: var(--topbar-background);
-        height: 50px;
+        height: 3.5rem;
         margin-bottom: 0;
+        padding: 0.3rem 0.5rem;
         width: 100%;
-        .logo {
-            left: 1rem;
-            max-height: 50px;
-            margin-top: 0;
-            position: absolute;
-            top: 22px;
-            img {
+        text-align: center;
+        position: relative;
+        .top-bar-left {
+            .logo {
+                left: 5px;
+                top: 0.25rem;
+                max-width: 200px;
                 position: absolute;
-                left: 16px;
+                z-index: 10;
             }
-        }
-        .topbar-right {
-            ul {
-                align-items: center;
-                justify-content: center;
+            ul.center-buttons {
+                display: inline-block;
+            }
+            ul.menu {
                 li {
-//                    padding-right: 1rem;
+                    &.active {
+                        > a {
+                            background: var(--topbar-background-active);
+                        }
+                    }
                     a {
-                        background-color: var(--topbar-background);
                         color: var(--topbar-link);
-                        //font-size: 1rem;
-                        //height: 40px;
-                        //padding-top: 1.3rem;
-                        //text-decoration: none;
+                        font-size: 1rem;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                        text-decoration: none;
                         &:hover {
                             background-color: var(--topbar-background-active);
                             color: var(--topbar-link-active);
+                            height: 100%;
                         }
                     }
                     ul.submenu {
                         background-color: var(--topbar-background);
                         height: auto;
                         margin-top: 0;
+                        width: 14.875rem;
                         padding: 0.5rem 0;
                         z-index: 99;
                         li {
                             a {
-                                font-size: 0.9rem;
-                                height: 24px;
+                                font-size: 1rem;
+                                height: 1.5rem;
                                 line-height: 1px;
                                 margin-top: 0;
-                                padding: 0.9rem 1rem;
+                                padding: 1rem 0.8rem;
                                 text-align: left;
-                                width: 190px;
                                 &:hover {
                                     background: var(--topbar-background-active);
                                     color: var(--topbar-link-active);
@@ -109,25 +119,11 @@
                         }
                         &.megamenu.is-dropdown-submenu {
                             padding: 0.5rem 0;
-                            width: 390px;
+                            width: 30.375rem;
                             li.is-dropdown-submenu-item {
                                 float: left;
                                 padding-right: 0;
-                                width: 190px;
-                                &:hover {
-                                    padding-left: 8px;
-                                    margin-left: 8px;
-                                    width: 182px;
-                                }
-                                a {
-                                    line-height: 1px;
-                                    padding-right: 0;
-                                    text-align: left;
-                                    &:hover {
-                                        margin-left: -8px;
-                                        padding-left: 8px;
-                                    }
-                                }
+                                max-width: 14.875rem;
                             }
                         }
                     }
@@ -139,14 +135,16 @@
 .off-canvas-wrapper {
     ul#offcanvas.nav.vertical {
         background: var(--topbar-background);
+        height: 100%;
         width: 100%;
         li {
+            background: var(--topbar-background);
             padding: 0;
             a {
                 border-bottom: 1px solid var(--primary-color-hover);
                 color: res.$white;
                 display: block;
-                padding: 12px 0 12px 8px;
+                padding: 0.75rem 0 0.75rem 0.5rem;
                 &:hover {
                     background: var(--primary-color-hover);
                     color: res.$light-gray;

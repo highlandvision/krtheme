@@ -14,11 +14,11 @@
 	}
 	.chart {
 		width: 95%;
-		font-size: 0.95rem;
+		font-size: 0.8rem;
 		margin: 5px 0 0;
 		dt {
 			float: left;
-			margin: 3px 0 0 10px;
+			margin: 3px 0 3px 10px;
 			font-weight: 400;
 			color: res.$white;
 		}
@@ -56,7 +56,7 @@
 			background-color: var(--secondary-color);
 			margin: 2px;
 			text-decoration: none;
-			font-size: 16px;
+			font-size: 1rem;
 			line-height: 35px;
 			text-align: center;
 			color: res.$black-light;

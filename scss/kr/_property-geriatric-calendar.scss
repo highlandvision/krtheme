@@ -1,11 +1,17 @@
 @use '../resources/resources' as res;
+@use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 /* Geriatric calendar */
-.tabs-content {
-    #geriatric-key, .calendar-month {
-        margin: 0 auto;
-        text-align: center;
+#geriatric-key, .calendar-month {
+    margin: 0 auto;
+    text-align: center;
+    @include mixin.breakpoint(large) {
+        margin: 0;
+        text-align: left;
     }
+}
+#kr-page-geriatric-calendar {
+    text-align: center;
 }
 table.legend {
     border: none;
@@ -42,7 +48,7 @@ table.legend {
         border-collapse: separate;
         border-spacing: 1px;
         table-layout: fixed;
-        width: 150px;
+        width: 144px;
         padding: 0;
         display: inline-table;
         margin: 0 0 10px;
@@ -52,7 +58,7 @@ table.legend {
             text-align: center;
             font-family: Verdana, Arial, sans-serif;
             color: #444;
-            font-weight: normal;
+            font-weight: 400;
             font-size: 10px;
         }
         tr {
@@ -113,7 +119,7 @@ table.legend {
                     &.nostart {
                         p.day {
                             opacity: 0.4;
-                            font-weight: normal;
+                            font-weight: 400;
                         }
                     }
                     p {

@@ -1,15 +1,8 @@
 @use '../resources/resources' as res;
 @use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
-.intro-image {
-	text-align: center;
-	@include mixin.breakpoint(medium) {
-		float: left;
-		margin-left: 0 !important;
-	}
-}
 p.readmore a, a.readmore {
-	font-size:   .9em;
+	font-size:   0.9rem;
 	line-height: 100%;
 	color:       res.$dark-gray;
 	font-weight: 700;
@@ -17,29 +10,42 @@ p.readmore a, a.readmore {
 #system-message {
 	margin-bottom: 0;
 }
+.blog-items {
+	margin-bottom: 1rem;
+}
 .blog {
 	.grid-x {
 		position:  relative;
 		border:    none;
-		margin:    0 auto 20px;
-		max-width: 303px;
+		margin:    0 auto 1.25rem;
+		max-width: 18.9375rem;
 		@include mixin.breakpoint(medium) {
 			text-align: left;
 			max-width:  100%;
 		}
 	}
 	h4 {
-		padding-bottom: 5px;
+		padding-bottom: 0.3125rem;
 	}
 }
 .item {
 	position: relative;
 }
 .img-fulltext-none img {
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem;
 }
 .item-image {
-	margin: 0.5rem 2rem 2rem;
+	margin: 0.5rem 0 2rem;
+	@include mixin.breakpoint(medium) {
+		margin: 0 2rem 2rem;
+	}
+}
+.intro-image {
+	text-align: center;
+	@include mixin.breakpoint(large) {
+		float: left;
+		margin-left: 0 !important;
+	}
 }
 .visually-hidden, .sr-only,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {

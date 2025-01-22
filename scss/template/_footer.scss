@@ -3,14 +3,16 @@
 
 #footer {
 	position: relative;
-	padding-top: var(--global-padding);
 	.top {
 		position: relative;
 		padding: 1.5rem 0 0;
 		background: var(--footer-background-top);
 	}
 	.moduletable {
-		margin-bottom: 0;
+		margin-bottom: 1rem;
+		@include mixin.breakpoint(medium) {
+			margin-bottom: 0;
+		}
 	}
 	i {
 		color: var(--footer-icon);
@@ -30,8 +32,11 @@
 			text-align: left;
 		}
 		h3 {
+			font-size: 1.5rem;
 			color: var(--footer-background-top);
-			margin-bottom: 0.5rem;
+			@include mixin.breakpoint(large) {
+				font-size: 1.2rem;
+			}
 		}
 		a {
 			color: var(--footer-link);
@@ -82,7 +87,7 @@
 	.bottom {
 		background: res.$light-gray;
 		padding: 1.5rem 0 0;
-		font-size: .8rem;
+		font-size: 0.8rem;
 		position: relative;
 		.moduletable {
 			margin: 0;

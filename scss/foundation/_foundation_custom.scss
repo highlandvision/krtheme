@@ -40,10 +40,10 @@
 //@import 'components/label';
 //@import 'components/progress-bar';
 //@import 'components/slider';
-@import '../../../../node_modules/foundation-sites/scss/components/switch';
-@import '../../../../node_modules/foundation-sites/scss/components/table';
+//@import '../../../../node_modules/foundation-sites/scss/components/switch';
+//@import '../../../../node_modules/foundation-sites/scss/components/table';
 // Basic components
-//@import 'components/badge';
+@import '../../../../node_modules/foundation-sites/scss/components/badge';
 //@import '../../../../../node_modules/foundation-sites/scss/components/breadcrumbs';
 @import '../../../../node_modules/foundation-sites/scss/components/callout';
 @import '../../../../node_modules/foundation-sites/scss/components/card';
@@ -52,10 +52,10 @@
 @import '../../../../node_modules/foundation-sites/scss/components/tooltip';
 
 // Containers
-@import '../../../../node_modules/foundation-sites/scss/components/accordion';
+//@import '../../../../node_modules/foundation-sites/scss/components/accordion';
 @import '../../../../node_modules/foundation-sites/scss/components/media-object';
 //@import 'components/orbit';
-@import '../../../../node_modules/foundation-sites/scss/components/responsive-embed';
+//@import '../../../../node_modules/foundation-sites/scss/components/responsive-embed';
 @import '../../../../node_modules/foundation-sites/scss/components/tabs';
 //@import 'components/thumbnail';
 // Menu-based containers
@@ -111,10 +111,10 @@
 	//@include foundation-label;
 	//@include foundation-progress-bar;
 	//@include foundation-slider;
-	@include foundation-switch;
-	@include foundation-table;
+	//@include foundation-switch;
+	//@include foundation-table;
 	// Basic components
-	//@include foundation-badge;
+	@include foundation-badge;
 	//@include foundation-breadcrumbs;
 	@include foundation-callout;
 	@include foundation-card;
@@ -125,7 +125,7 @@
 	//@include foundation-accordion;
 	@include foundation-media-object;
 	//@include foundation-orbit;
-	@include foundation-responsive-embed;
+	//@include foundation-responsive-embed;
 	@include foundation-tabs;
 	//@include foundation-thumbnail;
 	// Menu-based containers

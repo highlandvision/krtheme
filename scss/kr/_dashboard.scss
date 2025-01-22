@@ -3,11 +3,15 @@
 	.stacked {
 		margin-top: 1.6rem;
 	}
+	ul.download li {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
 }
 #holder input {
 	display: inline;
-	max-width: 78px;
-	margin-right: .4rem;
+	max-width: 4.9rem;
+	margin-right: 0.4rem;
 }
 address {
 	font-style: normal;
@@ -17,5 +21,12 @@ address {
 	margin-bottom: 0;
 }
 .callout.financial {
-	font-size: 13px;
+	font-size: 0.8rem;
+}
+.button-group .button {
+	font-size: 0.9375rem;
+}
+#showgateways {
+	font-size: 1rem;
+	line-height: 1.3;
 }

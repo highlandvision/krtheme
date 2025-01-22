@@ -1,15 +1,6 @@
 @use '../resources/resources' as res;
 @use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
-body {
-    background: var(--body-background);
-    color: var(--body-font-color);
-    font-family: var(--body-font-family), Arial, sans-serif;
-    line-height: var(--global-lineheight);
-    min-width: 380px;
-    position: relative;
-    width: 100%;
-}
 .staticpane {
     overflow-y: scroll;
     position: fixed;
@@ -27,13 +18,12 @@ body {
 .color-accent, .font-contrast {
     color: var(--accent-color);
 }
-.color-body {
-    color: var(--body-color);
+.body-font-color {
+    color: var(--body-font-color) !important;
 }
 .color-custom {
     color: var(--custom-color);
 }
-
 i.solid, i.fab {
     color: var(--primary-color);
 }
@@ -92,52 +82,5 @@ i.solid, i.fab {
     }
     &.warning {
         @include kr-button-hollow(var(--warning-color), var(--warning-color-hover));
-    }
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    color: var(--header-color);
-    font-family: var(--header-font-family);
-    line-height: var(--header-lineheight);
-}
-small {
-    font-size: var(--small-font-size);
-}
-p.small {
-    font-size: var(--small-font-size);
-    line-height: 1.5;
-}
-@media print, screen and (min-width: 40.0625em) {
-    h1, .h1 {
-        font-size: var(--medium-h1-font-size);
-    }
-    h2, .h2 {
-        font-size: var(--medium-h2-font-size);
-    }
-    h3, .h3 {
-        font-size: var(--medium-h3-font-size);
-    }
-    h4, .h4 {
-        font-size: var(--medium-h4-font-size);
-    }
-    h5, .h5 {
-        font-size: var(--medium-h5-font-size);
-    }
-}
-@media print, screen and (min-width: 64em) {
-    h1, .h1 {
-        font-size: var(--large-h1-font-size);
-    }
-    h2, .h2 {
-        font-size: var(--large-h2-font-size);
-    }
-    h3, .h3 {
-        font-size: var(--large-h3-font-size);
-    }
-    h4, .h4 {
-        font-size: var(--large-h4-font-size);
-    }
-    h5, .h5 {
-        font-size: var(--large-h5-font-size);
     }
 }

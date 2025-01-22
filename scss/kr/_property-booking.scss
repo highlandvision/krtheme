@@ -1,7 +1,7 @@
 @use '../resources/resources' as res;
 
 .kr-property-quote {
-	background: res.$medium-gray;
+	background: res.$light-gray;
 	padding: 0.5rem 1rem 0;
 	.heading {
 		margin-bottom: 0;
@@ -9,52 +9,32 @@
 		text-align: center;
 	}
 	.help {
-		font-size: 90%;
 		text-align: center;
 	}
 	#kr-quote-form {
 		padding-bottom: 0.75rem;
 		.cell {
-			padding-bottom: 0.3rem;
+			padding-bottom: 0.5rem;
 		}
 	}
 	.property-book {
 		padding: 0;
 		text-align: center;
-		h4, h6 {
-			margin-bottom: 0;
-			color: var(--body-color);
-		}
-		.total-price {
-			color: var(--primary-color);
-			font-size: 1.8rem;
-		}
 		.discount {
 			color: var(--alert-color);
 			i {
 				color: var(--alert-color);
 			}
 		}
-		.deposit {
-			color: var(--primary-color);
-			font-size: 1.5rem;
-			margin-top: 0.5rem;
-			i {
-				color: var(--primary-color);
-			}
-		}
 		.booknow {
 			margin-top: 1rem;
-			.button {
-				font-size: 1.3rem;
-			}
 		}
 		.booking-summary {
+			font-size: 15px;
 			margin: 0;
-			padding: 0.5rem;
+			padding-bottom: 0.5rem;
 			p {
-				margin-bottom: 0.2rem;
-				font-size: 0.9rem;
+				line-height: 1.6rem;
 			}
 		}
 	}

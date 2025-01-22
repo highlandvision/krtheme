@@ -1,8 +1,9 @@
 :root {
+  --global-font-size: 16px;
   --global-width: 73.125rem;
   --global-lineheight: 1.5;
-  --global-margin: 2rem;
-  --global-padding: 2rem;
+  --global-margin: 1rem;
+  --global-padding: rem;
   --body-background: hsl(0, 0%, 100%);
   --body-font-family: Arial, sans-serif;
   --body-font-color: hsl(0, 0%, 27%);
@@ -25,17 +26,16 @@
   --header-color: hsl(208, 100%, 22%);
   --header-lineheight: 1.3;
   --medium-h1-font-size: 28px;
-  --medium-h2-font-size: 22px;
-  --medium-h3-font-size: 20px;
-  --medium-h4-font-size: 18px;
-  --medium-h5-font-size: 16px;
+  --medium-h2-font-size: 24px;
+  --medium-h3-font-size: 22px;
+  --medium-h4-font-size: 20px;
+  --medium-h5-font-size: 18px;
   --large-h1-font-size: 34px;
-  --large-h2-font-size: 24px;
-  --large-h3-font-size: 22px;
-  --large-h4-font-size: 18px;
-  --large-h5-font-size: 17px;
-  --paragraph-font-size: 16px;
-  --small-font-size: 14px;
+  --large-h2-font-size: 28px;
+  --large-h3-font-size: 25px;
+  --large-h4-font-size: 22px;
+  --large-h5-font-size: 19px;
+  --small-font-size: 90%;
   --topbar-background-top: hsl(208, 100%, 22%);
   --topbar-background: hsl(208, 100%, 22%);
   --topbar-submenu-background: hsl(207, 74%, 42%);

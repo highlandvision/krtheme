@@ -4,22 +4,16 @@
 .kr-property {
 	position: relative;
 	text-align: left;
-	#sidebar-right .h3 {
-		font-size: 1.6rem;
-		line-height: 2rem;
-		font-weight: 400;
-	}
 	.kr-property-header {
-		margin-bottom: var(--global-margin);
+		margin-bottom: 2rem;
 	}
 	a.backlink {
+		background: none;
+		border: 1px solid var(--accent-color);
+		height: 2.3rem;
 		position: absolute;
-		right: 25%;
-		top: -1rem;
-		@include mixin.breakpoint(medium) {
-			top: 0;
-			right: 0;
-		}
+		top: -4.3rem;
+		right: 0;
 		i.solid {
 			color: res.$white;
 		}
@@ -29,6 +23,31 @@
 		color: res.$white;
 		padding: 0.75rem;
 		margin: 0 auto 1.5rem;
+	}
+	.rooms {
+		h6 {
+			margin-bottom: 0.2rem;
+			margin-top: 0.5rem;
+		}
+	}
+	.amenity {
+		p {
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-bottom: 0;
+			@include mixin.breakpoint(large) {
+				i {
+					color: var(--primary-color);
+					font-size: 6px;
+					margin-bottom: 3px;
+					opacity: 0.4;
+					vertical-align: middle;
+				}
+			}
+		}
+		&.room p {
+			font-size: 0.9375rem;
+		}
 	}
 	.heading p {
 		margin-bottom: 1rem;
@@ -41,58 +60,32 @@
 			width: 25%;
 			color: res.$dark-gray;
 			font-weight: 700;
-			font-family: Arial, sans-serif;
 		}
 	}
 	.page {
+		margin-bottom: 2rem;
 		.header {
-			background: res.$white;
+			background: hsl(0, 0%, 94%);
 			border-bottom: 1px solid res.$medium-gray;
 			border-top: 1px solid res.$light-gray;
 			color: var(--primary-color);
-			font-weight: 200;
-			font-size: 1.1rem;
-			line-height: 1rem;
-			padding: .75rem 0.3rem;
-			margin: 1rem -0.25rem 0.5rem;
+			margin: 1.5rem 0 0.75rem 0;
+			padding: .4rem .5rem;
 		}
-		h4 {
-			font-size: 1.1rem;
-			margin-bottom: 0.2rem;
-			margin-top: 0.5rem;
+		.section {
+			margin-left: 0.4rem;
 		}
-		p {
-			font-size: 0.9rem;
-		}
-		.rooms {
-			font-size: 0.8rem;
-			h6 {
-				font-size: 0.9rem;
-				margin-bottom: 0.2rem;
-				margin-top: 0.3rem;
-			}
-			i {
-				color: var(--primary-color);
-				font-size: 80%;
-				opacity: 0.6;
+		.kr-reviews {
+			h4 {
+				margin-top: 0 !important;
 			}
 		}
 	}
-	.tabs-panel {
-		.header {
-			color: var(--primary-color);
-			font-weight: 400;
-			font-size: 1.1rem;
-			margin-bottom: 0.2rem;
-		}
-		.facilities {
-			.amenity {
-				font-size: 14px;
-				margin-bottom: 1rem;
-				.cell i {
-					color: var(--primary-color);
-					opacity: .5;
-				}
+	.tabs-content {
+		.tabs-panel {
+			.header {
+				color: var(--primary-color);
+				margin-bottom: 0.2rem
 			}
 		}
 	}
@@ -125,11 +118,12 @@
 		}
 	}
 	.kr-areview {
-		border-radius: 5px;
+		border-radius: 4px;
 		box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 	}
 }
 #kr-map-solo {
+	border: 1px solid res.$medium-gray;
 	max-width: 100%;
 	height: 25rem;
 	@include mixin.breakpoint(medium) {
