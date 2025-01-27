@@ -90,9 +90,6 @@ form {
     input[type="checkbox"].checkover + label.checklabel.disabled {
         cursor: default;
     }
-    button i.solid, button i.fab {
-        color: res.$white;
-    }
     .accordion-title::before {
         top: 45%;
         font-size: 1.5rem;

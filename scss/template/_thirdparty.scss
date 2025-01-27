@@ -1,0 +1,104 @@
+@use '../resources/resources' as res;
+@use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
+
+.blog-items {
+    margin-bottom: 1rem;
+}
+.blog {
+    .grid-x {
+        position:  relative;
+        border:    none;
+        margin:    0 auto 1.25rem;
+        max-width: 18.9375rem;
+        @include mixin.breakpoint(medium) {
+            text-align: left;
+            max-width:  100%;
+        }
+    }
+    h4 {
+        padding-bottom: 0.3125rem;
+    }
+}
+.mod-breadcrumbs {
+    background-color: res.$light-gray;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    list-style: none;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    li::after {
+        content: "/";
+        margin: 0 0.5rem;
+    }
+    li:first-child::after,
+    li:last-child::after {
+        content: "";
+        margin-right: 0;
+    }
+    li a:hover {
+        text-decoration: underline;
+    }
+}
+.g-recaptcha {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+.intro-image {
+    text-align: center;
+    @include mixin.breakpoint(large) {
+        float: left;
+        margin-left: 0 !important;
+    }
+}
+.item-image {
+    margin: 0.5rem 0 2rem;
+    @include mixin.breakpoint(medium) {
+        margin: 0 2rem 2rem;
+    }
+}
+p.readmore a, a.readmore {
+    font-size:   0.9rem;
+    line-height: 100%;
+    color:       res.$dark-gray;
+    font-weight: 700;
+}
+.osmap-items {
+    h2 {
+        font-size: 1rem !important;
+        margin-bottom: 0.3rem;
+    }
+    ul {
+        font-size: 0.9rem;
+        &.level_1 {
+            flex-wrap: wrap;
+            display: flex;
+            @include mixin.breakpoint(medium) {
+                li {
+                    flex: 1 0 50%;
+                }
+            }
+            @include mixin.breakpoint(large) {
+                li {
+                    flex: 0 0 33.3%;
+                }
+            }
+        }
+    }
+}
+#system-message {
+    margin-bottom: 0;
+}
+.visually-hidden, .sr-only,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}

@@ -1,7 +1,7 @@
 @use '../resources/resources' as res;
 
 #main {
-	margin-top: 1rem;
+	margin-top: 2rem;
 	.modules-above {
 		display: block;
 	}
@@ -14,28 +14,6 @@
 	}
 	#sidebar-right button, #sidebar-left button {
 		margin-bottom: 1rem;
-	}
-}
-.breadcrumb {
-	background-color: res.$light-gray;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 0.85rem;
-	list-style: none;
-	margin-bottom: 2rem;
-	margin-top: 0.5rem;
-	padding: 0.5rem;
-	li::after {
-		content: "/";
-		margin: 0 0.5rem;
-	}
-	li:first-child::after,
-	li:last-child::after {
-		content: "";
-		margin-right: 0;
-	}
-	li a:hover {
-		text-decoration: underline;
 	}
 }
 #kr-overlay {

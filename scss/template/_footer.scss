@@ -2,11 +2,12 @@
 @use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 #footer {
+	margin-top: 2rem;
 	position: relative;
 	.top {
-		position: relative;
-		padding: 1.5rem 0 0;
 		background: var(--footer-background-top);
+		padding: 1.5rem 0 0;
+		position: relative;
 	}
 	.moduletable {
 		margin-bottom: 1rem;
@@ -56,7 +57,7 @@
 			padding: 0;
 			list-style: none;
 			line-height: 1;
-			font-size: 1rem;
+			font-size: 0.9375rem;
 			display: block;
 			li {
 				padding: 0;
@@ -73,14 +74,6 @@
 						color: var(--footer-link-hover);
 					}
 				}
-			}
-		}
-		i.fab {
-			&.fa-cc-visa,
-			&.fa-cc-amex,
-			&.fa-cc-paypal,
-			&.fa-cc-mastercard {
-				font-size: 2rem;
 			}
 		}
 	}

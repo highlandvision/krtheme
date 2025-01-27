@@ -46,7 +46,9 @@ $wa->useScript('template.user');
 
 <!DOCTYPE html>
 <html class="no-js" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<!--suppress HtmlRequiredTitleElement -->
 <head>
+	<!--suppress JSUnresolvedReference -->
 	<script>
         document.documentElement.style.visibility = 'hidden';
         document.addEventListener('DOMContentLoaded', function () {
@@ -189,9 +191,6 @@ $wa->useScript('template.user');
 					<div class="article small-12 medium-9 cell">
 						<jdoc:include type="component"/>
 						<div style="clear:both;"></div>
-						<!--						--><?php //if ($this->countModules('under-content', true)): ?>
-						<!--							<jdoc:include type="modules" name="under-content" style="html5"/>-->
-						<!--						--><?php //endif; ?>
 					</div>
 				<?php elseif ($this->countModules('sidebar-right')): ?>
 					<div class="article small-12 medium-8 cell">
@@ -209,14 +208,16 @@ $wa->useScript('template.user');
 						<jdoc:include type="component"/>
 						<div style="clear:both;"></div>
 						<?php if ($this->countModules('under-content', true)): ?>
-							<jdoc:include type="modules" name="under-content" style="html5"/>
+							<div class="small-12 cell">
+								<jdoc:include type="modules" name="under-content" style="html5"/>
+							</div>
 						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 
 				<!--modules below content-->
 				<?php if ($this->countModules('below-left', true) || $this->countModules('below-right', true)): ?>
-					<div class="grid-x grid-margin-x show-for-medium modules-below double">
+					<div class="show-for-medium modules-below double">
 						<div class="medium-8 cell below left">
 							<jdoc:include type="modules" name="below-left" style="html5"/>
 						</div>
@@ -226,11 +227,13 @@ $wa->useScript('template.user');
 					</div>
 				<?php endif; ?>
 
-				<?php if ($this->countModules('below-content', true)): ?>
-					<div class="modules-below">
-						<jdoc:include type="modules" name="below-content" style="html5"/>
-					</div>
-				<?php endif; ?>
+				<div class="small-12 cell">
+					<?php if ($this->countModules('below-content', true)): ?>
+						<div class="modules-below">
+							<jdoc:include type="modules" name="below-content" style="html5"/>
+						</div>
+					<?php endif; ?>
+				</div>
 			</div>
 		</section>
 		<!--//end main-->

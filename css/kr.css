@@ -16,9 +16,6 @@
 #kr-confirm .summary h2, #kr-confirm .summary p {
   margin-bottom: 0;
 }
-#kr-confirm #kr-form-confirm .callout.noborder {
-  border: none;
-}
 #kr-confirm .button {
   margin-bottom: 1rem;
 }
@@ -31,9 +28,6 @@
 }
 #kr-totals p {
   color: var(--body-font-color);
-}
-#kr-totals .hilite-total {
-  color: var(--primary-color);
 }
 #kr-totals .total-summary {
   margin: 0.5rem 0;
@@ -131,7 +125,7 @@
   width: 30vw;
   min-width: 31.25rem;
   align-self: center;
-  box-shadow: 0 0 0 0.5px rgba(50, 50, 93, 0.1), 0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 1px rgba(50, 50, 93, 0), 0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0);
   border-radius: 0.45rem;
   padding: 2.5rem;
 }
@@ -417,9 +411,6 @@ form input[type=radio].radioover:checked + label.radiolabel:before.open {
 form input[type=checkbox].checkover + label.checklabel.disabled {
   cursor: default;
 }
-form button i.solid, form button i.fab {
-  color: hsl(0, 0%, 100%);
-}
 form .accordion-title::before {
   top: 45%;
   font-size: 1.5rem;
@@ -496,17 +487,6 @@ form .form-control-feedback {
   cursor: pointer;
   padding-top: 0;
   opacity: 1;
-}
-
-.kr-mobilebar {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-.kr-mobilebar li {
-  background: var(--primary-color);
-}
-.kr-mobilebar button {
-  padding: 1rem 0.5rem;
 }
 
 .kr-properties-header h3 {
@@ -782,23 +762,6 @@ form .form-control-feedback {
     font-size: 1rem;
   }
 }
-#kr-grid .bookingtype {
-  flex: 0 0 120px;
-}
-#kr-grid .bookingtype .button.viewproperty {
-  font-size: 1.1rem;
-  height: 40px;
-  line-height: 22px;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  text-align: left;
-  width: 100%;
-}
-#kr-grid .bookingtype .button.viewproperty i {
-  color: hsl(0, 0%, 100%);
-  float: right;
-  font-size: 1.5rem;
-  line-height: 22px;
-}
 
 .kr-search-section .card-section {
   flex: 1 1 auto;
@@ -819,10 +782,12 @@ form .form-control-feedback {
 }
 #kr-grid .card .card-section .geo {
   color: var(--body-font-color) !important;
+  font-size: 1rem;
   margin-bottom: 0.2rem;
 }
 #kr-grid .card .card-section .info {
   color: var(--body-font-color) !important;
+  font-size: 0.9375rem;
   margin-bottom: 1rem;
 }
 #kr-grid .card .card-section .amenities {
@@ -1226,6 +1191,15 @@ form .form-control-feedback {
 #kr-property-slideshow.centered p {
   display: none;
 }
+#kr-property-slideshow.centered .slick-current p {
+  background: hsl(0, 0%, 100%);
+  bottom: 0;
+  color: #333;
+  display: block;
+  opacity: 0.7;
+  padding: 0.3rem 1rem;
+  position: absolute;
+}
 
 .kr-infowindow-slideshow i.slick-nav {
   padding: 1.4rem 0.6rem;
@@ -1249,6 +1223,7 @@ form .form-control-feedback {
 
 .kr-property-quote {
   background: hsl(0, 0%, 94%);
+  margin-top: 1.8rem;
   padding: 0.5rem 1rem 0;
 }
 .kr-property-quote .heading {
@@ -1436,9 +1411,6 @@ table.legend tr td div.duo {
   line-height: 1;
 }
 
-.kr-reviews .xbig {
-  line-height: 1;
-}
 .kr-reviews .review-score {
   margin-top: 1rem;
   text-align: center;
@@ -1477,33 +1449,6 @@ table.legend tr td div.duo {
   -webkit-border-radius: 0 15px 15px 0;
   -moz-border-radius: 0 15px 15px 0;
   border-radius: 0 15px 15px 0;
-}
-
-.kr-ratings .br-widget {
-  height: 35px;
-  margin-bottom: 20px;
-}
-.kr-ratings .br-widget a {
-  display: block;
-  width: 35px;
-  height: 35px;
-  float: left;
-  border: 2px solid var(--secondary-color);
-  background-color: var(--secondary-color);
-  margin: 2px;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 35px;
-  text-align: center;
-  color: hsl(0, 0%, 42%);
-}
-.kr-ratings .br-widget a.br-active {
-  border: 2px solid var(--accent-color);
-}
-.kr-ratings .br-widget a.br-current {
-  border: 2px solid var(--accent-color);
-  background: var(--primary-color);
-  color: hsl(0, 0%, 100%);
 }
 
 /*# sourceMappingURL=kr.css.map */

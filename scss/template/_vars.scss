@@ -15,7 +15,7 @@
 .color-secondary {
     color: var(--secondary-color);
 }
-.color-accent, .font-contrast {
+.color-accent {
     color: var(--accent-color);
 }
 .body-font-color {
@@ -23,9 +23,6 @@
 }
 .color-custom {
     color: var(--custom-color);
-}
-i.solid, i.fab {
-    color: var(--primary-color);
 }
 @mixin kr-button-color($color, $hover) {
     background-color: $color;

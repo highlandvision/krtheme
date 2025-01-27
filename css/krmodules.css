@@ -7480,7 +7480,7 @@ ul#categories li a:hover {
 .kr-search .datepicker-wrapper i {
   position: absolute;
   right: 8px;
-  top: 8px;
+  top: 11px;
   font-size: 1.1rem;
   color: var(--primary-color);
   cursor: pointer;
@@ -7569,6 +7569,9 @@ ul#categories li a:hover {
   width: 100% !important;
   padding-left: 0.5rem !important;
   padding-right: 0.2rem !important;
+}
+.kr-search .kr-searchby-map {
+  margin-bottom: var(--global-margin);
 }
 
 #kr-hero {

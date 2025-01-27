@@ -40,7 +40,7 @@
         i {
             position: absolute;
             right: 8px;
-            top: 8px;
+            top: 11px;
             font-size: 1.1rem;
             color: var(--primary-color);
             cursor: pointer;
@@ -127,5 +127,8 @@
                 padding-right: 0.2rem !important;
             }
         }
+    }
+    .kr-searchby-map {
+        margin-bottom: var(--global-margin);
     }
 }

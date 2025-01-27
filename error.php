@@ -51,6 +51,7 @@ $notify      = 'Our technical team have been notified';
 	<div class="error">
 		<h1><?php echo $title; ?></h1>
 	</div>
+	<!--suppress HtmlUnknownTarget -->
 	<img alt="Stop Error occurred" src='/media/templates/site/krtheme/images/error.jpg' width='360'>
 	<div class="desc">
 		<h2><?php echo $description; ?></h2>

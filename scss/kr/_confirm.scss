@@ -20,11 +20,6 @@
             margin-bottom: 0;
         }
     }
-    #kr-form-confirm {
-        .callout.noborder {
-            border: none;
-        }
-    }
     .button {
         margin-bottom: 1rem;
     }
@@ -36,9 +31,6 @@
     text-align: center;
     p {
         color: var(--body-font-color);
-    }
-    .hilite-total {
-        color: var(--primary-color);
     }
     .total-summary {
         margin: 0.5rem 0;
@@ -130,8 +122,8 @@
         width: 30vw;
         min-width: 31.25rem;
         align-self: center;
-        box-shadow: 0 0 0 0.5px rgba(50, 50, 93, 0.1),
-        0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07);
+        box-shadow: 0 0 0 1px rgba(50, 50, 93, 0),
+        0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0);
         border-radius: 0.45rem;
         padding: 2.5rem;
     }
