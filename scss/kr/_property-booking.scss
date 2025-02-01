@@ -1,42 +1,45 @@
 @use '../resources/resources' as res;
 
 .kr-property-quote {
-	background: res.$light-gray;
-	margin-top: 1.8rem;
-	padding: 0.5rem 1rem 0;
-	.heading {
-		margin-bottom: 0;
-		padding-top: 0;
-		text-align: center;
-	}
-	.help {
-		text-align: center;
-	}
-	#kr-quote-form {
-		padding-bottom: 0.75rem;
-		.cell {
-			padding-bottom: 0.5rem;
-		}
-	}
-	.property-book {
-		padding: 0;
-		text-align: center;
-		.discount {
-			color: var(--alert-color);
-			i {
-				color: var(--alert-color);
-			}
-		}
-		.booknow {
-			margin-top: 1rem;
-		}
-		.booking-summary {
-			font-size: 15px;
-			margin: 0;
-			padding-bottom: 0.5rem;
-			p {
-				line-height: 1.6rem;
-			}
-		}
-	}
+    background: res.$light-gray;
+    margin-top: 1.8rem;
+    padding: 0.5rem 1rem 0;
+    .heading {
+        margin-bottom: 0;
+        padding-top: 0;
+        text-align: center;
+    }
+    .help {
+        text-align: center;
+    }
+    #kr-quote-form {
+        padding-bottom: 0.75rem;
+        .cell {
+            padding-bottom: 0.5rem;
+        }
+    }
+    .property-book {
+        padding: 0;
+        text-align: center;
+        .discount {
+            color: var(--alert-color);
+            i {
+                color: var(--alert-color);
+            }
+        }
+        .deposit {
+            margin-top: 1rem;
+        }
+        .booknow {
+            margin-top: 1rem;
+        }
+        .booking-summary {
+            font-size: 15px;
+            margin: 0;
+            padding-bottom: 0.5rem;
+            p {
+                line-height: 1.6rem;
+            }
+        }
+    }
 }

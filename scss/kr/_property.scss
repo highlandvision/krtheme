@@ -2,131 +2,131 @@
 @use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 .kr-property {
-	position: relative;
-	text-align: left;
-	.kr-property-header {
-		margin-bottom: 2rem;
-	}
-	a.backlink {
-		background: none;
-		border: 1px solid var(--accent-color);
-		height: 2.3rem;
-		position: absolute;
-		top: -4.3rem;
-		right: 0;
-		i.solid {
-			color: res.$white;
-		}
-	}
-	.property-summary {
-		background: var(--accent-color);
-		color: res.$white;
-		padding: 0.75rem;
-		margin: 0 auto 1.5rem;
-	}
-	.rooms {
-		h6 {
-			margin-bottom: 0.2rem;
-			margin-top: 0.5rem;
-		}
-	}
-	.amenity {
-		p {
-			font-size: 1rem;
-			line-height: 1.6;
-			margin-bottom: 0;
-			@include mixin.breakpoint(large) {
-				i {
-					color: var(--primary-color);
-					font-size: 6px;
-					margin-bottom: 3px;
-					opacity: 0.4;
-					vertical-align: middle;
-				}
-			}
-		}
-		&.room p {
-			font-size: 0.9375rem;
-		}
-	}
-	.heading p {
-		margin-bottom: 1rem;
-	}
-	ul.overview {
-		margin: 3px 0 0;
-		padding: 0;
-		li span.title {
-			float: left;
-			width: 25%;
-			color: res.$dark-gray;
-			font-weight: 700;
-		}
-	}
-	.page {
-		margin-bottom: 2rem;
-		.header {
-			background: hsl(0, 0%, 94%);
-			border-bottom: 1px solid res.$medium-gray;
-			border-top: 1px solid res.$light-gray;
-			color: var(--primary-color);
-			margin: 1.5rem 0 0.75rem 0;
-			padding: .4rem .5rem;
-		}
-		.section {
-			margin-left: 0.4rem;
-		}
-		.kr-reviews {
-			h4 {
-				margin-top: 0 !important;
-			}
-		}
-	}
-	.tabs-content {
-		.tabs-panel {
-			.header {
-				color: var(--primary-color);
-				margin-bottom: 0.2rem
-			}
-		}
-	}
-	#phototour p {
-		padding: 0.3rem 0.5rem 1rem;
-		margin-bottom: 0;
-		text-align: center;
-	}
-	.score {
-		display: inline-block;
-		font-size: 1.2rem;
-		color: res.$medium-gray;
-		position: relative;
-		font-family: "Font Awesome 6 Free", sans-serif;
-		font-weight: 900;
-		&::before {
-			content: "\f005\f005\f005\f005\f005";
-			display: block;
-		}
-		span {
-			color: var(--accent-color);
-			position: absolute;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-			&::after {
-				content: "\f005\f005\f005\f005\f005";
-				display: block;
-			}
-		}
-	}
-	.kr-areview {
-		border-radius: 4px;
-		box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
-	}
+    position: relative;
+    text-align: left;
+    .kr-property-header {
+        margin-bottom: 2rem;
+    }
+    a.backlink {
+        background: none;
+        border: 1px solid var(--accent-color);
+        height: 2.3rem;
+        position: absolute;
+        top: -4.3rem;
+        right: 0;
+        i.solid {
+            color: res.$white;
+        }
+    }
+    .property-summary {
+        background: var(--accent-color);
+        color: res.$white;
+        padding: 0.75rem;
+        margin: 0 auto 1.5rem;
+    }
+    .rooms {
+        h6 {
+            margin-bottom: 0.2rem;
+            margin-top: 0.5rem;
+        }
+    }
+    .amenity {
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+            @include mixin.breakpoint(large) {
+                i {
+                    color: var(--primary-color);
+                    font-size: 6px;
+                    margin-bottom: 3px;
+                    opacity: 0.4;
+                    vertical-align: middle;
+                }
+            }
+        }
+        &.room p {
+            font-size: 0.9375rem;
+        }
+    }
+    .heading p {
+        margin-bottom: 1rem;
+    }
+    ul.overview {
+        margin: 3px 0 0;
+        padding: 0;
+        li span.title {
+            float: left;
+            width: 25%;
+            color: res.$dark-gray;
+            font-weight: 700;
+        }
+    }
+    .page {
+        margin-bottom: 2rem;
+        .header {
+            background: hsl(0, 0%, 94%);
+            border-bottom: 1px solid res.$medium-gray;
+            border-top: 1px solid res.$light-gray;
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem 0;
+            padding: .4rem .5rem;
+        }
+        .section {
+            margin-left: 0.4rem;
+        }
+        .kr-reviews {
+            h4 {
+                margin-top: 0 !important;
+            }
+        }
+    }
+    .tabs-content {
+        .tabs-panel {
+            .header {
+                color: var(--primary-color);
+                margin-bottom: 0.2rem
+            }
+        }
+    }
+    #phototour p {
+        padding: 0.3rem 0.5rem 1rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .score {
+        display: inline-block;
+        font-size: 1.2rem;
+        color: res.$medium-gray;
+        position: relative;
+        font-family: "Font Awesome 6 Free", sans-serif;
+        font-weight: 900;
+        &::before {
+            content: "\f005\f005\f005\f005\f005";
+            display: block;
+        }
+        span {
+            color: var(--accent-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            &::after {
+                content: "\f005\f005\f005\f005\f005";
+                display: block;
+            }
+        }
+    }
+    .kr-areview {
+        border-radius: 4px;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    }
 }
 #kr-map-solo {
-	border: 1px solid res.$medium-gray;
-	max-width: 100%;
-	height: 25rem;
-	@include mixin.breakpoint(medium) {
-		height: 35rem;
-	}
+    border: 1px solid res.$medium-gray;
+    max-width: 100%;
+    height: 25rem;
+    @include mixin.breakpoint(medium) {
+        height: 35rem;
+    }
 }

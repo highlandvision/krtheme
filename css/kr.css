@@ -1098,7 +1098,7 @@ form .form-control-feedback {
   border-bottom: 1px solid hsl(0, 0%, 79%);
   border-top: 1px solid hsl(0, 0%, 94%);
   color: var(--primary-color);
-  margin: 1.5rem 0 0.75rem 0;
+  margin: 1.5rem 0 1rem 0;
   padding: 0.4rem 0.5rem;
 }
 .kr-property .page .section {
@@ -1249,6 +1249,9 @@ form .form-control-feedback {
 }
 .kr-property-quote .property-book .discount i {
   color: var(--alert-color);
+}
+.kr-property-quote .property-book .deposit {
+  margin-top: 1rem;
 }
 .kr-property-quote .property-book .booknow {
   margin-top: 1rem;

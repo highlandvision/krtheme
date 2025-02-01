@@ -198,8 +198,8 @@
             }
             &.center {
                 text-align: center;
-                    margin-bottom: 0;
-                }
+                margin-bottom: 0;
+            }
             &.top {
                 top: 5%;
             }
@@ -369,7 +369,7 @@
     a.property {
         height: auto;
         .content {
-            padding: 1rem 0.5rem;
+            padding: 1rem;
             min-height: 200px;
         }
         .price {
