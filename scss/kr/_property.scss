@@ -18,6 +18,14 @@
             color: res.$white;
         }
     }
+    .header {
+        background: hsl(0, 0%, 94%);
+        border-bottom: 1px solid res.$medium-gray;
+        border-top: 1px solid res.$light-gray;
+        color: var(--primary-color);
+        margin: 1.5rem 0 1rem 0;
+        padding: .4rem .5rem;
+    }
     .property-summary {
         background: var(--accent-color);
         color: res.$white;
@@ -64,14 +72,6 @@
     }
     .page {
         margin-bottom: 2rem;
-        .header {
-            background: hsl(0, 0%, 94%);
-            border-bottom: 1px solid res.$medium-gray;
-            border-top: 1px solid res.$light-gray;
-            color: var(--primary-color);
-            margin: 1.5rem 0 1rem 0;
-            padding: .4rem .5rem;
-        }
         .section {
             margin-left: 0.4rem;
         }

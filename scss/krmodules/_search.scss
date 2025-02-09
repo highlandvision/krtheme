@@ -26,6 +26,13 @@
             margin-bottom: 0;
         }
     }
+    &.kr-vertical {
+        input, select {
+            @include mixin.breakpoint(large) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
     .sidebar {
         input, select {
             margin-bottom: 0.75rem;

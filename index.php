@@ -36,7 +36,8 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 
 $color = $this->params->get('colors', 'colors_default');
 $asset = 'theme.' . $color;
-$wa    = $this->getWebAssetManager();
+
+$wa = $this->getWebAssetManager();
 $wa->usePreset('template.krtheme.site');
 $wa->registerAndUseStyle($asset, 'media/templates/site/krtheme/css/global/' . $color . '.css');
 $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');

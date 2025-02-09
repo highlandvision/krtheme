@@ -7467,6 +7467,12 @@ ul#categories li a:hover {
     margin-bottom: 0;
   }
 }
+
+@media print, screen and (min-width: 64em) {
+    .kr-search.kr-vertical input, .kr-search.kr-vertical select {
+        margin-bottom: 1rem;
+    }
+}
 .kr-search .sidebar input, .kr-search .sidebar select {
   margin-bottom: 0.75rem;
 }
@@ -7594,7 +7600,6 @@ ul#categories li a:hover {
     display: block;
     height: auto;
   }
-
   #kr-hero.slider .kr-slideshow .slick-slide img {
     display: block;
     height: 100%;
@@ -7615,11 +7620,9 @@ ul#categories li a:hover {
     width: auto;
     z-index: 9999;
   }
-
   #kr-hero.slider .kr-slideshow .caption:hover {
     background: hsla(0, 0%, 100%, 0.9);
   }
-
   #kr-hero.slider .kr-slideshow .caption a {
     color: var(--primary-color);
     font-size: 0.9rem;
@@ -7737,7 +7740,6 @@ ul#categories li a:hover {
     width: 100%;
     z-index: 10;
   }
-
   #kr-hero.top .kr-search .hero-sticky .button {
     border: 1px solid var(--primary-color);
   }
