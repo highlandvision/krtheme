@@ -131,8 +131,8 @@ $wa->useScript('template.user');
 				<div class="off-canvas position-top kr-offcanvas kr-search" id="kr-offcanvas-top-search"
 				     data-off-canvas data-options="inCanvasOn:large;" data-transition="overlap">
 					<div data-sticky-container>
-						<div data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="topbar:bottom"
-						     data-check-every="-1">
+						<div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0"
+						     data-top-anchor="responsive-menu:bottom" data-check-every="-1">
 							<jdoc:include type="modules" name="hero-sticky" style="html5"/>
 						</div>
 					</div>
@@ -241,7 +241,7 @@ $wa->useScript('template.user');
 
 		<!--//footer-->
 		<section id="footer">
-			<div class="top">
+			<div class="footer-top">
 				<?php if ($this->countModules('above-bottom')): ?>
 					<jdoc:include type="modules" name="above-bottom" style="html5"/>
 				<?php endif; ?>

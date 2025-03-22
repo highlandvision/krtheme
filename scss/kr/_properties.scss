@@ -1,7 +1,10 @@
 @use '../resources/resources' as res;
 @use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
-#kr-properties-filter-heading {
+.kr-properties-filter-heading {
+    margin-bottom: 0;
+}
+.kr-properties-filter-count {
     margin-bottom: 1rem;
 }
 .kr-searchbar {

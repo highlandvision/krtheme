@@ -319,6 +319,9 @@ span.jq-dte span.jq-dte-errorbox {
   white-space: nowrap;
 }
 
+form .fieldset {
+    padding: 0;
+}
 form .fieldset legend {
   color: var(--primary-color);
   margin-bottom: 0.3rem;
@@ -457,12 +460,29 @@ form .form-control-feedback {
   text-align: right;
 }
 
+#kr-contact-form .help {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+#kr-contact-form [type=text], #kr-contact-form [type=password], #kr-contact-form [type=date], #kr-contact-form [type=datetime], #kr-contact-form [type=datetime-local], #kr-contact-form [type=month], #kr-contact-form [type=week], #kr-contact-form [type=email], #kr-contact-form [type=number], #kr-contact-form [type=search], #kr-contact-form [type=tel], #kr-contact-form [type=time], #kr-contact-form [type=url], #kr-contact-form [type=color], #kr-contact-form textarea {
+    margin-bottom: 0;
+}
+
+#kr-contact-form .controls {
+    margin-bottom: 1rem;
+}
+
 #jform_billing {
   margin-left: 1rem;
   margin-top: 0.25rem;
 }
 
-#kr-properties-filter-heading {
+.kr-properties-filter-heading {
+    margin-bottom: 0;
+}
+
+.kr-properties-filter-count {
   margin-bottom: 1rem;
 }
 
@@ -1050,7 +1070,6 @@ form .form-control-feedback {
 .kr-property a.backlink i.solid {
   color: hsl(0, 0%, 100%);
 }
-
 .kr-property .header {
     background: hsl(0, 0%, 94%);
     border-bottom: 1px solid hsl(0, 0%, 79%);
@@ -1267,12 +1286,12 @@ form .form-control-feedback {
 }
 
 /* Geriatric calendar */
-#geriatric-key, .calendar-month {
+#geriatric-key, .calendar-months {
   margin: 0 auto;
   text-align: center;
 }
 @media print, screen and (min-width: 64em) {
-  #geriatric-key, .calendar-month {
+    #geriatric-key, .calendar-months {
     margin: 0;
     text-align: left;
   }
@@ -1312,7 +1331,7 @@ table.legend tr td div.duo {
 }
 
 /* Calendar month */
-.calendar-month table.amonth {
+.calendar-months table.amonth {
   border: none;
   border-collapse: separate;
   border-spacing: 1px;
@@ -1322,76 +1341,91 @@ table.legend tr td div.duo {
   display: inline-table;
   margin: 0 0 10px;
 }
-.calendar-month table.amonth tr th,
-.calendar-month table.amonth tr td,
-.calendar-month table.amonth p {
+
+.calendar-months table.amonth tr th,
+.calendar-months table.amonth tr td,
+.calendar-months table.amonth p {
   text-align: center;
   font-family: Verdana, Arial, sans-serif;
   color: #444;
   font-weight: 400;
   font-size: 10px;
 }
-.calendar-month table.amonth tr {
+
+.calendar-months table.amonth tr {
   padding: 0;
   margin: 0;
   background: hsl(0, 0%, 100%);
 }
-.calendar-month table.amonth tr.monthrow th, .calendar-month table.amonth tr.daysrow th {
+
+.calendar-months table.amonth tr.monthrow th, .calendar-months table.amonth tr.daysrow th {
   font-weight: 400;
   background: #8a8a8a;
   color: hsl(0, 0%, 100%);
   padding: 0;
   height: 16px;
 }
-.calendar-month table.amonth tr.daysrow th {
+
+.calendar-months table.amonth tr.daysrow th {
   background: #b0b0b0;
   color: hsl(0, 0%, 100%);
 }
-.calendar-month table.amonth tr td {
+
+.calendar-months table.amonth tr td {
   text-align: center;
   padding: 0;
 }
-.calendar-month table.amonth tr td div {
+
+.calendar-months table.amonth tr td div {
   border-width: 20px;
   border-style: solid;
   position: relative;
   height: 0;
   width: 0;
 }
-.calendar-month table.amonth tr td div.duo {
+
+.calendar-months table.amonth tr td div.duo {
   border-width: 10px;
 }
-.calendar-month table.amonth tr td div.bgblank {
+
+.calendar-months table.amonth tr td div.bgblank {
   border-top-color: hsl(0, 0%, 100%);
   border-left-color: hsl(0, 0%, 100%);
   border-bottom-color: hsl(0, 0%, 100%);
   border-right-width: 0;
   border-bottom-width: 0;
 }
-.calendar-month table.amonth tr td div.bgblank p.day {
+
+.calendar-months table.amonth tr td div.bgblank p.day {
   color: hsl(0, 0%, 100%);
 }
-.calendar-month table.amonth tr td div.bgtoday {
+
+.calendar-months table.amonth tr td div.bgtoday {
   border-top-color: #cacaca;
   border-left-color: #cacaca;
 }
-.calendar-month table.amonth tr td div.bgtoday p.day {
+
+.calendar-months table.amonth tr td div.bgtoday p.day {
   color: #cc0000;
 }
-.calendar-month table.amonth tr td div.bgpast {
+
+.calendar-months table.amonth tr td div.bgpast {
   border-top-color: #cacaca;
   border-left-color: #cacaca;
   border-right-width: 0;
   border-bottom-width: 0;
 }
-.calendar-month table.amonth tr td div.bookme p.day, .calendar-month table.amonth tr td div.bgtoavail p.day {
+
+.calendar-months table.amonth tr td div.bookme p.day, .calendar-months table.amonth tr td div.bgtoavail p.day {
   color: #333;
 }
-.calendar-month table.amonth tr td div.nostart p.day {
+
+.calendar-months table.amonth tr td div.nostart p.day {
   opacity: 0.4;
   font-weight: 400;
 }
-.calendar-month table.amonth tr td div p {
+
+.calendar-months table.amonth tr td div p {
   font-size: 10px !important;
   line-height: 0;
   margin: 0;
@@ -1399,11 +1433,13 @@ table.legend tr td div.duo {
   position: absolute;
   width: 20px;
 }
-.calendar-month table.amonth tr td div.solo p.day {
+
+.calendar-months table.amonth tr td div.solo p.day {
   top: -10px;
   left: -20px;
 }
-.calendar-month table.amonth tr td div.duo p.day {
+
+.calendar-months table.amonth tr td div.duo p.day {
   left: -10px;
 }
 

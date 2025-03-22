@@ -2,6 +2,9 @@
 @use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 form {
+    .fieldset {
+        padding: 0;
+    }
     .fieldset legend {
         color: var(--primary-color);
         margin-bottom: 0.3rem;
@@ -136,6 +139,18 @@ form {
         right: 1rem;
         bottom: -1.8rem;
         text-align: right;
+    }
+}
+#kr-contact-form {
+    .help {
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    [type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+        margin-bottom: 0;
+    }
+    .controls {
+        margin-bottom: 1rem;
     }
 }
 #jform_billing {

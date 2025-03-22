@@ -332,11 +332,6 @@ hr {
   margin: 1rem 0 0.25rem;
 }
 
-.narrower {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 input[type=number], .input-tiny {
   min-width: 2rem !important;
   max-width: 3.5rem !important;
@@ -622,7 +617,7 @@ img.responsive {
     z-index: 99;
   }
   .top-bar .top-bar-left ul.menu li ul.submenu li a {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     height: 1.5rem;
     line-height: 1px;
     margin-top: 0;
@@ -723,7 +718,8 @@ img.responsive {
   margin-top: 2rem;
   position: relative;
 }
-#footer .top {
+
+#footer .footer-top {
   background: var(--footer-background-top);
   padding: 1.5rem 0 0;
   position: relative;

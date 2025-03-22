@@ -18,13 +18,14 @@ use Joomla\CMS\Installer\InstallerScript;
  */
 class KrthemeInstallerScript extends InstallerScript
 {
+	// Add deleted files here
 	protected $deleteFiles = [
-//		Add deleted files here
+		'/templates/krtheme/scss/kr/properties-thumbs.scss'
 	];
+	//	Add deleted folders here
 	protected $deleteFolders = [
-//		Add deleted folders here
 	];
-	protected $extension = 'krtheme';
+	protected $extension     = 'krtheme';
 
 	/**
 	 * Update template

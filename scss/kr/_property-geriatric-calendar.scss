@@ -2,7 +2,7 @@
 @use '../../../../node_modules/foundation-sites/scss/util/_util' as mixin;
 
 /* Geriatric calendar */
-#geriatric-key, .calendar-month {
+#geriatric-key, .calendar-months {
     margin: 0 auto;
     text-align: center;
     @include mixin.breakpoint(large) {
@@ -42,7 +42,7 @@ table.legend {
     }
 }
 /* Calendar month */
-.calendar-month {
+.calendar-months {
     table.amonth {
         border: none;
         border-collapse: separate;
