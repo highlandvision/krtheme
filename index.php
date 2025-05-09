@@ -126,6 +126,7 @@ $wa->useScript('template.user');
 			</div>
 		</nav>
 
+		<!--	Hero -->
 		<?php if ($this->countModules('hero-sticky', true)): ?>
 			<div id="kr-hero" class="top">
 				<div class="off-canvas position-top kr-offcanvas kr-search" id="kr-offcanvas-top-search"

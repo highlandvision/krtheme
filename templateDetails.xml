@@ -9,12 +9,12 @@
     <description>TPL_KRTHEME_XML_DESCRIPTION</description>
     <inheritable>1</inheritable>
     <files>
+        <filename>KrthemeInstallerScript.php</filename>
         <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>favicon.ico</filename>
         <filename>index.php</filename>
         <filename>joomla.asset.json</filename>
-        <filename>KrthemeInstallerScript.php</filename>
         <filename>templateDetails.xml</filename>
         <folder>html</folder>
         <folder>language</folder>
