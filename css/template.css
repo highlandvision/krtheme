@@ -714,11 +714,26 @@ img.responsive {
   z-index: 98;
 }
 
+#back-to-top {
+    border-radius: 5px;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#back-to-top :hover {
+    opacity: 0.8;
+}
+
 #footer {
   margin-top: 2rem;
   position: relative;
 }
-
 #footer .footer-top {
   background: var(--footer-background-top);
   padding: 1.5rem 0 0;

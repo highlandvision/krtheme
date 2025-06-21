@@ -296,6 +296,10 @@ $wa->useScript('template.user');
 		<!--//end footer-->
 	</div>
 
+	<a href="#top" id="back-to-top" class="button secondary" title="Back to top">
+		<i class="fas fa-arrow-up"></i>
+	</a>
+
 	<jdoc:include type="modules" name="debug" style="none"/>
 
 	<div id="kr-lang" data-krlang="<?php echo $this->language; ?>"></div>
@@ -311,6 +315,18 @@ $wa->useScript('template.user');
         document.addEventListener('DOMContentLoaded', function () {
             [].slice.call(document.head.querySelectorAll('link[rel="lazy-stylesheet"]')).forEach(function ($link) {
                 $link.rel = "stylesheet";
+            });
+        });
+        const btn = document.getElementById('back-to-top');
+        window.onscroll = function () {
+            let pageOffset = document.documentElement.scrollTop || document.body.scrollTop;
+            if (btn) btn.style.visibility = pageOffset > 150 ? 'visible' : 'hidden';
+        };
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
 	</script>

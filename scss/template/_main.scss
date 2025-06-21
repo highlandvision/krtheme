@@ -1,29 +1,43 @@
 @use '../resources/resources' as res;
 
 #main {
-	margin-top: 2rem;
-	.modules-above {
-		display: block;
-	}
-	#sidebar-left, #sidebar-right  {
-		margin-top: 0;
-		text-align: left;
-	}
-	#sidebar-right > div, #sidebar-left > div {
-		margin-bottom: var(--global-margin);
-	}
-	#sidebar-right button, #sidebar-left button {
-		margin-bottom: 1rem;
-	}
+    margin-top: 2rem;
+    .modules-above {
+        display: block;
+    }
+    #sidebar-left, #sidebar-right {
+        margin-top: 0;
+        text-align: left;
+    }
+    #sidebar-right > div, #sidebar-left > div {
+        margin-bottom: var(--global-margin);
+    }
+    #sidebar-right button, #sidebar-left button {
+        margin-bottom: 1rem;
+    }
 }
 #kr-overlay {
-	background-color: rgba(0, 0, 0, 0.6);
-	display: none;
-	height: 100%;
-	left: 0;
-	position: fixed;
-	top: 0;
-	user-select: none;
-	width: 100%;
-	z-index: 98;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    user-select: none;
+    width: 100%;
+    z-index: 98;
+}
+#back-to-top {
+    border-radius: 5px;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    visibility: hidden;
+    z-index: 1000;
+    :hover {
+        opacity: 0.8;
+    }
 }
