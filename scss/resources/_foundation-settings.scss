@@ -60,13 +60,14 @@
 //  55. Top Bar
 //  56. Xy Grid
 
+@use "sass:color";
 //@use 'foundation-settings';
 @use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 // Default colors (demo)
 // For hover values increase or decrease the percentage values (saturation and lightness) as required
 
-$default-global-font-size: 16px !default;
+$default-global-font-size: 15px !default;
 $default-global-width: 73.125rem !default;
 $default-global-lineheight: 1.5 !default;
 $default-global-margin: 2rem !default;
@@ -183,12 +184,12 @@ $foundation-palette: (
         warning: $default-warning-color,
         custom: $default-custom-color
 );
-$black: hsl(0, 0%, 4%);
-$black-light: hsl(0, 0%, 42%);
-$white: hsl(0, 0%, 100%);
 $light-gray: hsl(0, 0%, 94%);
 $medium-gray: hsl(0, 0%, 79%);
 $dark-gray: hsl(0, 0%, 44%);
+$black: hsl(0, 0%, 4%);
+$black-light: hsl(0, 0%, 42%);
+$white: hsl(0, 0%, 100%);
 $body-background: $default-body-background;
 $body-font-color: $default-body-font-color;
 $body-font-family: $default-body-font-family;
@@ -214,6 +215,8 @@ $print-hrefs: false;
 
 // 2. Breakpoints
 // --------------
+
+$-zf-size: null;
 $breakpoints: (
         small: 0,
         medium: 641px,
@@ -429,6 +432,7 @@ $button-sizes: (
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
+$button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
 $button-hollow-background-hover: lighten($default-primary-color, 50%);
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -471,7 +475,6 @@ $card-divider-background: $medium-gray;
 $card-border: 1px solid $medium-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
-//$card-padding: $global-padding;
 $card-padding: 0.5rem;
 $card-margin-bottom: $global-margin;
 
