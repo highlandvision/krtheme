@@ -4,7 +4,7 @@
  * @subpackage Site Template
  * @copyright  2021 Highland Vision. All rights reserved.
  * @license    See the file "LICENSE.txt" for the full license governing this code.
- * @author     Hazel Wilson <hazel@highlandvision.com>
+ * @author     Highland Vision https://www.highlandvision.com
  */
 /** @noinspection PhpUnhandledExceptionInspection */
 

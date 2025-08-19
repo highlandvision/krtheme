@@ -5027,7 +5027,6 @@ a.button:hover, a.button:focus {
   align-items: stretch;
   flex-grow: 1;
 }
-
 .button-group::before, .button-group::after {
     display: none;
 }
