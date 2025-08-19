@@ -7,7 +7,7 @@
   "assets": [
     {
       "name": "template.krtheme.kr",
-      "description": "CSS for KR theme.",
+      "description": "CSS for KrTheme.",
       "type": "style",
       "uri": "kr.min.css"
     },
@@ -19,13 +19,13 @@
     },
     {
       "name": "template.krtheme.template",
-      "description": "CSS for krtheme template.",
+      "description": "CSS for KrTheme template.",
       "type": "style",
       "uri": "template.min.css"
     },
     {
       "name": "template.krtheme.foundation",
-      "description": "CSS for krtheme foundation.",
+      "description": "CSS for KrTheme foundation.",
       "type": "style",
       "uri": "foundation.min.css"
     },

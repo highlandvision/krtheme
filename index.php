@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Know Reservations
- * @subpackage Site Template
+ * @subpackage Site Template for KR
  * @copyright  2021 Highland Vision. All rights reserved.
  * @license    See the file "LICENSE.txt" for the full license governing this code.
  * @author     Highland Vision https://www.highlandvision.com
