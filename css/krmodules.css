@@ -7400,10 +7400,10 @@ i.slick-nav.next {
   grid-auto-rows: 3fr;
 }
 .kr-featured .slick-slide {
-  margin-left: 1.875rem;
+    margin-left: 33px;
 }
 .kr-featured .slick-list {
-  margin-left: -1.875rem;
+    margin-left: -33px;
 }
 .kr-featured .fouter {
   display: flex;
