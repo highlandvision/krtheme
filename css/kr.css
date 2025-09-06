@@ -477,11 +477,24 @@ form .form-control-feedback {
 }
 
 .kr-properties-filter-heading {
-    margin-bottom: 0;
+    color: var(--primary-color);
+    display: inline-block;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.kr-properties-filter-heading::after {
+    content: ":  ";
 }
 
 .kr-properties-filter-count {
-  margin-bottom: 1rem;
+    color: var(--primary-color);
+    display: inline-block;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
 .kr-searchbar {

@@ -2,10 +2,22 @@
 @use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
 
 .kr-properties-filter-heading {
-    margin-bottom: 0;
+    color: var(--primary-color);
+    display: inline-block;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    &::after {
+        content: ":  ";
+    }
 }
 .kr-properties-filter-count {
-    margin-bottom: 1rem;
+    color: var(--primary-color);
+    display: inline-block;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 .kr-searchbar {
     font-size: 0.8rem;
