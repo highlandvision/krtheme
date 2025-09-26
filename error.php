@@ -16,7 +16,7 @@ if (!isset($this->error)) {
 	$this->error = Text::_('JERROR_AN_ERROR_HAS_OCCURRED');
 }
 
-//get language and direction
+// Get language and direction
 $doc             = Factory::getDocument();
 $this->language  = $doc->language;
 $this->direction = $doc->direction;
