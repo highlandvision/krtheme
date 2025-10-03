@@ -61,7 +61,6 @@
   float: left;
   height: 100%;
   min-height: 1px;
-  display: none;
 }
 [dir=rtl] .slick-slide {
   float: right;
@@ -70,6 +69,9 @@
   display: block;
 }
 .slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide {
   display: none;
 }
 .slick-slide.dragging img {
@@ -7400,10 +7402,10 @@ i.slick-nav.next {
   grid-auto-rows: 3fr;
 }
 .kr-featured .slick-slide {
-    margin-left: 33px;
+  margin-left: 33px;
 }
 .kr-featured .slick-list {
-    margin-left: -33px;
+  margin-left: -33px;
 }
 .kr-featured .fouter {
   display: flex;
@@ -7441,7 +7443,7 @@ ul#categories li a:hover {
 
 .kr-search .hero-search-text h3.h4 {
   color: var(--primary-color);
-    font-size: 1.2rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   margin-bottom: 0.2rem;
   padding: 0 2rem;
@@ -7452,7 +7454,7 @@ ul#categories li a:hover {
     color: var(--primary-color);
     line-height: 1.3rem;
     margin-bottom: 0;
-      margin-top: -2px;
+    margin-top: -2px;
     padding: 0;
     text-align: right;
   }
@@ -7468,9 +7470,9 @@ ul#categories li a:hover {
   }
 }
 @media print, screen and (min-width: 64em) {
-    .kr-search.kr-vertical input, .kr-search.kr-vertical select {
-        margin-bottom: 1rem;
-    }
+  .kr-search.kr-vertical input, .kr-search.kr-vertical select {
+    margin-bottom: 1rem;
+  }
 }
 .kr-search .sidebar input, .kr-search .sidebar select {
   margin-bottom: 0.75rem;
