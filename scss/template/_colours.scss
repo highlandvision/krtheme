@@ -1,7 +1,5 @@
 @use '../resources/resources' as res;
-@use '../../../../node_modules/foundation-sites/scss/util/util' as mixin;
-
-.color-light  {
+.color-light {
 	color: res.$medium-gray;
 }
 .color-dark {
