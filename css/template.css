@@ -615,6 +615,7 @@ img.responsive {
     width: 14.875rem;
     padding: 0.5rem 0;
     z-index: 99;
+    border-top: 1px solid hsl(0, 0%, 100%);
   }
   .top-bar .top-bar-left ul.menu li ul.submenu li a {
     font-size: 0.9375rem;
@@ -629,6 +630,7 @@ img.responsive {
     color: var(--topbar-link-active);
   }
   .top-bar .top-bar-left ul.menu li ul.submenu.megamenu.is-dropdown-submenu {
+    border-top: 1px solid hsl(0, 0%, 100%);
     padding: 0.5rem 0;
     width: 30.375rem;
   }

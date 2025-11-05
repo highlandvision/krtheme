@@ -105,6 +105,8 @@
 
 #kr-form-gateway.kr-stripe {
   /* Variables from Stripe for payment element */
+  /* Buttons and links */
+  /* spinner/processing state, errors */
 }
 #kr-form-gateway.kr-stripe * {
   box-sizing: border-box;
@@ -140,9 +142,6 @@
 #kr-form-gateway.kr-stripe #payment-element {
   margin-bottom: 1.5rem;
 }
-#kr-form-gateway.kr-stripe {
-  /* Buttons and links */
-}
 #kr-form-gateway.kr-stripe button {
   color: hsl(0, 0%, 100%);
   border-radius: 0.25rem;
@@ -162,9 +161,6 @@
 #kr-form-gateway.kr-stripe button:disabled {
   opacity: 0.5;
   cursor: default;
-}
-#kr-form-gateway.kr-stripe {
-  /* spinner/processing state, errors */
 }
 #kr-form-gateway.kr-stripe .spinner,
 #kr-form-gateway.kr-stripe .spinner:before,

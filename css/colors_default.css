@@ -1,0 +1,53 @@
+:root {
+  --global-font-size: 15px;
+  --global-width: 73.125rem;
+  --global-lineheight: 1.5;
+  --global-margin: 2rem;
+  --global-padding: 1rem;
+  --body-background: hsl(0, 0%, 100%);
+  --body-font-family: Open Sans, Arial, sans-serif;
+  --body-font-color: hsl(0, 0%, 27%);
+  --primary-color: hsl(208.39, 100%, 21.96%);
+  --primary-color-hover: hsl(208, 100%, 32%);
+  --secondary-color: hsl(286, 24%, 58%);
+  --secondary-color-hover: hsl(286, 24%, 44%);
+  --accent-color: hsl(208, 100%, 37%);
+  --accent-color-hover: hsl(208, 100%, 47%);
+  --alert-color: hsl(0, 100%, 33%);
+  --alert-color-hover: hsl(0, 100%, 45%);
+  --success-color: hsl(128, 29%, 70%);
+  --success-color-hover: hsl(128, 29%, 60%);
+  --warning-color: hsl(24, 100%, 56%);
+  --warning-color-hover: hsl(24, 100%, 66%);
+  --custom-color: hsl(215, 54%, 36%);
+  --custom-color-hover: hsl(215, 54%, 48%);
+  --favorite: hsl(338, 87%, 55%);
+  --header-font-family: Open Sans, Arial, sans-serif;
+  --header-color: hsl(208.39, 100%, 21.96%);
+  --header-lineheight: 1.5;
+  --medium-h1-font-size: 30px;
+  --medium-h2-font-size: 25px;
+  --medium-h3-font-size: 22px;
+  --medium-h4-font-size: 18px;
+  --medium-h5-font-size: 16px;
+  --large-h1-font-size: 32px;
+  --large-h2-font-size: 27px;
+  --large-h3-font-size: 25px;
+  --large-h4-font-size: 20px;
+  --large-h5-font-size: 18px;
+  --small-font-size: 14px;
+  --topbar-background-top: hsl(202, 85%, 92%);
+  --topbar-background: hsl(208.39, 100%, 21.96%);
+  --topbar-submenu-background: hsl(207, 74%, 42%);
+  --topbar-link: hsl(0, 0%, 100%);
+  --topbar-link-active: hsl(0, 0%, 100%);
+  --topbar-background-active: hsl(207, 100%, 37%);
+  --footer-background-top: hsl(202, 85%, 92%);
+  --footer-background: hsl(208.39, 100%, 21.96%);
+  --footer-icon: hsl(202, 85%, 92%);
+  --footer-link: hsl(0, 0%, 96%);
+  --footer-link-hover: hsl(0, 0%, 48%);
+  --callout-background-color: #dfdfdf;
+}
+
+/*# sourceMappingURL=colors_default.css.map */
