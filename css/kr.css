@@ -483,6 +483,7 @@ form .form-control-feedback {
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  min-height: 30px;
 }
 .kr-properties-filter-heading::after {
   content: ":  ";
@@ -525,6 +526,9 @@ form .form-control-feedback {
   margin-top: 1.25rem;
 }
 
+.kr-properties {
+  min-height: 800px;
+}
 .kr-properties .kr-grid {
   min-height: 400px;
 }
@@ -535,6 +539,7 @@ form .form-control-feedback {
   position: relative;
 }
 .kr-properties .kr-list {
+  min-height: 400px;
   position: relative;
 }
 

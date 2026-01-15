@@ -17,7 +17,8 @@ use Joomla\CMS\HTML\HTMLHelper;
 
 $Itemid   = SiteHelper::getItemId('com_knowres', 'property');
 $plink    = KrMethods::route('index.php?option=com_knowres&view=property&Itemid=' . $Itemid . '&id='
-                             . (int) $property_id);
+							 . (int)$property_id
+);
 $image    = Media\Images::getPropertyImageName($property_id);
 $KRparams = KrMethods::getParams();
 
@@ -29,8 +30,7 @@ if ($item->menu_image) {
 		? $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />
 			<span class="image-title">' . $item->title . '</span> '
 		: $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
-}
-else {
+} else {
 	$linktype = $item->title;
 }
 ?>
@@ -39,11 +39,12 @@ else {
 	<a href="<?php echo $plink; ?>" title="<?php echo strip_tags($headline); ?>">
 		<?php echo $linktype; ?><br>
 		<?php echo HTMLHelper::_('image',
-		                         Media\Images::getImagePath($property_id, 'solo', $image),
-		                         $headline,
-		                         ['width'  => $KRparams->get('max_property_width'),
-		                          'height' => $KRparams->get('max_property_height')
-		                         ]
+			Media\Images::getImagePath($property_id, 'solo', $image),
+			$headline,
+			[
+				'width'  => $KRparams->get('max_property_width'),
+				'height' => $KRparams->get('max_property_height')
+			]
 		); ?>
 		<figcaption><?php echo $headline; ?></figcaption>
 	</a>
